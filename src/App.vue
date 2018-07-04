@@ -30,30 +30,33 @@
               <img src="../static/img/logo01.png" alt="">
             </div>
             <ul>
-              <li>好的设计一定是特殊的，当你看到它的时候。好的设计一定是特殊的，当你看到它的时候。</li>
-              <li>好的设计一定是特殊的，当你看到它的时候。好的设计一定是特殊的，当你看到它的时候。</li>
-              <li>好的设计一定是特殊的，当你看到它的时候。好的设计一定是特殊的，当你看到它的时候。</li>
+              <li>客服热线：4008 831 831&nbsp;&nbsp;&nbsp;&nbsp;公司邮箱：corp@archie.com.cn</li>
+              <li>官方网站：www.archie.cm.cn</li>
+              <li>公司地址：广东省佛山市南海区狮山长虹岭工业园长岗北路</li>
             </ul>
           </div>
           <div class="footer-right floatr clearfloat">
             <div class="code01 floatl">
-              <div class="img"></div>
+              <div class="img">
+                <img src="../static/img/er1.jpg"/>
+              </div>
               <div>微信二维码</div>
             </div>
             <div class="code02 floatl">
-              <div class="img"></div>
+              <div class="img">
+                <img src="../static/img/er2.jpg"/>
+              </div>
               <div>微信二维码</div>
             </div>
           </div>
         </div>
       </div>
       <div class="footer-wrap1">
-        <span>©mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2017]1530-131号</span>
+        <span>Copyright ©2000-2011 广东雅洁五金有限公司, All Rights Reserved</span>
       </div>
     </footer>
   </div>
 </template>
-
 <script>
 export default {
   name: 'App',
