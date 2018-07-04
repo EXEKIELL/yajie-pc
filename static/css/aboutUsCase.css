@@ -1,0 +1,206 @@
+#aboutUsCase {
+  padding-bottom: 100px; }
+  #aboutUsCase .list1 {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 45px; }
+    #aboutUsCase .list1 p {
+      line-height: 35px;
+      text-align: justify; }
+  #aboutUsCase .list2 {
+    position: relative; }
+    #aboutUsCase .list2 .swiper05 {
+      width: 100%; }
+      #aboutUsCase .list2 .swiper05 .swiper-slide {
+        display: flex; }
+        #aboutUsCase .list2 .swiper05 .swiper-slide img {
+          width: 100%; }
+        #aboutUsCase .list2 .swiper05 .swiper-slide .slide1 {
+          width: 43%;
+          position: relative; }
+          #aboutUsCase .list2 .swiper05 .swiper-slide .slide1 .detail {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40%;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            -webkit-transform: translateY(100%);
+            -moz-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            -o-transform: translateY(100%);
+            transform: translateY(100%);
+            opacity: 0; }
+            #aboutUsCase .list2 .swiper05 .swiper-slide .slide1 .detail .time {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              background-color: #604775;
+              color: #ffffff;
+              padding: 5px 15px;
+              font-size: 14px; }
+            #aboutUsCase .list2 .swiper05 .swiper-slide .slide1 .detail .detail-wrap {
+              width: 85%; }
+              #aboutUsCase .list2 .swiper05 .swiper-slide .slide1 .detail .detail-wrap .wrap-1 {
+                color: #604775;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px; }
+              #aboutUsCase .list2 .swiper05 .swiper-slide .slide1 .detail .detail-wrap .wrap-2 {
+                font-size: 14px;
+                color: #555555; }
+                #aboutUsCase .list2 .swiper05 .swiper-slide .slide1 .detail .detail-wrap .wrap-2 p {
+                  line-height: 30px;
+                  text-align: justify; }
+        #aboutUsCase .list2 .swiper05 .swiper-slide .slide1:hover .detail {
+          -webkit-transform: translateY(0%);
+          -moz-transform: translateY(0%);
+          -ms-transform: translateY(0%);
+          -o-transform: translateY(0%);
+          transform: translateY(0%);
+          opacity: 1; }
+        #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 {
+          width: 29%;
+          position: relative; }
+          #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 > div {
+            height: 50%; }
+          #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .img01 {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+          #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .img01::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            border: 1px solid #ede8e3;
+            opacity: 0;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; }
+          #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01 {
+            position: relative;
+            background-color: #f2f2f2;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; }
+            #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01 .time {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              background-color: #e4e4e4;
+              color: #ffffff;
+              padding: 5px 15px;
+              font-size: 14px;
+              -webkit-transition: all 0.5s;
+              -moz-transition: all 0.5s;
+              -ms-transition: all 0.5s;
+              -o-transition: all 0.5s;
+              transition: all 0.5s; }
+            #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01 .detail-wrap {
+              width: 85%; }
+              #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01 .detail-wrap .wrap-1 {
+                color: #333333;
+                font-size: 18px;
+                margin-bottom: 10px;
+                -webkit-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+                -ms-transition: all 0.5s;
+                -o-transition: all 0.5s;
+                transition: all 0.5s; }
+              #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01 .detail-wrap .wrap-2 {
+                font-size: 14px;
+                color: #888888;
+                -webkit-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+                -ms-transition: all 0.5s;
+                -o-transition: all 0.5s;
+                transition: all 0.5s; }
+                #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01 .detail-wrap .wrap-2 p {
+                  line-height: 30px;
+                  text-align: justify; }
+          #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01.d1::before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 100;
+            top: -20px;
+            margin: 0;
+            padding: 0;
+            border-bottom: 10px solid #ffffff;
+            border-top: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            -webkit-transform: translateY(100%);
+            -moz-transform: translateY(100%);
+            -ms-transform: translateY(100%);
+            -o-transform: translateY(100%);
+            transform: translateY(100%);
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            opacity: 0; }
+          #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01.d2::before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -18px;
+            margin: 0;
+            z-index: 100;
+            padding: 0;
+            border-top: 10px solid #ffffff;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            -webkit-transform: translateY(-100%);
+            -moz-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+            -o-transform: translateY(-100%);
+            transform: translateY(-100%);
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            opacity: 0; }
+        #aboutUsCase .list2 .swiper05 .swiper-slide .slide2:hover .detail01 {
+          background-color: #fff; }
+          #aboutUsCase .list2 .swiper05 .swiper-slide .slide2:hover .detail01 .time {
+            background-color: #604775;
+            color: #ffffff; }
+          #aboutUsCase .list2 .swiper05 .swiper-slide .slide2:hover .detail01 .detail-wrap .wrap-1 {
+            color: #604775;
+            font-weight: bold; }
+          #aboutUsCase .list2 .swiper05 .swiper-slide .slide2:hover .detail01 .detail-wrap .wrap-2 {
+            color: #555555; }
+        #aboutUsCase .list2 .swiper05 .swiper-slide .slide2:hover .detail01.d1::before, #aboutUsCase .list2 .swiper05 .swiper-slide .slide2:hover .detail01.d2::before {
+          -webkit-transform: translateY(0%);
+          -moz-transform: translateY(0%);
+          -ms-transform: translateY(0%);
+          -o-transform: translateY(0%);
+          transform: translateY(0%);
+          opacity: 1; }
+        #aboutUsCase .list2 .swiper05 .swiper-slide .slide2:hover .img01::before {
+          opacity: 1; }
+
+/*# sourceMappingURL=aboutUsCase.css.map */

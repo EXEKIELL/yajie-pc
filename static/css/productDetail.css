@@ -1,0 +1,17 @@
+#productDetail .list1 {
+  width: 100%; }
+  #productDetail .list1 img {
+    width: 100%; }
+#productDetail .list2 {
+  width: 100%;
+  background: url("../img/bj06.png") no-repeat;
+  background-size: 100% auto;
+  margin-bottom: 100px; }
+  #productDetail .list2 .l2-wrap {
+    width: 1200px;
+    margin: auto;
+    padding-top: 30px; }
+    #productDetail .list2 .l2-wrap img {
+      margin: auto; }
+
+/*# sourceMappingURL=productDetail.css.map */

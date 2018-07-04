@@ -1,0 +1,103 @@
+#informationDetail{
+  font-size: 14px;
+  color: #555555;
+  p{
+    text-indent: 2em;
+    line-height: 35px;
+    text-align: justify;
+  }
+  .list1{
+    width: 100%;
+    position: relative;
+    margin-bottom: 55px;
+    img{
+      width: 100%;
+    }
+    .l1-title{
+      position: absolute;
+      width: 60%;
+      background-color: #fff;
+      bottom: 0;
+      right: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 48px;
+      padding-bottom: 15px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      >div{
+        width: 78%;
+        .l1-1{
+          font-size: 20px;
+          color: #604775;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          padding: 25px 0;
+          margin-bottom: 30px;
+          .time{
+            font-size: 14px;
+            color: #b3b3b3;
+            line-height: 26px;
+          }
+        }
+        .l1-1::after{
+          content: '';
+          display: block;
+          border-bottom: 1px solid #604775;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 10%;
+        }
+        .l1-2{
+          font-size: 12px;
+          color: #888888;
+          line-height: 25px;
+          text-align: justify;
+          width: 72%;
+        }
+      }
+    }
+  }
+  .list2{
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 35px;
+    p{
+      text-indent: 2em;
+      line-height: 35px;
+    }
+  }
+  .list3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+    .l3-text{
+      width: 54.5%;
+    }
+    .l3-img{
+      width: 38%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .list4{
+    display: flex;
+    justify-content: space-between;
+    >div{
+      width: 32.5%;
+      img{
+        width: 100%;
+      }
+    }
+    >div:last-child{
+      margin-right: 0;
+    }
+  }
+}

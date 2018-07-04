@@ -1,0 +1,146 @@
+#productInfo .list3 {
+  padding: 1px; }
+  #productInfo .list3 .l3-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333333;
+    text-align: left;
+    padding: 20px 0; }
+  #productInfo .list3 .l3-cont {
+    height: 981px; }
+    #productInfo .list3 .l3-cont > div {
+      width: 49%; }
+    #productInfo .list3 .l3-cont .cont-1 {
+      height: 100%; }
+    #productInfo .list3 .l3-cont .listCont {
+      background-color: #fff;
+      height: 100%;
+      margin-bottom: 4%; }
+      #productInfo .list3 .l3-cont .listCont .lc1 {
+        padding: 20px;
+        height: 85%;
+        box-sizing: border-box;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #productInfo .list3 .l3-cont .listCont .lc1 > div {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          height: 100%;
+          padding: 10px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
+          #productInfo .list3 .l3-cont .listCont .lc1 > div img {
+            width: 100%;
+            margin: auto; }
+        #productInfo .list3 .l3-cont .listCont .lc1 .search {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          background: url("../img/search01.png") no-repeat center rgba(96, 71, 117, 0.5);
+          background-size: 35% auto;
+          display: none;
+          opacity: 0;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
+      #productInfo .list3 .l3-cont .listCont .lc2 {
+        height: 15%;
+        padding: 20px 5px;
+        box-sizing: border-box;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+        #productInfo .list3 .l3-cont .listCont .lc2 > div {
+          text-align: left;
+          display: inline-block;
+          width: 85%; }
+          #productInfo .list3 .l3-cont .listCont .lc2 > div .lc2-1 {
+            font-size: 18px;
+            color: #333333;
+            margin-bottom: 15px;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; }
+          #productInfo .list3 .l3-cont .listCont .lc2 > div .lc2-2 {
+            font-size: 14px;
+            color: #999999;
+            margin-bottom: 15px; }
+          #productInfo .list3 .l3-cont .listCont .lc2 > div .lc2-3 button {
+            padding: 0 30px;
+            line-height: 35px;
+            color: #ffffff;
+            background-color: #ede8e3;
+            font-size: 14px;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; }
+    #productInfo .list3 .l3-cont .listContSmall .lc1 > div {
+      width: 548px;
+      height: 290px; }
+      #productInfo .list3 .l3-cont .listContSmall .lc1 > div img {
+        width: 80%; }
+    #productInfo .list3 .l3-cont .listCont:hover .lc1 {
+      background-color: rgba(96, 71, 117, 0.3);
+      position: relative; }
+      #productInfo .list3 .l3-cont .listCont:hover .lc1 > div {
+        border: 1px solid #f2f2f2; }
+      #productInfo .list3 .l3-cont .listCont:hover .lc1 .search {
+        display: block;
+        opacity: 1; }
+    #productInfo .list3 .l3-cont .listCont:hover .lc2 {
+      background-color: #efefef; }
+      #productInfo .list3 .l3-cont .listCont:hover .lc2 .lc2-1 {
+        color: #604775; }
+      #productInfo .list3 .l3-cont .listCont:hover .lc2 .lc2-3 button {
+        background-color: #604775;
+        color: #ffffff; }
+  #productInfo .list3 .l3-button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+    #productInfo .list3 .l3-button button {
+      display: inline-block;
+      padding: 0 100px;
+      line-height: 60px;
+      color: #888888;
+      font-size: 16px;
+      background-color: #ede8e3;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+    #productInfo .list3 .l3-button button:hover {
+      background-color: #604775;
+      color: #ffffff; }
+
+/*# sourceMappingURL=productInfo.css.map */
