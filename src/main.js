@@ -9,8 +9,11 @@ import '../static/css/reset.css'
 import '../static/css/swiper.min.css'
 import '../static/js/swiper.min'
 import $ from 'jquery'
+import api from '../static/js/mainPublic'
 
+Vue.prototype.$api = api;
 Vue.config.productionTip = false;
+Vue.prototype.$baseLink = 'http://archie.web.hengdikeji.com';
 Vue.use(ElementUI);
 
 /* eslint-disable no-new */

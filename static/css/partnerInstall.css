@@ -30,7 +30,6 @@
       top: 0;
       left: -20px;
       width: 100%;
-      height: 100%;
       background-color: rgba(96, 71, 117, 0.8);
       color: #ffffff;
       display: none;
@@ -58,10 +57,9 @@
             align-items: baseline;
             justify-content: space-between;
             position: relative;
-            padding: 20px 0;
-            margin-bottom: 35px; }
+            padding: 20px 0 10px; }
             #partnerInstall .list2 .l2-left .l2left-1 .downWrap .wrap > div .wrap-title .title-left {
-              font-size: 28px;
+              font-size: 18px;
               font-weight: bold;
               display: flex;
               align-items: center; }
@@ -83,10 +81,12 @@
             width: 15%;
             bottom: 0;
             left: -20px; }
-          #partnerInstall .list2 .l2-left .l2left-1 .downWrap .wrap > div .wrap-info p {
-            font-size: 14px;
-            line-height: 25px;
-            text-align: justify; }
+          #partnerInstall .list2 .l2-left .l2left-1 .downWrap .wrap > div .wrap-info {
+            padding-bottom: 20px; }
+            #partnerInstall .list2 .l2-left .l2left-1 .downWrap .wrap > div .wrap-info p {
+              font-size: 14px;
+              line-height: 25px;
+              text-align: justify; }
     #partnerInstall .list2 .l2-left .l2left-1 .downWrap.slideleft {
       opacity: 1;
       -webkit-transform: translateX(0%);
@@ -101,7 +101,6 @@
       top: 0;
       left: -20px;
       width: 100%;
-      height: 100%;
       background-color: rgba(96, 71, 117, 0.8);
       color: #ffffff;
       display: none;
@@ -129,10 +128,9 @@
             align-items: baseline;
             justify-content: space-between;
             position: relative;
-            padding: 20px 0;
-            margin-bottom: 35px; }
+            padding: 20px 0 10px; }
             #partnerInstall .list2 .l2-right .l2left-1 .downWrap .wrap > div .wrap-title .title-left {
-              font-size: 28px;
+              font-size: 18px;
               font-weight: bold;
               display: flex;
               align-items: center; }
@@ -154,9 +152,11 @@
             width: 15%;
             bottom: 0;
             left: -20px; }
-          #partnerInstall .list2 .l2-right .l2left-1 .downWrap .wrap > div .wrap-info p {
-            font-size: 14px;
-            line-height: 25px;
-            text-align: justify; }
+          #partnerInstall .list2 .l2-right .l2left-1 .downWrap .wrap > div .wrap-info {
+            padding-bottom: 20px; }
+            #partnerInstall .list2 .l2-right .l2left-1 .downWrap .wrap > div .wrap-info p {
+              font-size: 14px;
+              line-height: 25px;
+              text-align: justify; }
 
 /*# sourceMappingURL=partnerInstall.css.map */

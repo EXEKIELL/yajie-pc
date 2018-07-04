@@ -101,7 +101,25 @@
           console.log(this.formData.upload);
         },
         btn(){
-          console.log(this.formData)
+          console.log(this.formData);
+          var _this = this;
+          _this.$api.axiosPost('/index/service/postMessage',0,_this.formData,function (data) {
+            console.log(data);
+            if(data.data.status==0)
+            {
+              _this.$alert(data.data.msg,'温馨提示', {
+                  confirmButtonText: '确定',
+                  showClose:false
+                }
+              )
+            }else{
+              _this.$alert(data.data.msg,'温馨提示', {
+                  confirmButtonText: '确定',
+                  showClose:false
+                }
+              )
+            }
+          });
         },
       }
     }
@@ -112,4 +130,18 @@
 </style>
 <style>
   @import "../../static/css/public.css";
+  .el-button--primary{
+    background-color: #604775!important;
+    border-color: #604775!important;
+  }
+  .el-button--primary:hover{
+    background-color: #604775!important;
+    border-color: #604775!important;
+  }
+  .el-message-box__title{
+    text-align: center;
+  }
+  .el-message-box__content{
+    text-align: center;
+  }
 </style>
