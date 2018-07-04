@@ -8,12 +8,118 @@
       <div class="swiper-container swiper11">
         <div class="swiper-wrapper">
           <div class="swiper-slide slide11">
-            <div class="swiper-container swiper12">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide slide12">
-
+            <div>
+              <div class="title02">
+                <img src="../../static/img/title05.png" alt="">
+              </div>
+              <div class="swiper-container swiper12">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
                 </div>
               </div>
+              <div class="swiper-button-prev prev12"></div>
+              <div class="swiper-button-next next12"></div>
+              <div class="swiper-pagination pagin12"></div>
+            </div>
+          </div>
+          <div class="swiper-slide slide11">
+            <div>
+              <div class="title02">
+                <img src="../../static/img/title05.png" alt="">
+              </div>
+              <div class="swiper-container swiper12">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev prev12"></div>
+              <div class="swiper-button-next next12"></div>
+              <div class="swiper-pagination pagin12"></div>
+            </div>
+          </div>
+          <div class="swiper-slide slide11">
+            <div>
+              <div class="title02">
+                <img src="../../static/img/title05.png" alt="">
+              </div>
+              <div class="swiper-container swiper12">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev prev12"></div>
+              <div class="swiper-button-next next12"></div>
+              <div class="swiper-pagination pagin12"></div>
+            </div>
+          </div>
+          <div class="swiper-slide slide11">
+            <div>
+              <div class="title02">
+                <img src="../../static/img/title05.png" alt="">
+              </div>
+              <div class="swiper-container swiper12">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev prev12"></div>
+              <div class="swiper-button-next next12"></div>
+              <div class="swiper-pagination pagin12"></div>
+            </div>
+          </div>
+          <div class="swiper-slide slide11">
+            <div>
+              <div class="title02">
+                <img src="../../static/img/title05.png" alt="">
+              </div>
+              <div class="swiper-container swiper12">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                  <div class="swiper-slide slide12">
+                    <img src="../../static/img/lunbo01.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-prev prev12"></div>
+              <div class="swiper-button-next next12"></div>
+              <div class="swiper-pagination pagin12"></div>
             </div>
           </div>
         </div>
@@ -75,6 +181,7 @@
             </div>
           </div>
           <div class="swiperRight">
+            <div class="prev13"></div>
             <div class="r1" :class="{sel:pagin13 == 0}" @click="btn13(0)">
               <div>
                 <div class="r1-title">加盟优势</div>
@@ -92,6 +199,269 @@
                 <div class="r1-title">加盟优势</div>
                 <div class="r1-title2">Advantages of joining</div>
               </div>
+            </div>
+            <div class="next13"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list4">
+      <div class="l4-wrap">
+        <div class="l4-title">
+          <img src="../../static/img/title03.png" alt="">
+        </div>
+        <div class="l4-swiper">
+          <div class="swiper-container swiper14">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide14">
+                <div class="slide14-1">
+                  <img src="../../static/img/img34.png" alt="">
+                  <div class="imgDetail">
+                    <p>雅洁五金位于中国广东佛山，占地面积近120000平方米。拥有各类中、高级技术人员100多名，员工约1000名，1000多台/条国内外先进的生产设备或自动化生产线，建有电子、模具、压铸、机加、抛光、喷粉、包装、维修等九大现代化车间及配套齐全的生产、生活设施。</p>
+                  </div>
+                </div>
+                <div class="slide14-2">
+                  <div class="cirImg">
+                    <div><img src="../../static/img/img35.png" alt=""></div>
+                  </div>
+                  <div class="sl4-wrap">
+                    <div class="s4-info1">雅洁五金0元加盟费</div>
+                    <div class="s4-info2">Yajie Hardware 0 yuan initial fee</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide14">
+                <div class="slide14-1">
+                  <img src="../../static/img/img34.png" alt="">
+                  <div class="imgDetail">
+                    <p>雅洁五金位于中国广东佛山，占地面积近120000平方米。拥有各类中、高级技术人员100多名，员工约1000名，1000多台/条国内外先进的生产设备或自动化生产线，建有电子、模具、压铸、机加、抛光、喷粉、包装、维修等九大现代化车间及配套齐全的生产、生活设施。</p>
+                  </div>
+                </div>
+                <div class="slide14-2">
+                  <div class="cirImg">
+                    <div><img src="../../static/img/img35.png" alt=""></div>
+                  </div>
+                  <div class="sl4-wrap">
+                    <div class="s4-info1">雅洁五金0元加盟费</div>
+                    <div class="s4-info2">Yajie Hardware 0 yuan initial fee</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide14">
+                <div class="slide14-1">
+                  <img src="../../static/img/img34.png" alt="">
+                  <div class="imgDetail">
+                    <p>雅洁五金位于中国广东佛山，占地面积近120000平方米。拥有各类中、高级技术人员100多名，员工约1000名，1000多台/条国内外先进的生产设备或自动化生产线，建有电子、模具、压铸、机加、抛光、喷粉、包装、维修等九大现代化车间及配套齐全的生产、生活设施。</p>
+                  </div>
+                </div>
+                <div class="slide14-2">
+                  <div class="cirImg">
+                    <div><img src="../../static/img/img35.png" alt=""></div>
+                  </div>
+                  <div class="sl4-wrap">
+                    <div class="s4-info1">雅洁五金0元加盟费</div>
+                    <div class="s4-info2">Yajie Hardware 0 yuan initial fee</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide14">
+                <div class="slide14-1">
+                  <img src="../../static/img/img34.png" alt="">
+                  <div class="imgDetail">
+                    <p>雅洁五金位于中国广东佛山，占地面积近120000平方米。拥有各类中、高级技术人员100多名，员工约1000名，1000多台/条国内外先进的生产设备或自动化生产线，建有电子、模具、压铸、机加、抛光、喷粉、包装、维修等九大现代化车间及配套齐全的生产、生活设施。</p>
+                  </div>
+                </div>
+                <div class="slide14-2">
+                  <div class="cirImg">
+                    <div><img src="../../static/img/img35.png" alt=""></div>
+                  </div>
+                  <div class="sl4-wrap">
+                    <div class="s4-info1">雅洁五金0元加盟费</div>
+                    <div class="s4-info2">Yajie Hardware 0 yuan initial fee</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide14">
+                <div class="slide14-1">
+                  <img src="../../static/img/img34.png" alt="">
+                  <div class="imgDetail">
+                    <p>雅洁五金位于中国广东佛山，占地面积近120000平方米。拥有各类中、高级技术人员100多名，员工约1000名，1000多台/条国内外先进的生产设备或自动化生产线，建有电子、模具、压铸、机加、抛光、喷粉、包装、维修等九大现代化车间及配套齐全的生产、生活设施。</p>
+                  </div>
+                </div>
+                <div class="slide14-2">
+                  <div class="cirImg">
+                    <div><img src="../../static/img/img35.png" alt=""></div>
+                  </div>
+                  <div class="sl4-wrap">
+                    <div class="s4-info1">雅洁五金0元加盟费</div>
+                    <div class="s4-info2">Yajie Hardware 0 yuan initial fee</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev prev14"></div>
+          <div class="swiper-button-next next14"></div>
+        </div>
+      </div>
+    </div>
+    <div class="list5">
+      <div class="l5-wrap">
+        <div class="l5-title">
+          <img src="../../static/img/title04.png" alt="">
+        </div>
+        <div class="l5-slide">
+          <div class="slideList">
+            <div class="sl1">
+              <div class="l-default">ICON</div>
+              <img src="" alt="">
+            </div>
+            <div class="sl2">
+              <img src="../../static/img/icon17.png" alt="">
+              <div class="sl2-1">01</div>
+              <div class="sl2-2">提交加盟申请</div>
+            </div>
+          </div>
+          <div class="slideList">
+            <div class="sl1">
+              <div class="l-default">ICON</div>
+              <img src="" alt="">
+            </div>
+            <div class="sl2">
+              <img src="../../static/img/icon17.png" alt="">
+              <div class="sl2-1">01</div>
+              <div class="sl2-2">提交加盟申请</div>
+            </div>
+          </div>
+          <div class="slideList">
+            <div class="sl1">
+              <div class="l-default">ICON</div>
+              <img src="" alt="">
+            </div>
+            <div class="sl2">
+              <img src="../../static/img/icon17.png" alt="">
+              <div class="sl2-1">01</div>
+              <div class="sl2-2">提交加盟申请</div>
+            </div>
+          </div>
+          <div class="slideList">
+            <div class="sl1">
+              <div class="l-default">ICON</div>
+              <img src="" alt="">
+            </div>
+            <div class="sl2">
+              <img src="../../static/img/icon17.png" alt="">
+              <div class="sl2-1">01</div>
+              <div class="sl2-2">提交加盟申请</div>
+            </div>
+          </div>
+          <div class="slideList">
+            <div class="sl1">
+              <div class="l-default">ICON</div>
+              <img src="" alt="">
+            </div>
+            <div class="sl2">
+              <img src="../../static/img/icon17.png" alt="">
+              <div class="sl2-1">01</div>
+              <div class="sl2-2">提交加盟申请</div>
+            </div>
+          </div>
+          <div class="slideList">
+            <div class="sl1">
+              <div class="l-default">ICON</div>
+              <img src="" alt="">
+            </div>
+            <div class="sl2">
+              <img src="../../static/img/icon17.png" alt="">
+              <div class="sl2-1">01</div>
+              <div class="sl2-2">提交加盟申请</div>
+            </div>
+          </div>
+          <div class="slideList">
+            <div class="sl1">
+              <div class="l-default">ICON</div>
+              <img src="" alt="">
+            </div>
+            <div class="sl2">
+              <img src="../../static/img/icon17.png" alt="">
+              <div class="sl2-1">01</div>
+              <div class="sl2-2">提交加盟申请</div>
+            </div>
+          </div>
+          <div class="slideList">
+            <div class="sl1">
+              <div class="l-default">ICON</div>
+              <img src="" alt="">
+            </div>
+            <div class="sl2">
+              <img src="../../static/img/icon17.png" alt="">
+              <div class="sl2-1">01</div>
+              <div class="sl2-2">提交加盟申请</div>
+            </div>
+          </div>
+          <div class="slideList">
+            <div class="sl1">
+              <div class="l-default">ICON</div>
+              <img src="" alt="">
+            </div>
+            <div class="sl2">
+              <img src="../../static/img/icon17.png" alt="">
+              <div class="sl2-1">01</div>
+              <div class="sl2-2">提交加盟申请</div>
+            </div>
+          </div>
+          <div class="slideList">
+            <div class="sl1">
+              <div class="l-default">ICON</div>
+              <img src="" alt="">
+            </div>
+            <div class="sl2">
+              <img src="../../static/img/icon17.png" alt="">
+              <div class="sl2-1">01</div>
+              <div class="sl2-2">提交加盟申请</div>
+            </div>
+          </div>
+          <div class="slideList">
+            <div class="sl1">
+              <div class="l-default">ICON</div>
+              <img src="" alt="">
+            </div>
+            <div class="sl2">
+              <img src="../../static/img/icon17.png" alt="">
+              <div class="sl2-1">01</div>
+              <div class="sl2-2">提交加盟申请</div>
+            </div>
+          </div>
+          <div class="slideList">
+            <div class="sl1">
+              <div class="l-default">ICON</div>
+              <img src="" alt="">
+            </div>
+            <div class="sl2">
+              <img src="../../static/img/icon17.png" alt="">
+              <div class="sl2-1">01</div>
+              <div class="sl2-2">提交加盟申请</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="list6">
+      <div class="l6-wrap">
+        <img src="../../static/img/bj15.png" alt="">
+        <div class="detail">
+          <div>
+            <div class="name">
+              <span class="label">姓名</span><input type="text" placeholder="请输入姓名">
+            </div>
+            <div class="phone">
+              <span class="label">电话</span><input type="text" placeholder="请输入联系方式">
+            </div>
+            <div class="addr">
+              <span class="label">地址</span><input type="text" placeholder="请输入姓名">
+            </div>
+            <div class="button">
+              <button>提交申请</button>
             </div>
           </div>
         </div>
@@ -120,12 +490,26 @@
         var swiper11 = new Swiper('.swiper11',{
           // pagination: '.swiper-pagination',
           // paginationClickable: true,
-          direction: 'vertical'
+          direction: 'vertical',
+          pagination:'.pagin11'
+        });
+        var swiper12 = new Swiper('.swiper12',{
+          prevButton:'.prev12',
+          nextButton:'.next12',
+          pagination:'.pagin12'
         });
         this.swiper13 = new Swiper('.swiper13',{
+          prevButton:'.prev13',
+          nextButton:'.next13',
           onSlideChangeStart: function(swiper){
             that.pagin13 = swiper.activeIndex;
           }
+        });
+        var swiper14 = new Swiper('.swiper14',{
+          slidesPerView:4,
+          spaceBetween:15,
+          prevButton:'.prev14',
+          nextButton:'.next14'
         })
       }
     }

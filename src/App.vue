@@ -61,7 +61,7 @@ export default {
     return {
       navList:[
         {text:'首页',url:'/homePage',tags:[]},
-        {text:'关于雅洁',url:'/aboutUs',tags:[{tagsText:'企业简介',url:''},{tagsText:'发展历程',url:''},{tagsText:'品牌荣誉',url:''},{tagsText:'工程案例',url:''},{tagsText:'联系我们',url:''}]},
+        {text:'关于雅洁',url:'/aboutUs',tags:[{tagsText:'企业简介',url:'/aboutUs/aboutUsIntro'},{tagsText:'发展历程',url:'/aboutUs/aboutUsCourse'},{tagsText:'品牌荣誉',url:'/aboutUs/aboutUsHonor'},{tagsText:'工程案例',url:'/aboutUs/aboutUsCase'},{tagsText:'联系我们',url:'/aboutUs/aboutUsContact'}]},
         {text:'产品中心',url:'/productCenter',tags:[]},
         {text:'雅洁资讯',url:'/information',tags:[]},
         {text:'雅洁服务',url:'/service',tags:[{tagsText:'全国门店',url:''},{tagsText:'在线留言',url:''}]},

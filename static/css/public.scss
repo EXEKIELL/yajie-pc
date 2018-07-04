@@ -265,6 +265,59 @@ body{
     background: initial;
   }
 }
+#inviteJoin{
+  .pagin12{
+    bottom: -35px;
+    width: 100%;
+    .swiper-pagination-bullet{
+      -webkit-border-radius: initial;
+      -moz-border-radius: initial;
+      border-radius: initial;
+      border: 1px solid #444444;
+      background: transparent;
+      width: 60px;
+      height: 3px;
+      display: inline-block;
+      opacity: 1;
+      margin-right: 10px;
+    }
+    .swiper-pagination-bullet-active{
+      border: 1px solid #604775;
+      background: initial;
+    }
+  }
+  .pagin11{
+    right: initial;
+    left: 30px;
+    .swiper-pagination-bullet{
+      border: 1px solid #999999;
+      background: #999999;
+      width: 5px;
+      height: 5px;
+      opacity: 1;
+      margin-bottom: 30px;
+    }
+    .swiper-pagination-bullet-active{
+      border: 1px solid #ffffff;
+      background-color: #ffffff;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .swiper-pagination-bullet-active::after{
+      content: '';
+      display: block;
+      position: absolute;
+      border: 1px solid #ffffff;
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+    }
+  }
+}
 #aboutUsCase{
   .pagin05{
     width: 100%;
