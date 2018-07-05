@@ -136,10 +136,19 @@
 <script>
     export default {
       name: "productInfo",
+      data(){
+        return {
+          tag01:[]//顶级标签
+        }
+      },
       methods:{
         moreBtn(){
           this.$router.push('/productDetail');
         }
+      },
+      mounted(){
+        const that = this;
+
       }
     }
 </script>

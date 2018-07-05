@@ -36,23 +36,15 @@
       <div class="cont">
         <div class="cont-1">
           <div>
-            <div class="c1List1 sel" @click="tags01Btn(0)">
+            <div :id="item.id" :class="{sel:index == 0,c1List1:index == 0,c1List2:index == 1,c1List3:index == 2}" v-for="(item,index) in tags01" :key="index" @click="tags01Btn(index,item.id)">
               <div class="list1"></div>
-              <div class="list2">传统五金</div>
-            </div>
-            <div class="c1List2" @click="tags01Btn(1)">
-              <div class="list1"></div>
-              <div class="list2">智能家居</div>
-            </div>
-            <div class="c1List3" @click="tags01Btn(2)">
-              <div class="list1"></div>
-              <div class="list2">智能安防</div>
+              <div class="list2">{{item.name}}</div>
             </div>
           </div>
         </div>
         <div class="cont-2">
           <ul>
-            <li v-for="(item,index) in tags02" :class="{sel:index == 0}" :key="index" @click="tags2(index)">{{item}}</li>
+            <li v-for="(item,index) in tags02" :class="{sel:index == 0}" :key="index" @click="tags2(index)">{{item.name}}</li>
           </ul>
         </div>
         <div class="cont-3">
@@ -315,75 +307,18 @@
       <div class="cont-5">
         <div class="swiper-container swiperHome05">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide" v-for="(item,index) in newsList" :key="index">
               <div class="slideImg">
-                <img src="../../static/img/img32.png" alt="">
+                <img :src="'http://archie.web.hengdikeji.com'+item.pic" alt="">
               </div>
               <div class="slideInfo">
                 <div>
                   <div class="info1">
-                    <div class="i1-1">雅洁五金新闻资讯雅洁新闻资讯</div>
-                    <div class="i1-2">2018-04-24</div>
+                    <div class="i1-1">{{item.title}}</div>
+                    <div class="i1-2">{{item.time|time01}}</div>
                   </div>
                   <div class="info2">
-                    <p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊的。好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊的。</p>
-                  </div>
-                  <div class="info3">
-                    <span class="more">MORE</span><span class="moreJT">&gt;</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="slideImg">
-                <img src="../../static/img/img32.png" alt="">
-              </div>
-              <div class="slideInfo">
-                <div>
-                  <div class="info1">
-                    <div class="i1-1">雅洁五金新闻资讯雅洁新闻资讯</div>
-                    <div class="i1-2">2018-04-24</div>
-                  </div>
-                  <div class="info2">
-                    <p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊的。好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊的。</p>
-                  </div>
-                  <div class="info3">
-                    <span class="more">MORE</span><span class="moreJT">&gt;</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="slideImg">
-                <img src="../../static/img/img32.png" alt="">
-              </div>
-              <div class="slideInfo">
-                <div>
-                  <div class="info1">
-                    <div class="i1-1">雅洁五金新闻资讯雅洁新闻资讯</div>
-                    <div class="i1-2">2018-04-24</div>
-                  </div>
-                  <div class="info2">
-                    <p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊的。好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊的。</p>
-                  </div>
-                  <div class="info3">
-                    <span class="more">MORE</span><span class="moreJT">&gt;</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="slideImg">
-                <img src="../../static/img/img32.png" alt="">
-              </div>
-              <div class="slideInfo">
-                <div>
-                  <div class="info1">
-                    <div class="i1-1">雅洁五金新闻资讯雅洁新闻资讯</div>
-                    <div class="i1-2">2018-04-24</div>
-                  </div>
-                  <div class="info2">
-                    <p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊的。好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊的。</p>
+                    <p>{{item.desc}}</p>
                   </div>
                   <div class="info3">
                     <span class="more">MORE</span><span class="moreJT">&gt;</span>
@@ -394,62 +329,62 @@
           </div>
         </div>
         <div class="pagin05">
-          <div class="p5Slide s1 " :class="{sel:newsIndex == 0}">
+          <div class="p5Slide s1 " :class="{sel:newsIndex == index,s1:index == 0,s2:index == 1,s3:index == 2,s4:index == 3}" v-for="(item,index) in newsList" :key="index">
             <div class="slide-img">
-              <img src="../../static/img/img32.png" alt="">
+              <img :src="'http://archie.web.hengdikeji.com'+item.pic" alt="">
             </div>
-            <div class="mask" @click="newBtn(0)">
+            <div class="mask" @click="newBtn(index)">
               <div>
-                <div class="mask1 textEllipsis">雅洁五金新闻资讯</div>
+                <div class="mask1 textEllipsis">{{item.title}}</div>
                 <div class="mask2">
-                  <p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己...</p>
+                  <p>{{item.desc|newDesc02}}</p>
                 </div>
-                <div class="mask3">01.</div>
+                <div class="mask3">0{{index}}.</div>
               </div>
             </div>
           </div>
-          <div class="p5Slide s2 " :class="{sel:newsIndex == 1}" >
-            <div class="slide-img">
-              <img src="../../static/img/img32.png" alt="">
-            </div>
-            <div class="mask" @click="newBtn(1)">
-              <div>
-                <div class="mask1 textEllipsis">雅洁五金新闻资讯</div>
-                <div class="mask2">
-                  <p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己...</p>
-                </div>
-                <div class="mask3">01.</div>
-              </div>
-            </div>
-          </div>
-          <div class="p5Slide s3 " :class="{sel:newsIndex == 2}" >
-            <div class="slide-img">
-              <img src="../../static/img/img32.png" alt="">
-            </div>
-            <div class="mask" @click="newBtn(2)">
-              <div>
-                <div class="mask1 textEllipsis">雅洁五金新闻资讯</div>
-                <div class="mask2">
-                  <p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己...</p>
-                </div>
-                <div class="mask3">01.</div>
-              </div>
-            </div>
-          </div>
-          <div class="p5Slide s4 " :class="{sel:newsIndex == 3}" >
-            <div class="slide-img">
-              <img src="../../static/img/img32.png" alt="">
-            </div>
-            <div class="mask" @click="newBtn(3)">
-              <div>
-                <div class="mask1 textEllipsis">雅洁五金新闻资讯</div>
-                <div class="mask2">
-                  <p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己...</p>
-                </div>
-                <div class="mask3">01.</div>
-              </div>
-            </div>
-          </div>
+          <!--<div class="p5Slide s2 " :class="{sel:newsIndex == 1}" >-->
+            <!--<div class="slide-img">-->
+              <!--<img src="../../static/img/img32.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="mask" @click="newBtn(1)">-->
+              <!--<div>-->
+                <!--<div class="mask1 textEllipsis">雅洁五金新闻资讯</div>-->
+                <!--<div class="mask2">-->
+                  <!--<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己...</p>-->
+                <!--</div>-->
+                <!--<div class="mask3">01.</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="p5Slide s3 " :class="{sel:newsIndex == 2}" >-->
+            <!--<div class="slide-img">-->
+              <!--<img src="../../static/img/img32.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="mask" @click="newBtn(2)">-->
+              <!--<div>-->
+                <!--<div class="mask1 textEllipsis">雅洁五金新闻资讯</div>-->
+                <!--<div class="mask2">-->
+                  <!--<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己...</p>-->
+                <!--</div>-->
+                <!--<div class="mask3">01.</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="p5Slide s4 " :class="{sel:newsIndex == 3}" >-->
+            <!--<div class="slide-img">-->
+              <!--<img src="../../static/img/img32.png" alt="">-->
+            <!--</div>-->
+            <!--<div class="mask" @click="newBtn(3)">-->
+              <!--<div>-->
+                <!--<div class="mask1 textEllipsis">雅洁五金新闻资讯</div>-->
+                <!--<div class="mask2">-->
+                  <!--<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己...</p>-->
+                <!--</div>-->
+                <!--<div class="mask3">01.</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
           <div class="p5Button">
             <div>
               <div class="swiper-button-prev prev05"></div>
@@ -474,7 +409,7 @@
             <div class="title-2"><span>COMPANY INTRODUCTION</span></div>
           </div>
           <div class="cont">
-            <p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。</p>
+            <p>{{companyInfo}}</p>
           </div>
           <div class="moreButton">
             <button style="width: 192px;">MORE</button>
@@ -527,8 +462,11 @@
       name: "homePage",
       data(){
         return {
-          tags01:['传统五金','智能家居','智能安防'],
-          tags02:['产品分类','产品分类','产品分类','产品分类','产品分类','产品分类','产品分类','产品分类'],
+          tags01:[],//产品二级分类
+          tags02:[],//产品三级分类
+          productList:[],//产品列表
+          newsList:[],//新闻动态列表
+          companyInfo:'广东雅洁五金有限公司，始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、建筑门锁、卫浴五金、门用五金、家具五金等众多品类。',
           newsIndex:0,
           swiperHome05:null,
           iconDetail:[
@@ -544,14 +482,35 @@
           ]
         }
       },
+      filters:{
+        time01:function (value) {
+          var Y,M,D,month;
+          var date = new Date(value * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+          Y = date.getFullYear();
+          M = (date.getMonth()+1 < 10 ? (date.getMonth()+1) : date.getMonth()+1);
+          D = date.getDate();
+          return Y+'-'+M+'-'+D;
+        },
+        newDesc02:function (value) {
+          var str = value.slice(0,22);
+          str = str+'...';
+          return str
+        }
+      },
       methods:{
         tags2(i){
           $('.cont-2 li').removeClass('sel');
           $('.cont-2 li').eq(i).addClass('sel');
         },
-        tags01Btn(i){
+        tags01Btn(i,id){
+          const that = this;
           $('.l2 .cont-1>div>div').removeClass('sel');
           $('.l2 .cont-1>div>div').eq(i).addClass('sel');
+          //获取产品三级标签
+          that.$api.axiosGet('/index/product/getCates/pid/'+id,{},function (data) {
+            console.log(data);
+            that.tags02 = data.data.cates.all;
+          })
         },
         newBtn(i){
           this.newsIndex = i;
@@ -585,18 +544,11 @@
           nextButton: '.nextHome04',
           loop:true
         });
-        this.swiperHome05 = new Swiper('.swiperHome05',{
-          prevButton:'.prev05',
-          nextButton:'.next05',
-          // effect : 'fade',//淡入效果
-          onSlideChangeStart: function(swiper){
-            that.newsIndex = swiper.activeIndex;
-          }
-        });
         var swiperHome06 = new Swiper('.swiperHome06',{
           slidesPerView: 6,
           spaceBetween: 10
-        })
+        });
+        // 页面右下导航
         $('.l8 .li4').hover(function () {
           $('.l8 .li4 .erwei').css('display','flex')
           setTimeout(function () {
@@ -616,6 +568,38 @@
             $('.l8').removeClass('show');
           }
         });
+
+        //获取产品推荐
+        //获取产品顶级标签
+        this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
+          console.log(data);
+          that.tags01 = data.data.cates;
+          //获取产品三级标签
+          that.$api.axiosGet('/index/product/getCates/pid/'+data.data.cates[0].id,{},function (data) {
+            console.log(data);
+            that.tags02 = data.data.cates.all;
+            //获取产品列表
+            that.$api.axiosGet('/index/product/getProductList/type/limit3/id/'+data.data.cates.all[0].id,{},function (data) {
+              console.log(data)
+            })
+          })
+        })
+        //获取新闻动态
+        this.$api.axiosGet('/index/news/getNewsList/'+1,{},function (data) {
+          console.log(data);
+          that.newsList = data.data.list.data;
+          //新闻资讯
+          setTimeout(function () {
+            that.swiperHome05 = new Swiper('.swiperHome05',{
+              prevButton:'.prev05',
+              nextButton:'.next05',
+              effect : 'fade',//淡入效果
+              onSlideChangeStart: function(swiper){
+                that.newsIndex = swiper.activeIndex;
+              }
+            });
+          },50)
+        })
       }
     }
 </script>

@@ -1,5 +1,5 @@
 #aboutUsCase {
-  padding-bottom: 100px; }
+  padding-bottom: 10px; }
   #aboutUsCase .list1 {
     font-size: 14px;
     color: #555555;
@@ -8,11 +8,13 @@
       line-height: 35px;
       text-align: justify; }
   #aboutUsCase .list2 {
-    position: relative; }
+    position: relative;
+    margin-bottom: 50px; }
     #aboutUsCase .list2 .swiper05 {
       width: 100%; }
       #aboutUsCase .list2 .swiper05 .swiper-slide {
-        display: flex; }
+        display: flex;
+        flex-wrap: wrap; }
         #aboutUsCase .list2 .swiper05 .swiper-slide img {
           width: 100%; }
         #aboutUsCase .list2 .swiper05 .swiper-slide .slide1 {
@@ -68,11 +70,11 @@
           transform: translateY(0%);
           opacity: 1; }
         #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 {
-          width: 29%;
-          position: relative; }
-          #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 > div {
-            height: 50%; }
+          width: 376px;
+          position: relative;
+          margin-bottom: 10px; }
           #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .img01 {
+            overflow: hidden;
             position: relative;
             display: flex;
             justify-content: center;
@@ -101,7 +103,8 @@
             -moz-transition: all 0.5s;
             -ms-transition: all 0.5s;
             -o-transition: all 0.5s;
-            transition: all 0.5s; }
+            transition: all 0.5s;
+            height: 270px; }
             #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01 .time {
               position: absolute;
               bottom: 0;

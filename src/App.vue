@@ -69,7 +69,7 @@ export default {
         {text:'雅洁资讯',url:'/information',tags:[]},
         {text:'雅洁服务',url:'/service',tags:[{tagsText:'全国门店',url:''},{tagsText:'在线留言',url:''}]},
         {text:'加入雅洁',url:'/invite',tags:[{tagsText:'人才招聘',url:''},{tagsText:'招商加盟',url:'/inviteJoin'}]},
-        {text:'合作商专区',url:'/partner',tags:[{tagsText:'政策文档',url:''},{tagsText:'安装视频',url:''}]},
+        {text:'合作商专区',url:'/partner',tags:[{tagsText:'政策文档',url:'/partner/partnerPolicy'},{tagsText:'安装视频',url:'/partner/partnerInstall'}]},
       ]
     }
   },

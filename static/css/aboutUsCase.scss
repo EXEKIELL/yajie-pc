@@ -1,5 +1,5 @@
 #aboutUsCase{
-  padding-bottom: 100px;
+  padding-bottom: 10px;
   .list1{
     font-size: 14px;
     color: #555555;
@@ -11,10 +11,12 @@
   }
   .list2{
     position: relative;
+    margin-bottom: 50px;
     .swiper05{
       width: 100%;
       .swiper-slide{
         display: flex;
+        flex-wrap: wrap;
         img{
           width: 100%;
         }
@@ -81,12 +83,14 @@
           }
         }
         .slide2{
-          width: 29%;
+          width: 376px;
           position: relative;
+          margin-bottom: 10px;
           >div{
-            height: 50%;
+
           }
           .img01{
+            overflow: hidden;
             position: relative;
             display: flex;
             justify-content: center;
@@ -118,6 +122,7 @@
             -ms-transition: all 0.5s;
             -o-transition: all 0.5s;
             transition: all 0.5s;
+            height: 270px;
             .time{
               position: absolute;
               bottom: 0;

@@ -13,6 +13,44 @@ body{
 #app{
   padding: 1px;
 }
+
+.pagina{
+  width: 100%;
+  .btn-prev,.btn-next{
+    font-size: 14px;
+    color: #666666;
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    padding: 8px 13px;
+    height: 35px;
+    span{
+      line-height: normal;
+    }
+  }
+  .el-pager{
+    li{
+      height: 35px;
+      min-width: 35px;
+      line-height: 35px;
+      background-color: #fff;
+      border: 1px solid #bfbfbf;
+      font-size: 14px;
+      font-weight: normal;
+      color: #666666;
+    }
+    li.active{
+      background-color: #0f7ba1;
+      border: 1px solid #0f7ba1;
+      color: #ffffff;
+    }
+    li.active:hover{
+      color: #ffffff;
+    }
+    li:hover{
+      color: #666666;
+    }
+  }
+}
 .clearfloat:after {display: block;clear: both;content: "";visibility: hidden;height: 0; }
 .clearfloat{zoom: 1;}
 .floatl{float: left}
@@ -335,9 +373,46 @@ body{
     opacity: 1;
     margin-right: 15px;
   }
+  .pagina{
+    text-align: center;
+  }
   .swiper-pagination-bullet-active{
     border: 1px solid #604775;
     background: initial;
+  }
+  .btn-prev,.btn-next{
+    font-size: 14px;
+    color: #666666;
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    padding: 8px 13px;
+    height: 35px;
+    span{
+      line-height: normal;
+    }
+  }
+  .el-pager{
+    li{
+      height: 35px;
+      min-width: 35px;
+      line-height: 35px;
+      background-color: #fff;
+      border: 1px solid #bfbfbf;
+      font-size: 14px;
+      font-weight: normal;
+      color: #666666;
+    }
+    li.active{
+      background-color: #604775;
+      border: 1px solid #0f7ba1;
+      color: #ffffff;
+    }
+    li.active:hover{
+      color: #ffffff;
+    }
+    li:hover{
+      color: #666666;
+    }
   }
 }
 #homePage{

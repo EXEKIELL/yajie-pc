@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../../src/http'
 import router from '../../src/router/index'
 import qs from 'qs'
 
