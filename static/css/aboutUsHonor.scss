@@ -10,7 +10,7 @@
   }
   .swiper06{
     width: 70%;
-    padding: 100px 0;
+    padding: 100px 0 140px;
     position: absolute;
     top: 13%;
     right: 10%;
@@ -42,6 +42,9 @@
     position: relative;
     z-index: 1000;
     opacity: 1;
+    .detailText{
+      opacity: 1;
+    }
   }
   .prev06,.next06{
     width: 52px;
@@ -71,11 +74,30 @@
   }
   .detailText{
     position: absolute;
-    font-size: 14px;
+    width: 100%;
+    font-size: 8px;
+    bottom: -40px;
+    line-height: 22px;
     color: #ffffff;
-    background-color: #333333;
-    padding: 15px 40px;
-    top: 87%;
-    left: 43%
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    -webkit-flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    p{
+      background-color: #333333;
+      padding: 0 10px;
+    }
+    /* padding: 15px 40px; */
+    /* top: 87%; */
+    /* left: 43%; */
   }
 }

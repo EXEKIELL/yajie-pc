@@ -16,7 +16,6 @@
 #informationNews .list2-wrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-bottom: 80px; }
   #informationNews .list2-wrap > div {
     width: 32.5%; }
@@ -29,15 +28,19 @@
     border-bottom: 1px solid #ededed;
     border-top: 1px solid #ededed;
     cursor: pointer;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    margin-right: 15px; }
     #informationNews .list2-wrap .list .listImg {
-      width: 100%; }
+      width: 100%;
+      height: 165px;
+      overflow-y: hidden; }
       #informationNews .list2-wrap .list .listImg img {
         width: 100%; }
     #informationNews .list2-wrap .list .listText {
       padding: 25px 15px; }
       #informationNews .list2-wrap .list .listText .text1 {
         font-size: 18px;
+        height: 48px;
         color: #333333;
         margin-bottom: 20px;
         -webkit-transition: color 0.5s;
@@ -46,7 +49,8 @@
         -o-transition: color 0.5s;
         transition: color 0.5s; }
       #informationNews .list2-wrap .list .listText .text2 {
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        height: 50px; }
         #informationNews .list2-wrap .list .listText .text2 p {
           font-size: 14px;
           color: #888888;
@@ -87,6 +91,8 @@
         #informationNews .list2-wrap .list .listText .text3 .date > span:first-child {
           font-size: 24px;
           color: #333333; }
+  #informationNews .list2-wrap .list:nth-child(3n) {
+    margin-right: 0; }
   #informationNews .list2-wrap .list:hover {
     -webkit-box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
     -moz-box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);

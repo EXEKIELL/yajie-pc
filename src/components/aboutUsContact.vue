@@ -55,6 +55,12 @@
 <script>
     export default {
         name: "aboutUsContact",
+        data(){
+          return{
+            map:'',
+            marker:''
+          }
+        },
         mounted:function () {
           var link = document.createElement('link')
           link.rel = 'stylesheet'
@@ -72,30 +78,30 @@
           script3.type = 'text/javascript'
           script3.src = 'http://cache.amap.com/lbs/static/addToolbar.js'   // 高德地图
           document.body.appendChild(script3);
-
+          var _this = this;
           setTimeout(function () {
-            var map = new AMap.Map('companyMap', {
+            _this.map = new AMap.Map('companyMap', {
               resizeEnable: true,
               zoom:19,
               center: [113.049546,23.128268]
             });
-            var marker = new AMap.Marker({
-              position: map.getCenter(),
+            _this.marker = new AMap.Marker({
+              position: _this.map.getCenter(),
               draggable: true,
               cursor: 'move',
             });
             // icon: "../../static/img/addressIcon.png"
-            marker.setMap(map);
+            _this.marker.setMap(_this.map);
             // 设置点标记的动画效果，此处为弹跳效果
-            //marker.setAnimation('AMAP_ANIMATION_BOUNCE');
-            marker.setTitle('点击我，打开地图，雅洁五金欢迎您的到来！');
-            marker.on('click',function(e){
+            _this.marker.setAnimation('AMAP_ANIMATION_BOUNCE');
+            _this.marker.setTitle('点击我，打开地图，雅洁五金欢迎您的到来！');
+            _this.marker.on('click',function(e){
               marker.markOnAMAP({
                 name:'雅洁五金有限公司',
-                position:marker.getPosition()
+                position:_this.marker.getPosition()
               })
             })
-          },500);
+          },1000);
         }
     }
 </script>

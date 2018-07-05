@@ -12,19 +12,13 @@
 <script>
     export default {
       name: "invite",
+      data(){
+        return{
+          swiperInvite:''
+        }
+      },
       mounted(){
-        // swiper轮播初始化
-        var swiperInvite = new Swiper('.swiper-invite',{
-          // effect: 'fade',
-          prevButton:'.prevInvite',
-          nextButton:'.nextInvite',
-        });
-        var swiperInvite01 = new Swiper('.swiper-invite01',{
-          pagination : '.pagin01',
-          slidesPerView: 5,
-          paginationClickable: true,
-          spaceBetween: 10
-        })
+
       }
     }
 </script>
