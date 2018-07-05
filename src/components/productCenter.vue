@@ -13,21 +13,30 @@
       <div class="l2-2">
         <div class="swiper-container swiper02">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" :class="{sel:index == 0}" v-for="(item,index) in iconDetail" :key="index" @click="select(index)">
-              <router-link :to="'/productCenter/ProductList'+item.id">
-                <div class="slide1" :class="{default:item.path == ''}">
-                  <img :src="item.path" alt="">
-                </div>
-                <div class="slide2">
-                  <span>{{item.name}}</span>
-                </div>
-              </router-link>
+            <div class="swiper-slide" v-for="(item,index) in iconDetail" :key="index" @click="select(index)">
+              <div>
+                <router-link :to="{path:'/productCenter/ProductList',query:{item:item}}">
+                  <div class="slide1" :class="{default:item.path == ''}">
+                    <img :src="item.path" alt="">
+                  </div>
+                  <div class="slide2">
+                    <span>{{item.name}}</span>
+                  </div>
+                </router-link>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive">
+        <!-- 这里是会被缓存的视图组件，比如 page1,page2 -->
+      </router-view>
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive">
+      <!-- 这里是不被缓存的视图组件，比如 page3 -->
+    </router-view>
   </div>
 </template>
 
@@ -51,10 +60,22 @@
           const that = this;
           this.idx = i;
           console.log(id);
+          let defaultId = id;
           // 获取默认二级标签
           that.$api.axiosGet('/index/product/getCates/pid/'+id,{},function (data) {
             console.log(data);
             that.iconDetail = data.data.cates.all;
+            $('.l2-2 .swiper-slide').removeClass('sel');
+            $('.l2-2 .swiper-slide').eq(0).addClass('sel');
+            setTimeout(function () {
+              that.swiper02.slideTo(0);
+            },50)
+            that.$router.push({
+              name: 'ProductInfo',
+              query:{
+                id:defaultId
+              }
+            });
           })
         },
         select(i){
@@ -63,15 +84,7 @@
         }
       },
       updated(){
-        // 初始化
         const that = this;
-        that.swiper02 = null;
-        setTimeout(function () {
-          that.swiper02 = new Swiper('.swiper02',{
-            slidesPerView: 8,
-            spaceBetween: 10
-          })
-        },50)
       },
       mounted(){
         const that = this;
@@ -79,18 +92,31 @@
         this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
           console.log(data);
           that.navBtn = data.data.cates;
+          let defaultId = data.data.cates[0].id;
+          that.$router.push({
+            name: 'ProductInfo',
+            query:{
+              id:defaultId
+            }
+          });
           // 获取默认二级标签
           that.$api.axiosGet('/index/product/getCates/pid/'+data.data.cates[0].id,{},function (data) {
             console.log(data);
             that.iconDetail = data.data.cates.all;
-            console.log(that.iconDetail);
             //初始化
             setTimeout(function () {
               that.swiper02 = new Swiper('.swiper02',{
                 slidesPerView: 8,
-                spaceBetween: 10
+                spaceBetween: 10,
+                observer:true,
+                observeParents:false,//修改swiper的父元素时，自动初始化swiper
+                onSlideChangeEnd: function(swiper){
+                  swiper.update();
+                  // that.swiper02.startAutoplay();
+                  // that.swiper02.reLoop();
+                }
               })
-            },50)
+            },50);
           })
         })
       }

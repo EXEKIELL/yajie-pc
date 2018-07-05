@@ -67,7 +67,7 @@ export default {
         {text:'关于雅洁',url:'/aboutUs',tags:[{tagsText:'企业简介',url:'/aboutUs/aboutUsIntro'},{tagsText:'发展历程',url:'/aboutUs/aboutUsCourse'},{tagsText:'品牌荣誉',url:'/aboutUs/aboutUsHonor'},{tagsText:'工程案例',url:'/aboutUs/aboutUsCase'},{tagsText:'联系我们',url:'/aboutUs/aboutUsContact'}]},
         {text:'产品中心',url:'/productCenter',tags:[]},
         {text:'雅洁资讯',url:'/information',tags:[]},
-        {text:'雅洁服务',url:'/service',tags:[{tagsText:'全国门店',url:''},{tagsText:'在线留言',url:''}]},
+        {text:'雅洁服务',url:'/service',tags:[{tagsText:'全国门店',url:'/service/serviceShop'},{tagsText:'在线留言',url:'/service/serviceMessage'}]},
         {text:'加入雅洁',url:'/invite',tags:[{tagsText:'人才招聘',url:''},{tagsText:'招商加盟',url:'/inviteJoin'}]},
         {text:'合作商专区',url:'/partner',tags:[{tagsText:'政策文档',url:'/partner/partnerPolicy'},{tagsText:'安装视频',url:'/partner/partnerInstall'}]},
       ]
@@ -79,7 +79,7 @@ export default {
       $('.nav-btn>li').removeClass('sel');
       $(this).parent('li').addClass('sel')
     });
-
+    console.log(this.$router)
   }
 }
 </script>

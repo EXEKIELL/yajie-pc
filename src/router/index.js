@@ -76,7 +76,10 @@ export default new Router({
         {
           path: '/productCenter/productInfo',
           name: 'ProductInfo',
-          component: ProductInfo
+          component: ProductInfo,
+          meta:{
+            keepAlive:true
+          }
         },
         {
           path: '/productCenter/ProductList',

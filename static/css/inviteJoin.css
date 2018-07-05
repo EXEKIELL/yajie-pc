@@ -27,8 +27,83 @@
         #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 {
           width: 800px;
           margin: auto; }
-          #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 img {
-            width: 100%; }
+          #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 {
+            text-align: center; }
+            #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 {
+              position: relative;
+              padding: 40px 0; }
+              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .s12Img {
+                width: 200px;
+                height: 140px;
+                margin: auto;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 35px; }
+                #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .s12Img img {
+                  width: 100%; }
+              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .s12Img::after {
+                content: '';
+                position: absolute;
+                width: 200px;
+                height: 140px;
+                border: 1px solid #444444;
+                -webkit-transform: translate(-12%, -15%);
+                -moz-transform: translate(-12%, -15%);
+                -ms-transform: translate(-12%, -15%);
+                -o-transform: translate(-12%, -15%);
+                transform: translate(-12%, -15%); }
+              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .page12 {
+                position: absolute;
+                width: 45px;
+                height: 35px;
+                left: 27%; }
+                #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .page12 .currentPage {
+                  font-size: 18px;
+                  color: #ede8e3;
+                  text-align: left; }
+                #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .page12 .xian {
+                  width: 50px;
+                  height: 1px;
+                  background-color: #555555;
+                  -webkit-transform: rotateZ(-45deg);
+                  -moz-transform: rotateZ(-45deg);
+                  -ms-transform: rotateZ(-45deg);
+                  -o-transform: rotateZ(-45deg);
+                  transform: rotateZ(-45deg); }
+                #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .page12 .totalPage {
+                  font-size: 14px;
+                  color: #555555;
+                  text-align: right; }
+              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .s12Title .enTitle {
+                font-size: 16px;
+                color: #444444;
+                margin-bottom: 8px; }
+              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .s12Title .cnTitle {
+                font-size: 18px;
+                color: #ede8e3; }
+            #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-2 {
+              padding: 55px 50px;
+              font-size: 14px;
+              color: #999999;
+              background-color: #373535;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              position: relative; }
+              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-2 p {
+                text-align: center;
+                line-height: 30px; }
+            #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-2::after {
+              content: '';
+              display: block;
+              position: absolute;
+              width: 2px;
+              height: 50px;
+              background-color: #604775;
+              left: 50%;
+              top: -25px; }
         #inviteJoin .list2 .swiper11 .slide11 > div .prev12, #inviteJoin .list2 .swiper11 .slide11 > div .next12 {
           width: 52px;
           height: 50px; }
@@ -133,9 +208,12 @@
       width: 15%;
       height: 430px;
       position: relative; }
+      #inviteJoin .list3 .l3-swiper .swiperRight .swiper17 {
+        width: 100%;
+        height: 100%; }
       #inviteJoin .list3 .l3-swiper .swiperRight .r1 {
         width: 100%;
-        height: 33.3%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -154,11 +232,12 @@
         #inviteJoin .list3 .l3-swiper .swiperRight .r1 > div {
           width: 55%; }
           #inviteJoin .list3 .l3-swiper .swiperRight .r1 > div .r1-title {
-            font-size: 18px;
+            font-size: 14px;
             color: #ffffff;
             font-weight: bold;
             margin-bottom: 10px; }
           #inviteJoin .list3 .l3-swiper .swiperRight .r1 > div .r1-title2 {
+            font-size: 8px;
             color: rgba(255, 255, 255, 0.5); }
       #inviteJoin .list3 .l3-swiper .swiperRight .r1:first-child {
         border-top: 1px solid #647bbb; }
@@ -198,29 +277,29 @@
         background: url("../img/bottom01.png") no-repeat center #5b73b6;
         background-size: 20% auto;
         opacity: 1; }
-#inviteJoin .list4 {
+#inviteJoin .wrap .list4 {
   width: 100%;
   height: 700px;
   padding: 50px 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  #inviteJoin .list4 .l4-wrap {
+  #inviteJoin .wrap .list4 .l4-wrap {
     width: 1200px;
     margin: auto; }
-    #inviteJoin .list4 .l4-wrap .l4-title {
+    #inviteJoin .wrap .list4 .l4-wrap .l4-title {
       margin-bottom: 60px; }
-      #inviteJoin .list4 .l4-wrap .l4-title img {
+      #inviteJoin .wrap .list4 .l4-wrap .l4-title img {
         width: 100%; }
-    #inviteJoin .list4 .l4-wrap .l4-swiper {
+    #inviteJoin .wrap .list4 .l4-wrap .l4-swiper {
       width: 100%;
       position: relative; }
-      #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 {
+      #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         padding: 20px 10px; }
-        #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 {
+        #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 {
           -webkit-transition: all 0.5s;
           -moz-transition: all 0.5s;
           -ms-transition: all 0.5s;
@@ -229,11 +308,11 @@
           -webkit-box-shadow: 0 0 10px rgba(51, 51, 51, 0.1);
           -moz-box-shadow: 0 0 10px rgba(51, 51, 51, 0.1);
           box-shadow: 0 0 10px rgba(51, 51, 51, 0.1); }
-          #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-1 {
+          #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-1 {
             position: relative; }
-            #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-1 img {
+            #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-1 img {
               width: 100%; }
-            #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-1 .imgDetail {
+            #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-1 .imgDetail {
               position: absolute;
               width: 100%;
               height: 100%;
@@ -256,16 +335,16 @@
               transition: all 0.5s;
               z-index: -1;
               opacity: 0; }
-              #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-1 .imgDetail p {
+              #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-1 .imgDetail p {
                 line-height: 30px;
                 text-align: justify; }
-          #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 {
+          #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 35px 0;
             position: relative; }
-            #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .cirImg {
+            #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .cirImg {
               position: absolute;
               width: 70px;
               height: 70px;
@@ -277,14 +356,14 @@
               transition: all 0.5s;
               z-index: -1;
               opacity: 0; }
-              #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .cirImg > div {
+              #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .cirImg > div {
                 -webkit-border-radius: 50%;
                 -moz-border-radius: 50%;
                 border-radius: 50%;
                 overflow: hidden; }
-              #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .cirImg img {
+              #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .cirImg img {
                 width: 100%; }
-            #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .cirImg::after {
+            #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .cirImg::after {
               -webkit-transition: all 0.5s;
               -moz-transition: all 0.5s;
               -ms-transition: all 0.5s;
@@ -301,58 +380,58 @@
               -webkit-border-radius: 20px;
               -moz-border-radius: 20px;
               border-radius: 20px; }
-            #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .sl4-wrap {
+            #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .sl4-wrap {
               -webkit-transition: all 0.5s;
               -moz-transition: all 0.5s;
               -ms-transition: all 0.5s;
               -o-transition: all 0.5s;
               transition: all 0.5s;
               text-align: center; }
-              #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .sl4-wrap .s4-info1 {
+              #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .sl4-wrap .s4-info1 {
                 font-size: 16px;
                 color: #333333;
                 margin-bottom: 15px; }
-              #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .sl4-wrap .s4-info2 {
+              #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14 .slide14-2 .sl4-wrap .s4-info2 {
                 font-size: 12px;
                 color: #c8c8c8; }
-        #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14:hover {
+        #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14:hover {
           box-shadow: none; }
-          #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14:hover .slide14-1 .imgDetail {
+          #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14:hover .slide14-1 .imgDetail {
             z-index: 100;
             opacity: 1; }
-          #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14:hover .slide14-2 .cirImg {
+          #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14:hover .slide14-2 .cirImg {
             opacity: 1;
             z-index: 100; }
-          #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14:hover .slide14-2 .cirImg::after {
+          #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14:hover .slide14-2 .cirImg::after {
             height: 40px; }
-          #inviteJoin .list4 .l4-wrap .l4-swiper .swiper14 .slide14:hover .slide14-2 .sl4-wrap {
+          #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .swiper14 .slide14:hover .slide14-2 .sl4-wrap {
             -webkit-transform: translateY(55%);
             -moz-transform: translateY(55%);
             -ms-transform: translateY(55%);
             -o-transform: translateY(55%);
             transform: translateY(55%); }
-      #inviteJoin .list4 .l4-wrap .l4-swiper .prev14, #inviteJoin .list4 .l4-wrap .l4-swiper .next14 {
+      #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .prev14, #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .next14 {
         width: 52px;
         height: 50px; }
-      #inviteJoin .list4 .l4-wrap .l4-swiper .prev14 {
+      #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .prev14 {
         top: 50%;
         left: -50px;
         background: url("../img/iconLeft01_use.png") no-repeat center #604775;
         background-size: 20% auto; }
-      #inviteJoin .list4 .l4-wrap .l4-swiper .prev14.swiper-button-disabled {
+      #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .prev14.swiper-button-disabled {
         opacity: 1;
         background: url("../img/iconLeft01.png") no-repeat center #f6f6f6;
         background-size: 20% auto; }
-      #inviteJoin .list4 .l4-wrap .l4-swiper .next14 {
+      #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .next14 {
         top: 50%;
         right: -50px;
         background: url("../img/iconRight01_use.png") no-repeat center #604775;
         background-size: 20% auto; }
-      #inviteJoin .list4 .l4-wrap .l4-swiper .next14.swiper-button-disabled {
+      #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .next14.swiper-button-disabled {
         opacity: 1;
         background: url("../img/iconRight01.png") no-repeat center #f6f6f6;
         background-size: 20% auto; }
-#inviteJoin .list5 {
+#inviteJoin .wrap .list5 {
   width: 100%;
   height: 710px;
   background: url("../img/bj13.png") no-repeat center;
@@ -361,28 +440,26 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 40px 0; }
-  #inviteJoin .list5 .l5-wrap {
+  #inviteJoin .wrap .list5 .l5-wrap {
     width: 1200px;
     margin: auto; }
-    #inviteJoin .list5 .l5-wrap .l5-title {
+    #inviteJoin .wrap .list5 .l5-wrap .l5-title {
       width: 100%;
       margin-bottom: 60px; }
-      #inviteJoin .list5 .l5-wrap .l5-title img {
+      #inviteJoin .wrap .list5 .l5-wrap .l5-title img {
         width: 90%;
         margin: auto; }
-    #inviteJoin .list5 .l5-wrap .l5-slide {
+    #inviteJoin .wrap .list5 .l5-wrap .l5-slide {
       display: flex;
       flex-wrap: wrap; }
-      #inviteJoin .list5 .l5-wrap .l5-slide > div {
+      #inviteJoin .wrap .list5 .l5-wrap .l5-slide > div {
         width: 16%; }
-      #inviteJoin .list5 .l5-wrap .l5-slide .slideList {
+      #inviteJoin .wrap .list5 .l5-wrap .l5-slide .slideList {
         display: flex;
-        justify-content: center;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 30px;
-        cursor: pointer; }
-        #inviteJoin .list5 .l5-wrap .l5-slide .slideList .sl1 {
+        margin-bottom: 30px; }
+        #inviteJoin .wrap .list5 .l5-wrap .l5-slide .slideList .sl1 {
           width: 85px;
           height: 85px;
           -webkit-border-radius: 50%;
@@ -391,7 +468,7 @@
           overflow: hidden;
           position: relative;
           z-index: 200; }
-          #inviteJoin .list5 .l5-wrap .l5-slide .slideList .sl1 .l-default {
+          #inviteJoin .wrap .list5 .l5-wrap .l5-slide .slideList .sl1 .l-default {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -402,7 +479,7 @@
             line-height: 85px;
             color: #ffffff;
             background-color: #c8c8c8; }
-        #inviteJoin .list5 .l5-wrap .l5-slide .slideList .sl2 {
+        #inviteJoin .wrap .list5 .l5-wrap .l5-slide .slideList .sl2 {
           -webkit-transform: translateY(-30%);
           -moz-transform: translateY(-30%);
           -ms-transform: translateY(-30%);
@@ -414,17 +491,17 @@
           -o-transition: all 0.5s;
           transition: all 0.5s;
           text-align: center; }
-          #inviteJoin .list5 .l5-wrap .l5-slide .slideList .sl2 > img {
+          #inviteJoin .wrap .list5 .l5-wrap .l5-slide .slideList .sl2 > img {
             width: 20%;
             margin: auto; }
-          #inviteJoin .list5 .l5-wrap .l5-slide .slideList .sl2 .sl2-1 {
+          #inviteJoin .wrap .list5 .l5-wrap .l5-slide .slideList .sl2 .sl2-1 {
             font-size: 20px;
             color: #888888;
             margin-bottom: 7px; }
-          #inviteJoin .list5 .l5-wrap .l5-slide .slideList .sl2 .sl2-2 {
+          #inviteJoin .wrap .list5 .l5-wrap .l5-slide .slideList .sl2 .sl2-2 {
             font-size: 12px;
             color: #999999; }
-      #inviteJoin .list5 .l5-wrap .l5-slide .slideList:hover .sl2 {
+      #inviteJoin .wrap .list5 .l5-wrap .l5-slide .slideList:hover .sl2 {
         -webkit-transform: translateY(0%);
         -moz-transform: translateY(0%);
         -ms-transform: translateY(0%);
@@ -491,5 +568,35 @@
           background-color: transparent; }
         #inviteJoin .list6 .l6-wrap .detail > div .label {
           margin-right: 50px; }
+#inviteJoin .wrapButton {
+  position: fixed;
+  right: 12px;
+  width: 100px;
+  background-color: #fff;
+  top: 50%;
+  margin-top: -75px;
+  z-index: 1000; }
+  #inviteJoin .wrapButton ul {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4; }
+    #inviteJoin .wrapButton ul li {
+      text-align: center;
+      font-size: 14px;
+      color: #604775;
+      border-bottom: 1px solid #e4e4e4;
+      line-height: 50px;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      cursor: pointer; }
+    #inviteJoin .wrapButton ul li:first-child {
+      border-top: 1px solid #e4e4e4; }
+    #inviteJoin .wrapButton ul li:hover {
+      background-color: #604775;
+      color: #f2f2f2; }
 
 /*# sourceMappingURL=inviteJoin.css.map */

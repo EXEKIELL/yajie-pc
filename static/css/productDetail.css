@@ -11,7 +11,10 @@
     width: 1200px;
     margin: auto;
     padding-top: 30px; }
-    #productDetail .list2 .l2-wrap img {
-      margin: auto; }
+    #productDetail .list2 .l2-wrap p {
+      width: 100%; }
+      #productDetail .list2 .l2-wrap p img {
+        margin: auto;
+        width: 100%; }
 
 /*# sourceMappingURL=productDetail.css.map */

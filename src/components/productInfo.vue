@@ -2,132 +2,144 @@
     <div id="productInfo">
       <div class="list3">
         <div class="l3-title">
-          <span>门锁</span>
+          <span>{{title01}}</span>
         </div>
-        <div class="l3-cont clearfloat">
-          <div class="cont-1 floatl">
-            <div class="listCont">
+        <div class="l3-cont clearfloat" v-if="listData.data">
+          <!--<div class="cont-1 floatl">-->
+            <!--<div class="listCont">-->
+              <!--<div class="lc1">-->
+                <!--<div>-->
+                  <!--<img src="../../static/img/product01_big.png" alt="">-->
+                <!--</div>-->
+                <!--<button class="search"></button>-->
+              <!--</div>-->
+              <!--<div class="lc2">-->
+                <!--<div>-->
+                  <!--<div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>-->
+                  <!--<div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>-->
+                  <!--<div class="lc2-3">-->
+                    <!--<button @click="moreBtn">MORE</button>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <div class="cont-2 floatl" v-if="listData.data.length !=0">
+            <div class="listCont" v-for="(item,index) in listData.data" :key="index">
               <div class="lc1">
-                <div>
-                  <img src="../../static/img/product01_big.png" alt="">
+                <div class="imgWrap">
+                  <img :src="$baseLink+item.pic" alt="">
                 </div>
-                <button class="search"></button>
+                <div class="hoverWrap">
+                  <button class="search" @click="navTo(item.id)"></button>
+                </div>
               </div>
               <div class="lc2">
                 <div>
-                  <div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>
-                  <div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>
+                  <div class="lc2-1">{{item.name}}</div>
+                  <div class="lc2-2 textEllipsis">{{item.desc}}</div>
                   <div class="lc2-3">
-                    <button @click="moreBtn">MORE</button>
+                    <button>MORE</button>
                   </div>
                 </div>
               </div>
             </div>
+            <!--<div class="listCont">-->
+              <!--<div class="lc1">-->
+                <!--<div>-->
+                  <!--<img src="../../static/img/product03.png" alt="">-->
+                <!--</div>-->
+                <!--<button class="search"></button>-->
+              <!--</div>-->
+              <!--<div class="lc2">-->
+                <!--<div>-->
+                  <!--<div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>-->
+                  <!--<div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>-->
+                  <!--<div class="lc2-3">-->
+                    <!--<button>MORE</button>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="listCont">-->
+              <!--<div class="lc1">-->
+                <!--<div>-->
+                  <!--<img src="../../static/img/product03.png" alt="">-->
+                <!--</div>-->
+                <!--<button class="search"></button>-->
+              <!--</div>-->
+              <!--<div class="lc2">-->
+                <!--<div>-->
+                  <!--<div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>-->
+                  <!--<div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>-->
+                  <!--<div class="lc2-3">-->
+                    <!--<button>MORE</button>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="listCont">-->
+              <!--<div class="lc1">-->
+                <!--<div>-->
+                  <!--<img src="../../static/img/product03.png" alt="">-->
+                <!--</div>-->
+                <!--<button class="search"></button>-->
+              <!--</div>-->
+              <!--<div class="lc2">-->
+                <!--<div>-->
+                  <!--<div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>-->
+                  <!--<div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>-->
+                  <!--<div class="lc2-3">-->
+                    <!--<button>MORE</button>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
           </div>
-          <div class="cont-2 floatr">
-            <div class="listCont">
-              <div class="lc1">
-                <div>
-                  <img src="../../static/img/product02.png" alt="">
-                </div>
-                <button class="search"></button>
-              </div>
-              <div class="lc2">
-                <div>
-                  <div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>
-                  <div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>
-                  <div class="lc2-3">
-                    <button>MORE</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="listCont listContSmall">
-              <div class="lc1">
-                <div>
-                  <img src="../../static/img/product03.png" alt="">
-                </div>
-                <button class="search"></button>
-              </div>
-              <div class="lc2">
-                <div>
-                  <div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>
-                  <div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>
-                  <div class="lc2-3">
-                    <button>MORE</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="noneList" v-else style="padding: 55px 0;">
+            <span>暂无产品推荐~</span>
           </div>
+          <!--<div class="cont-2 floatr">-->
+            <!--<div class="listCont">-->
+              <!--<div class="lc1">-->
+                <!--<div>-->
+                  <!--<img src="../../static/img/product02.png" alt="">-->
+                <!--</div>-->
+                <!--<button class="search"></button>-->
+              <!--</div>-->
+              <!--<div class="lc2">-->
+                <!--<div>-->
+                  <!--<div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>-->
+                  <!--<div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>-->
+                  <!--<div class="lc2-3">-->
+                    <!--<button>MORE</button>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="listCont listContSmall">-->
+              <!--<div class="lc1">-->
+                <!--<div>-->
+                  <!--<img src="../../static/img/product03.png" alt="">-->
+                <!--</div>-->
+                <!--<button class="search"></button>-->
+              <!--</div>-->
+              <!--<div class="lc2">-->
+                <!--<div>-->
+                  <!--<div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>-->
+                  <!--<div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>-->
+                  <!--<div class="lc2-3">-->
+                    <!--<button>MORE</button>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
         </div>
-        <div class="l3-button">
-          <button>MORE</button>
-        </div>
-      </div>
-      <div class="list3">
-        <div class="l3-title">
-          <span>门锁</span>
-        </div>
-        <div class="l3-cont clearfloat">
-          <div class="cont-1 floatr">
-            <div class="listCont big">
-              <div class="lc1">
-                <div>
-                  <img src="../../static/img/product01_big.png" alt="">
-                </div>
-                <button class="search"></button>
-              </div>
-              <div class="lc2">
-                <div>
-                  <div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>
-                  <div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>
-                  <div class="lc2-3">
-                    <button>MORE</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div v-if="listData.data">
+          <div class="l3-button" v-if="listData.data.length !=0">
+            <button>MORE</button>
           </div>
-          <div class="cont-2 floatl">
-            <div class="listCont">
-              <div class="lc1">
-                <div>
-                  <img src="../../static/img/product02.png" alt="">
-                </div>
-                <button class="search"></button>
-              </div>
-              <div class="lc2">
-                <div>
-                  <div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>
-                  <div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>
-                  <div class="lc2-3">
-                    <button>MORE</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="listCont listContSmall">
-              <div class="lc1">
-                <div>
-                  <img src="../../static/img/product03.png" alt="">
-                </div>
-                <button class="search"></button>
-              </div>
-              <div class="lc2">
-                <div>
-                  <div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>
-                  <div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>
-                  <div class="lc2-3">
-                    <button>MORE</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="l3-button">
-          <button>MORE</button>
         </div>
       </div>
     </div>
@@ -138,17 +150,55 @@
       name: "productInfo",
       data(){
         return {
-          tag01:[]//顶级标签
+          tag01:[],//顶级标签
+          listData:{},
+          title01:'',//标题
+          id:40
         }
       },
       methods:{
         moreBtn(){
           this.$router.push('/productDetail');
+        },
+        navTo(i){
+          console.log(i);
+          this.$router.push({path:'/productDetail',query:{id:i}});
+        }
+      },
+      watch:{
+        '$route': function (to, from) {
+          const that = this;
+          var id = to.query.id;
+          if(id == 40){
+            this.title01 = '传统五金'
+          }else if(id == 41){
+            this.title01 = '智能家居'
+          }else if(id == 42){
+            this.title01 = '智能安防'
+          }
+          this.id = id;
+          // 获取
+          this.$api.axiosGet('/index/product/getProductList/type/limit3/id/'+id,{},function (data) {
+            console.log(data);
+            that.listData = data.data.list;
+          })
         }
       },
       mounted(){
         const that = this;
-
+        var id = this.$router.history.current.query.id;
+        if(id == 40){
+          this.title01 = '传统五金'
+        }else if(id == 41){
+          this.title01 = '智能家居'
+        }else if(id == 42){
+          this.title01 = '智能安防'
+        }
+        // 获取
+        this.$api.axiosGet('/index/product/getProductList/type/limit3/id/'+that.id,{},function (data) {
+          console.log(data);
+          that.listData = data.data.list;
+        })
       }
     }
 </script>
