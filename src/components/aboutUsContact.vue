@@ -1,25 +1,27 @@
 <template>
   <div id="aboutUsContact">
     <div class="list1">
-      <div class="l1-map"></div>
+      <div class="l1-map" id="companyMap">
+
+      </div>
       <div class="l1-info">
         <div>
           <div class="info-1">
             <ul>
-              <li><span class="s1">地址：</span><span>中国广东省佛山市南海区狮山长虹岭工业园长岗北路</span></li>
-              <li><span class="s1">邮编：</span><span>528231</span></li>
-              <li><span class="s1">电话：</span><span>86-757-85523938 85555238 </span></li>
-              <li><span class="s1">传真：</span><span>86-757-85566268</span></li>
+              <li><span class="s1">客服热线：</span><span>4008 831 831</span></li>
+              <li><span class="s1">公司邮箱：</span><span>corp@archie.com.cn</span></li>
+              <li><span class="s1">官方网站：</span><span>www.archie.cm.cn</span></li>
+              <li><span class="s1">公司地址：</span><span>广东省佛山市南海区狮山长虹岭工业园长岗北路</span></li>
             </ul>
           </div>
-          <div class="info-2">
-            <ul>
-              <li>网址： http://www.archie.com.cn</li>
-              <li>Email： (把#改为@)</li>
-              <li>客户服务：services#archie.com.cn</li>
-              <li>公司邮箱：corp#archie.com.cn</li>
-            </ul>
-          </div>
+          <!--<div class="info-2">-->
+            <!--<ul>-->
+              <!--<li>网址： http://www.archie.com.cn</li>-->
+              <!--<li>Email： (把#改为@)</li>-->
+              <!--<li>客户服务：services#archie.com.cn</li>-->
+              <!--<li>公司邮箱：corp#archie.com.cn</li>-->
+            <!--</ul>-->
+          <!--</div>-->
         </div>
       </div>
     </div>
@@ -52,7 +54,49 @@
 
 <script>
     export default {
-        name: "aboutUsContact"
+        name: "aboutUsContact",
+        mounted:function () {
+          var link = document.createElement('link')
+          link.rel = 'stylesheet'
+          link.href = 'http://cache.amap.com/lbs/static/main1119.css'   // 高德地图
+          document.body.appendChild(link);
+          var script1 = document.createElement('script')
+          script1.type = 'text/javascript'
+          script1.src = 'http://cache.amap.com/lbs/static/es5.min.js'   // 高德地图
+          document.body.appendChild(script1);
+          var script2 = document.createElement('script')
+          script2.type = 'text/javascript'
+          script2.src = 'http://webapi.amap.com/maps?v=1.3&key=5433dcc2bc76f4bfae5b9b20179efac5'   // 高德地图
+          document.body.appendChild(script2);
+          var script3 = document.createElement('script')
+          script3.type = 'text/javascript'
+          script3.src = 'http://cache.amap.com/lbs/static/addToolbar.js'   // 高德地图
+          document.body.appendChild(script3);
+
+          setTimeout(function () {
+            var map = new AMap.Map('companyMap', {
+              resizeEnable: true,
+              zoom:19,
+              center: [113.049546,23.128268]
+            });
+            var marker = new AMap.Marker({
+              position: map.getCenter(),
+              draggable: true,
+              cursor: 'move',
+            });
+            // icon: "../../static/img/addressIcon.png"
+            marker.setMap(map);
+            // 设置点标记的动画效果，此处为弹跳效果
+            //marker.setAnimation('AMAP_ANIMATION_BOUNCE');
+            marker.setTitle('点击我，打开地图，雅洁五金欢迎您的到来！');
+            marker.on('click',function(e){
+              marker.markOnAMAP({
+                name:'雅洁五金有限公司',
+                position:marker.getPosition()
+              })
+            })
+          },500);
+        }
     }
 </script>
 

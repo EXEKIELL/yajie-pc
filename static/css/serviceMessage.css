@@ -46,15 +46,15 @@
             align-items: center;
             margin-bottom: 30px; }
             #serviceMessage .popUp .popUpWrap .wrapList .list-right > div .data-1 > div {
-              width: 40%;
+              width: 48%;
               display: flex;
               align-items: center;
               padding: 20px 0;
               border-bottom: 1px solid #dddddd; }
               #serviceMessage .popUp .popUpWrap .wrapList .list-right > div .data-1 > div .name01 {
-                width: 25%; }
+                width: 20%; }
               #serviceMessage .popUp .popUpWrap .wrapList .list-right > div .data-1 > div input {
-                width: 70%; }
+                width: 78%; }
               #serviceMessage .popUp .popUpWrap .wrapList .list-right > div .data-1 > div .select-1 {
                 display: flex;
                 align-items: center;

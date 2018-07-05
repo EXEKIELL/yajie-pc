@@ -40,13 +40,13 @@
               <div class="img">
                 <img src="../static/img/er1.jpg"/>
               </div>
-              <div>微信二维码</div>
+              <div>微信公众号</div>
             </div>
             <div class="code02 floatl">
               <div class="img">
                 <img src="../static/img/er2.jpg"/>
               </div>
-              <div>微信二维码</div>
+              <div>微信服务号</div>
             </div>
           </div>
         </div>

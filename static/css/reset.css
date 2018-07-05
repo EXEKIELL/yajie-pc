@@ -106,7 +106,6 @@ html,body {
 	font-family: "微软雅黑", "Microsoft YaHei", 'Heiti SC', "宋体", "Segoe UI", "Lucida Grande", Helvetica, Arial, sans-serif, FreeSans, Arimo;
 	outline: 0;
 	-webkit-text-size-adjust: none;
-	font-size: 62.5%
 }
 
 body {
@@ -171,4 +170,7 @@ a:link {
 
 a {
 	display: block;
+}
+body{
+  overflow-x: hidden;
 }
