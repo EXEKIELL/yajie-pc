@@ -6,7 +6,7 @@
       <div class="wrap">
         <div class="nav01">
           <ul>
-            <li v-for="(item,index) in nav01List" :class="{sel:index == 0}" :key="index">
+            <li v-for="(item,index) in nav01List" :class="{sel:index == selStatus2}" :key="index">
               <router-link :to="item.to">{{item.text}}</router-link>
             </li>
           </ul>
@@ -23,6 +23,7 @@
       name: "aboutUs",
       data(){
         return {
+          selStatus2:0,
           nav01List:[
             {text:'企业简介',to:'/aboutUs/aboutUsIntro'},
             {text:'发展历程',to:'/aboutUs/aboutUsCourse'},
@@ -32,11 +33,50 @@
           ]
         }
       },
+      watch:{
+        '$route':function (to, form) {
+          switch (to.path) {
+            case "/aboutUs/aboutUsIntro":
+              this.selStatus2 = 0;
+              break;
+            case "/aboutUs/aboutUsCourse":
+              this.selStatus2 = 1;
+              break;
+            case "/aboutUs/aboutUsHonor":
+              this.selStatus2 = 2;
+              break;
+            case "/aboutUs/aboutUsCase":
+              this.selStatus2 = 3;
+              break;
+            case "/aboutUs/aboutUsContact":
+              this.selStatus2 = 4;
+              break;
+          }
+        }
+      },
       mounted(){
         $('#aboutUs .nav01 li a').on('click',function () {
           $('#aboutUs .nav01 li').removeClass('sel');
           $(this).parent('li').addClass('sel');
         })
+        var to = this.$router.history.current;
+        switch (to.path) {
+          case "/aboutUs/aboutUsIntro":
+            this.selStatus2 = 0;
+            break;
+          case "/aboutUs/aboutUsCourse":
+            this.selStatus2 = 1;
+            break;
+          case "/aboutUs/aboutUsHonor":
+            this.selStatus2 = 2;
+            break;
+          case "/aboutUs/aboutUsCase":
+            this.selStatus2 = 3;
+            break;
+          case "/aboutUs/aboutUsContact":
+            this.selStatus2 = 4;
+            break;
+        }
       }
     }
 </script>

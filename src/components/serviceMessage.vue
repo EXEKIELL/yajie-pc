@@ -4,7 +4,7 @@
       <div class="popUpWrap">
         <div class="wrapList">
           <div class="list-left">
-            <img src="../../static/img/bj10.png" alt="">
+            <img src="../../static/img/message01.png" alt="">
           </div>
           <div class="list-right">
             <div>
@@ -46,7 +46,8 @@
                       <div id="distpicker">
                         <div class="form-group">
                           <div style="position: relative;">
-                            <input id="city-picker3" class="form-control" readonly type="text" placeholder="请选择地区"  data-toggle="city-picker">
+                            <!--<input id="city-picker3" class="form-control" readonly type="text" placeholder="请选择地区"  data-toggle="city-picker">-->
+                            <input type="text" placeholder="请输入地址" v-model="formData.address">
                           </div>
                         </div>
                         <!--<div class="form-group">-->
@@ -100,68 +101,108 @@
             address:'',
             content:'',
             email:''
-          }
+          },
+          $citypicker3:null
         }
       },
+      watch:{
+        '$route':function (to, from) {
+          // console.log(to,from)
+        }
+      },
+      beforeRouteLeave (to, from, next) {
+        // 导航离开该组件的对应路由时调用
+        // 可以访问组件实例 `this`
+        // console.log('2');
+        this.$destroy();
+        // console.log('3')
+        next();
+      },
+      created(){
+        setTimeout(function () {
+          var $citypicker3 = $('#city-picker3');
+        },20)
+      },
       mounted:function () {
+        const that = this;
+        // console.log(1);
+
         'use strict';
-        var $citypicker3 = $('#city-picker3');
+        that.$citypicker3 = $('#city-picker3');
+        // console.log(that.$citypicker3)
+
 
       },
       methods:{
         selInput(e){
-          console.log(e);
+          // console.log(e);
           $('.cir').removeClass('sel');
           $(e.target).parent('.cir').addClass('sel');
         },
         updata(e){
-          console.log(e.target.files);
+          // console.log(e.target.files);
           this.formData.upload = e.target.files[0].name;
-          console.log(this.formData.upload);
+          // console.log(this.formData.upload);
         },
         btn(){
-          var provice = $('.city-picker-span > .title > span').eq(0).text();
-          var city = $('.city-picker-span > .title > span').eq(1).text();
-          var area = $('.city-picker-span > .title > span').eq(2).text();
+          // var provice = $('.city-picker-span > .title > span').eq(0).text();
+          // var city = $('.city-picker-span > .title > span').eq(1).text();
+          // var area = $('.city-picker-span > .title > span').eq(2).text();
           var _this = this;
-          if(provice=='')
-          {
-            _this.$alert('请选择省','温馨提示', {
-                confirmButtonText: '确定',
-                showClose:false
-              }
-            )
-          }else if(city==''){
-            _this.$alert('请选择市','温馨提示', {
-                confirmButtonText: '确定',
-                showClose:false
-              }
-            )
-          }else if(area==''){
-            _this.$alert('请选择区','温馨提示', {
-                confirmButtonText: '确定',
-                showClose:false
-              }
-            )
-          }else{
-            _this.formData.address = provice+' '+city+' '+area;
-            _this.$api.axiosPost('/index/service/postMessage',0,_this.formData,function (data) {
-              if(data.data.status==0)
-              {
-                _this.$alert(data.data.msg,'温馨提示', {
-                    confirmButtonText: '确定',
-                    showClose:false
-                  }
-                )
-              }else{
-                _this.$alert(data.data.msg,'温馨提示', {
-                    confirmButtonText: '确定',
-                    showClose:false
-                  }
-                )
-              }
-            });
-          }
+          // if(provice=='')
+          // {
+          //   _this.$alert('请选择省','温馨提示', {
+          //       confirmButtonText: '确定',
+          //       showClose:false
+          //     }
+          //   )
+          // }else if(city==''){
+          //   _this.$alert('请选择市','温馨提示', {
+          //       confirmButtonText: '确定',
+          //       showClose:false
+          //     }
+          //   )
+          // }else if(area==''){
+          //   _this.$alert('请选择区','温馨提示', {
+          //       confirmButtonText: '确定',
+          //       showClose:false
+          //     }
+          //   )
+          // }else{
+          //   // _this.formData.address = provice+' '+city+' '+area;
+          //   _this.$api.axiosPost('/index/service/postMessage',0,_this.formData,function (data) {
+          //     if(data.data.status==0)
+          //     {
+          //       _this.$alert(data.data.msg,'温馨提示', {
+          //           confirmButtonText: '确定',
+          //           showClose:false
+          //         }
+          //       )
+          //     }else{
+          //       _this.$alert(data.data.msg,'温馨提示', {
+          //           confirmButtonText: '确定',
+          //           showClose:false
+          //         }
+          //       )
+          //     }
+          //   });
+          // }
+          _this.$api.axiosPost('/index/service/postMessage',0,_this.formData,function (data) {
+            if(data.data.status==0)
+            {
+              _this.$alert(data.data.msg,'温馨提示', {
+                  confirmButtonText: '确定',
+                  showClose:false
+                }
+              )
+            }else{
+              _this.$alert(data.data.msg,'温馨提示', {
+                  confirmButtonText: '确定',
+                  showClose:false
+                }
+              )
+            }
+          });
 
         },
       }

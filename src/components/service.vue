@@ -3,7 +3,7 @@
     <div class="wrap">
       <div class="nav01">
         <ul>
-          <li v-for="(item,index) in nav01List" :class="{sel:index == 0}" :key="index">
+          <li v-for="(item,index) in nav01List" :class="{sel:index == selStatus2}" :key="index">
             <router-link :to="item.to">{{item.text}}</router-link>
           </li>
         </ul>
@@ -20,11 +20,24 @@
       name: "service",
       data(){
         return {
+          selStatus2:0,
           nav01List:[
             {text:'全国门店',to:'/service/serviceShop'},
-            {text:'在线咨询',to:'###'},
+            // {text:'在线咨询',to:'###'},
             {text:'在线留言',to:'/service/serviceMessage'},
           ]
+        }
+      },
+      watch:{
+        '$route':function (to, form) {
+          switch (to.path) {
+            case "/service/serviceShop":
+              this.selStatus2 = 0;
+              break;
+            case "/service/serviceMessage":
+              this.selStatus2 = 1;
+              break;
+          }
         }
       },
       mounted(){
@@ -32,6 +45,15 @@
           $('#service .nav01 li').removeClass('sel');
           $(this).parent('li').addClass('sel');
         })
+        var to = this.$router.history.current;
+        switch (to.path) {
+          case "/service/serviceShop":
+            this.selStatus2 = 0;
+            break;
+          case "/service/serviceMessage":
+            this.selStatus2 = 1;
+            break;
+        }
       }
     }
 </script>

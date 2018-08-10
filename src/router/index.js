@@ -31,9 +31,14 @@ import Information from '@/components/information'
 import InformationNews from '@/components/informationNews'
 import InformationDetail from '@/components/informationDetail'
 
+import Black from '@/components/black'
+
 Vue.use(Router)
 
 export default new Router({
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  },
   routes: [
     {
       path: '/',
@@ -42,28 +47,43 @@ export default new Router({
     {
       path: '/homePage',
       name: HomePage,
-      component: HomePage
+      component: HomePage,
+      meta:{
+        keepAlive:false
+      }
     },
     {
       path: '/inviteJoin',
       name: 'InviteJoin',
-      component: InviteJoin
+      component: InviteJoin,
+      meta:{
+        keepAlive:false
+      }
     },
     {
       path: '/invite',
       name: 'Invite',
       component: Invite,
       redirect: '/invite/inviteInfo',
+      meta:{
+        keepAlive:false
+      },
       children:[
         {
           path: '/invite/inviteInfo',
           name: 'InviteInfo',
-          component: InviteInfo
+          component: InviteInfo,
+          meta:{
+            keepAlive:false
+          }
         },
         {
           path: '/invite/inviteDetail',
           name: 'InviteDetail',
-          component: InviteDetail
+          component: InviteDetail,
+          meta:{
+            keepAlive:false
+          }
         }
       ]
     },
@@ -72,6 +92,9 @@ export default new Router({
       name: 'ProductCenter',
       component: ProductCenter,
       redirect: '/productCenter/productInfo',
+      meta:{
+        keepAlive:false
+      },
       children:[
         {
           path: '/productCenter/productInfo',
@@ -84,45 +107,69 @@ export default new Router({
         {
           path: '/productCenter/ProductList',
           name: 'ProductList',
-          component: ProductList
+          component: ProductList,
+          meta:{
+            keepAlive:false
+          }
         }
       ]
     },
     {
       path: '/productDetail',
       name: 'ProductDetail',
-      component: ProductDetail
+      component: ProductDetail,
+      meta:{
+        keepAlive:false
+      }
     },
     {
       path: '/aboutUs',
       name: 'AboutUs',
       component: AboutUs,
       redirect: '/aboutUs/aboutUsIntro',
+      meta:{
+        keepAlive:false
+      },
       children:[
         {
           path: '/aboutUs/aboutUsIntro',
           name: 'aboutUsIntro',
-          component: AboutUsIntro
+          component: AboutUsIntro,
+          meta:{
+            keepAlive:false
+          }
         },
         {
           path:'/aboutUs/aboutUsCourse',
           name: 'AboutUsCourse',
-          component: AboutUsCourse
+          component: AboutUsCourse,
+          meta:{
+            keepAlive:false
+          }
         },
         {
           path: '/aboutUs/aboutUsHonor',
           name: 'AboutUsHonor',
-          component: AboutUsHonor
+          component: AboutUsHonor,
+          meta:{
+            keepAlive:false
+          }
         },
         {
           path: '/aboutUs/aboutUsCase',
           name: 'AboutUsCase',
-          component: AboutUsCase
+          component: AboutUsCase,
+          meta:{
+            keepAlive:false
+          }
         },
         {
           path: '/aboutUs/aboutUsContact',
           name: 'AboutUsContact',
-          component: AboutUsContact
+          component: AboutUsContact,
+          meta:{
+            keepAlive:false
+          }
         }
       ]
     },
@@ -131,16 +178,25 @@ export default new Router({
       name: 'Service',
       component: Service,
       redirect: '/service/serviceShop',
+      meta:{
+        keepAlive:false
+      },
       children:[
         {
           path: '/service/serviceShop',
           name: 'ServiceShop',
-          component: ServiceShop
+          component: ServiceShop,
+          meta:{
+            keepAlive:false
+          }
         },
         {
           path: '/service/serviceMessage',
           name: 'ServiceMessage',
-          component: ServiceMessage
+          component: ServiceMessage,
+          meta:{
+            keepAlive:false
+          }
         }
       ]
     },
@@ -149,16 +205,25 @@ export default new Router({
       name: 'Partner',
       component: Partner,
       redirect: '/partner/partnerPolicy',
+      meta:{
+        keepAlive:false
+      },
       children:[
         {
           path: '/partner/partnerPolicy',
           name: 'partnerPolicy',
-          component: PartnerPolicy
+          component: PartnerPolicy,
+          meta:{
+            keepAlive:false
+          }
         },
         {
           path: '/partner/partnerInstall',
           name: 'partnerInstall',
-          component: PartnerInstall
+          component: PartnerInstall,
+          meta:{
+            keepAlive:false
+          }
         }
       ]
     },
@@ -167,18 +232,32 @@ export default new Router({
       name: 'Information',
       component:Information,
       redirect: '/information/informationNews',
+      meta:{
+        keepAlive:false
+      },
       children:[
         {
           path: '/information/informationNews',
           name: 'informationNews',
-          component: InformationNews
+          component: InformationNews,
+          meta:{
+            keepAlive:false
+          }
         },
         {
           path: '/information/informationDetail',
           name: 'informationDetail',
-          component: InformationDetail
+          component: InformationDetail,
+          meta:{
+            keepAlive:false
+          }
         }
       ]
+    },
+    {
+      path: '/black',
+      name: 'Black',
+      component: Black
     }
   ]
 })

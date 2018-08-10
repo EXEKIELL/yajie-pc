@@ -3,9 +3,9 @@
     <div class="list1">
       <div class="swiper-container swiper-container-year" >
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="(item,index) in prodata">
-            <div class="listBox">
-                <p>{{item.year}}</p>
+          <div class="swiper-slide" v-for="(item,index) in detailData">
+            <div class="listBox" :class="{'listBox1':index==lbx}">
+                <p @click="year(index)">{{item.time}}</p>
             </div>
           </div>
         </div>
@@ -14,16 +14,16 @@
     <div class="list2">
       <div class="swiper-container swiper07">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"  v-for="(item,index) in prodata">
+          <div class="swiper-slide" style="background: #ffffff"  v-for="(item,index) in detailData">
             <div class="slide1">
-              <img src="../../static/img/img25.png" alt="">
+              <img :src="$baseLink+item.pic" alt="">
             </div>
             <div class="slide2">
               <div class="s2-wrap">
                 <div>
                   <!--<div class="s2-title">经销加盟合作</div>-->
                   <div class="s2-cont">
-                    <p v-for="(its,i) in item.content">{{its}}</p>
+                    <p >{{item.desc}}</p>
                   </div>
                 </div>
               </div>
@@ -42,6 +42,7 @@
       name: "aboutUsCourse",
       data(){
         return{
+          lbx:0,
           prodata:[
             {
               year: '2017',
@@ -171,20 +172,60 @@
               path:'',
               content:['广东雅洁五金有限公司开始创办。']
             }
-          ]
+          ],
+          swiper1:'',
+          swiper2:'',
+          detailData:[]
+        }
+      },
+      filters:{
+        time01:function (val) {
+          var Y,M,D,month;
+          var date = new Date(val * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+          Y = date.getFullYear();
+          M = (date.getMonth()+1 < 10 ? (date.getMonth()+1) : date.getMonth()+1);
+          D = date.getDate();
+          return Y;
         }
       },
       mounted(){
-        var swiper07 = new Swiper('.swiper07',{
-          prevButton:'.prev07',
-          nextButton:'.next07'
+        var _this = this;
+
+        // 获取历程数据
+        this.$api.axiosGet('/index/about/getDevelop',{},function (data) {
+          // console.log(data);
+          _this.detailData = data.data.develop;
         });
         setTimeout(function () {
-          var swiper07 = new Swiper('.swiper-container-year',{
+          _this.swiper1 = new Swiper('.swiper07',{
+            prevButton:'.prev07',
+            nextButton:'.next07',
+            effect : 'fade',
+            observer:true,
+            onSlideChangeEnd:function (swiper) {
+              // console.log(swiper.activeIndex);
+              if(_this.swiper2!='')
+              {
+                _this.swiper2.slideTo(swiper.activeIndex);
+                _this.lbx = swiper.activeIndex;
+              }
+            }
+          });
+          _this.swiper2 = new Swiper('.swiper-container-year',{
             slidesPerView : 7.33,
+            observer:true
           })
         },200);
 
+      },
+      methods:{
+        year:function (index) {
+          var _this = this;
+          if(_this.swiper1 != '')
+          {
+            _this.swiper1.slideTo(index);
+          }
+        }
       }
     }
 </script>

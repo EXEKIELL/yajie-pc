@@ -114,7 +114,7 @@
           const that = this;
           // 获取案例列表
           this.$api.axiosGet('/index/about/getProject/page/'+val,{},function (data) {
-            console.log(data);
+            // console.log(data);
             that.listData = data.data.project;
           })
         }
@@ -127,7 +127,7 @@
         })
         // 获取案例列表
         this.$api.axiosGet('/index/about/getProject/'+0,{},function (data) {
-          console.log(data);
+          // console.log(data);
           that.listData = data.data.project;
         })
       }

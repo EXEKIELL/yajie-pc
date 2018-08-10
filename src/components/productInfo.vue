@@ -39,7 +39,7 @@
                   <div class="lc2-1">{{item.name}}</div>
                   <div class="lc2-2 textEllipsis">{{item.desc}}</div>
                   <div class="lc2-3">
-                    <button>MORE</button>
+                    <button @click="navTo(item.id)">MORE</button>
                   </div>
                 </div>
               </div>
@@ -136,10 +136,20 @@
             <!--</div>-->
           <!--</div>-->
         </div>
-        <div v-if="listData.data">
-          <div class="l3-button" v-if="listData.data.length !=0">
-            <button>MORE</button>
-          </div>
+        <!--<div v-if="listData.data">-->
+          <!--<div class="l3-button" v-if="listData.data.length !=0">-->
+            <!--<button>MORE</button>-->
+          <!--</div>-->
+        <!--</div>-->
+        <div class="pagina" style="margin-top: 50px;">
+          <el-pagination
+            background
+            layout="prev, pager, next"
+            prev-text="上一页"
+            next-text="下一页"
+            @current-change="sizeChange"
+            :total="listData.last_page*10">
+          </el-pagination>
         </div>
       </div>
     </div>
@@ -161,13 +171,23 @@
           this.$router.push('/productDetail');
         },
         navTo(i){
-          console.log(i);
+          // console.log(i);
           this.$router.push({path:'/productDetail',query:{id:i}});
+        },
+        sizeChange(i){
+          const that = this;
+          // console.log(i);
+          // 获取
+          this.$api.axiosGet('/index/product/getProductList/type/limit3/id/'+that.id+'/page/'+i,{},function (data) {
+            // console.log(data);
+            that.listData = data.data.list;
+          })
         }
       },
       watch:{
         '$route': function (to, from) {
           const that = this;
+          // console.log(to);
           var id = to.query.id;
           if(id == 40){
             this.title01 = '传统五金'
@@ -179,7 +199,7 @@
           this.id = id;
           // 获取
           this.$api.axiosGet('/index/product/getProductList/type/limit3/id/'+id,{},function (data) {
-            console.log(data);
+            // console.log(data);
             that.listData = data.data.list;
           })
         }
@@ -187,6 +207,7 @@
       mounted(){
         const that = this;
         var id = this.$router.history.current.query.id;
+        // console.log(this.$router)
         if(id == 40){
           this.title01 = '传统五金'
         }else if(id == 41){
@@ -196,7 +217,7 @@
         }
         // 获取
         this.$api.axiosGet('/index/product/getProductList/type/limit3/id/'+that.id,{},function (data) {
-          console.log(data);
+          // console.log(data);
           that.listData = data.data.list;
         })
       }

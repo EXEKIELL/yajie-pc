@@ -9,9 +9,19 @@
     width: 100%;
     position: relative;
     margin-bottom: 55px; }
+    #informationDetail .list1 .lt-bottom {
+      position: absolute;
+      width: 596px;
+      height: 365px;
+      bottom: 0;
+      left: 0;
+      overflow: hidden; }
+      #informationDetail .list1 .lt-bottom img {
+        width: 100%; }
     #informationDetail .list1 img {
       width: 100%; }
     #informationDetail .list1 .l1-title {
+      z-index: 10;
       position: absolute;
       width: 60%;
       background-color: #fff;
@@ -28,7 +38,7 @@
       #informationDetail .list1 .l1-title > div {
         width: 78%; }
         #informationDetail .list1 .l1-title > div .l1-1 {
-          font-size: 20px;
+          font-size: 18px;
           color: #604775;
           width: 100%;
           display: flex;
@@ -36,6 +46,12 @@
           position: relative;
           padding: 25px 0;
           margin-bottom: 30px; }
+          #informationDetail .list1 .l1-title > div .l1-1 span:nth-child(1) {
+            display: inline-block;
+            width: 490px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
           #informationDetail .list1 .l1-title > div .l1-1 .time {
             font-size: 14px;
             color: #b3b3b3;
@@ -67,9 +83,9 @@
     align-items: center;
     margin-bottom: 45px; }
     #informationDetail .list3 .l3-text {
-      width: 54.5%; }
+      width: 52%; }
     #informationDetail .list3 .l3-img {
-      width: 38%; }
+      width: 45%; }
       #informationDetail .list3 .l3-img img {
         width: 100%; }
   #informationDetail .list4 {

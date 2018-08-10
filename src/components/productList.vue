@@ -18,11 +18,11 @@
           </div>
         </div>
       </div>
-      <div class="list2 clearfloat">
+      <div class="list2 clearfloat" v-if="productList.data">
         <div class="l2-wrap" v-for="(item,index) in productList.data" :key="index">
           <div class="wrapImg">
             <div class="img01">
-              <img :src="'http://archie.web.hengdikeji.com'+item.pic" alt="">
+              <img :src="$baseLink+item.pic" alt="">
             </div>
             <div class="hoverWrap">
               <button class="search" @click="navTo(item.id)"></button>
@@ -74,19 +74,20 @@
       watch:{
         '$route':function (to, from) {
           const that = this;
+          console.log(to);
           var id = to.query.item.id;
-          console.log(id);
+          // console.log(id);
           that.id = id;
           that.twoId = id;
           console.log(id);
           this.title01 = to.query.item.name;
-          // 获取默认二级标签
+          //获取默认二级标签
           that.$api.axiosGet('/index/product/getCates/pid/'+that.id,{},function (data) {
             console.log(data);
             that.tags = data.data.cates.all;
-            // 获取产品列表
+           // 获取产品列表
             that.$api.axiosGet('/index/product/getProductList/type/limit9/id/'+id,{},function (data) {
-              console.log(data);
+              // console.log(data);
               that.productList = data.data.list;
               $('.tags span').removeClass('sel');
               $('.tags span').eq(0).addClass('sel');
@@ -103,7 +104,7 @@
             this.allId = 0;
             // 获取产品列表
             that.$api.axiosGet('/index/product/getProductList/type/limit9/id/'+that.twoId,{},function (data) {
-              console.log(data);
+              // console.log(data);
               that.productList = data.data.list;
             })
           }else{
@@ -111,7 +112,7 @@
             this.pageId = id;
             // 获取产品列表
             that.$api.axiosGet('/index/product/getProductList/type/limit9/id/'+id,{},function (data) {
-              console.log(data);
+              // console.log(data);
               that.productList = data.data.list;
             })
           }
@@ -121,19 +122,19 @@
           if(this.allId == 0){
             // 获取产品列表
             that.$api.axiosGet('/index/product/getProductList/type/limit9/id/'+that.twoId+'/page/'+val,{},function (data) {
-              console.log(data);
+              // console.log(data);
               that.productList = data.data.list;
             })
           }else{
             // 获取产品列表
             that.$api.axiosGet('/index/product/getProductList/type/limit9/id/'+that.pageId+'/page/'+val,{},function (data) {
-              console.log(data);
+              // console.log(data);
               that.productList = data.data.list;
             })
           }
         },
         navTo(i){
-          console.log(i);
+          // console.log(i);
           this.$router.push({path:'/productDetail',query:{id:i}});
         }
       },
@@ -144,12 +145,12 @@
         this.title01 = this.$router.history.current.query.item.name;
         // 获取默认二级标签
         that.$api.axiosGet('/index/product/getCates/pid/'+id,{},function (data) {
-          console.log(data);
+          // console.log(data);
           that.tags = data.data.cates.all;
           let tagId = data.data.cates.all[0].id;
           // 获取产品列表
           that.$api.axiosGet('/index/product/getProductList/type/limit9/id/'+id,{},function (data) {
-            console.log(data);
+            // console.log(data);
             that.productList = data.data.list;
           })
         })

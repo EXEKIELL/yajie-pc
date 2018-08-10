@@ -552,6 +552,7 @@
         .l5-slide{
           display: flex;
           flex-wrap: wrap;
+          justify-content: center;
           >div{
             width: 16%;
           }
@@ -569,6 +570,15 @@
               overflow: hidden;
               position: relative;
               z-index: 200;
+              background-color: #ffffff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid #c8c8c8;
+              img{
+                max-width: 100%;
+                max-height: 100%;
+              }
               .l-default{
                 position: absolute;
                 width: 100%;
@@ -722,6 +732,10 @@
       }
       li:first-child{
         border-top: 1px solid #e4e4e4;
+      }
+      li.sel{
+        background-color: #604775;
+        color: #f2f2f2;
       }
       li:hover{
         background-color: #604775;

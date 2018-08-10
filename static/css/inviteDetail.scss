@@ -207,6 +207,7 @@
         li{
           display: flex;
           line-height: 40px;
+          flex-direction: column;
         }
       }
     }
@@ -244,6 +245,7 @@
         li{
           display: flex;
           line-height: 40px;
+          flex-direction: column;
         }
       }
     }
@@ -370,8 +372,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       .wrapList{
-        width: 55%;
+        min-width: 1048px;
         background-color: #f2f2f2;
         display: flex;
         .list-left{

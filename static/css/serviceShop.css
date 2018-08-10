@@ -12,16 +12,17 @@
   align-items: center;
   padding: 55px 0; }
   #serviceShop .list2 .l2-1 {
-    width: 25%;
+    width: 45%;
     font-size: 14px;
     color: #999999;
-    border-right: 1px solid #ede8e3; }
+    border-right: 1px solid #ede8e3;
+    text-align: center; }
     #serviceShop .list2 .l2-1 .l21-1 {
       font-size: 26px;
       color: #333333;
       margin-bottom: 12px; }
   #serviceShop .list2 .l2-2 {
-    width: 70%;
+    width: 45%;
     display: flex;
     align-items: center; }
     #serviceShop .list2 .l2-2 > div {
@@ -30,7 +31,7 @@
       align-items: center;
       justify-content: space-between; }
       #serviceShop .list2 .l2-2 > div > div {
-        width: 24.5%; }
+        width: 40%; }
       #serviceShop .list2 .l2-2 > div .search {
         display: flex;
         height: 40px; }

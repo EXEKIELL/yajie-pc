@@ -1,24 +1,35 @@
 <template>
     <div id="aboutUsIntro">
       <div class="list1 clearfloat">
-        <div class="img01"><img  src="../../static/img/img02.png" alt=""></div>
-        <div class="img02"><img src="../../static/img/img03.png" alt=""></div>
-        <div class="img03"><img src="../../static/img/img04.png" alt=""></div>
-        <div class="info_1">
-          <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。同时远销欧美、中东和东南亚等50多个国家和地区。</p>
+        <div class="img01" v-if="item.size == 1" v-for="(item,index) in imgs" :key="index">
+          <img :src="$baseLink+item.pic" alt="">
         </div>
-        <div class="info_1 info_2">
-          <p>雅洁五金位于中国广东佛山，占地面积近120000平方米。拥有各类中、高级技术人员100多名，员工约1000名，1000多台/条国内外先进的生产设备或自动化生产线，建有电子、模具、压铸、机加、抛光、喷粉、包装、维修等九大现代化车间及配套齐全的生产、生活设施。</p>
+        <div class="img02" v-if="item.size == 2" v-for="(item,index) in imgs" :key="index">
+          <img :src="$baseLink+item.pic" alt="">
+        </div>
+        <div class="img03" v-if="item.size == 3" v-for="(item,index) in imgs" :key="index">
+          <img :src="$baseLink+item.pic" alt="">
+        </div>
+        <div class="info_1" style="max-height: 280px;" v-if="contents.length != 0">
+          <p style="max-height: 210px">{{contents[0].content}}</p>
+        </div>
+        <div class="info_1 info_2" v-if="contents.length != 0">
+          <p style="max-height: 220px">{{contents[1].content}}</p>
         </div>
       </div>
       <div class="list2">
         <div class="swiper-container swiper03">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="../../static/img/intro01.png" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="../../static/img/intro01.png" alt="">
+            <div class="swiper-slide" v-for="(item,index) in swiperBox">
+              <div class="slideBox">
+                  <div class="sildeLeft">
+                    <img :src="$baseLink+item.pics"/>
+                  </div>
+                  <div class="sildeRight">
+                    <div class="srTitle"><p>{{index<10?'0'+(index+1):index+1}}{{item.title}}</p></div>
+                    <p>{{item.content}}</p>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
@@ -31,17 +42,43 @@
 <script>
     export default {
       name: "aboutUsIntro",
+      data(){
+        return{
+          contents:[],
+          imgs:[],
+          swiperBox:[],
+          swiper03:''
+        }
+      },
       mounted(){
-        var swiper03 = new Swiper('.swiper03',{
-          prevButton:'.prev03',
-          nextButton:'.next03',
-          autoplay:2500,
-          // loop:true
-        })
+        var _this = this;
+        // 获取企业简介
+        this.$api.axiosGet('/index/about/getProfile',{},function (data) {
+          // console.log(data);
+          _this.contents = data.data.profile;
+        });
+        // 获取背景图片
+        this.$api.axiosGet('/index/about/getPic/location/1',{},function (data) {
+          // console.log(data);
+          _this.imgs = data.data.pic;
+        });
+        // 获取轮播信息 /index/about/getPics
+        this.$api.axiosGet('/index/about/getPics',{},function (data) {
+          // console.log(data);
+          _this.swiperBox = data.data.pics;
+        });
+        setTimeout(function () {
+          _this.swiper03 = new Swiper('.swiper03',{
+              prevButton:'.prev03',
+              nextButton:'.next03',
+              autoplay:3000,
+              observer:true
+              // loop:true
+            });
+        },300);
       }
     }
 </script>
-
 <style scoped>
 @import "../../static/css/aboutUsIntro.css";
 </style>

@@ -1,19 +1,22 @@
 <template>
   <div id="serviceShop">
-    <div class="list1">
+    <div class="list1" style="display: none;">
       <img src="../../static/img/map01.png" alt="">
+      <div class="area">
+
+      </div>
       <div class="title02">
         <img src="../../static/img/title02.png" alt="">
       </div>
     </div>
     <div class="list2">
       <div class="l2-1">
-        <div class="l21-1">一个更舒适的家</div>
-        <div class="l21-2">A MORE COMFORTABLE HOME</div>
+        <div class="l21-1">国内少数指纹锁核心技术拥有者</div>
+        <div class="l21-2">雅洁智能锁，80道工序全数合格检验，超强精准识别，权威体系认证。</div>
       </div>
       <div class="l2-2">
         <div>
-          <div class="province" style="margin-left: 360px;">
+          <div class="province" style="margin-left: 90px;">
             <el-select v-model="province" placeholder="请选择省" @change = "selectProvice()">
               <el-option
                 v-for="item in options1"
@@ -67,7 +70,7 @@
           <div class="l3 info-3">{{item.time}}</div>
         </li>
         <li class="listInfo noListInfo"v-if="showShop==false">
-            <p>很抱歉，暂无门店信息！</p>
+            <p>请搜索省、市查询门店</p>
         </li>
       </ul>
     </div>
@@ -146,7 +149,7 @@
           var _this = this;
           _this.$api.axiosGet('/index/service/getNetwork/province/' + _this.province+'/city/'+_this.city, {}, function (data) {
 
-            console.log(_this.city);
+            // console.log(_this.city);
             if (_this.city==52||_this.city==321||_this.city==394||_this.city==343) {
 
             }else{

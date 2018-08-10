@@ -31,33 +31,35 @@
         justify-content: center;
         align-items: center;
         .video{
-          margin-right: 20px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 12px;
-          color: #888888;
-          border: 1px solid #ececec;
-          line-height: 30px;
-          padding: 0 22px;
-          -webkit-border-radius: 30px;
-          -moz-border-radius: 30px;
-          border-radius: 30px;
-          cursor: pointer;
-          -webkit-transition: all 0.5s;
-          -moz-transition: all 0.5s;
-          -ms-transition: all 0.5s;
-          -o-transition: all 0.5s;
-          transition: all 0.5s;
-          >span:first-child{
-            width: 9px;
-            height: 10px;
-            background: url("../img/icon07.png") no-repeat center;
-            background-size: 100% auto;
-            margin-right: 5px;
+          a{
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            color: #888888;
+            border: 1px solid #ececec;
+            line-height: 30px;
+            padding: 0 22px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;
+            cursor: pointer;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            >span:first-child{
+              width: 9px;
+              height: 10px;
+              background: url("../img/icon07.png") no-repeat center;
+              background-size: 100% auto;
+              margin-right: 5px;
+            }
           }
         }
-        .video:hover{
+        .video a:hover{
           border: 1px solid #604775;
           color: #604775;
         }
@@ -283,11 +285,11 @@
       .swiperHome02{
         width: 100%;
         .swiper-slide{
-          -webkit-transition: all 0.5s;
-          -moz-transition: all 0.5s;
-          -ms-transition: all 0.5s;
-          -o-transition: all 0.5s;
-          transition: all 0.5s;
+          //-webkit-transition: all 0.5s;
+          //-moz-transition: all 0.5s;
+          //-ms-transition: all 0.5s;
+          //-o-transition: all 0.5s;
+          //transition: all 0.5s;
           position: relative;
           .slide-top{
             width: 100%;
@@ -562,10 +564,24 @@
       position: relative;
       width: 85%;
       .swiperHome04{
+        padding: 50px 0;
         .swiper-wrapper{
           .swiper-slide{
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            transform: scale(0.8);
+            text-align: center;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
             .slide_1{
-              margin-bottom: 70px;
+              width: 80%;
+              margin: auto;
+              height: 160px;
               .s1-title{
                 font-size: 16px;
                 color: #333333;
@@ -575,8 +591,8 @@
                 font-size: 12px;
                 color: #999999;
                 p{
+                  text-align: center;
                   line-height: 25px;
-                  text-align: justify;
                 }
               }
             }
@@ -592,11 +608,13 @@
             }
           }
           .swiper-slide.swiper-slide-active{
-            width: 42%!important;
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+            z-index: 1000;
             .slide_1{
-              width: 67%;
-              position: relative;
-              left: 28%;
               .s1-title{
                 color: #604775;
                 font-weight: bold;
@@ -940,7 +958,7 @@
       width: 1000px;
       margin: auto;
       padding: 20px;
-      background-color: #fff;
+      background-color: rgba(255,255,255,0.7);
       position: relative;
       margin-top: -200px;
       >div{
@@ -965,13 +983,12 @@
       .swiperHome06{
         .swiper-wrapper{
           .swiper-slide{
-            cursor: pointer;
             .slide1{
               border: 1px solid #e6e6e6;
               width: 90px;
               height: 90px;
               margin: auto;
-              margin-bottom: 15px;
+              margin-bottom: 10px;
               -webkit-border-radius: 50%;
               -moz-border-radius: 50%;
               border-radius: 50%;

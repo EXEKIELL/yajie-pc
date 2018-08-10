@@ -25,7 +25,7 @@
                         </div>
                       </div>
                       <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
+                        <img :src="item.img" alt="">
                       </div>
                       <div class="s12Title">
                         <div class="enTitle">{{item.chTitle}}</div>
@@ -385,7 +385,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide slide13" v-for="(item,index) in join2" :key="index">
                 <div class="slide13-img">
-                  <img src="../../static/img/img33.png" alt="">
+                  <img :src="item.img" alt="">
                 </div>
                 <div class="slide13-info">
                   <div class="info13-1">
@@ -418,7 +418,7 @@
       </div>
     </div>
     <!--传统五金-->
-    <div class="wrap" v-if="detailIdx == 0">
+    <div class="wrap" v-if="detailIdx == 1">
       <div class="list4">
         <div class="l4-wrap">
           <div class="l4-title">
@@ -429,7 +429,7 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide slide14" v-for="(item,index) in three1" :key="index">
                   <div class="slide14-1">
-                    <img src="../../static/img/img34.png" alt="">
+                    <img :src="item.img" alt="">
                     <div class="imgDetail">
                       <p>{{item.content}}</p>
                     </div>
@@ -459,8 +459,8 @@
           <div class="l5-slide">
             <div class="slideList" v-for="(item,index) in progress1" :key="index">
               <div class="sl1">
-                <div class="l-default">ICON</div>
-                <img src="" alt="">
+                <!--<div class="l-default"></div>-->
+                <img :src="item.icon" alt="">
               </div>
               <div class="sl2">
                 <img src="../../static/img/icon17.png" alt="">
@@ -473,7 +473,7 @@
       </div>
     </div>
     <!--智能安防-->
-    <div class="wrap" v-if="detailIdx == 1">
+    <div class="wrap" v-if="detailIdx == 2">
       <div class="list4">
         <div class="l4-wrap">
           <div class="l4-title">
@@ -514,8 +514,8 @@
           <div class="l5-slide">
             <div class="slideList" v-for="(item,index) in progress2" :key="index">
               <div class="sl1">
-                <div class="l-default">ICON</div>
-                <img src="" alt="">
+                <!--<div class="l-default">ICON</div>-->
+                <img :src="item.icon" alt="">
               </div>
               <div class="sl2">
                 <img src="../../static/img/icon17.png" alt="">
@@ -528,7 +528,7 @@
       </div>
     </div>
     <!--智能家居-->
-    <div class="wrap" v-if="detailIdx == 2">
+    <div class="wrap" v-if="detailIdx == 3">
       <div class="list4">
         <div class="l4-wrap">
           <div class="l4-title">
@@ -569,8 +569,8 @@
           <div class="l5-slide">
             <div class="slideList" v-for="(item,index) in progress3" :key="index">
               <div class="sl1">
-                <div class="l-default">ICON</div>
-                <img src="" alt="">
+                <!--<div class="l-default">ICON</div>-->
+                <img :src="item.icon" alt="">
               </div>
               <div class="sl2">
                 <img src="../../static/img/icon17.png" alt="">
@@ -605,7 +605,7 @@
     </div>
     <div class="wrapButton">
       <ul>
-        <li v-for="(item,index) in liBtn" :key="index" @click="btn01(index)">{{item}}</li>
+        <li v-for="(item,index) in liBtn" :class="{sel:index == 0}" :key="index" @click="btn01(index)">{{item}}</li>
       </ul>
     </div>
   </div>
@@ -617,43 +617,50 @@
       data(){
         return {
           pagin13:0,
-          detailIdx:0,//0-传统五金 1-智能安防 2-智能家居
+          detailIdx:1,//1-传统五金 2-智能安防 3-智能家居
           swiper13:null,
           liBtn:['传统五金','智能安防','智能家居'],
           threeBtn:["雅洁五金招商","智能家居招商","智能门锁招商"],
           three1:[
             {
               title:'销售返利的支持',
+              img:'static/img/support01.png',
               enTitle:'Sales rebate support',
               content:'根据年度销售目标，经销商可获得不同程度的返利最高可达5%。'
             },
             {
               title:'目标市场的支持和培养',
+              img:'static/img/support02.png',
               enTitle:'Support and development of target markets',
               content:'公司会根据经销商所在地的市场情况，酌情分配客户资源到经销商。'
             },
             {
               title:'展厅的支持',
+              img:'static/img/support03.png',
               enTitle:'Exhibition support',
               content:'公司会给予展厅、门面专柜费用进行补贴，最高补贴可达50%。样品和展板的支持，最高优惠50%。免费为经销商进行市场调研、展厅选址、店面布局和设计、品牌形象包装等一站式服务。'
             },
             {
               title:'店铺运营的支持',
+              img:'static/img/support04.png',
               enTitle:'Store operation support',
               content:'公司对经销商进行运营指导，提供合理化的建议，结合公司的资源优势帮组经销商实现盈利，持续发展。'
             },
             {
               title:'广告的支持',
+              img:'static/img/support05.png',
               enTitle:'Advertising support',
               content:'公司常年在互联网、电视媒体和专业报刊杂志、户外等大众媒体投放广告。同时，不定期与经销商一起商讨广告方案，并投放区域性广告。'
             },
             {
               title:'物料支持',
               enTitle:'Material support',
+              img:'static/img/support06.png',
               content:'免费提供常规广告宣传物料（画册、海报等），免费提供节假日礼品。'
             },
             {
               title:'经销商管理培训',
+              img:'static/img/support07.png',
               enTitle:'Dealer management training',
               content:'保姆式全方位终端培训。包括产品知识、营销知识、店面管理、终端导购技巧、技术安装指导、售后服务等，提升经销商服务水平和市场竞争力。'
             }
@@ -741,130 +748,160 @@
           progress1:[
             {
               title:'加盟洽谈',
+              icon:'static/img/joinIcon/24-03.png',
               range:'01'
             },
             {
               title:'提交资料',
+              icon:'static/img/joinIcon/25-03.png',
               range:'02'
             },
             {
               title:'资质审核',
+              icon:'static/img/joinIcon/26-03.png',
               range:'03'
             },
             {
               title:'签订经销商合同',
+              icon:'static/img/joinIcon/27-03.png',
               range:'04'
             },
             {
               title:'交付订金',
+              icon:'static/img/joinIcon/28-03.png',
               range:'05'
             },
             {
               title:'店面设计',
+              icon:'static/img/joinIcon/29-03.png',
               range:'06'
             },
             {
               title:'经营培训',
+              icon:'static/img/joinIcon/30-03.png',
               range:'07'
             },
             {
               title:'店面装修',
+              icon:'static/img/joinIcon/31-03.png',
               range:'08'
             },
             {
               title:'完工验收',
+              icon:'static/img/joinIcon/24-03.png',
               range:'09'
             },
             {
               title:'培训和试运营',
+              icon:'static/img/joinIcon/25-03.png',
               range:'10'
             },
             {
               title:'正式营业',
+              icon:'static/img/joinIcon/26-03.png',
               range:'11'
             }
           ],
           progress2:[
             {
               title:'合作咨询',
+              icon:'static/img/joinIcon/26-03.png',
               range:'01'
             },
+            // {
+            //   title:'商务洽谈',
+            //   range:'02'
+            // },
             {
-              title:'商务洽谈',
+              title:'加盟申请',
+              icon:'static/img/joinIcon/27-03.png',
               range:'02'
             },
             {
-              title:'加盟申请',
+              title:'资质审核',
+              icon:'static/img/joinIcon/28-03.png',
               range:'03'
             },
             {
-              title:'资质审核',
+              title:'签订合同',
+              icon:'static/img/joinIcon/29-03.png',
               range:'04'
             },
             {
-              title:'签订合同',
+              title:'缴纳费用',
+              icon:'static/img/joinIcon/30-03.png',
               range:'05'
             },
             {
-              title:'缴纳费用',
+              title:'店面装修',
+              icon:'static/img/joinIcon/31-03.png',
               range:'06'
             },
             {
-              title:'店面装修',
+              title:'总部培训',
+              icon:'static/img/joinIcon/26-03.png',
               range:'07'
             },
             {
-              title:'总部培训',
-              range:'08'
-            },
-            {
               title:'正式运营',
-              range:'09'
+              icon:'static/img/joinIcon/27-03.png',
+              range:'08'
             }
           ],
           progress3:[
             {
               title:'加盟洽谈',
+              icon:'static/img/joinIcon/24-03.png',
               range:'01'
             },
             {
               title:'提交资料',
+              icon:'static/img/joinIcon/25-03.png',
               range:'02'
             },
             {
               title:'资质审核',
+              icon:'static/img/joinIcon/26-03.png',
               range:'03'
             },
             {
               title:'签订经销商合同',
+              icon:'static/img/joinIcon/27-03.png',
               range:'04'
             },
             {
               title:'交付订金',
+              icon:'static/img/joinIcon/28-03.png',
               range:'05'
             },
             {
               title:'店面设计',
+              icon:'static/img/joinIcon/29-03.png',
               range:'06'
             },
             {
               title:'经营培训',
+              icon:'static/img/joinIcon/30-03.png',
               range:'07'
             },
             {
               title:'店面装修',
+              icon:'static/img/joinIcon/31-03.png',
               range:'08'
             },
             {
               title:'完工验收',
+              icon:'static/img/joinIcon/26-03.png',
               range:'09'
             },
             {
               title:'培训和试运营',
+              icon:'static/img/joinIcon/27-03.png',
               range:'10'
             },
             {
               title:'正式营业',
+              icon:'static/img/joinIcon/28-03.png',
               range:'11'
             }
           ],
@@ -872,37 +909,44 @@
             {
               zhTitle:'智能家居将成大趋势',
               chTitle:'SMART HOME WILL BECOME A MAJOR TREND',
+              img:'static/img/whyjoin01.png',
               content:'2012年起，雅洁已着手切入智能家居市场，以最新的科技成果、优势营销资源和全面发展战略搭建智能家居云平台。未来几年，消费者的生活品味会进一步提升，相关产业的利润随之提高，当家居智能化逐步普及时，智能家居行业会飞速发展，智能家居领域前景十分乐观。'
             },
             {
               zhTitle:'自主研发实力强劲',
               chTitle:'INDEPENDENT RESEARCH AND DEVELOPMENT STRENGTH',
+              img:'static/img/whyjoin02.png',
               content:'雅洁拥有“广东省智能锁具工程技术研究开发中心”，创建在全国锁具及五金企业中居先进地位的“国家认可认证实验室（CNAS）”，目前已申请国家专利500余项。雅洁致力于智能科技产品的创新与研发，为用户提供更优质的产品、更专业的服务、更先进的体验。'
             },
             {
               zhTitle:'集团全方位支持',
               chTitle:'GROUP SUPPORT',
+              img:'static/img/whyjoin03.png',
               content:'基于市场情况和加盟模式，雅洁集团提供运营、管理、广告、物料及客户资源等支持，助力提升经销商提升服务水平和市场竞争力。'
             }
           ],
           join2:[
             {
               zhTitle:'近三十年的传承与发展，品牌文化深厚',
+              img:'static/img/youshi01.png',
               chTitle:'INHERITANCE AND DEVELOPMENT IN THE PAST 30 YEARS, PROFOUND BRAND CULTURE',
               content:'以“立足中华，放眼全球，创立名牌，实现腾飞”为经营理念，有良好的品牌意识与广大的品牌知名度。'
             },
             {
               zhTitle:'创新高效的人才与技术',
+              img:'static/img/youshi02.png',
               chTitle:'INNOVATIVE AND EFFICIENT TALENT AND TECHNOLOGY',
               content:'创新高效的研发团队与国内外知名专家顾问作人才资源后盾，具备长期可持续发展能力。在业界，曾打造出了“改变行业100把锁”的传奇。'
             },
             {
               zhTitle:'权威认证，管理标准化',
+              img:'static/img/youshi03.png',
               chTitle:'AUTHORITATIVE CERTIFICATION, MANAGEMENT STANDARDIZATION',
               content:'业内唯一同时获得ISO9001质量管理体系、ISO14001环境管理体系、OHSAS18001 职业健康安全管理体系三体系认证合一运行的企业，并且智能锁产品通过了中国公安部MA认证、欧洲CE认证和美国FCC认证，产品研发生产管理高度标准化。'
             },
             {
               zhTitle:'终端全覆盖，市场资源广阔',
+              img:'static/img/youshi04.png',
               chTitle:'FULL COVERAGE OF TERMINALS, BROAD MARKET RESOURCES',
               content:'销售网络覆盖全国80%的地区，全国专卖店近两千家。自主品牌远销欧洲、北美、中东和东南亚等50多个国家和地区。同时已建立了完善的售后服务体系，“智能锁产品身份卡”让用户尊享2年保修、终身维护的服务。'
             }
@@ -921,12 +965,47 @@
         },
         btn01(i){
           $("html,body").animate({scrollTop:0}, 500);
-          this.detailIdx = i;
+          $('.wrapButton>ul>li').removeClass('sel');
+          $('.wrapButton>ul>li').eq(i).addClass('sel');
+          this.detailIdx = i+1;
         },
         btnForm(){
           const that = this;
           let formData = this.joinForm;
-          console.log(formData)
+          if(formData.name == ''){
+            that.$alert('姓名不能为空','温馨提示', {
+              confirmButtonText: '确定',
+              showClose:false
+            });
+          }else if(formData.phone == ''){
+            that.$alert('电话不能为空','温馨提示', {
+              confirmButtonText: '确定',
+              showClose:false
+            });
+          }else if(formData.address == ''){
+            that.$alert('地址不能为空','温馨提示', {
+              confirmButtonText: '确定',
+              showClose:false
+            });
+          }else{
+            // console.log(formData);
+            formData.type = this.detailIdx;
+            // 提交表单
+            this.$api.axiosPost('http://archie.web.hengdikeji.com/index/join/postJoinOnline',0,formData,function (data) {
+              // console.log(data);
+              if(data.data.status == 1){
+                that.$alert(data.data.msg,'温馨提示', {
+                  confirmButtonText: '确定',
+                  showClose:false
+                });
+              }else{
+                that.$alert(data.data.msg,'温馨提示', {
+                  confirmButtonText: '确定',
+                  showClose:false
+                });
+              }
+            })
+          }
         }
       },
       mounted(){

@@ -114,12 +114,14 @@
       },
       mounted(){
         var _this = this;
-        _this.load = this.$loading({
-          lock: true,
-          text: '智能加载...',
-          spinner: 'el-icon-loading',
-          background: 'rgba(0, 0, 0, 0.7)'
-        });
+        setTimeout(function () {
+          _this.load = _this.$loading({
+            lock: true,
+            text: '智能加载...',
+            spinner: 'el-icon-loading',
+            background: 'rgba(0, 0, 0, 0.7)'
+          });
+        },50)
         setTimeout(() => {
           _this.load.close();
         }, 4000);
