@@ -48,6 +48,7 @@
                 <div class="slide-top">
                   <img :src="$baseLink+item.pic" alt="">
                   <button class="search" @click="moveTo(item.id)"></button>
+                  <div class="slide-mask"></div>
                 </div>
                 <div class="slide-bottom">
                   <div>
@@ -55,7 +56,7 @@
                     <div class="slide-desc textEllipsis">{{item.desc}}</div>
                   </div>
                 </div>
-                <div class="slide-mask"></div>
+                
               </div>
             </div>
           </div>
@@ -136,7 +137,7 @@
       </div>
     </div>
     <div class="l5">
-      <div class="title l5-title">
+      <div class="title">
         <div class="title-1">
           <span class="color">新闻</span><span>动态</span>
         </div>
@@ -145,7 +146,61 @@
       <div class="title01">
         <img src="../../static/img/title01.png" alt="">
       </div>
-      <div class="cont-5">
+      <div class="newsBoxes">
+      	<div class="newsLeft">
+      		<div class="newsLeftIn">
+      			<div class="swiper-container swiperHome05">
+		          <div class="swiper-wrapper">
+		            <div class="swiper-slide" v-for="(item,index) in newsList" :key="index" style="cursor: pointer" @click="moveTo01(item.id)">
+		              <div class="slideImg">
+		                <img :src="'http://archie.web.hengdikeji.com'+item.pic" alt="">
+		              </div>
+		            </div>
+		          </div>
+		          <div class="swiper-pagination"></div>
+		        </div>
+      		</div>
+      	</div>
+      	<div class="newsRight">
+      		<div class="nrBox">
+      			<div class="nrTitle">
+      					<p>雅洁五金新闻资讯雅洁新闻资讯</p>
+      			</div>
+      			<div class="nrContent">
+      					<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊...</p>
+      			</div>
+      			<div class="nrDate">
+      				<p>12-07</p>
+      				<div class="moreRead"></div>
+      			</div>
+      		</div>
+      		<div class="nrBox">
+      			<div class="nrTitle">
+      					<p>雅洁五金新闻资讯雅洁新闻资讯</p>
+      			</div>
+      			<div class="nrContent">
+      					<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊...</p>
+      			</div>
+      			<div class="nrDate">
+      				<p>12-07</p>
+      				<div class="moreRead"></div>
+      			</div>
+      		</div>
+      		<div class="nrBox">
+      			<div class="nrTitle">
+      					<p>雅洁五金新闻资讯雅洁新闻资讯</p>
+      			</div>
+      			<div class="nrContent">
+      					<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊...</p>
+      			</div>
+      			<div class="nrDate">
+      				<p>12-07</p>
+      				<div class="moreRead"></div>
+      			</div>
+      		</div>
+      	</div>
+      </div>
+      <!--<div class="cont-5">
         <div class="swiper-container swiperHome05">
           <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="(item,index) in newsList" :key="index" style="cursor: pointer" @click="moveTo01(item.id)">
@@ -184,48 +239,6 @@
               </div>
             </div>
           </div>
-          <!--<div class="p5Slide s2 " :class="{sel:newsIndex == 1}" >-->
-            <!--<div class="slide-img">-->
-              <!--<img src="../../static/img/img32.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="mask" @click="newBtn(1)">-->
-              <!--<div>-->
-                <!--<div class="mask1 textEllipsis">雅洁五金新闻资讯</div>-->
-                <!--<div class="mask2">-->
-                  <!--<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己...</p>-->
-                <!--</div>-->
-                <!--<div class="mask3">01.</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="p5Slide s3 " :class="{sel:newsIndex == 2}" >-->
-            <!--<div class="slide-img">-->
-              <!--<img src="../../static/img/img32.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="mask" @click="newBtn(2)">-->
-              <!--<div>-->
-                <!--<div class="mask1 textEllipsis">雅洁五金新闻资讯</div>-->
-                <!--<div class="mask2">-->
-                  <!--<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己...</p>-->
-                <!--</div>-->
-                <!--<div class="mask3">01.</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="p5Slide s4 " :class="{sel:newsIndex == 3}" >-->
-            <!--<div class="slide-img">-->
-              <!--<img src="../../static/img/img32.png" alt="">-->
-            <!--</div>-->
-            <!--<div class="mask" @click="newBtn(3)">-->
-              <!--<div>-->
-                <!--<div class="mask1 textEllipsis">雅洁五金新闻资讯</div>-->
-                <!--<div class="mask2">-->
-                  <!--<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己...</p>-->
-                <!--</div>-->
-                <!--<div class="mask3">01.</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
           <div class="p5Button">
             <div>
               <div class="swiper-button-prev prev05"></div>
@@ -234,7 +247,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
       <div class="moreButton">
         <button @click="more(2)">MORE</button>
       </div>
@@ -551,6 +564,8 @@
               prevButton:'.prev05',
               nextButton:'.next05',
               effect : 'fade',//淡入效果
+              pagination : '.swiper-pagination',
+              paginationClickable :true,
               onSlideChangeStart: function(swiper){
                 that.newsIndex = swiper.activeIndex;
               }

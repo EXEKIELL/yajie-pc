@@ -110,6 +110,8 @@
   #homePage .cont {
     width: 100%;
     margin-bottom: 60px; }
+    #homePage .cont .swiper-slide {
+      border: 1px solid transparent; }
     #homePage .cont .cont-1 {
       display: flex;
       justify-content: center;
@@ -152,6 +154,8 @@
         #homePage .cont .cont-1 > div .c1List1:hover .list1 {
           background: url("../../static/img/icon08_sel.png") no-repeat center;
           background-size: 18% auto; }
+        #homePage .cont .cont-1 > div .c1List1:hover .swiper-slide {
+          border: 1px solid #EEEEEE; }
         #homePage .cont .cont-1 > div .c1List1:hover .list2 {
           color: #604775; }
         #homePage .cont .cont-1 > div .c1List1.sel .list1 {
@@ -219,6 +223,7 @@
       #homePage .cont .cont-3 .swiperHome02 {
         width: 100%; }
         #homePage .cont .cont-3 .swiperHome02 .swiper-slide {
+          border: 1px solid transparent;
           position: relative; }
           #homePage .cont .cont-3 .swiperHome02 .swiper-slide .slide-top {
             width: 100%;
@@ -287,18 +292,21 @@
             display: flex;
             justify-content: center;
             align-items: center; }
-        #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-top .search {
-          z-index: 102;
-          opacity: 1; }
-        #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-top::after {
-          z-index: 101;
-          opacity: 1; }
-        #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-bottom > div .slide-title {
-          color: #604775;
-          font-weight: bold; }
-        #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-mask {
-          z-index: 100;
-          opacity: 1; }
+        #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover {
+          border: 1px solid #EEEEEE;
+          background-color: white; }
+          #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-top .search {
+            z-index: 102;
+            opacity: 1; }
+          #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-top::after {
+            z-index: 101;
+            opacity: 1; }
+          #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-bottom > div .slide-title {
+            color: #604775;
+            font-weight: bold; }
+          #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-mask {
+            z-index: 100;
+            opacity: 1; }
       #homePage .cont .cont-3 .prevHome02, #homePage .cont .cont-3 .nextHome02 {
         width: 52px;
         height: 50px;
@@ -436,16 +444,16 @@
         -ms-transform: scale(0.8);
         -o-transform: scale(0.8);
         transform: scale(0.8);
-        text-align: center;
+        text-align: left;
         -webkit-transition: all 0.5s;
         -moz-transition: all 0.5s;
         -ms-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s; }
         #homePage .l4 .cont .swiperHome04 .swiper-wrapper .swiper-slide .slide_1 {
-          width: 80%;
+          width: 100%;
           margin: auto;
-          height: 160px; }
+          height: 140px; }
           #homePage .l4 .cont .swiperHome04 .swiper-wrapper .swiper-slide .slide_1 .s1-title {
             font-size: 16px;
             color: #333333;
@@ -454,7 +462,7 @@
             font-size: 12px;
             color: #999999; }
             #homePage .l4 .cont .swiperHome04 .swiper-wrapper .swiper-slide .slide_1 .s1-desc p {
-              text-align: center;
+              text-align: left;
               line-height: 25px; }
         #homePage .l4 .cont .swiperHome04 .swiper-wrapper .swiper-slide .slide_2 img {
           width: 100%; }
@@ -469,11 +477,16 @@
         -o-transform: scale(1.2);
         transform: scale(1.2);
         z-index: 1000; }
-        #homePage .l4 .cont .swiperHome04 .swiper-wrapper .swiper-slide.swiper-slide-active .slide_1 .s1-title {
-          color: #604775;
-          font-weight: bold; }
+        #homePage .l4 .cont .swiperHome04 .swiper-wrapper .swiper-slide.swiper-slide-active .slide_1 {
+          width: 100%; }
+          #homePage .l4 .cont .swiperHome04 .swiper-wrapper .swiper-slide.swiper-slide-active .slide_1 .s1-title {
+            color: #604775;
+            font-weight: bold;
+            margin-left: 20px; }
+          #homePage .l4 .cont .swiperHome04 .swiper-wrapper .swiper-slide.swiper-slide-active .slide_1 .s1-desc {
+            margin-left: 20px; }
         #homePage .l4 .cont .swiperHome04 .swiper-wrapper .swiper-slide.swiper-slide-active .slide_3 {
-          text-align: center; }
+          text-align: left; }
     #homePage .l4 .cont .prevHome04, #homePage .l4 .cont .nextHome04 {
       width: 52px;
       height: 50px; }
@@ -734,16 +747,20 @@
     position: relative;
     margin-bottom: 80px; }
     #homePage .l6 img {
-      width: 100%; }
+      padding-left: 50%;
+      margin-left: -960px; }
     #homePage .l6 .wrap {
       width: 1000px;
       margin: auto;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.7);
-      position: relative;
-      margin-top: -200px; }
+      background-color: rgba(255, 255, 255, 0.96);
+      position: absolute;
+      left: 50%;
+      margin-left: -500px;
+      top: 50%;
+      margin-top: -234px; }
       #homePage .l6 .wrap > div {
-        border: 1px solid #e4e4e4;
+        border: 1px solid #c8c8c8;
         padding: 55px; }
         #homePage .l6 .wrap > div .cont {
           font-size: 14px;
@@ -751,6 +768,84 @@
           #homePage .l6 .wrap > div .cont p {
             line-height: 30px;
             text-align: center; }
+  #homePage .newsBoxes {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    position: relative; }
+    #homePage .newsBoxes .newsLeft {
+      width: 540px;
+      height: 540px;
+      background-color: #e8e8e8;
+      position: relative; }
+      #homePage .newsBoxes .newsLeft .newsLeftIn {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 540px; }
+        #homePage .newsBoxes .newsLeft .newsLeftIn img {
+          width: 100%; }
+      #homePage .newsBoxes .newsLeft .swiper-container-horizontal > .swiper-pagination-bullets, #homePage .newsBoxes .newsLeft .swiper-pagination-custom, #homePage .newsBoxes .newsLeft .swiper-pagination-fraction {
+        text-align: right;
+        padding-right: 20px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box; }
+    #homePage .newsBoxes .newsRight {
+      position: absolute;
+      top: 0;
+      left: 600px;
+      width: 540px; }
+      #homePage .newsBoxes .newsRight .nrBox {
+        padding: 48px 0 48px 20px;
+        position: relative;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        border-bottom: 1px solid #eeeeee; }
+        #homePage .newsBoxes .newsRight .nrBox .nrDate {
+          position: absolute;
+          right: 30px;
+          top: 50%;
+          margin-top: -43px;
+          font-size: 24px;
+          color: #999999;
+          line-height: 24px;
+          font-weight: lighter; }
+          #homePage .newsBoxes .newsRight .nrBox .nrDate .moreRead {
+            width: 44px;
+            height: 30px;
+            margin-left: 10px;
+            background: url(../img/arrow.png) no-repeat right center;
+            border-left: 1px solid #e8e8e8;
+            margin-top: 25px;
+            margin-bottom: 5px; }
+      #homePage .newsBoxes .newsRight .nrBox:nth-last-child(1) {
+        border: 0; }
+      #homePage .newsBoxes .newsRight .nrTitle {
+        font-size: 18px;
+        position: relative;
+        color: #333333; }
+      #homePage .newsBoxes .newsRight .nrTitle::before {
+        content: "";
+        position: absolute;
+        left: -20px;
+        width: 6px;
+        height: 6px;
+        top: 50%;
+        border-radius: 50%;
+        background-color: #ede8e3;
+        margin-top: -3px; }
+      #homePage .newsBoxes .newsRight .nrContent {
+        margin-top: 10px;
+        height: 56px;
+        width: 350px;
+        font-size: 14px;
+        color: #999999;
+        line-height: 26px; }
   #homePage .l7 {
     width: 1200px;
     margin: auto;
