@@ -14,9 +14,51 @@
         </div>
         <div class="swiper-button-prev prev06"></div>
         <div class="swiper-button-next next06"></div>
-
+      </div>
+      <div class="listBottom">
+      	<div class="lbBox">
+      		<div class="lbLeft">
+      			<p>2017年08月</p>
+      		</div>
+      		<div class="lbRight">
+      			<p>重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌</p>
+      		</div>
+      	</div>  
+      	<div class="lbBox">
+      		<div class="lbLeft">
+      			<p>2017年08月</p>
+      		</div>
+      		<div class="lbRight">
+      			<p>重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌</p>
+      		</div>
+      	</div>
+      	<div class="lbBox">
+      		<div class="lbLeft">
+      			<p>2017年08月</p>
+      		</div>
+      		<div class="lbRight">
+      			<p>重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌</p>
+      		</div>
+      	</div>
+      	<div class="lbBox">
+      		<div class="lbLeft">
+      			<p>2017年08月</p>
+      		</div>
+      		<div class="lbRight">
+      			<p>重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌</p>
+      		</div>
+      	</div>
+      	<div class="lbBox">
+      		<div class="lbLeft">
+      			<p>2017年08月</p>
+      		</div>
+      		<div class="lbRight">
+      			<p>重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌</p>
+      		</div>
+      	</div>
       </div>
     </div>
+    
 </template>
 
 <script>
@@ -43,7 +85,7 @@
             _this.swiper06 = new Swiper('.swiper06',{
               // speed:1000,
               loop:true,
-              autoplay:2000,
+//            autoplay:2000,
               slidesPerView:3,
               centeredSlides:true,
               nextButton:'.next06',

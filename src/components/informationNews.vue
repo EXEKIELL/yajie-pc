@@ -8,22 +8,24 @@
       </div>
       <div class="list2-wrap">
         <div class="list" v-for="(item,index) in listData" :key="index" @click="navTo(item.id)">
-          <div class="listImg" v-if="index%2 == 0">
+          <div class="listImg">
             <img :src="item.img" alt="">
           </div>
-          <div class="listText" v-if="index%2 == 0">
+          <div class="listText">
             <div class="text1">{{item.title}}</div>
             <div class="text2">
               <p>{{item.desc}}</p>
             </div>
             <div class="text3">
-              <div class="more">MORE <span class="jiantou"></span></div>
+              <div class="more">
+              	<p>MORE</p>
+              	</div>
               <div class="date">
                 <span>{{item.date[0]}}</span><span>/{{item.date[1]}}</span>
               </div>
             </div>
           </div>
-          <div class="listText" v-if="index%2 != 0">
+          <!--<div class="listText" v-if="index%2 != 0">
             <div class="text1">{{item.title}}</div>
             <div class="text2">
               <p>{{item.desc}}</p>
@@ -37,7 +39,7 @@
           </div>
           <div class="listImg" v-if="index%2 != 0">
             <img :src="item.img" alt="">
-          </div>
+          </div>-->
         </div>
       </div>
       <!--<div class="list3-pagin">-->

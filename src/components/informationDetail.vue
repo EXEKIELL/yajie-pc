@@ -1,6 +1,6 @@
 <template>
     <div id="informationDetail">
-      <div class="list1">
+      <!--<div class="list1">
         <img src="../../static/img/bj01.png" alt="">
         <div class="lt-bottom" v-if="list.info">
           <img :src="list.info.pic" />
@@ -14,7 +14,7 @@
       </div>
       <div class="list2" v-html="list.info.content1"  v-if="list.info">
 
-      </div>
+      </div>-->
       <!--<div class="list3">-->
         <!--<div class="l3-text">-->
           <!--<p>雅洁一直保持着健康、稳定、持续的增长，在国内外市场上取得骄人成绩，为企业在社会各界赢得了良好口碑，已获得政府、行业和社会各方面荣誉，包括“全国质量信得过产品”、“中国名优产品”、“中国优秀制锁企业”、“广东省用户满意产品”、“广东省百强民营企业”、“全国用户满意产品”、“中国质量500强”、“中国十大五金质量品牌”、连续七年“守合同重信用企业”、广东省“知识产权优势企业”和连续2年“佛山市纳税超1000万元企业”等。雅洁已于2001年通过了ISO9001质量管理体系认证，2007年通过了中检认证集团（CCIC）ISO14001环境管理体系和OHSAS18001职业健康安全管理体系认证。“雅洁”商标已被认定为“中国驰名商标”和“广东省著名商标”，雅洁锁具产品已于2008年获得“广东省名牌产品”称号。</p>-->
@@ -24,11 +24,28 @@
           <!--<img src="../../static/img/bj02.png" alt="">-->
         <!--</div>-->
       <!--</div>-->
-      <div class="list4">
+      <!--<div class="list4">
         <div v-for="(item,index) in list.min"  v-if="list.info">
           <img :src="item.pic" alt="">
         </div>
-      </div>
+      </div>-->
+     	 <div class="inforIn" v-if="list.info">
+     	 	<div class="inforTitle">
+     	 		<p>{{list.info.title}}</p>
+     	 	</div>
+     	 	<div class="inforDate">
+     	 		<p><span>日期：{{list.info.time}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>浏览：325人</span></p>
+     	 	</div>
+     	 	<div class="inforContent" v-html="list.info.content1"></div>
+    	</div>
+    	<div class="prevNext clearfloat">
+    		<div class="prev">
+    			<p>上一篇&nbsp;&nbsp;&nbsp;&nbsp;Archie雅洁，走品牌代理的新外贸之路</p>
+    		</div>
+    		<div class="next">
+    			<p>Archie雅洁，走品牌代理的新外贸之路&nbsp;&nbsp;&nbsp;&nbsp;下一篇</p>
+    		</div>
+    	</div>
     </div>
 </template>
 

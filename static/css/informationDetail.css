@@ -1,10 +1,6 @@
 #informationDetail {
   font-size: 14px;
   color: #555555; }
-  #informationDetail p {
-    text-indent: 2em;
-    line-height: 35px;
-    text-align: justify; }
   #informationDetail .list1 {
     width: 100%;
     position: relative;
@@ -97,5 +93,64 @@
         width: 100%; }
     #informationDetail .list4 > div:last-child {
       margin-right: 0; }
+
+.inforIn {
+  width: 1000px;
+  margin: 0 auto; }
+  .inforIn .inforTitle {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold; }
+  .inforIn .inforDate {
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: center;
+    margin: 30px 0;
+    color: #604775; }
+
+.prevNext {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px; }
+  .prevNext > div {
+    float: left;
+    width: 500px;
+    line-height: 100px;
+    height: 100px;
+    color: #888888;
+    font-size: 16px;
+    font-weight: lighter;
+    background: url(../img/iconLeft01.png) no-repeat 30px center;
+    background-color: #f6f6f6;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    cursor: pointer;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s; }
+  .prevNext .prev {
+    padding: 0 25px 0 75px; }
+    .prevNext .prev p {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+  .prevNext .prev:hover {
+    background-color: #604775;
+    color: white; }
+  .prevNext .next {
+    background: url(../img/iconRight01.png) no-repeat 460px center;
+    background-color: #f6f6f6;
+    padding: 0 75px 0 25px; }
+    .prevNext .next p {
+      text-align: right; }
+  .prevNext .next:hover {
+    background-color: #604775;
+    color: white; }
 
 /*# sourceMappingURL=informationDetail.css.map */

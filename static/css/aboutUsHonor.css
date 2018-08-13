@@ -88,4 +88,25 @@
       background-color: #333333;
       padding: 0 10px; }
 
+.lbBox {
+  width: 550px;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 22px;
+  padding: 14px  0 14px 135px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  position: relative; }
+  .lbBox .lbLeft {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    font-weight: bold; }
+  .lbBox .lbRight {
+    text-align: justify; }
+
+.listBottom {
+  margin-top: 80px; }
+
 /*# sourceMappingURL=aboutUsHonor.css.map */

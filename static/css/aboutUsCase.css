@@ -70,9 +70,10 @@
           transform: translateY(0%);
           opacity: 1; }
         #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 {
-          width: 376px;
+          width: 352px;
+          margin-right: 36px;
           position: relative;
-          margin-bottom: 10px; }
+          margin-bottom: 40px; }
           #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .img01 {
             overflow: hidden;
             position: relative;
@@ -94,7 +95,7 @@
             transition: all 0.5s; }
           #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01 {
             position: relative;
-            background-color: #f2f2f2;
+            background-color: white;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -104,7 +105,7 @@
             -ms-transition: all 0.5s;
             -o-transition: all 0.5s;
             transition: all 0.5s;
-            height: 270px; }
+            line-height: 30px; }
             #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01 .time {
               position: absolute;
               bottom: 0;
@@ -119,11 +120,13 @@
               -o-transition: all 0.5s;
               transition: all 0.5s; }
             #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01 .detail-wrap {
-              width: 85%; }
+              width: 100%;
+              margin: 25px 0; }
               #aboutUsCase .list2 .swiper05 .swiper-slide .slide2 .detail01 .detail-wrap .wrap-1 {
                 color: #333333;
+                font-weight: bold;
                 font-size: 18px;
-                margin-bottom: 10px;
+                text-align: left;
                 -webkit-transition: all 0.5s;
                 -moz-transition: all 0.5s;
                 -ms-transition: all 0.5s;
@@ -205,5 +208,7 @@
           opacity: 1; }
         #aboutUsCase .list2 .swiper05 .swiper-slide .slide2:hover .img01::before {
           opacity: 1; }
+        #aboutUsCase .list2 .swiper05 .swiper-slide .slide2:nth-child(3n) {
+          margin-right: 0; }
 
 /*# sourceMappingURL=aboutUsCase.css.map */

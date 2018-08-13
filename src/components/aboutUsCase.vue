@@ -20,7 +20,7 @@
               <!--</div>-->
             <!--</div>-->
             <div class="slide2" v-for="(item,index) in listData.data" :key="index">
-              <div v-if="index%2 == 0" class="detail01 d2">
+              <!--<div v-if="index%2 == 0" class="detail01 d2">
                 <div class="time">{{item.time|time02}}</div>
                 <div class="detail-wrap">
                   <div class="wrap-1">{{item.name}}</div>
@@ -31,17 +31,17 @@
               </div>
               <div v-if="index%2 == 0" class="img01">
                 <img :src="'http://archie.web.hengdikeji.com'+item.pic" alt="">
-              </div>
-              <div v-if="index%2 != 0" class="img01">
+              </div>-->
+              <div class="img01">
                 <img :src="'http://archie.web.hengdikeji.com'+item.pic" alt="">
               </div>
-              <div v-if="index%2 != 0" class="detail01 d1">
-                <div class="time">{{item.time|time02}}6</div>
+              <div class="detail01 d1">
+                <!--<div class="time">{{item.time|time02}}6</div>-->
                 <div class="detail-wrap">
                   <div class="wrap-1">{{item.name}}</div>
-                  <div class="wrap-2">
+                  <!--<div class="wrap-2">
                     <p>项目地点:{{item.address}}</p>
-                  </div>
+                  </div>-->
                 </div>
               </div>
             </div>

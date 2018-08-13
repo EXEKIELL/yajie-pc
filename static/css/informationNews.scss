@@ -41,7 +41,7 @@
       margin-right: 15px;
       .listImg{
         width: 100%;
-        height: 165px;
+        height: 292px;
         overflow-y: hidden;
         img{
           width: 100%;
@@ -53,12 +53,13 @@
           font-size: 18px;
           height: 48px;
           color: #333333;
+//         font-weight: bold;
           margin-bottom: 20px;
-          -webkit-transition: color 0.5s;
-          -moz-transition: color 0.5s;
-          -ms-transition: color 0.5s;
-          -o-transition: color 0.5s;
-          transition: color 0.5s;
+          -webkit-transition: color 0.5s font-size 0.5s;
+          -moz-transition: color 0.5s font-size 0.5s;
+          -ms-transition: color 0.5s font-size 0.5s;
+          -o-transition: color 0.5s font-size 0.5s;
+          transition: color 0.5s font-size 0.5s;
         }
         .text2{
           margin-bottom: 20px;
@@ -79,12 +80,23 @@
           .more{
             display: flex;
             align-items: center;
-            -webkit-transition: color 0.5s;
-            -moz-transition: color 0.5s;
-            -ms-transition: color 0.5s;
-            -o-transition: color 0.5s;
-            transition: color 0.5s;
+            -webkit-transition: color 0.5s background 0.5s;
+            -moz-transition: color 0.5s background 0.5s;
+            -ms-transition: color 0.5s background 0.5s;
+            -o-transition: color 0.5s background 0.5s;
+            transition: color 0.5s background 0.5s;
             cursor: pointer;
+            line-height: 30px;
+           
+            width: 80px;
+            text-align: center;
+            background-color: #ede8e3;
+            text-align: center;
+            p{
+                width: 100%;
+                text-align: center;
+                color: white;
+            }
             .jiantou{
               margin-left: 5px;
               width: 7px;
@@ -123,9 +135,11 @@
       .listText{
         .text1{
           color: #604775;
+//        font-weight: bold;
         }
         .text3{
           .more{
+            background-color:#604775;
             color: #604775;
             .jiantou{
               -webkit-transform: translateX(0%);
