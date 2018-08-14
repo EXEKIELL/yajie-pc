@@ -1,6 +1,6 @@
 <template>
     <div id="information">
-      <div class="banner">
+      <div class="banner" v-if="idx">
         <img src="../../static/img/banner04.png" alt="">
       </div>
       <div class="wrap">
@@ -11,7 +11,22 @@
 
 <script>
     export default {
-      name: "information"
+      name: "information",
+      data(){
+        return{
+          idx:true
+        }
+      },
+      watch:{
+        $route:function (to) {
+          console.log(to);
+          if(to.name == 'informationDetail'){
+            this.idx = false;
+          }else{
+            this.idx = true;
+          }
+        }
+      }
     }
 </script>
 

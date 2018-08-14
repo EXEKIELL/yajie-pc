@@ -10,8 +10,11 @@
       align-items: center;
       .wrapList{
         width: 100%;
-        background-color: #f2f2f2;
+        background-color: #ffffff;
         display: flex;
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         .list-left{
           width: 30%;
           img{
@@ -50,18 +53,49 @@
               display: flex;
               justify-content: space-between;
               align-items: center;
-              margin-bottom: 30px;
+              margin-bottom: 0px;
               >div{
                 width: 48%;
-                display: flex;
+                //display: flex;
                 align-items: center;
                 padding: 20px 0;
-                border-bottom: 1px solid #dddddd;
+                .name{
+                  margin-bottom: 10px;
+                }
                 .name01{
                   width: 20%;
+                  font-size: 14px;
+                  color: #555555;
+                  font-weight: bold;
+                }
+                .name01:before{
+                  content: '*';
+                  color: #ff0000;
+                }
+                .input{
+                  line-height: 50px;
+                  border: 1px solid #e4e4e4;
+                  text-align: center;
                 }
                 input{
-                  width: 78%;
+                  width: 90%;
+                  font-size: 14px;
+                }
+                input::placeholder{
+                  font-size: 14px;
+                  color: #c8c8c8;
+                }
+                input:-moz-placeholder{
+                  font-size: 14px;
+                  color: #c8c8c8;
+                }
+                input::-webkit-input-placeholder{
+                  font-size: 14px;
+                  color: #c8c8c8;
+                }
+                input:-ms-input-placeholder{
+                  font-size: 14px;
+                  color: #c8c8c8;
                 }
                 .select-1{
                   display: flex;
@@ -112,23 +146,46 @@
               }
             }
             .data-3{
-              margin-bottom: 110px;
+              margin-bottom: 20px;
               .d1-1{
                 width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: left;
                 text-align: left;
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
                 box-sizing: border-box;
-                padding-right: 15px;
                 .name01{
                   width: 100%;
                   margin-bottom: 20px;
                 }
-                input{
-                  width: 100%;
+                .input{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 110px;
+                }
+                textarea{
+                  width: 95%;
+                  font-size: 14px;
+                  height: 75%;
+                  resize: none;
+                  border: 0;
+                  background-color: transparent;
+                }
+                textarea::placeholder{
+                  font-size: 14px;
+                  color: #c8c8c8;
+                }
+                textarea:-moz-placeholder{
+                  font-size: 14px;
+                  color: #c8c8c8;
+                }
+                textarea::-webkit-input-placeholder{
+                  font-size: 14px;
+                  color: #c8c8c8;
+                }
+                textarea:-ms-input-placeholder{
+                  font-size: 14px;
+                  color: #c8c8c8;
                 }
               }
             }
@@ -180,7 +237,7 @@
             .data-5{
               width: 100%;
               button{
-                width: 35%;
+                width: 100%;
                 line-height: 60px;
                 background-color: #ede8e3;
                 color: #666666;
@@ -194,6 +251,9 @@
               button:hover{
                 background-color: #604775;
                 color: #ffffff;
+                -webkit-box-shadow: 0 0 15px rgba(96, 71, 117, 0.2);
+                -moz-box-shadow: 0 0 15px rgba(96, 71, 117, 0.2);
+                box-shadow: 0 0 15px rgba(96, 71, 117, 0.2);
               }
             }
             .bj01{

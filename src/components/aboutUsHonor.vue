@@ -1,13 +1,17 @@
 <template>
     <div id="aboutUsHonor">
-      <div class="bj"></div>
       <div class="list1">
         <div class="swiper-container swiper06">
           <div class="swiper-wrapper">
             <div class="swiper-slide"  v-for="(item,index) in list">
-              <img :src="item.pics" alt="">
-              <div class="detailText">
-                <p>{{item.title}}</p>
+              <div>
+                <img :src="item.pics" alt="">
+                <div class="detailText">
+                  <div class="dt_wrap">
+                    <p>{{item.title}}</p>
+                    <span class="time">2018-08</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -23,7 +27,7 @@
       		<div class="lbRight">
       			<p>重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌</p>
       		</div>
-      	</div>  
+      	</div>
       	<div class="lbBox">
       		<div class="lbLeft">
       			<p>2017年08月</p>
@@ -58,7 +62,7 @@
       	</div>
       </div>
     </div>
-    
+
 </template>
 
 <script>
@@ -75,6 +79,7 @@
       mounted(){
         var _this = this;
         _this.$api.axiosGet('/index/about/getHonor',{},function (data) {
+          console.log(data)
           _this.list = data.data.honor;
           _this.listLength = _this.list.length;
           for(var i = 0;i<_this.list.length;i++)
@@ -87,6 +92,7 @@
               loop:true,
 //            autoplay:2000,
               slidesPerView:3,
+              spaceBetween:50,
               centeredSlides:true,
               nextButton:'.next06',
               prevButton:'.prev06',

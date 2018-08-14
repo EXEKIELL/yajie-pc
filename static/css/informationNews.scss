@@ -87,7 +87,7 @@
             transition: color 0.5s background 0.5s;
             cursor: pointer;
             line-height: 30px;
-           
+
             width: 80px;
             text-align: center;
             background-color: #ede8e3;
@@ -133,6 +133,7 @@
       -moz-box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
       box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
       .listText{
+        position: relative;
         .text1{
           color: #604775;
 //        font-weight: bold;
@@ -151,6 +152,15 @@
             }
           }
         }
+      }
+      .listText:after{
+        content: '';
+        display: block;
+        position: absolute;
+        border-bottom: 1px solid #604775;
+        width: 100%;
+        bottom: 0;
+        left: 0;
       }
     }
   }

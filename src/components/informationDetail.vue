@@ -46,6 +46,24 @@
     			<p>Archie雅洁，走品牌代理的新外贸之路&nbsp;&nbsp;&nbsp;&nbsp;下一篇</p>
     		</div>
     	</div>
+      <!--侧边咨询-->
+      <div class="l9">
+        <div>
+          <div class="l9_wrap">
+            <div class="w_1">
+              <div class="head">
+                <div class="img">
+                  <img src="http://archie.web.hengdikeji.com/uploads/About/link/20180709/0145dc3c989b38175602495528d6c424.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="w_2">
+              <div>微信扫一扫</div>
+              <div>关注该公众号</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 </template>
 

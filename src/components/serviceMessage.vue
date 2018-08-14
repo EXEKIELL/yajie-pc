@@ -3,86 +3,104 @@
     <div class="popUp">
       <div class="popUpWrap">
         <div class="wrapList">
-          <div class="list-left">
-            <img src="../../static/img/message01.png" alt="">
-          </div>
           <div class="list-right">
             <div>
               <div class="data-1">
                 <div class="d1-1">
-                  <span class="name01">姓名</span>
-                  <input type="text" placeholder="请输入姓名" v-model="formData.name">
+                  <div class="name">
+                    <span class="name01">姓名</span>
+                  </div>
+                  <div class="input">
+                    <input type="text" placeholder="请输入姓名" v-model="formData.name">
+                  </div>
                 </div>
                 <div class="d1-1">
-                  <span class="name01">邮箱</span>
-                  <input type="text" placeholder="请输入邮箱" v-model="formData.email">
+                  <div class="name">
+                    <span class="name01">邮箱</span>
+                  </div>
+                  <div class="input">
+                    <input type="text" placeholder="请输入邮箱" v-model="formData.email">
+                  </div>
                 </div>
                 <!--<div class="d1-2">-->
-                  <!--<span class="name01">性别</span>-->
-                  <!--<div class="select-1">-->
-                    <!--<div class="cir">-->
-                      <!--<input type="radio" @click="selInput" name="sex" value="男士" v-model="formData.sex">-->
-                    <!--</div>-->
-                    <!--<div class="text-1 name01">男士</div>-->
-                  <!--</div>-->
-                  <!--<div class="select-1">-->
-                    <!--<div class="cir">-->
-                      <!--<input type="radio" @click="selInput" name="sex" value="女士" v-model="formData.sex">-->
-                    <!--</div>-->
-                    <!--<div class="text-1 name01">女士</div>-->
-                  <!--</div>-->
+                <!--<span class="name01">性别</span>-->
+                <!--<div class="select-1">-->
+                <!--<div class="cir">-->
+                <!--<input type="radio" @click="selInput" name="sex" value="男士" v-model="formData.sex">-->
+                <!--</div>-->
+                <!--<div class="text-1 name01">男士</div>-->
+                <!--</div>-->
+                <!--<div class="select-1">-->
+                <!--<div class="cir">-->
+                <!--<input type="radio" @click="selInput" name="sex" value="女士" v-model="formData.sex">-->
+                <!--</div>-->
+                <!--<div class="text-1 name01">女士</div>-->
+                <!--</div>-->
                 <!--</div>-->
               </div>
               <div class="data-1">
                 <div class="d1-1">
-                  <span class="name01">手机号</span>
-                  <input type="text" placeholder="请输入手机号" v-model="formData.phone">
+                  <div class="name">
+                    <span class="name01">手机号</span>
+                  </div>
+                  <div class="input">
+                    <input type="text" placeholder="请输入手机号" v-model="formData.phone">
+                  </div>
                 </div>
                 <div class="d1-1">
-                  <span class="name01">地区</span>
-                  <!--<input type="text" >-->
-                  <div class="docs-methods">
-                    <form class="form-inline">
-                      <div id="distpicker">
-                        <div class="form-group">
-                          <div style="position: relative;">
-                            <!--<input id="city-picker3" class="form-control" readonly type="text" placeholder="请选择地区"  data-toggle="city-picker">-->
-                            <input type="text" placeholder="请输入地址" v-model="formData.address">
-                          </div>
-                        </div>
-                        <!--<div class="form-group">-->
-                        <!--<button class="btn btn-warning" id="reset" type="button">重置</button>-->
-                        <!--<button class="btn btn-danger" id="destroy" type="button">确定</button>-->
-                        <!--</div>-->
-                      </div>
-                    </form>
+                  <div class="name">
+                    <span class="name01">地区</span>
                   </div>
+                  <div class="input">
+                    <div class="docs-methods">
+                      <form class="form-inline">
+                        <div id="distpicker">
+                          <div class="form-group">
+                            <div style="position: relative;">
+                              <!--<input id="city-picker3" class="form-control" readonly type="text" placeholder="请选择地区"  data-toggle="city-picker">-->
+                              <input type="text" placeholder="请输入地址" v-model="formData.address">
+                            </div>
+                          </div>
+                          <!--<div class="form-group">-->
+                          <!--<button class="btn btn-warning" id="reset" type="button">重置</button>-->
+                          <!--<button class="btn btn-danger" id="destroy" type="button">确定</button>-->
+                          <!--</div>-->
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!--<input type="text" >-->
                 </div>
               </div>
               <div class="data-1 data-3">
                 <div class="d1-1">
-                  <span class="name01">内容</span>
-                  <input type="text" placeholder="请输入内容" v-model="formData.content">
+                  <div class="name">
+                    <span class="name01">内容</span>
+                  </div>
+                  <div class="input">
+                    <!--<input type="text" placeholder="请输入内容" v-model="formData.content">-->
+                    <textarea placeholder="谢谢您的宝贵建议，我们将不断改进" v-model="formData.content"></textarea>
+                  </div>
                 </div>
               </div>
               <!--<div class="data-4">-->
-                <!--<div class="d4-text name01">上传附件</div>-->
-                <!--<div class="d4-upload">-->
-                  <!--<div class="showBtn">选择文件-->
-                    <!--<input class="file" type="file" @change="updata">-->
-                  <!--</div>-->
-                  <!--<div class="showData">-->
-                    <!--<input class="text" disabled type="text" v-model="formData.upload">-->
-                  <!--</div>-->
-                <!--</div>-->
+              <!--<div class="d4-text name01">上传附件</div>-->
+              <!--<div class="d4-upload">-->
+              <!--<div class="showBtn">选择文件-->
+              <!--<input class="file" type="file" @change="updata">-->
+              <!--</div>-->
+              <!--<div class="showData">-->
+              <!--<input class="text" disabled type="text" v-model="formData.upload">-->
+              <!--</div>-->
+              <!--</div>-->
               <!--</div>-->
               <div class="data-5">
                 <button @click="btn">确认提交</button>
               </div>
-              <div class="bj01">
-                <img src="../../static/img/popImg01.png" alt="">
-              </div>
             </div>
+          </div>
+          <div class="list-left">
+            <img src="../../static/img/img38.png" alt="">
           </div>
         </div>
       </div>

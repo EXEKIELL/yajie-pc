@@ -221,19 +221,34 @@
       margin: auto;
       position: relative; }
       #homePage .cont .cont-3 .swiperHome02 {
-        width: 100%; }
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px; }
         #homePage .cont .cont-3 .swiperHome02 .swiper-slide {
           border: 1px solid transparent;
           position: relative; }
+          #homePage .cont .cont-3 .swiperHome02 .swiper-slide > div {
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s; }
           #homePage .cont .cont-3 .swiperHome02 .swiper-slide .slide-top {
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            overflow: hidden; }
+            overflow: hidden;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 15px; }
             #homePage .cont .cont-3 .swiperHome02 .swiper-slide .slide-top img {
-              width: 95%; }
+              max-width: 100%;
+              max-height: 100%; }
             #homePage .cont .cont-3 .swiperHome02 .swiper-slide .slide-top .search {
               position: absolute;
               width: 60px;
@@ -264,13 +279,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 35px 0; }
+            padding: 15px 0; }
             #homePage .cont .cont-3 .swiperHome02 .swiper-slide .slide-bottom > div {
               width: 90%; }
               #homePage .cont .cont-3 .swiperHome02 .swiper-slide .slide-bottom > div .slide-title {
                 color: #333333;
                 font-size: 18px;
-                margin-bottom: 20px; }
+                margin-bottom: 12px; }
               #homePage .cont .cont-3 .swiperHome02 .swiper-slide .slide-bottom > div .slide-desc {
                 width: 100%;
                 font-size: 14px;
@@ -279,7 +294,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: rgba(96, 71, 117, 0.3);
+            background-color: rgba(96, 71, 117, 0.5);
             top: 0;
             left: 0;
             -webkit-transition: all 0.5s;
@@ -293,17 +308,30 @@
             justify-content: center;
             align-items: center; }
         #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover {
-          border: 1px solid #EEEEEE;
           background-color: white; }
+          #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover > div {
+            -webkit-box-shadow: 0 0 20px rgba(51, 51, 51, 0.2);
+            -moz-box-shadow: 0 0 20px rgba(51, 51, 51, 0.2);
+            box-shadow: 0 0 20px rgba(51, 51, 51, 0.2); }
           #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-top .search {
             z-index: 102;
             opacity: 1; }
           #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-top::after {
             z-index: 101;
             opacity: 1; }
-          #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-bottom > div .slide-title {
-            color: #604775;
-            font-weight: bold; }
+          #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-bottom {
+            position: relative; }
+            #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-bottom > div .slide-title {
+              color: #604775;
+              font-weight: bold; }
+          #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-bottom:after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-bottom: 1px solid #604775;
+            width: 100%;
+            bottom: 0;
+            left: 0; }
           #homePage .cont .cont-3 .swiperHome02 .swiper-slide:hover .slide-mask {
             z-index: 100;
             opacity: 1; }
@@ -357,82 +385,97 @@
       width: 95%;
       margin: auto;
       margin-bottom: 55px; }
-      #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-top {
-        position: relative; }
-        #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-top img {
-          width: 100%; }
-        #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-top .st03-topMask {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          background-color: rgba(96, 71, 117, 0.5);
+      #homePage .l3 .cont .swiperHome03 {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 5px; }
+        #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide > div {
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
+        #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-top {
+          position: relative; }
+          #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-top img {
+            width: 100%; }
+          #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-top .st03-topMask {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(96, 71, 117, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            z-index: -1;
+            opacity: 0; }
+            #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-top .st03-topMask .bofang {
+              width: 53px;
+              height: 53px;
+              background: url("../img/bo01.png") no-repeat center;
+              background-size: 100% auto;
+              position: absolute; }
+        #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-bottom {
           display: flex;
           justify-content: center;
           align-items: center;
-          -webkit-transition: all 0.5s;
-          -moz-transition: all 0.5s;
-          -ms-transition: all 0.5s;
-          -o-transition: all 0.5s;
-          transition: all 0.5s;
-          z-index: -1;
-          opacity: 0; }
-          #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-top .st03-topMask .bofang {
-            width: 53px;
-            height: 53px;
-            background: url("../img/bo01.png") no-repeat center;
+          padding: 35px 0;
+          position: relative; }
+          #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-bottom .st03-wrap {
+            width: 85%; }
+            #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-bottom .st03-wrap .st03-title {
+              font-size: 16px;
+              color: #333333;
+              margin-bottom: 15px; }
+            #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-bottom .st03-wrap .st03-desc {
+              font-size: 12px;
+              color: #999999; }
+          #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-bottom .jiantou {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            width: 18px;
+            height: 12px;
+            background: url("../img/right01.png") no-repeat center;
             background-size: 100% auto;
-            position: absolute; }
-      #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-bottom {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 35px 0;
-        position: relative; }
-        #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-bottom .st03-wrap {
-          width: 85%; }
-          #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-bottom .st03-wrap .st03-title {
-            font-size: 16px;
-            color: #333333;
-            margin-bottom: 15px; }
-          #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-bottom .st03-wrap .st03-desc {
-            font-size: 12px;
-            color: #999999; }
-        #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-bottom .jiantou {
-          cursor: pointer;
-          position: absolute;
-          right: 10px;
-          width: 18px;
-          height: 12px;
-          background: url("../img/right01.png") no-repeat center;
-          background-size: 100% auto;
-          -webkit-transition: all 0.5s;
-          -moz-transition: all 0.5s;
-          -ms-transition: all 0.5s;
-          -o-transition: all 0.5s;
-          transition: all 0.5s;
-          -webkit-transform: translateX(-100%);
-          -moz-transform: translateX(-100%);
-          -ms-transform: translateX(-100%);
-          -o-transform: translateX(-100%);
-          transform: translateX(-100%);
-          opacity: 0;
-          z-index: -1; }
-      #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide:hover .st03-top .st03-topMask {
-        z-index: 100;
-        opacity: 1; }
-      #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide:hover .st03-bottom .st03-wrap .st03-title {
-        font-weight: bold;
-        color: #604775; }
-      #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide:hover .jiantou {
-        -webkit-transform: translateX(0%);
-        -moz-transform: translateX(0%);
-        -ms-transform: translateX(0%);
-        -o-transform: translateX(0%);
-        transform: translateX(0%);
-        z-index: 100;
-        opacity: 1; }
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+            -webkit-transform: translateX(-100%);
+            -moz-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+            -o-transform: translateX(-100%);
+            transform: translateX(-100%);
+            opacity: 0;
+            z-index: -1; }
+        #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide:hover > div {
+          -webkit-box-shadow: 0 0 30px rgba(51, 51, 51, 0.1);
+          -moz-box-shadow: 0 0 30px rgba(51, 51, 51, 0.1);
+          box-shadow: 0 0 30px rgba(51, 51, 51, 0.1); }
+        #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide:hover .st03-top .st03-topMask {
+          z-index: 100;
+          opacity: 1; }
+        #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide:hover .st03-bottom .st03-wrap .st03-title {
+          font-weight: bold;
+          color: #604775; }
+        #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide:hover .jiantou {
+          -webkit-transform: translateX(0%);
+          -moz-transform: translateX(0%);
+          -ms-transform: translateX(0%);
+          -o-transform: translateX(0%);
+          transform: translateX(0%);
+          z-index: 100;
+          opacity: 1; }
   #homePage .l4 .cont {
     position: relative;
     width: 85%; }
@@ -532,7 +575,7 @@
         left: -40px; }
     #homePage .l5 .title01 {
       position: absolute;
-      right: 4%;
+      right: 0;
       top: 0; }
     #homePage .l5 .cont-5 {
       width: 1200px;
@@ -796,7 +839,45 @@
       position: absolute;
       top: 0;
       left: 600px;
-      width: 540px; }
+      width: 540px;
+      height: 100%; }
+      #homePage .newsBoxes .newsRight .swiper_01 {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 5px;
+        height: 100%; }
+        #homePage .newsBoxes .newsRight .swiper_01 .swiper-slide {
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+          cursor: pointer;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 0 20px; }
+        #homePage .newsBoxes .newsRight .swiper_01 .swiper-slide:hover {
+          -webkit-box-shadow: 0 0 10px rgba(96, 71, 117, 0.5);
+          -moz-box-shadow: 0 0 10px rgba(96, 71, 117, 0.5);
+          box-shadow: 0 0 10px rgba(96, 71, 117, 0.5);
+          background-color: #604775; }
+          #homePage .newsBoxes .newsRight .swiper_01 .swiper-slide:hover .nrTitle {
+            color: #ffffff;
+            font-weight: bold; }
+          #homePage .newsBoxes .newsRight .swiper_01 .swiper-slide:hover .nrContent {
+            color: #ffffff; }
+        #homePage .newsBoxes .newsRight .swiper_01 .swiper-slide.sel {
+          -webkit-box-shadow: 0 0 10px rgba(96, 71, 117, 0.5);
+          -moz-box-shadow: 0 0 10px rgba(96, 71, 117, 0.5);
+          box-shadow: 0 0 10px rgba(96, 71, 117, 0.5);
+          background-color: #604775; }
+          #homePage .newsBoxes .newsRight .swiper_01 .swiper-slide.sel .nrTitle {
+            color: #ffffff;
+            font-weight: bold; }
+          #homePage .newsBoxes .newsRight .swiper_01 .swiper-slide.sel .nrContent {
+            color: #ffffff; }
       #homePage .newsBoxes .newsRight .nrBox {
         padding: 48px 0 48px 20px;
         position: relative;
@@ -845,7 +926,8 @@
         width: 350px;
         font-size: 14px;
         color: #999999;
-        line-height: 26px; }
+        line-height: 26px;
+        font-weight: lighter; }
   #homePage .l7 {
     width: 1200px;
     margin: auto;
@@ -1024,5 +1106,89 @@
     -o-transform: translateY(0%);
     transform: translateY(0%);
     opacity: 1; }
+  #homePage .l9 {
+    position: fixed;
+    right: 2%;
+    top: 30%;
+    width: 120px;
+    height: 160px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #e4e4e4;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    z-index: -1;
+    background-color: #fff;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    #homePage .l9 > div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #homePage .l9 .l9_wrap .head {
+      width: 80px;
+      height: 80px;
+      position: relative;
+      margin-bottom: 15px; }
+    #homePage .l9 .l9_wrap .img {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%; }
+      #homePage .l9 .l9_wrap .img img {
+        width: 100%; }
+    #homePage .l9 .l9_wrap .icon {
+      width: 23px;
+      height: 22px;
+      background: url("../img/icon18.png") no-repeat center;
+      background-size: 100% auto;
+      position: absolute;
+      top: -5%;
+      right: -5%;
+      -webkit-animation: shan 2s linear infinite;
+      -o-animation: shan 2s linear infinite;
+      animation: shan 2s linear infinite; }
+    #homePage .l9 .l9_wrap .w_2 {
+      width: 100%;
+      text-align: center; }
+      #homePage .l9 .l9_wrap .w_2 button {
+        height: 30px;
+        padding: 0 15px;
+        background-color: #604775;
+        color: #ffffff;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+      #homePage .l9 .l9_wrap .w_2 button:hover {
+        -webkit-box-shadow: 0 0 20px rgba(96, 71, 117, 0.3);
+        -moz-box-shadow: 0 0 20px rgba(96, 71, 117, 0.3);
+        box-shadow: 0 0 20px rgba(96, 71, 117, 0.3); }
+  #homePage .l9.show {
+    opacity: 1;
+    z-index: 50; }
+
+@keyframes shan {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 /*# sourceMappingURL=homePage.css.map */

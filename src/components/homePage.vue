@@ -45,18 +45,19 @@
           <div class="swiper-container swiperHome02">
             <div class="swiper-wrapper">
               <div class="swiper-slide" v-for="(item,index) in productList.data" :key="index">
-                <div class="slide-top">
-                  <img :src="$baseLink+item.pic" alt="">
-                  <button class="search" @click="moveTo(item.id)"></button>
-                  <div class="slide-mask"></div>
-                </div>
-                <div class="slide-bottom">
-                  <div>
-                    <div class="slide-title" style="font-size: 16px;">{{item.name}}</div>
-                    <div class="slide-desc textEllipsis">{{item.desc}}</div>
+                <div>
+                  <div class="slide-top">
+                    <img :src="$baseLink+item.pic" alt="">
+                    <button class="search" @click="moveTo(item.id)"></button>
+                    <div class="slide-mask"></div>
+                  </div>
+                  <div class="slide-bottom">
+                    <div>
+                      <div class="slide-title" style="font-size: 16px;">{{item.name}}</div>
+                      <div class="slide-desc textEllipsis">{{item.desc}}</div>
+                    </div>
                   </div>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -82,21 +83,23 @@
         <div class="swiper-container swiperHome03">
           <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="(item,index) in videoList" :key="index">
-              <div class="st03-top">
-                <!--<img src="../../static/img/img30.png" alt="">-->
-                <iframe height='178' allowfullscreen="true" allowtransparency="true" width='273' :src='item.path' frameborder=0></iframe>
-                <!--<iframe height='178' allowfullscreen="true" allowtransparency="true" width='273' src='http://player.youku.com/embed/XMzcwODE2OTg4NA==' frameborder=0></iframe>-->
-                <!--<iframe height='178' allowfullscreen="true" allowtransparency="true" width='273' src='http://player.youku.com/embed/XMzcwODE3NjA0NA==' frameborder=0></iframe>-->
-                <!--<div class="st03-topMask">-->
+              <div>
+                <div class="st03-top">
+                  <!--<img src="../../static/img/img30.png" alt="">-->
+                  <iframe height='178' allowfullscreen="true" allowtransparency="true" width='273' :src='item.path' frameborder=0></iframe>
+                  <!--<iframe height='178' allowfullscreen="true" allowtransparency="true" width='273' src='http://player.youku.com/embed/XMzcwODE2OTg4NA==' frameborder=0></iframe>-->
+                  <!--<iframe height='178' allowfullscreen="true" allowtransparency="true" width='273' src='http://player.youku.com/embed/XMzcwODE3NjA0NA==' frameborder=0></iframe>-->
+                  <!--<div class="st03-topMask">-->
                   <!--<button class="bofang"></button>-->
-                <!--</div>-->
-              </div>
-              <div class="st03-bottom">
-                <div class="st03-wrap">
-                  <div class="st03-title textEllipsis">{{item.title}}</div>
-                  <div class="st03-desc textEllipsis">{{item.desc}}</div>
+                  <!--</div>-->
                 </div>
-                <div class="jiantou"></div>
+                <div class="st03-bottom">
+                  <div class="st03-wrap">
+                    <div class="st03-title textEllipsis">{{item.title}}</div>
+                    <div class="st03-desc textEllipsis">{{item.desc}}</div>
+                  </div>
+                  <div class="jiantou"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -162,42 +165,60 @@
       		</div>
       	</div>
       	<div class="newsRight">
-      		<div class="nrBox">
-      			<div class="nrTitle">
-      					<p>雅洁五金新闻资讯雅洁新闻资讯</p>
-      			</div>
-      			<div class="nrContent">
-      					<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊...</p>
-      			</div>
-      			<div class="nrDate">
-      				<p>12-07</p>
-      				<div class="moreRead"></div>
-      			</div>
-      		</div>
-      		<div class="nrBox">
-      			<div class="nrTitle">
-      					<p>雅洁五金新闻资讯雅洁新闻资讯</p>
-      			</div>
-      			<div class="nrContent">
-      					<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊...</p>
-      			</div>
-      			<div class="nrDate">
-      				<p>12-07</p>
-      				<div class="moreRead"></div>
-      			</div>
-      		</div>
-      		<div class="nrBox">
-      			<div class="nrTitle">
-      					<p>雅洁五金新闻资讯雅洁新闻资讯</p>
-      			</div>
-      			<div class="nrContent">
-      					<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊...</p>
-      			</div>
-      			<div class="nrDate">
-      				<p>12-07</p>
-      				<div class="moreRead"></div>
-      			</div>
-      		</div>
+          <div class="swiper-container swiper_01">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" :class="{sel:newsIndex == index}" v-for="(item,index) in newsList" :key="index"  @click="moveTo01(item.id)">
+                <div class="nrBox">
+                  <div class="nrTitle">
+                    <p class="textEllipsis" style="width: 75%;">{{item.title}}</p>
+                  </div>
+                  <div class="nrContent">
+                    <p>{{item.desc}}</p>
+                  </div>
+                  <div class="nrDate">
+                    <p>12-07</p>
+                    <div class="moreRead"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      		<!--<div class="nrBox">-->
+      			<!--<div class="nrTitle">-->
+      					<!--<p>雅洁五金新闻资讯雅洁新闻资讯</p>-->
+      			<!--</div>-->
+      			<!--<div class="nrContent">-->
+      					<!--<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊...</p>-->
+      			<!--</div>-->
+      			<!--<div class="nrDate">-->
+      				<!--<p>12-07</p>-->
+      				<!--<div class="moreRead"></div>-->
+      			<!--</div>-->
+      		<!--</div>-->
+      		<!--<div class="nrBox">-->
+      			<!--<div class="nrTitle">-->
+      					<!--<p>雅洁五金新闻资讯雅洁新闻资讯</p>-->
+      			<!--</div>-->
+      			<!--<div class="nrContent">-->
+      					<!--<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊...</p>-->
+      			<!--</div>-->
+      			<!--<div class="nrDate">-->
+      				<!--<p>12-07</p>-->
+      				<!--<div class="moreRead"></div>-->
+      			<!--</div>-->
+      		<!--</div>-->
+      		<!--<div class="nrBox">-->
+      			<!--<div class="nrTitle">-->
+      					<!--<p>雅洁五金新闻资讯雅洁新闻资讯</p>-->
+      			<!--</div>-->
+      			<!--<div class="nrContent">-->
+      					<!--<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊...</p>-->
+      			<!--</div>-->
+      			<!--<div class="nrDate">-->
+      				<!--<p>12-07</p>-->
+      				<!--<div class="moreRead"></div>-->
+      			<!--</div>-->
+      		<!--</div>-->
       	</div>
       </div>
       <!--<div class="cont-5">
@@ -300,7 +321,7 @@
         <li class="li1" @click="bottomBtn(1)"></li>
         <li class="li2" @click="bottomBtn(2)">
           <!--<a style="display: block;width: 100%;height: 100%;opacity: 0;" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=164992537&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=392563086" alt="点击联系在线客服" title="点击联系在线客服"/></a>-->
-          <a style="display: block;width: 100%;height: 100%;opacity: 0;" href="tencent://message/?uin=392563086&Site=http://vps.shuidazhe.com&Menu=yes">PC版</a>
+          <a id="kefu" style="display: block;width: 100%;height: 100%;opacity: 0;" href="tencent://message/?uin=392563086&Site=http://vps.shuidazhe.com&Menu=yes">PC版</a>
         </li>
         <li class="li3" @click="bottomBtn(3)"></li>
         <li class="li4">
@@ -310,6 +331,24 @@
         </li>
         <li class="li5" @click="toTop"></li>
       </ul>
+    </div>
+    <!--侧边咨询-->
+    <div class="l9">
+      <div>
+        <div class="l9_wrap">
+          <div class="w_1">
+            <div class="head">
+              <div class="img">
+                <img src="../../static/img/head01.png" alt="">
+              </div>
+              <span class="icon"></span>
+            </div>
+          </div>
+          <div class="w_2">
+            <button @click="zixun">在线咨询</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -332,6 +371,7 @@
             {path:'http://player.youku.com/embed/XMzcwODE3NjA0NA==',title:'雅洁智能锁，开启智慧生活',desc:'雅洁智能锁，开启智慧生活'}
           ],//首页视频
           newsList:[],//新闻动态列表
+          newIdx:0,
           //企业介绍
           companyInfo:[],
           newsIndex:0,
@@ -462,6 +502,10 @@
               id:i
             }
           })
+        },
+        zixun(){
+          console.log(1);
+          document.getElementById("kefu").click()
         }
       },
       mounted(){
@@ -475,7 +519,7 @@
           //   loop:true,
           //   // observer:true
           // });
-        },100)
+        },100);
         var swiperHome03 = new Swiper('.swiperHome03',{
           slidesPerView:4,
           spaceBetween:15,
@@ -503,6 +547,11 @@
             $('.l8').addClass('show');
           }else{
             $('.l8').removeClass('show');
+          }
+          if($(window).scrollTop()>1000){
+            $('.l9').addClass('show');
+          }else{
+            $('.l9').removeClass('show');
           }
         });
         // 获取banner图
@@ -565,10 +614,18 @@
               nextButton:'.next05',
               effect : 'fade',//淡入效果
               pagination : '.swiper-pagination',
+              autoplay:3000,
               paginationClickable :true,
               onSlideChangeStart: function(swiper){
                 that.newsIndex = swiper.activeIndex;
+                swiper_01.slideTo(swiper.activeIndex);
               }
+            });
+            var swiper_01 = new Swiper('.swiper_01',{
+              direction : 'vertical',
+              slidesPerView:3,
+              spaceBetween:5,
+              observer:true
             });
           },50)
         })

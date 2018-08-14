@@ -1,16 +1,5 @@
 <template>
   <div id="aboutUsCourse">
-    <div class="list1">
-      <div class="swiper-container swiper-container-year" >
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="(item,index) in detailData">
-            <div class="listBox" :class="{'listBox1':index==lbx}">
-                <p @click="year(index)">{{item.time}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="list2">
       <div class="swiper-container swiper07">
         <div class="swiper-wrapper">
@@ -23,6 +12,7 @@
                 <div>
                   <!--<div class="s2-title">经销加盟合作</div>-->
                   <div class="s2-cont">
+                    <!--<p class="title">{{item.title}}</p>-->
                     <p >{{item.desc}}</p>
                   </div>
                 </div>
@@ -34,6 +24,42 @@
       <div class="swiper-button-prev prev07"></div>
       <div class="swiper-button-next next07"></div>
     </div>
+    <div class="list1">
+      <div class="swiper-container swiper-container-year" >
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="(item,index) in detailData">
+            <div class="listBox" :class="{'listBox1':index==lbx}">
+              <p @click="year(index)">{{item.time}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<div class="list1">-->
+      <!--<div class="swiperWrap">-->
+        <!--<div class="swiper-container swiper_02">-->
+          <!--<div class="swiper-wrapper">-->
+            <!--<div class="swiper-slide">-->
+              <!--<div class="slide-wrap">-->
+                <!--<div class="s_top">-->
+                  <!--<img src="../../static/img/img37.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="s_detail">-->
+                  <!--<div>-->
+                    <!--<div class="s_title">-->
+                      <!--<p>2018-经销加盟合作</p>-->
+                    <!--</div>-->
+                    <!--<div class="s_desc">-->
+                      <!--<p>确立一级经销加盟合作模式，全国招商。推出全新的智能单品系列，助力雅洁智能家居体验馆和体验区的稳健发展。</p>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
   </div>
 </template>
 
@@ -190,19 +216,26 @@
       },
       mounted(){
         var _this = this;
+        var swiper_02 = new Swiper('.swiper_02',{
+
+        });
 
         // 获取历程数据
         this.$api.axiosGet('/index/about/getDevelop',{},function (data) {
-          // console.log(data);
+          console.log(data);
           _this.detailData = data.data.develop;
         });
         setTimeout(function () {
           _this.swiper1 = new Swiper('.swiper07',{
             prevButton:'.prev07',
             nextButton:'.next07',
-            effect : 'fade',
+            centeredSlides : true,
+            slidesPerView:1.5,
+            // autoplay:3000,
+            speed:1000,
+            spaceBetween:50,
             observer:true,
-            onSlideChangeEnd:function (swiper) {
+            onSlideChangeStart:function (swiper) {
               // console.log(swiper.activeIndex);
               if(_this.swiper2!='')
               {
@@ -211,10 +244,16 @@
               }
             }
           });
-          _this.swiper2 = new Swiper('.swiper-container-year',{
-            slidesPerView : 7.33,
-            observer:true
-          })
+          setTimeout(function () {
+            _this.swiper2 = new Swiper('.swiper-container-year',{
+              slidesPerView : 5,
+              speed:1000,
+              observer:true,
+              onInit:function (swiper) {
+                swiper.slideTo(0);
+              }
+            })
+          },30);
         },200);
 
       },

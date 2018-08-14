@@ -49,6 +49,9 @@
     .prev03,.next03{
       width: 52px;
       height: 50px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
     }
     .prev03{
       top: 60%;
