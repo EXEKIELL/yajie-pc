@@ -74,25 +74,33 @@ export default {
       navList:[
         {text:'首页',url:'/homePage',tags:[]},
         {text:'关于雅洁',url:'/aboutUs',tags:[{tagsText:'企业简介',url:'/aboutUs/aboutUsIntro'},{tagsText:'发展历程',url:'/aboutUs/aboutUsCourse'},{tagsText:'品牌荣誉',url:'/aboutUs/aboutUsHonor'},{tagsText:'工程案例',url:'/aboutUs/aboutUsCase'},{tagsText:'联系我们',url:'/aboutUs/aboutUsContact'}]},
-        {text:'产品中心',url:'/productCenter',tags:[]},
+        {text:'产品中心',url:'/productCenter/productInfo?id=40',tags:[]},
+        {text:'智能家居',url:'/productCenter/productInfo?id=41',tags:[]},
         {text:'雅洁资讯',url:'/information',tags:[]},
         {text:'雅洁服务',url:'/service',tags:[{tagsText:'全国门店',url:'/service/serviceShop'},{tagsText:'在线留言',url:'/black'}]},
         {text:'加入雅洁',url:'/invite',tags:[{tagsText:'人才招聘',url:'/invite/inviteInfo'},{tagsText:'招商加盟',url:'/inviteJoin'}]},
         {text:'合作商专区',url:'/partner',tags:[{tagsText:'政策文档',url:'/partner/partnerPolicy'},{tagsText:'安装视频',url:'/partner/partnerInstall'}]},
       ],
-      bottomDetail:[]
+      bottomDetail:[],
+      tags:[],
+      //智能家居
+      jj:{},
+      // 传统五金
+      wj:{},
+      // 智能安防
+      af:{}
     }
   },
   methods:{
     nav2Btn(i){
       // console.log(i);
-      $('.nav-btn>li').removeClass('sel');
-      $('.nav-btn>li').eq(i).addClass('sel');
+      this.selStatus = i;
     }
   },
   watch:{
     '$route':function (to, form) {
       const that = this;
+      console.log(to);
       switch (to.path) {
         case "/homePage":
           this.selStatus = 0;
@@ -113,41 +121,53 @@ export default {
           this.selStatus = 1;
           break;
         case "/productCenter/productInfo":
-          this.selStatus = 2;
+          if(to.query.id){
+            if(to.query.id == 41){
+              this.selStatus = 3;
+
+            }else{
+              this.selStatus = 2;
+
+            }
+          }
           break;
         case '/productCenter/ProductList':
-          this.selStatus = 2;
+          if(to.query.item.pid == 41){
+            this.selStatus = 3;
+          }else{
+            this.selStatus = 2;
+          }
           break;
         case '/productDetail':
           this.selStatus = 2;
           break;
         case "/information/informationNews":
-          this.selStatus = 3;
+          this.selStatus = 4;
           break;
         case '/information/informationDetail':
-          this.selStatus = 3;
+          this.selStatus = 4;
           break;
         case "/service/serviceShop":
-          this.selStatus = 4;
+          this.selStatus = 5;
           break;
         case '/service/serviceMessage':
-          this.selStatus = 4;
+          this.selStatus = 5;
 
           break;
         case "/invite/inviteInfo":
-          this.selStatus = 5;
+          this.selStatus = 6;
           break;
         case '/invite/inviteDetail':
-          this.selStatus = 5;
+          this.selStatus = 6;
           break;
         case '/inviteJoin':
-          this.selStatus = 5;
+          this.selStatus = 6;
           break;
         case "/partner/partnerPolicy":
-          this.selStatus = 6;
+          this.selStatus = 7;
           break;
         case '/partner/partnerInstall':
-          this.selStatus = 6;
+          this.selStatus = 7;
           setTimeout(function () {
             that.load = that.$loading({
               lock: true,
@@ -162,6 +182,9 @@ export default {
           break;
       }
       // console.log(this.selStatus)
+    },
+    selStatus:function (i) {
+      sessionStorage.setItem('selStatus',i)
     }
   },
   mounted(){
@@ -234,6 +257,20 @@ export default {
       // console.log(data);
       that.bottomDetail = data.data.link;
     })
+    // 获取产品中心一级标签
+    // this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
+    //   console.log(data);
+    //   that.tags = data.data.cates;
+    //   for(var i = 0;i<data.data.cates;i++){
+    //     if(data.data.cates[i].name == '智能家居'){
+    //       that.jj = data.data.cates[i]
+    //     }else if(data.data.cates[i].name == '传统五金'){
+    //       that.wj = data.data.cates[i]
+    //     }else{
+    //       that.af = data.data.cates[i]
+    //     }
+    //   }
+    // })
     // console.log(this.selStatus)
   }
 }

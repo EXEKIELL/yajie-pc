@@ -10,6 +10,9 @@
         <div class="list" v-for="(item,index) in listData" :key="index" @click="navTo(item.id)">
           <div class="listImg">
             <img :src="item.img" alt="">
+            <div class="hoverWrap">
+              <button class="search" @click="navTo(item.id)"></button>
+            </div>
           </div>
           <div class="listText">
             <div class="text1">{{item.title}}</div>

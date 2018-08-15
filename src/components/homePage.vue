@@ -85,13 +85,13 @@
             <div class="swiper-slide" v-for="(item,index) in videoList" :key="index">
               <div>
                 <div class="st03-top">
-                  <!--<img src="../../static/img/img30.png" alt="">-->
-                  <iframe height='178' allowfullscreen="true" allowtransparency="true" width='273' :src='item.path' frameborder=0></iframe>
+                  <img :src="$baseLink+item.pic" alt="">
+                  <!--<iframe height='178' allowfullscreen="true" allowtransparency="true" width='273' :src='item.path' frameborder=0></iframe>-->
                   <!--<iframe height='178' allowfullscreen="true" allowtransparency="true" width='273' src='http://player.youku.com/embed/XMzcwODE2OTg4NA==' frameborder=0></iframe>-->
                   <!--<iframe height='178' allowfullscreen="true" allowtransparency="true" width='273' src='http://player.youku.com/embed/XMzcwODE3NjA0NA==' frameborder=0></iframe>-->
-                  <!--<div class="st03-topMask">-->
-                  <!--<button class="bofang"></button>-->
-                  <!--</div>-->
+                  <div class="st03-topMask">
+                    <button class="bofang" @click="videobofang(item.path)"></button>
+                  </div>
                 </div>
                 <div class="st03-bottom">
                   <div class="st03-wrap">
@@ -350,6 +350,15 @@
         </div>
       </div>
     </div>
+    <!--播放视频-->
+    <div class="videoWrap" v-if="videoStatus">
+      <div>
+        <div class="wrap">
+          <iframe height='498' allowfullscreen="true" allowtransparency="true" width='760' :src='videoPath' frameborder=0></iframe>
+          <div class="close01" @click="videoStatus = false"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -363,6 +372,8 @@
           bannerVideoSrc:'###',
           tags01:[],//产品二级分类
           tags02:[],//产品三级分类
+          videoStatus:false,//视频弹窗
+          videoPath:'',//视频iframe地址
           productList:[],//产品列表
           productSwiper:null,//产品轮播
           videoList:[
@@ -438,6 +449,10 @@
               that.productSwiper.slideTo(0)
             },20)
           })
+        },
+        videobofang(i){
+          this.videoPath = i;
+          this.videoStatus = true;
         },
         tags01Btn(i,id){
           const that = this;
@@ -642,7 +657,7 @@
         });
         // 创新技术
         this.$api.axiosGet('/index/index/getTechnology/location/1',{},function (data) {
-          // console.log(data);
+          console.log(data);
           that.videoList = data.data.technology;
         })
         // 招商加盟

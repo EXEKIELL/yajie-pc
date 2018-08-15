@@ -33,9 +33,53 @@
     #informationNews .list2-wrap .list .listImg {
       width: 100%;
       height: 292px;
-      overflow-y: hidden; }
+      overflow-y: hidden;
+      position: relative; }
       #informationNews .list2-wrap .list .listImg img {
         width: 100%; }
+      #informationNews .list2-wrap .list .listImg .hoverWrap {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        background-color: rgba(96, 71, 117, 0.7);
+        z-index: -1;
+        opacity: 0; }
+      #informationNews .list2-wrap .list .listImg .hoverWrap::before {
+        content: '';
+        width: 90%;
+        height: 90%;
+        border: 1px solid #f2f2f2;
+        position: absolute;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+      #informationNews .list2-wrap .list .listImg .search {
+        width: 60px;
+        height: 60px;
+        z-index: -1;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background: url("../img/search01.png") no-repeat center rgba(96, 71, 117, 0.5);
+        background-size: 35% auto;
+        opacity: 0;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
     #informationNews .list2-wrap .list .listText {
       padding: 25px 15px; }
       #informationNews .list2-wrap .list .listText .text1 {
@@ -106,6 +150,12 @@
     -webkit-box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
     -moz-box-shadow: 0 0 10px rgba(153, 153, 153, 0.3);
     box-shadow: 0 0 10px rgba(153, 153, 153, 0.3); }
+    #informationNews .list2-wrap .list:hover .listImg .hoverWrap {
+      z-index: 100;
+      opacity: 1; }
+    #informationNews .list2-wrap .list:hover .listImg .search {
+      z-index: 101;
+      opacity: 1; }
     #informationNews .list2-wrap .list:hover .listText {
       position: relative; }
       #informationNews .list2-wrap .list:hover .listText .text1 {

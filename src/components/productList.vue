@@ -74,16 +74,16 @@
       watch:{
         '$route':function (to, from) {
           const that = this;
-          console.log(to);
+          // console.log(to);
           var id = to.query.item.id;
           // console.log(id);
           that.id = id;
           that.twoId = id;
-          console.log(id);
+          // console.log(id);
           this.title01 = to.query.item.name;
           //获取默认二级标签
           that.$api.axiosGet('/index/product/getCates/pid/'+that.id,{},function (data) {
-            console.log(data);
+            // console.log(data);
             that.tags = data.data.cates.all;
            // 获取产品列表
             that.$api.axiosGet('/index/product/getProductList/type/limit9/id/'+id,{},function (data) {
