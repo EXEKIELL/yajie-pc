@@ -1,20 +1,145 @@
-#productDetail .list1 {
-  width: 100%; }
-  #productDetail .list1 img {
-    width: 100%; }
-#productDetail .list2 {
-  width: 100%;
-  background: url("../img/bj06.png") no-repeat;
-  background-size: 100% auto;
+#productDetail {
   margin-bottom: 100px; }
-  #productDetail .list2 .l2-wrap {
-    width: 1200px;
-    margin: auto;
-    padding-top: 30px; }
-    #productDetail .list2 .l2-wrap p {
+  #productDetail .list1 {
+    width: 100%; }
+    #productDetail .list1 img {
       width: 100%; }
-      #productDetail .list2 .l2-wrap p img {
-        margin: auto;
+  #productDetail .list2 {
+    width: 100%;
+    background: url("../img/bj06.png") no-repeat;
+    background-size: 100% auto;
+    margin-bottom: 100px; }
+    #productDetail .list2 .l2-wrap {
+      width: 1200px;
+      margin: auto;
+      padding-top: 30px; }
+      #productDetail .list2 .l2-wrap p {
         width: 100%; }
+        #productDetail .list2 .l2-wrap p img {
+          margin: auto;
+          width: 100%; }
+  #productDetail .proBox {
+    width: 1200px;
+    margin: 0px auto; }
+    #productDetail .proBox .proLeft {
+      width: 600px;
+      height: 500px;
+      padding: 0 50px;
+      -ms-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      float: left;
+      margin: 80px 0; }
+      #productDetail .proBox .proLeft .proLeftIn {
+        width: 500px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        #productDetail .proBox .proLeft .proLeftIn img {
+          max-height: 100%;
+          max-width: 100%; }
+    #productDetail .proBox .proRight {
+      width: 550px;
+      margin: 80px 0px 80px 50px;
+      float: left; }
+  #productDetail .proTitle {
+    font-size: 36px;
+    color: #555555; }
+  #productDetail .proType {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #999999;
+    margin-top: 10px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e8e8e8; }
+  #productDetail .prot {
+    font-size: 18px;
+    color: #555555;
+    font-weight: bold;
+    line-height: 38px;
+    margin-top: 30px;
+    margin-bottom: 5px; }
+    #productDetail .prot span {
+      font-weight: lighter;
+      font-size: 14px; }
+  #productDetail .proText p {
+    font-size: 16px;
+    font-weight: lighter; }
+    #productDetail .proText p span {
+      padding: 0 10px;
+      border-right: 1px solid #adadad;
+      line-height: 16px; }
+    #productDetail .proText p span:nth-child(1) {
+      padding-left: 0px; }
+    #productDetail .proText p span:nth-last-child(1) {
+      padding-right: 0px;
+      border-right: 0; }
+  #productDetail .proImg {
+    width: 100%;
+    display: flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex; }
+    #productDetail .proImg .pImg {
+      width: 80px;
+      height: 80px;
+      padding: 5px;
+      cursor: pointer;
+      -ms-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #eeeeee;
+      overflow: hidden;
+      margin-right: 20px; }
+      #productDetail .proImg .pImg img {
+        width: 100%; }
+    #productDetail .proImg .pImgActive {
+      border-color: #604775; }
+    #productDetail .proImg .pImg:nth-last-child(1) {
+      margin-right: 0px; }
+  #productDetail .proMethod {
+    display: flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex; }
+    #productDetail .proMethod a {
+      width: 80px;
+      line-height: 30px;
+      text-align: center;
+      margin-right: 20px; }
+    #productDetail .proMethod .proJd {
+      background-color: #e83632;
+      color: white; }
+    #productDetail .proMethod .proTm {
+      background-color: #000000;
+      color: #ff0036; }
+  #productDetail .proParam {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 80px; }
+    #productDetail .proParam .proParamTitle {
+      font-size: 20px;
+      font-weight: bolder;
+      line-height: 48px; }
+    #productDetail .proParam .proParamBox {
+      display: flex;
+      flex-wrap: wrap; }
+      #productDetail .proParam .proParamBox .paramText {
+        width: 33.3333%;
+        color: #333333;
+        font-weight: bolder;
+        font-size: 14px;
+        line-height: 36px; }
+        #productDetail .proParam .proParamBox .paramText span {
+          font-weight: lighter; }
+  #productDetail .proHtml {
+    width: 1200px;
+    margin: 0 auto; }
+    #productDetail .proHtml img {
+      width: 100%; }
 
 /*# sourceMappingURL=productDetail.css.map */
