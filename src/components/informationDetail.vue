@@ -89,6 +89,7 @@
         let id = this.$router.history.current.query.id;
         _this.id = id;
         _this.$api.axiosGet('/index/news/getNewsinfo/id/'+id,{},function (data) {
+          console.log(data);
           _this.list = data.data;
           _this.list.info.pic = _this.$baseLink + _this.list.info.pic;
 

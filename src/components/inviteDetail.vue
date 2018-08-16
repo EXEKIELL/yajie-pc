@@ -1,5 +1,5 @@
 <template>
-  <div id="inviteDetail" v-if="jobData.length != 0">
+  <div id="inviteDetail" v-if="">
     <div class="list1 clearfloat">
       <div class="l1-title floatl">
         <div class="l1-title1">国内少数拥有指纹锁核心技术</div>
@@ -15,7 +15,7 @@
           </div>
         </form>
       </div>
-      <div class="l1-return">
+      <div class="l1-return" @click="goBack">
         <span class="icon"></span><span>返回</span>
       </div>
     </div>
@@ -194,7 +194,7 @@
       data(){
         return {
           popUp01:false,
-          jobData:[],
+          jobData:[1],
           id:0,
           formData:{
             name:'',
@@ -255,6 +255,10 @@
         },
         showPop(){
           this.popUp01 = true;
+        },
+        goBack(){
+          console.log(window)
+          window.history.go(-1);
         }
       },
       mounted(){

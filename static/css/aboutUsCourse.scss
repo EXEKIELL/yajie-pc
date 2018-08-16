@@ -64,6 +64,7 @@
       margin-bottom: 30px;
       .swiper-slide{
         display: flex;
+        flex-direction: column;
         position: relative;
         opacity: 0.2;
         >div{
@@ -80,10 +81,10 @@
           height: 100%;
         }
         .slide2{
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 60%;
+          //position: absolute;
+          //bottom: 0;
+          //left: 0;
+          width: 100%;
           .s2-wrap{
             width: 100%;
             background-color: #fff;

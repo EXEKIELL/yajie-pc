@@ -45,7 +45,7 @@
           <div class="swiper-container swiperHome02">
             <div class="swiper-wrapper">
               <div class="swiper-slide" v-for="(item,index) in productList.data" :key="index">
-                <div>
+                <div  @click="moveTo(item.id)" style="cursor: pointer">
                   <div class="slide-top">
                     <img :src="$baseLink+item.pic" alt="">
                     <button class="search" @click="moveTo(item.id)"></button>
@@ -119,7 +119,7 @@
       <div class="cont">
         <div class="swiper-container swiperHome04">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="(item,index) in slideJoin" :key="index">
+            <div style="cursor: pointer;" @click="$router.push('/inviteJoin')" class="swiper-slide" v-for="(item,index) in slideJoin" :key="index">
               <div class="slide_1">
                 <div class="s1-title textEllipsis">{{item.title}}</div>
                 <div class="s1-desc">
@@ -316,22 +316,22 @@
         </div>
       </div>
     </div>
-    <div class="l8">
-      <ul>
-        <li class="li1" @click="bottomBtn(1)"></li>
-        <li class="li2" @click="bottomBtn(2)">
-          <!--<a style="display: block;width: 100%;height: 100%;opacity: 0;" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=164992537&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=392563086" alt="点击联系在线客服" title="点击联系在线客服"/></a>-->
-          <a id="kefu" style="display: block;width: 100%;height: 100%;opacity: 0;" href="tencent://message/?uin=392563086&Site=http://vps.shuidazhe.com&Menu=yes">PC版</a>
-        </li>
-        <li class="li3" @click="bottomBtn(3)"></li>
-        <li class="li4">
-          <div class="erwei">
-            <img src="../../static/img/er1.jpg" alt="">
-          </div>
-        </li>
-        <li class="li5" @click="toTop"></li>
-      </ul>
-    </div>
+    <!--<div class="l8">-->
+      <!--<ul>-->
+        <!--<li class="li1" @click="bottomBtn(1)"></li>-->
+        <!--<li class="li2" @click="bottomBtn(2)">-->
+          <!--&lt;!&ndash;<a style="display: block;width: 100%;height: 100%;opacity: 0;" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=164992537&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=392563086" alt="点击联系在线客服" title="点击联系在线客服"/></a>&ndash;&gt;-->
+          <!--<a id="kefu" style="display: block;width: 100%;height: 100%;opacity: 0;" href="tencent://message/?uin=392563086&Site=http://vps.shuidazhe.com&Menu=yes">PC版</a>-->
+        <!--</li>-->
+        <!--<li class="li3" @click="bottomBtn(3)"></li>-->
+        <!--<li class="li4">-->
+          <!--<div class="erwei">-->
+            <!--<img src="../../static/img/er1.jpg" alt="">-->
+          <!--</div>-->
+        <!--</li>-->
+        <!--<li class="li5" @click="toTop"></li>-->
+      <!--</ul>-->
+    <!--</div>-->
     <!--侧边咨询-->
     <div class="l9">
       <div>
@@ -535,11 +535,7 @@
           //   // observer:true
           // });
         },100);
-        var swiperHome03 = new Swiper('.swiperHome03',{
-          slidesPerView:4,
-          spaceBetween:15,
-          observer:true
-        });
+
         var swiperHome06 = new Swiper('.swiperHome06',{
           slidesPerView: 7,
           spaceBetween: 10
@@ -659,6 +655,27 @@
         this.$api.axiosGet('/index/index/getTechnology/location/1',{},function (data) {
           console.log(data);
           that.videoList = data.data.technology;
+          // that.videoList = that.videoList.slice(0,1);
+          var length = data.data.technology.length;
+          if(length<4){
+            var l = 139*(4-length);
+            console.log(l);
+            $('.swiperHome03').css({
+              '-webkit-transform': 'translateX('+l+'px)',
+              '-moz-transform': 'translateX('+l+'px)',
+              '-ms-transform': 'translateX('+l+'px)',
+              '-o-transform': 'translateX('+l+'px)',
+              'transform': 'translateX('+l+'px)',
+              // 'margin-left': -w/2+'px'
+            })
+          }
+          setTimeout(function () {
+            var swiperHome03 = new Swiper('.swiperHome03',{
+              slidesPerView:4,
+              spaceBetween:15,
+              observer:true
+            });
+          },50);
         })
         // 招商加盟
         this.$api.axiosGet('/index/index/getJoin/location/1',{},function (data) {

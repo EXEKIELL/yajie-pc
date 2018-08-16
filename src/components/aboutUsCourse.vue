@@ -230,7 +230,7 @@
             prevButton:'.prev07',
             nextButton:'.next07',
             centeredSlides : true,
-            slidesPerView:1.5,
+            slidesPerView:1.8,
             // autoplay:3000,
             speed:1000,
             spaceBetween:50,

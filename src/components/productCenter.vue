@@ -144,6 +144,19 @@
           console.log(form);
           var idx = parseInt(sessionStorage.getItem('idx'));
           var idx1 = parseInt(sessionStorage.getItem('idx1'));
+          console.log(idx !== idx);
+          if(sessionStorage.getItem('idx') == null){
+            idx = 0;
+          }
+          if(sessionStorage.getItem('idx1') == null){
+            idx1 = -1;
+          }
+          if(idx !== idx){
+            idx = 0;
+          }
+          if(idx1 !== idx1){
+            idx1 = -1;
+          }
           if(to.path == "/productCenter/productInfo"){
             if(to.query.id == 41){
               this.tag1Show = false;
@@ -196,6 +209,7 @@
                   //初始化
                   setTimeout(function () {
                     that.swiper02 = new Swiper('.swiper02',{
+                      // autoplay:1000,
                       slidesPerView: 8,
                       spaceBetween: 10,
                       prevButton:'.prev02',
@@ -208,13 +222,16 @@
                         // that.swiper02.reLoop();
                       },
                       onInit:function (swiper) {
-                        setTimeout(function () {
-                          if(idx1 == -1){
-                            swiper.slideTo(idx1+1);
-                          }else{
-                            swiper.slideTo(idx1);
-                          }
-                        },50)
+                        // setTimeout(function () {
+                        //   if(idx1 == -1){
+                        //     swiper.slideTo(idx1+1);
+                        //   }else{
+                        //     swiper.slideTo(idx1);
+                        //   }
+                        // },50)
+                        setInterval(function () {
+                          swiper.slideNext();
+                        },1000)
                       }
                     })
                   },50);
@@ -235,7 +252,8 @@
               this.tag1Show = true;
               // 获取一级标签
               this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
-                // console.log(data);
+                console.log(data);
+                console.log(idx);
                 that.navBtn = data.data.cates;
                 let defaultId = data.data.cates[idx].id;
                 that.id = defaultId;
@@ -378,6 +396,7 @@
               //初始化
               setTimeout(function () {
                 that.swiper02 = new Swiper('.swiper02',{
+                  // autoplay:1000,
                   slidesPerView: 8,
                   spaceBetween: 10,
                   prevButton:'.prev02',
@@ -390,7 +409,13 @@
                     // that.swiper02.reLoop();
                   },
                   onInit:function (swiper) {
-                    swiper.slideTo(idx1+1);
+                    setTimeout(function () {
+                        if(idx1 == -1){
+                          swiper.slideTo(idx1+1);
+                        }else{
+                          swiper.slideTo(idx1);
+                        }
+                      },50)
                   }
                 })
               },50);

@@ -25,7 +25,7 @@
             <!--</div>-->
           <!--</div>-->
           <div class="cont-2 floatl" v-if="listData.data.length !=0">
-            <div class="listCont" v-for="(item,index) in listData.data" :key="index">
+            <div style="cursor:pointer;" @click="navTo(item.id)" class="listCont" v-for="(item,index) in listData.data" :key="index">
               <div class="lc1">
                 <div class="imgWrap">
                   <img :src="$baseLink+item.pic" alt="">

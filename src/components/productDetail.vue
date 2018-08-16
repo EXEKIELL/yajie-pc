@@ -95,7 +95,7 @@
         return {
           bigImg:'',
           content:'',
-          pImg:['../../static/img/produce1.png','../../static/img/produce1.png','../../static/img/produce1.png','../../static/img/produce1.png'],
+          pImg:['static/img/produce1.png','static/img/produce1.png','static/img/produce1.png','static/img/produce1.png'],
           noDetail:false,
           pIndex:0
         }

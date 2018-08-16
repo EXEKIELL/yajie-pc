@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="list2 clearfloat" v-if="productList.data">
-        <div class="l2-wrap" v-for="(item,index) in productList.data" :key="index">
+        <div style="cursor: pointer;" @click="navTo(item.id)" class="l2-wrap" v-for="(item,index) in productList.data" :key="index">
           <div class="wrapImg">
             <div class="img01">
               <img :src="$baseLink+item.pic" alt="">

@@ -9,7 +9,7 @@
     <div class="list2">
       <div class="l2-left">
         <div class="l2left-1" v-for="(item,index) in videoLeft">
-          <iframe height=340 width=558 :src='item.path' frameborder=0 ></iframe>
+          <iframe height=340 width=558 allowfullscreen="true" allowtransparency="true" :src='item.path' frameborder=0 ></iframe>
           <div class="downWrap">
             <div class="wrap">
               <div>
@@ -28,7 +28,7 @@
       </div>
       <div class="l2-left l2-right">
         <div class="l2left-1"  v-for="(item,index) in videoRight">
-          <iframe height=340 width=558 :src='item.path' frameborder=0 ></iframe>
+          <iframe height=340 width=558 allowfullscreen="true" allowtransparency="true" :src='item.path' frameborder=0 ></iframe>
           <div class="downWrap">
             <div class="wrap">
               <div>

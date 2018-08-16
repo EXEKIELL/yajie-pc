@@ -174,17 +174,17 @@
         getMore:function () {
           var _this = this;
           // console.log(this.jobData);
-          _this.$alert('您可以在智联，boss直聘等求职网站上搜索我司该职位进行投递，感谢您的关注！','温馨提示', {
-            confirmButtonText: '确定',
-            showClose:false
-          });
-          // var id = this.jobData[this.swiperIndex].id;
-          // this.$router.push({
-          //   path: '/invite/inviteDetail',
-          //   query:{
-          //     id:id
-          //   }
-          // })
+          // _this.$alert('您可以在智联，boss直聘等求职网站上搜索我司该职位进行投递，感谢您的关注！','温馨提示', {
+          //   confirmButtonText: '确定',
+          //   showClose:false
+          // });
+          var id = this.jobData[this.swiperIndex].id;
+          this.$router.push({
+            path: '/invite/inviteDetail',
+            query:{
+              id:id
+            }
+          })
         }
 
       }
