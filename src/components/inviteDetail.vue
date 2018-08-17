@@ -166,11 +166,20 @@
               <div class="data-4">
                 <div class="d4-text name01">上传附件</div>
                 <div class="d4-upload">
-                  <div class="showBtn">选择文件
-                    <input class="file" type="file" @change="updata">
+                  <div class="showBtn">
+                    <el-upload
+                      class="upload-demo"
+                      :action="action"
+                      :on-change="handleChange"
+                      name="file"
+                      :on-success="upload01"
+                      :file-list="fileList3">
+                      <el-button size="small" type="primary">点击上传</el-button>
+                      <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+                    </el-upload>
                   </div>
                   <div class="showData">
-                    <input class="text" disabled type="text" v-model="formData.upload.name">
+                    <input class="text" disabled type="text" v-model="formData.file.name">
                   </div>
                 </div>
               </div>
@@ -196,14 +205,16 @@
           popUp01:false,
           jobData:[1],
           id:0,
+          action:this.$baseLink+'/index/join/fileUpload' ,
           formData:{
             name:'',
             phone:'',
             address:'',
             desc:'',
             sex:'',
-            upload:{}
-          }
+            file:''
+          },
+          fileList3:[]
         }
       },
       filters:{
@@ -223,12 +234,16 @@
         updata(e){
           console.log(e.target.files);
           // this.formData.upload = e.target.files[0].name;
-          console.log(this.formData.upload);
-          var formData1 = new FormData();
-          // this.formData.upload = e.target.files[0];
-          formData1.file = e.target.files[0];
-          this.formData.upload = formData1;
-          console.log(formData1);
+          // console.log(this.formData.upload);
+          // var formData1 = new FormData();
+          // // this.formData.upload = e.target.files[0];
+          // formData1.file = e.target.files[0];
+          // this.formData.upload = formData1;
+          // console.log(formData1);
+          // $('#fileForm').submit();
+        },
+        handleChange(file, fileList) {
+          this.fileList3 = fileList.slice(-3);
         },
         btn(){
           const that = this;
@@ -247,6 +262,10 @@
               showClose:false
             });
           })
+        },
+        upload01(res,file,fileList){
+          console.log(res);
+          this.formData.file = res.path;
         },
         selInput(e){
           console.log(e);
@@ -286,4 +305,20 @@
 </style>
 <style>
   @import "../../static/css/public.css";
+  #inviteDetail .el-button--small, .el-button--small.is-round{
+    padding: 13px 15px;
+    width: 100%;
+    background-color: #604775;
+  }
+  #inviteDetail .el-upload{
+    width: 100%;
+  }
+  #inviteDetail .el-upload-list{
+    position: absolute;
+    right: -150px;
+    top: 0;
+  }
+  #inviteDetail .el-upload__tip{
+    display: none;
+  }
 </style>

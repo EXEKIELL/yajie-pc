@@ -34,7 +34,7 @@
      	 		<p>{{list.info.title}}</p>
      	 	</div>
      	 	<div class="inforDate">
-     	 		<p><span>日期：{{list.info.time}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>浏览：325人</span></p>
+     	 		<p><span>日期：{{list.info.time}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>浏览：{{list.info.browse}}人</span></p>
      	 	</div>
      	 	<div class="inforContent" v-html="list.info.content1"></div>
     	</div>
@@ -52,8 +52,8 @@
           <div class="l9_wrap">
             <div class="w_1">
               <div class="head">
-                <div class="img">
-                  <img src="http://archie.web.hengdikeji.com/uploads/About/link/20180709/0145dc3c989b38175602495528d6c424.jpg" alt="">
+                <div class="img" v-if="bottomDetail.length">
+                  <img :src="$baseLink+bottomDetail[0].pics" alt="">
                 </div>
               </div>
             </div>
@@ -82,6 +82,7 @@
         return {
           id:null,
           list:{},
+          bottomDetail:[]
         }
       },
       mounted(){
@@ -100,6 +101,11 @@
           _this.list.info.time = timestampToTime(_this.list.info.time);
           // console.log(_this.list);
         });
+        // 获取底部信息
+        this.$api.axiosGet('/index/about/getLink',{},function (data) {
+          console.log(data);
+          _this.bottomDetail = data.data.link;
+        })
       }
     }
 </script>

@@ -2,7 +2,7 @@
   <div id="aboutUsContact">
     <div class="list1">
       <div class="l1-map" id="companyMap">
-
+          <!--<my-map></my-map>-->
       </div>
       <div class="l1-info">
         <div>
@@ -54,7 +54,11 @@
 </template>
 
 <script>
+  import myMap from './map'
     export default {
+    components:{
+      myMap
+    },
         name: "aboutUsContact",
         data(){
           return{
@@ -63,23 +67,26 @@
             detailData:[]
           }
         },
+       created(){
+         // var link = document.createElement('link');
+         // link.rel = 'stylesheet';
+         // link.href = 'http://cache.amap.com/lbs/static/main1119.css'; // 高德地图
+         // document.body.appendChild(link);
+         // var script2 = document.createElement('script');
+         // script2.type = 'text/javascript';
+         // script2.src = 'http://webapi.amap.com/maps?v=1.3&key=5433dcc2bc76f4bfae5b9b20179efac5'   // 高德地图
+         // document.body.appendChild(script2);
+         // var script1 = document.createElement('script');
+         // script1.type = 'text/javascript';
+         // script1.src = 'http://cache.amap.com/lbs/static/es5.min.js';   // 高德地图
+         // document.body.appendChild(script1);
+         // var script3 = document.createElement('script');
+         // script3.type = 'text/javascript';
+         // script3.src = 'http://cache.amap.com/lbs/static/addToolbar.js';   // 高德地图
+         // document.body.appendChild(script3);
+       },
         mounted:function () {
-          var link = document.createElement('link');
-          link.rel = 'stylesheet';
-          link.href = 'http://cache.amap.com/lbs/static/main1119.css'; // 高德地图
-          document.body.appendChild(link);
-          var script1 = document.createElement('script');
-          script1.type = 'text/javascript';
-          script1.src = 'http://cache.amap.com/lbs/static/es5.min.js';   // 高德地图
-          document.body.appendChild(script1);
-          var script2 = document.createElement('script');
-          script2.type = 'text/javascript';
-          script2.src = 'http://webapi.amap.com/maps?v=1.3&key=5433dcc2bc76f4bfae5b9b20179efac5'   // 高德地图
-          document.body.appendChild(script2);
-          var script3 = document.createElement('script');
-          script3.type = 'text/javascript';
-          script3.src = 'http://cache.amap.com/lbs/static/addToolbar.js';   // 高德地图
-          document.body.appendChild(script3);
+
           var _this = this;
 
           // 获取联系信息
@@ -97,15 +104,17 @@
               _this.marker = new AMap.Marker({
                 position: _this.map.getCenter(),
                 draggable: true,
-                cursor: 'move',
+                cursor: 'pointer',
               });
               // icon: "../../static/img/addressIcon.png"
               _this.marker.setMap(_this.map);
               // 设置点标记的动画效果，此处为弹跳效果
               _this.marker.setAnimation('AMAP_ANIMATION_BOUNCE');
               _this.marker.setTitle('点击我，打开地图，雅洁五金欢迎您的到来！');
+              console.log(_this.marker.getPosition())
+              console.log(_this.marker);
               _this.marker.on('click',function(e){
-                marker.markOnAMAP({
+                _this.marker.markOnAMAP({
                   name:'雅洁五金有限公司',
                   position:_this.marker.getPosition()
                 })

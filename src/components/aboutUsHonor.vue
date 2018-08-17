@@ -9,7 +9,7 @@
                 <div class="detailText">
                   <div class="dt_wrap">
                     <p>{{item.title}}</p>
-                    <span class="time">2018-08</span>
+                    <span class="time">{{item.date}}</span>
                   </div>
                 </div>
               </div>
@@ -20,44 +20,12 @@
         <div class="swiper-button-next next06"></div>
       </div>
       <div class="listBottom">
-      	<div class="lbBox">
+      	<div class="lbBox" v-for="(item,index) in list" :key="index">
       		<div class="lbLeft">
-      			<p>2017年08月</p>
+      			<p>{{item.date}}</p>
       		</div>
       		<div class="lbRight">
-      			<p>重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌</p>
-      		</div>
-      	</div>
-      	<div class="lbBox">
-      		<div class="lbLeft">
-      			<p>2017年08月</p>
-      		</div>
-      		<div class="lbRight">
-      			<p>重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌</p>
-      		</div>
-      	</div>
-      	<div class="lbBox">
-      		<div class="lbLeft">
-      			<p>2017年08月</p>
-      		</div>
-      		<div class="lbRight">
-      			<p>重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌</p>
-      		</div>
-      	</div>
-      	<div class="lbBox">
-      		<div class="lbLeft">
-      			<p>2017年08月</p>
-      		</div>
-      		<div class="lbRight">
-      			<p>重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌</p>
-      		</div>
-      	</div>
-      	<div class="lbBox">
-      		<div class="lbLeft">
-      			<p>2017年08月</p>
-      		</div>
-      		<div class="lbRight">
-      			<p>重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌重点培育发展的广州省出口名牌</p>
+      			<p>{{item.title}}</p>
       		</div>
       	</div>
       </div>
@@ -79,7 +47,7 @@
       mounted(){
         var _this = this;
         _this.$api.axiosGet('/index/about/getHonor',{},function (data) {
-          console.log(data)
+          console.log(data);
           _this.list = data.data.honor;
           _this.listLength = _this.list.length;
           for(var i = 0;i<_this.list.length;i++)

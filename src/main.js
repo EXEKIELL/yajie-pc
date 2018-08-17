@@ -16,6 +16,8 @@ Vue.config.productionTip = false;
 Vue.prototype.$baseLink = 'http://archie.web.hengdikeji.com';
 Vue.use(ElementUI);
 
+console.log(window.map)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

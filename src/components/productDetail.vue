@@ -23,10 +23,10 @@
         </div>
         <div class="proRight">
           <div class="proTitle">
-            <p>智能指纹锁 雅洁6817A</p>
+            <p>{{getData.title}}</p>
           </div>
           <div class="proType">
-            <p>型号AJ1021-02A-30-尼龙铬</p>
+            <p>型号{{getData.name}}</p>
           </div>
           <div class="prot">
             <p>颜色 <span>| Color</span></p>
@@ -56,34 +56,34 @@
           <p>产品规格</p>
         </div>
         <div class="proParamBox">
-          <div class="paramText">
-            <p>系列名称：<span>云速系列</span></p>
+          <div class="paramText" v-for="(item,index) in productParam" :key="index">
+            <p>{{item.name}}：<span>{{item.content}}</span></p>
           </div>
-          <div class="paramText">
-            <p>可选颜色：<span>青古铜/红古铜/香槟金</span></p>
-          </div>
-          <div class="paramText">
-            <p>指纹容量：<span>100</span></p>
-          </div>
-          <div class="paramText">
-            <p>型号：<span>6213A</span></p>
-          </div>
-          <div class="paramText">
-            <p>开门方式：<span>密码/指纹/机械钥匙</span></p>
-          </div>
-          <div class="paramText">
-            <p>密码长度：<span>6-12位开门密码，总30位虚位密码</span></p>
-          </div>
-          <div class="paramText">
-            <p>尺寸：<span>400×78×31（mm）</span></p>
-          </div>
-          <div class="paramText">
-            <p>主要材质：<span> 锌合金</span></p>
-          </div>
+          <!--<div class="paramText">-->
+            <!--<p>可选颜色：<span>青古铜/红古铜/香槟金</span></p>-->
+          <!--</div>-->
+          <!--<div class="paramText">-->
+            <!--<p>指纹容量：<span>100</span></p>-->
+          <!--</div>-->
+          <!--<div class="paramText">-->
+            <!--<p>型号：<span>6213A</span></p>-->
+          <!--</div>-->
+          <!--<div class="paramText">-->
+            <!--<p>开门方式：<span>密码/指纹/机械钥匙</span></p>-->
+          <!--</div>-->
+          <!--<div class="paramText">-->
+            <!--<p>密码长度：<span>6-12位开门密码，总30位虚位密码</span></p>-->
+          <!--</div>-->
+          <!--<div class="paramText">-->
+            <!--<p>尺寸：<span>400×78×31（mm）</span></p>-->
+          <!--</div>-->
+          <!--<div class="paramText">-->
+            <!--<p>主要材质：<span> 锌合金</span></p>-->
+          <!--</div>-->
         </div>
       </div>
-      <div class="proHtml">
-          <img src="../../static/img/proImg1.png"/>
+      <div class="proHtml" v-html="content">
+          <!--<img src="../../static/img/proImg1.png"/>-->
       </div>
     </div>
 </template>
@@ -95,6 +95,8 @@
         return {
           bigImg:'',
           content:'',
+          getData:{},
+          productParam:[],
           pImg:['static/img/produce1.png','static/img/produce1.png','static/img/produce1.png','static/img/produce1.png'],
           noDetail:false,
           pIndex:0
@@ -110,6 +112,8 @@
           }else{
             that.bigImg = that.$baseLink+data.data.info.pic;
             that.content = data.data.info.content;
+            that.productParam = data.data.info.param.data;
+            that.getData = data.data.info;
           }
         })
       }
@@ -121,4 +125,7 @@
 </style>
 <style>
   @import "../../static/css/public.css";
+  .proHtml img{
+    width: 100%;
+  }
 </style>

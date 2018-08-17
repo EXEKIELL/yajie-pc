@@ -140,6 +140,6 @@
     width: 1200px;
     margin: 0 auto; }
     #productDetail .proHtml img {
-      width: 100%; }
+      width: 100% !important; }
 
 /*# sourceMappingURL=productDetail.css.map */

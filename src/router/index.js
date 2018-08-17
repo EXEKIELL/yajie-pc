@@ -35,7 +35,7 @@ import Black from '@/components/black'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   scrollBehavior (to, from, savedPosition) {
     return { x: 0, y: 0 }
   },
@@ -49,7 +49,8 @@ export default new Router({
       name: HomePage,
       component: HomePage,
       meta:{
-        keepAlive:false
+        keepAlive:false,
+        title:'雅洁五金'
       }
     },
     {
@@ -57,7 +58,8 @@ export default new Router({
       name: 'InviteJoin',
       component: InviteJoin,
       meta:{
-        keepAlive:false
+        keepAlive:false,
+        title:'加入我们'
       }
     },
     {
@@ -261,3 +263,11 @@ export default new Router({
     }
   ]
 })
+router.beforeEach((to, from, next) => {//beforeEach是router的钩子函数，在进入路由前执行
+  if (to.meta.title) {//判断是否有标题
+    document.title = to.meta.title
+  }
+  next()//执行进入路由，如果不写就不会进入目标页
+})
+
+export default router

@@ -590,7 +590,7 @@
         //获取产品推荐
         //获取产品顶级标签
         this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
-          // console.log(data);
+          console.log(data);
           that.tags01 = data.data.cates;
           var id01 = data.data.cates[0].id;
           //获取产品三级标签
