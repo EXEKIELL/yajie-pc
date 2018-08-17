@@ -10,12 +10,13 @@ import '../static/css/swiper.min.css'
 import '../static/js/swiper.min'
 import $ from 'jquery'
 import api from '../static/js/mainPublic'
-
+import VueAMap from 'vue-amap';
 Vue.prototype.$api = api;
+Vue.prototype.VueAMap = VueAMap;
 Vue.config.productionTip = false;
 Vue.prototype.$baseLink = 'http://archie.web.hengdikeji.com';
 Vue.use(ElementUI);
-
+Vue.use(VueAMap);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -23,3 +24,7 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+
+
+
