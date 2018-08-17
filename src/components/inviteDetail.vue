@@ -254,14 +254,18 @@
           }else if(formData.sex == '女士'){
             formData.sex = 0;
           }
-          console.log(formData);
-          this.$api.axiosPost('/index/join/postApply',0,formData,function (data) {
-            console.log(data);
-            that.$alert(data.data.msg,'温馨提示', {
-              confirmButtonText: '确定',
-              showClose:false
-            });
-          })
+          if(formData.file == ''){
+
+          }else{
+            console.log(formData);
+            this.$api.axiosPost('/index/join/postApply',0,formData,function (data) {
+              console.log(data);
+              that.$alert(data.data.msg,'温馨提示', {
+                confirmButtonText: '确定',
+                showClose:false
+              });
+            })
+          }
         },
         upload01(res,file,fileList){
           console.log(res);

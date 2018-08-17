@@ -54,11 +54,8 @@
 </template>
 
 <script>
-  import myMap from './map'
+  import { lazyAMapApiLoaderInstance } from 'vue-amap';
     export default {
-    components:{
-      myMap
-    },
         name: "aboutUsContact",
         data(){
           return{
@@ -86,40 +83,43 @@
          // document.body.appendChild(script3);
        },
         mounted:function () {
-
           var _this = this;
-
+          this.VueAMap.initAMapApiLoader({
+            key: '5433dcc2bc76f4bfae5b9b20179efac5',
+            plugin: ['AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType'],
+            v: '1.4.4'
+          });
           // 获取联系信息
           this.$api.axiosGet('/index/about/getLink',{},function (data) {
-            // console.log(data);
+            console.log(data);
+
             _this.detailData = data.data.link;
-            var x = parseInt(data.data.link[0].x),
-              y = parseInt(data.data.link[0].y);
-            setTimeout(function () {
+            var x = data.data.link[0].x,
+              y = data.data.link[0].y;
+            lazyAMapApiLoaderInstance.load().then(() => {
+              // your code ...
               _this.map = new AMap.Map('companyMap', {
+                center: new AMap.LngLat(x, y),
+                zoom: 19,
                 resizeEnable: true,
-                zoom:19,
-                center: [x,y]
               });
               _this.marker = new AMap.Marker({
                 position: _this.map.getCenter(),
                 draggable: true,
-                cursor: 'pointer',
+                cursor: 'move',
+                icon: "https://webapi.amap.com/theme/v1.3/markers/n/mark_b.png"
               });
-              // icon: "../../static/img/addressIcon.png"
-              _this.marker.setMap(_this.map);
-              // 设置点标记的动画效果，此处为弹跳效果
-              _this.marker.setAnimation('AMAP_ANIMATION_BOUNCE');
+              _this.map.add(_this.marker);
               _this.marker.setTitle('点击我，打开地图，雅洁五金欢迎您的到来！');
               console.log(_this.marker.getPosition())
               console.log(_this.marker);
               _this.marker.on('click',function(e){
                 _this.marker.markOnAMAP({
-                  name:'雅洁五金有限公司',
+                  name:'广东雅洁五金科技有限公司',
                   position:_this.marker.getPosition()
                 })
               })
-            },1000);
+            });
           })
         }
     }

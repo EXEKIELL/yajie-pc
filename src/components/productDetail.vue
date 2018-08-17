@@ -18,7 +18,7 @@
       <div class="proBox clearfloat">
         <div class="proLeft">
           <div class="proLeftIn">
-            <img :src="pImg[pIndex]" alt=""/>
+            <img :src="$baseLink+pImg[pIndex].url" alt=""/>
           </div>
         </div>
         <div class="proRight">
@@ -39,7 +39,7 @@
           </div>
           <div class="proImg clearfloat">
             <div  class="pImg " :class="{'pImgActive':pIndex==index}" v-for="(item,index) in pImg" @mouseover="pIndex=index">
-              <img :src="item"/>
+              <img :src="$baseLink+item.url"/>
             </div>
           </div>
           <div class="prot">
@@ -114,6 +114,7 @@
             that.content = data.data.info.content;
             that.productParam = data.data.info.param.data;
             that.getData = data.data.info;
+            that.pImg = data.data.info.img
           }
         })
       }
