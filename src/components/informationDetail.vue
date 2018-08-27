@@ -39,11 +39,11 @@
      	 	<div class="inforContent" v-html="list.info.content1"></div>
     	</div>
     	<div class="prevNext clearfloat">
-    		<div class="prev">
-    			<p>上一篇&nbsp;&nbsp;&nbsp;&nbsp;Archie雅洁，走品牌代理的新外贸之路</p>
+    		<div class="prev" v-if="list.front" @click="btn(0)">
+    			<p>上一篇&nbsp;&nbsp;&nbsp;&nbsp;{{list.front.title}}</p>
     		</div>
-    		<div class="next">
-    			<p>Archie雅洁，走品牌代理的新外贸之路&nbsp;&nbsp;&nbsp;&nbsp;下一篇</p>
+    		<div class="next" v-if="list.after" @click="btn(1)">
+    			<p><span class="textEllipsis" style="width: 82%">{{list.after.title}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>下一篇</span></p>
     		</div>
     	</div>
       <!--侧边咨询-->
@@ -83,6 +83,42 @@
           id:null,
           list:{},
           bottomDetail:[]
+        }
+      },
+      methods:{
+        btn(i){
+          const _this = this;
+          if(i == 0){
+            //上一篇
+            var id0 = this.list.front.id;
+            _this.$api.axiosGet('/index/news/getNewsinfo/id/'+id0,{},function (data) {
+              console.log(data);
+              _this.list = data.data;
+              _this.list.info.pic = _this.$baseLink + _this.list.info.pic;
+
+              for(var i = 0; i<_this.list.min.length; i++)
+              {
+                _this.list.min[i].pic = _this.$baseLink + _this.list.min[i].pic;
+              }
+              _this.list.info.time = timestampToTime(_this.list.info.time);
+              // console.log(_this.list);
+            });
+          }else{
+            //下一篇
+            var id1 = this.list.after.id;
+            _this.$api.axiosGet('/index/news/getNewsinfo/id/'+id1,{},function (data) {
+              console.log(data);
+              _this.list = data.data;
+              _this.list.info.pic = _this.$baseLink + _this.list.info.pic;
+
+              for(var i = 0; i<_this.list.min.length; i++)
+              {
+                _this.list.min[i].pic = _this.$baseLink + _this.list.min[i].pic;
+              }
+              _this.list.info.time = timestampToTime(_this.list.info.time);
+              // console.log(_this.list);
+            });
+          }
         }
       },
       mounted(){

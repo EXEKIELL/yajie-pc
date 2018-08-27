@@ -26,7 +26,7 @@ axios.interceptors.response.use(data=>{
 },error => {
   loadinginstace.close()
   Message.error({
-    message: '加载失败'
+    message: '加载失败,请稍后重试'
   })
   return Promise.reject(error)
 })

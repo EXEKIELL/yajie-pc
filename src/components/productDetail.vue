@@ -17,7 +17,7 @@
       <!--</div>-->
       <div class="proBox clearfloat">
         <div class="proLeft">
-          <div class="proLeftIn">
+          <div class="proLeftIn" v-if="pImg.length">
             <img :src="$baseLink+pImg[pIndex].url" alt=""/>
           </div>
         </div>
@@ -32,7 +32,7 @@
             <p>颜色 <span>| Color</span></p>
           </div>
           <div class="proText">
-            <p><span>青古铜</span><span>青古铜</span><span>青古铜</span></p>
+            <p><span v-for="(item,index) in color">{{item}}</span></p>
           </div>
           <div class="prot">
             <p>图片  <span>| Image</span></p>
@@ -45,9 +45,9 @@
           <div class="prot">
             <p>购买方式  <span>| Method of purchase</span></p>
           </div>
-          <div class="proMethod">
-            <a href="###" class="proJd">京东</a>
-            <a href="###" class="proTm">天猫</a>
+          <div class="proMethod" v-if="getData">
+            <a :href="getData.jd_url" target="_blank" class="proJd">京东</a>
+            <a :href="getData.tb_url" target="_blank" class="proTm">天猫</a>
           </div>
         </div>
       </div>
@@ -99,7 +99,9 @@
           productParam:[],
           pImg:['static/img/produce1.png','static/img/produce1.png','static/img/produce1.png','static/img/produce1.png'],
           noDetail:false,
-          pIndex:0
+          pIndex:0,
+          // 产品颜色
+          color:[]
         }
       },
       mounted(){
@@ -114,7 +116,11 @@
             that.content = data.data.info.content;
             that.productParam = data.data.info.param.data;
             that.getData = data.data.info;
-            that.pImg = data.data.info.img
+            that.pImg = data.data.info.img;
+            var color = data.data.info.color;
+            var colorArr = color.split(',');
+            that.color = colorArr;
+            console.log(that.color)
           }
         })
       }
