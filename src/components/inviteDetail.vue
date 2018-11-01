@@ -154,7 +154,7 @@
                 </div>
                 <div class="d1-1">
                   <span class="name01">地区</span>
-                  <input type="text" placeholder="请选择地区" v-model="formData.address">
+                  <input type="text" placeholder="请输入地区" v-model="formData.address">
                 </div>
               </div>
               <div class="data-1 data-3">

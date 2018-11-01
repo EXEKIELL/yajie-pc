@@ -25,6 +25,11 @@
         width: 32%;
         margin-bottom: 24px;
         margin-right: 22px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
         .lc1{
           width: 383px;
           height: 383px;
@@ -80,7 +85,7 @@
             -ms-transition: all 0.5s;
             -o-transition: all 0.5s;
             transition: all 0.5s;
-            background-color: rgba(96,71,117,0.3);
+            background-color: rgba(96,71,117,0.8);
             z-index: -1;
             opacity: 0;
           }
@@ -129,7 +134,7 @@
             .lc2-1{
               font-size: 18px;
               color: #333333;
-              margin-bottom: 15px;
+              margin-bottom: 10px;
               -webkit-transition: all 0.5s;
               -moz-transition: all 0.5s;
               -ms-transition: all 0.5s;
@@ -139,7 +144,7 @@
             .lc2-2{
               font-size: 14px;
               color: #999999;
-              margin-bottom: 15px;
+              //margin-bottom: 15px;
             }
             .lc2-3{
               button{
@@ -173,6 +178,9 @@
         }
       }
       .listCont:hover{
+        -webkit-box-shadow: 0 0 20px rgba(51, 51, 51, 0.1);
+        -moz-box-shadow: 0 0 20px rgba(51, 51, 51, 0.1);
+        box-shadow: 0 0 20px rgba(51, 51, 51, 0.1);
         .lc1{
 
           position: relative;
@@ -195,9 +203,10 @@
           }
         }
         .lc2{
-          background-color: #efefef;
+          //background-color: #efefef;
           .lc2-1{
             color: #604775;
+            font-weight: bold;
           }
           .lc2-3{
             button{

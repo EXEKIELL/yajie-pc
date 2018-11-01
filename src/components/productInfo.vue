@@ -5,25 +5,6 @@
           <span>{{title01}}</span>
         </div>
         <div class="l3-cont clearfloat" v-if="listData.data">
-          <!--<div class="cont-1 floatl">-->
-            <!--<div class="listCont">-->
-              <!--<div class="lc1">-->
-                <!--<div>-->
-                  <!--<img src="../../static/img/product01_big.png" alt="">-->
-                <!--</div>-->
-                <!--<button class="search"></button>-->
-              <!--</div>-->
-              <!--<div class="lc2">-->
-                <!--<div>-->
-                  <!--<div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>-->
-                  <!--<div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>-->
-                  <!--<div class="lc2-3">-->
-                    <!--<button @click="moreBtn">MORE</button>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
           <div class="cont-2 floatl" v-if="listData.data.length !=0">
             <div style="cursor:pointer;" @click="navTo(item.id)" class="listCont" v-for="(item,index) in listData.data" :key="index">
               <div class="lc1">
@@ -38,110 +19,23 @@
                 <div>
                   <div class="lc2-1">{{item.name}}</div>
                   <div class="lc2-2 textEllipsis">{{item.desc}}</div>
-                  <div class="lc2-3">
-                    <button @click="navTo(item.id)">MORE</button>
-                  </div>
+                  <!--<div class="lc2-3">-->
+                    <!--<button @click="navTo(item.id)">MORE</button>-->
+                  <!--</div>-->
                 </div>
               </div>
             </div>
-            <!--<div class="listCont">-->
-              <!--<div class="lc1">-->
-                <!--<div>-->
-                  <!--<img src="../../static/img/product03.png" alt="">-->
-                <!--</div>-->
-                <!--<button class="search"></button>-->
-              <!--</div>-->
-              <!--<div class="lc2">-->
-                <!--<div>-->
-                  <!--<div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>-->
-                  <!--<div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>-->
-                  <!--<div class="lc2-3">-->
-                    <!--<button>MORE</button>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<div class="listCont">-->
-              <!--<div class="lc1">-->
-                <!--<div>-->
-                  <!--<img src="../../static/img/product03.png" alt="">-->
-                <!--</div>-->
-                <!--<button class="search"></button>-->
-              <!--</div>-->
-              <!--<div class="lc2">-->
-                <!--<div>-->
-                  <!--<div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>-->
-                  <!--<div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>-->
-                  <!--<div class="lc2-3">-->
-                    <!--<button>MORE</button>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<div class="listCont">-->
-              <!--<div class="lc1">-->
-                <!--<div>-->
-                  <!--<img src="../../static/img/product03.png" alt="">-->
-                <!--</div>-->
-                <!--<button class="search"></button>-->
-              <!--</div>-->
-              <!--<div class="lc2">-->
-                <!--<div>-->
-                  <!--<div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>-->
-                  <!--<div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>-->
-                  <!--<div class="lc2-3">-->
-                    <!--<button>MORE</button>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
           </div>
           <div class="noneList" v-else style="padding: 55px 0;">
             <span>暂无产品推荐~</span>
           </div>
-          <!--<div class="cont-2 floatr">-->
-            <!--<div class="listCont">-->
-              <!--<div class="lc1">-->
-                <!--<div>-->
-                  <!--<img src="../../static/img/product02.png" alt="">-->
-                <!--</div>-->
-                <!--<button class="search"></button>-->
-              <!--</div>-->
-              <!--<div class="lc2">-->
-                <!--<div>-->
-                  <!--<div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>-->
-                  <!--<div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>-->
-                  <!--<div class="lc2-3">-->
-                    <!--<button>MORE</button>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-            <!--<div class="listCont listContSmall">-->
-              <!--<div class="lc1">-->
-                <!--<div>-->
-                  <!--<img src="../../static/img/product03.png" alt="">-->
-                <!--</div>-->
-                <!--<button class="search"></button>-->
-              <!--</div>-->
-              <!--<div class="lc2">-->
-                <!--<div>-->
-                  <!--<div class="lc2-1">雅洁智能门锁雅洁ahtyifh 智能门锁</div>-->
-                  <!--<div class="lc2-2 textEllipsis">雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门锁雅洁ahtyifh 智能门锁雅洁智能门...</div>-->
-                  <!--<div class="lc2-3">-->
-                    <!--<button>MORE</button>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
         </div>
         <!--<div v-if="listData.data">-->
           <!--<div class="l3-button" v-if="listData.data.length !=0">-->
             <!--<button>MORE</button>-->
           <!--</div>-->
         <!--</div>-->
-        <div class="pagina" style="margin-top: 50px;">
+        <div class="pagina" style="margin-top: 40px;">
           <el-pagination
             background
             layout="prev, pager, next"
@@ -194,7 +88,7 @@
           }else if(id == 41){
             this.title01 = '智能家居'
           }else if(id == 42){
-            this.title01 = '智能安防'
+            this.title01 = '智能产品'
           }
           this.id = id;
           // 获取
@@ -215,9 +109,10 @@
         }else if(id == 42){
           this.title01 = '智能安防'
         }
+        this.id = id;
         // 获取
         this.$api.axiosGet('/index/product/getProductList/type/limit3/id/'+that.id,{},function (data) {
-          // console.log(data);
+          console.log(data);
           that.listData = data.data.list;
         })
       }

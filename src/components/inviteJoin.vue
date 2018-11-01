@@ -3,416 +3,110 @@
     <div class="banner">
       <img src="../../static/img/banner07.png" alt="">
     </div>
+    <div class="zhankai sel">
+      <div class="icon23">
+        <img src="../../static/img/icon23.png" alt="">
+      </div>
+    </div>
+    <div class="nav01 sel">
+      <ul>
+        <li v-for="(item,index) in nav01List" :class="{sel:index == selStatus2}" :key="index">
+          <router-link :to="item.to">{{item.text}}</router-link>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapButton">
+      <ul>
+        <li v-for="(item,index) in liBtn" :class="{sel:index == detailIdx-1}" :key="index" @click="btn01(index)">
+          <div :class="{i1:index == 0,i2:index == 1,i3:index == 2}" class="icon"></div>
+          <div>{{item}}</div>
+        </li>
+      </ul>
+    </div>
+    <div class="title">
+      <img style="margin: auto;" src="../../static/img/title06.png" alt="">
+    </div>
     <div class="list2">
       <!--<img src="../../static/img/bj11.png" alt="">-->
       <div class="swiper-container swiper11">
         <div class="swiper-wrapper">
           <div class="swiper-slide slide11">
             <div>
-              <div class="title02">
-                <img src="../../static/img/title05.png" alt="">
-              </div>
               <div class="swiper-container swiper12">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide slide12" v-for="(item,index) in join1" :key="index">
                     <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">{{index<10?'0'+(index+1):index}}</div>
-                        <div class="xian"></div>
-                        <div v-if="join1">
-                          <div class="totalPage">{{join1.length<10?'0'+join1.length:join1.length}}</div>
-                        </div>
-                      </div>
-                      <div class="s12Img">
-                        <img :src="item.img" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">{{item.chTitle}}</div>
-                        <div class="cnTitle">{{item.zhTitle}}</div>
-                      </div>
-                    </div>
                     <div class="s12-2">
-                      <p>{{item.content}}</p>
+                      <div class="cnTitle">{{item.title}}</div>
+                      <p>{{item.text}}</p>
                     </div>
+                    <div class="s12-1"></div>
                   </div>
-                  <!--<div class="swiper-slide slide12">-->
-                  <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                  <!--</div>-->
-                  <!--<div class="swiper-slide slide12">-->
-                  <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                  <!--</div>-->
                 </div>
               </div>
-              <div class="swiper-button-prev prev12"></div>
-              <div class="swiper-button-next next12"></div>
-              <div class="swiper-pagination pagin12"></div>
-            </div>
-          </div>
-          <div class="swiper-slide slide11">
-            <div>
-              <div class="title02">
-                <img src="../../static/img/title05.png" alt="">
-              </div>
-              <div class="swiper-container swiper12">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide slide12">
-                    <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">01</div>
-                        <div class="xian"></div>
-                        <div class="totalPage">03</div>
-                      </div>
-                      <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">CREATE PERMANENT QUALITY</div>
-                        <div class="cnTitle">打造恒久精工品质</div>
-                      </div>
-                    </div>
-                    <div class="s12-2">
-                      <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。</p>
-                    </div>
+              <div class="swiper12_detail">
+                <div>
+                  <div class="w_1 wrap1" v-for="(item,index) in join1" :key="index" :class="{sel:index == index1}">
+                    <div class="num">0{{index+1}}</div>
+                    <div class="title1">{{item.title}}</div>
                   </div>
-                  <div class="swiper-slide slide12">
-                    <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">01</div>
-                        <div class="xian"></div>
-                        <div class="totalPage">03</div>
-                      </div>
-                      <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">CREATE PERMANENT QUALITY</div>
-                        <div class="cnTitle">打造恒久精工品质</div>
-                      </div>
-                    </div>
-                    <div class="s12-2">
-                      <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。</p>
-                    </div>
+                  <div @click="index1Change(index)" :class="{wrap2:index == 0,wrap3:index == 1,wrap4:index == 2,sel:index == index1}" class="w_2" v-for="(item,index) in join1" :key="index">
+                    <div class="num">0{{index+1}}</div>
+                    <div class="title1">{{item.title}}</div>
+                    <div class="mask"></div>
                   </div>
-                  <div class="swiper-slide slide12">
-                    <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">01</div>
-                        <div class="xian"></div>
-                        <div class="totalPage">03</div>
-                      </div>
-                      <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">CREATE PERMANENT QUALITY</div>
-                        <div class="cnTitle">打造恒久精工品质</div>
-                      </div>
-                    </div>
-                    <div class="s12-2">
-                      <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。</p>
-                    </div>
-                  </div>
-                  <!--<div class="swiper-slide slide12">-->
-                  <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                  <!--</div>-->
-                  <!--<div class="swiper-slide slide12">-->
-                  <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                  <!--</div>-->
                 </div>
               </div>
-              <div class="swiper-button-prev prev12"></div>
-              <div class="swiper-button-next next12"></div>
-              <div class="swiper-pagination pagin12"></div>
-            </div>
-          </div>
-          <div class="swiper-slide slide11">
-            <div>
-              <div class="title02">
-                <img src="../../static/img/title05.png" alt="">
-              </div>
-              <div class="swiper-container swiper12">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide slide12">
-                    <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">01</div>
-                        <div class="xian"></div>
-                        <div class="totalPage">03</div>
-                      </div>
-                      <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">CREATE PERMANENT QUALITY</div>
-                        <div class="cnTitle">打造恒久精工品质</div>
-                      </div>
-                    </div>
-                    <div class="s12-2">
-                      <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。</p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide slide12">
-                    <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">01</div>
-                        <div class="xian"></div>
-                        <div class="totalPage">03</div>
-                      </div>
-                      <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">CREATE PERMANENT QUALITY</div>
-                        <div class="cnTitle">打造恒久精工品质</div>
-                      </div>
-                    </div>
-                    <div class="s12-2">
-                      <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。</p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide slide12">
-                    <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">01</div>
-                        <div class="xian"></div>
-                        <div class="totalPage">03</div>
-                      </div>
-                      <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">CREATE PERMANENT QUALITY</div>
-                        <div class="cnTitle">打造恒久精工品质</div>
-                      </div>
-                    </div>
-                    <div class="s12-2">
-                      <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。</p>
-                    </div>
-                  </div>
-                  <!--<div class="swiper-slide slide12">-->
-                  <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                  <!--</div>-->
-                  <!--<div class="swiper-slide slide12">-->
-                  <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                  <!--</div>-->
-                </div>
-              </div>
-              <div class="swiper-button-prev prev12"></div>
-              <div class="swiper-button-next next12"></div>
-              <div class="swiper-pagination pagin12"></div>
-            </div>
-          </div>
-          <div class="swiper-slide slide11">
-            <div>
-              <div class="title02">
-                <img src="../../static/img/title05.png" alt="">
-              </div>
-              <div class="swiper-container swiper12">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide slide12">
-                    <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">01</div>
-                        <div class="xian"></div>
-                        <div class="totalPage">03</div>
-                      </div>
-                      <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">CREATE PERMANENT QUALITY</div>
-                        <div class="cnTitle">打造恒久精工品质</div>
-                      </div>
-                    </div>
-                    <div class="s12-2">
-                      <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。</p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide slide12">
-                    <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">01</div>
-                        <div class="xian"></div>
-                        <div class="totalPage">03</div>
-                      </div>
-                      <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">CREATE PERMANENT QUALITY</div>
-                        <div class="cnTitle">打造恒久精工品质</div>
-                      </div>
-                    </div>
-                    <div class="s12-2">
-                      <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。</p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide slide12">
-                    <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">01</div>
-                        <div class="xian"></div>
-                        <div class="totalPage">03</div>
-                      </div>
-                      <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">CREATE PERMANENT QUALITY</div>
-                        <div class="cnTitle">打造恒久精工品质</div>
-                      </div>
-                    </div>
-                    <div class="s12-2">
-                      <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。</p>
-                    </div>
-                  </div>
-                  <!--<div class="swiper-slide slide12">-->
-                  <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                  <!--</div>-->
-                  <!--<div class="swiper-slide slide12">-->
-                  <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                  <!--</div>-->
-                </div>
-              </div>
-              <div class="swiper-button-prev prev12"></div>
-              <div class="swiper-button-next next12"></div>
-              <div class="swiper-pagination pagin12"></div>
-            </div>
-          </div>
-          <div class="swiper-slide slide11">
-            <div>
-              <div class="title02">
-                <img src="../../static/img/title05.png" alt="">
-              </div>
-              <div class="swiper-container swiper12">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide slide12">
-                    <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">01</div>
-                        <div class="xian"></div>
-                        <div class="totalPage">03</div>
-                      </div>
-                      <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">CREATE PERMANENT QUALITY</div>
-                        <div class="cnTitle">打造恒久精工品质</div>
-                      </div>
-                    </div>
-                    <div class="s12-2">
-                      <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。</p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide slide12">
-                    <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">01</div>
-                        <div class="xian"></div>
-                        <div class="totalPage">03</div>
-                      </div>
-                      <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">CREATE PERMANENT QUALITY</div>
-                        <div class="cnTitle">打造恒久精工品质</div>
-                      </div>
-                    </div>
-                    <div class="s12-2">
-                      <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。</p>
-                    </div>
-                  </div>
-                  <div class="swiper-slide slide12">
-                    <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                    <div class="s12-1">
-                      <div class="page12">
-                        <div class="currentPage">01</div>
-                        <div class="xian"></div>
-                        <div class="totalPage">03</div>
-                      </div>
-                      <div class="s12Img">
-                        <img src="../../static/img/img36.png" alt="">
-                      </div>
-                      <div class="s12Title">
-                        <div class="enTitle">CREATE PERMANENT QUALITY</div>
-                        <div class="cnTitle">打造恒久精工品质</div>
-                      </div>
-                    </div>
-                    <div class="s12-2">
-                      <p>广东雅洁五金有限公司（简称雅洁五金），始于1990年，近30年的传承与发展，专注高端五金制品研发与生产。是一家集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、机械门锁、卫浴五金、门用五金、家具五金5大品类，遍及中国市场的旗舰店、专卖店和专柜超过1000家，强大的销售网点覆盖中国90%的地级以上城市。</p>
-                    </div>
-                  </div>
-                  <!--<div class="swiper-slide slide12">-->
-                  <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                  <!--</div>-->
-                  <!--<div class="swiper-slide slide12">-->
-                  <!--<img src="../../static/img/lunbo01.png" alt="">-->
-                  <!--</div>-->
-                </div>
-              </div>
-              <div class="swiper-button-prev prev12"></div>
-              <div class="swiper-button-next next12"></div>
-              <div class="swiper-pagination pagin12"></div>
+              <div class="swiper-button-prev prev12" style="z-index: 1000;"></div>
+              <div class="swiper-button-next next12" style="z-index: 1000;"></div>
+              <!--<div class="swiper-pagination pagin12"></div>-->
             </div>
           </div>
         </div>
         <div class="swiper-pagination pagin11"></div>
       </div>
     </div>
+    <div class="title">
+      <img style="margin: auto;" src="../../static/img/title07.png" alt="">
+    </div>
     <div class="list3">
       <div class="l3-wrap">
-        <div class="l3-title">
-          <div class="title-1">雅洁五金四大加盟优势</div>
-          <div class="title-2">YAJIE HARDWARE IV JOINING ADVANTAGE</div>
-        </div>
         <div class="l3-swiper">
+          <!--<div class="prev13"></div>-->
+          <!--<div class="next13"></div>-->
           <div class="swiper-container swiper13">
-            <div class="bj01"></div>
+            <!--<div class="bj01"></div>-->
             <div class="swiper-wrapper">
               <div class="swiper-slide slide13" v-for="(item,index) in join2" :key="index">
                 <div class="slide13-img">
-                  <img :src="item.img" alt="">
+                  <img :src="$baseLink+item.pic" alt="">
                 </div>
                 <div class="slide13-info">
+                  <div class="num">0{{index+1}}.</div>
                   <div class="info13-1">
-                    <div class="i13-title">{{item.zhTitle}}</div>
-                    <div class="i13-title2">{{item.chTitle}}</div>
+                    <div class="i13-title">{{item.title}}</div>
+                    <!--<div class="i13-title2">{{item.chTitle}}</div>-->
                   </div>
                   <div class="info13-2">
-                    <p>{{item.content}}</p>
+                    <p>{{item.text}}</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="swiperRight">
-            <div class="prev13"></div>
             <div class="swiper-container swiper17">
               <div class="swiper-wrapper">
-                <div class="swiper-slide" v-for="(item,index) in join2" :key="index">
+                <div class="swiper-slide" v-for="(item,index) in join2">
                   <div class="r1" :class="{sel:pagin13 == index}" @click="btn13(index)">
                     <div>
-                      <div class="r1-title">{{item.zhTitle}}</div>
+                      <div class="r1-num">0{{index+1}}</div>
+                      <div class="r1-title textEllipsis">优势{{index+1}}</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="next13"></div>
           </div>
         </div>
       </div>
@@ -429,9 +123,9 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide slide14" v-for="(item,index) in three1" :key="index">
                   <div class="slide14-1">
-                    <img :src="item.img" alt="">
+                    <img :src="$baseLink+item.pic" alt="">
                     <div class="imgDetail">
-                      <p>{{item.content}}</p>
+                      <p>{{item.text}}</p>
                     </div>
                   </div>
                   <div class="slide14-2">
@@ -440,7 +134,7 @@
                     </div>
                     <div class="sl4-wrap">
                       <div class="s4-info1">{{item.title}}</div>
-                      <div class="s4-info2">{{item.enTitle}}</div>
+                      <div class="s4-info2">{{item.ntitle}}</div>
                     </div>
                   </div>
                 </div>
@@ -453,26 +147,96 @@
       </div>
       <div class="list5">
         <div class="l5-wrap">
-          <div class="l5-title">
+          <div class="l5-title" style="margin-bottom: 0">
             <img src="../../static/img/title04.png" alt="">
           </div>
           <div class="l5-slide">
-            <div class="slideList" v-for="(item,index) in progress1" :key="index">
-              <div class="sl1">
-                <!--<div class="l-default"></div>-->
-                <img :src="item.icon" alt="">
-              </div>
-              <div class="sl2">
-                <img src="../../static/img/icon17.png" alt="">
-                <div class="sl2-1">{{item.range}}</div>
-                <div class="sl2-2">{{item.title}}</div>
-              </div>
+            <div class="" v-for="(item,index) in progress1" :key="index">
+              <img :src="$baseLink+item.pic" alt="">
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!--智能安防-->
+    <!--智能家居-->
+    <div class="wrap" v-if="detailIdx == 3">
+      <div class="title" style="margin-bottom: 60px;">
+        <img style="margin: auto;" src="../../static/img/title09.png" alt="">
+      </div>
+      <div class="list7">
+        <div class="l7-wrap">
+          <div class="l7-img">
+            <img src="../../static/img/img44.png" alt="">
+          </div>
+          <div class="l7-info">
+            <ul>
+              <li v-for="(item,index) in condition" :key="index">
+                <div class="xuhao center">{{index+1}}</div>
+                <div class="text">
+                  <div class="t0">{{item.title}}</div>
+                  <!--<div class="t1" v-if="item.mes1">-->
+                    <!--<div class="t1Text" v-for="(item1,index1) in item.mes1" :key="index1">-->
+                      <!--<span class="xh">({{index1+1}})</span><span>{{item1}}</span>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <!--<div class="t2" v-if="item.mes2">-->
+                    <!--<div class="t2Text" v-for="(item2,index2) in item.mes2" :key="'i'+index2">-->
+                      <!--<span class="t-title">{{item2.label}}</span><span>{{item2.text}}</span>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                  <div class="t1">{{item.text}}</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="list4">
+        <div class="l4-wrap">
+          <div class="l4-title">
+            <img src="../../static/img/title03.png" alt="">
+          </div>
+          <div class="l4-swiper">
+            <div class="swiper-container swiper14">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide14" v-for="(item,index) in three1" :key="index">
+                  <div class="slide14-1">
+                    <img :src="$baseLink+item.pic" alt="">
+                    <div class="imgDetail">
+                      <p>{{item.text}}</p>
+                    </div>
+                  </div>
+                  <div class="slide14-2">
+                    <div class="cirImg">
+                      <div><img src="../../static/img/img35.png" alt=""></div>
+                    </div>
+                    <div class="sl4-wrap">
+                      <div class="s4-info1">{{item.title}}</div>
+                      <div class="s4-info2">{{item.ntitle}}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev prev14"></div>
+            <div class="swiper-button-next next14"></div>
+          </div>
+        </div>
+      </div>
+      <div class="list5">
+        <div class="l5-wrap">
+          <div class="l5-title" style="margin-bottom: 0;">
+            <img src="../../static/img/title04.png" alt="">
+          </div>
+          <div class="l5-slide">
+            <div class="" v-for="(item,index) in progress1" :key="index">
+              <img :src="$baseLink+item.pic" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--智能产品-->
     <div class="wrap" v-if="detailIdx == 2">
       <div class="list4">
         <div class="l4-wrap">
@@ -482,11 +246,11 @@
           <div class="l4-swiper">
             <div class="swiper-container swiper14">
               <div class="swiper-wrapper">
-                <div class="swiper-slide slide14" v-for="(item,index) in three2" :key="index">
+                <div class="swiper-slide slide14" v-for="(item,index) in three1" :key="index">
                   <div class="slide14-1">
-                    <img src="../../static/img/img34.png" alt="">
+                    <img :src="$baseLink+item.pic" alt="">
                     <div class="imgDetail">
-                      <p>{{item.content}}</p>
+                      <p>{{item.text}}</p>
                     </div>
                   </div>
                   <div class="slide14-2">
@@ -495,7 +259,7 @@
                     </div>
                     <div class="sl4-wrap">
                       <div class="s4-info1">{{item.title}}</div>
-                      <div class="s4-info2">{{item.enTitle}}</div>
+                      <div class="s4-info2">{{item.ntitle}}</div>
                     </div>
                   </div>
                 </div>
@@ -508,93 +272,85 @@
       </div>
       <div class="list5">
         <div class="l5-wrap">
-          <div class="l5-title">
+          <div class="l5-title" style="margin-bottom: 0;">
             <img src="../../static/img/title04.png" alt="">
           </div>
           <div class="l5-slide">
-            <div class="slideList" v-for="(item,index) in progress2" :key="index">
-              <div class="sl1">
-                <!--<div class="l-default">ICON</div>-->
-                <img :src="item.icon" alt="">
-              </div>
-              <div class="sl2">
-                <img src="../../static/img/icon17.png" alt="">
-                <div class="sl2-1">{{item.range}}</div>
-                <div class="sl2-2">{{item.title}}</div>
-              </div>
+            <div class="" v-for="(item,index) in progress1" :key="index">
+              <img :src="$baseLink+item.pic" alt="">
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!--智能家居-->
-    <div class="wrap" v-if="detailIdx == 3">
-      <div class="list4">
-        <div class="l4-wrap">
-          <div class="l4-title">
-            <img src="../../static/img/title03.png" alt="">
-          </div>
-          <div class="l4-swiper">
-            <div class="swiper-container swiper14">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide slide14" v-for="(item,index) in three3" :key="index">
-                  <div class="slide14-1">
-                    <img src="../../static/img/img34.png" alt="">
-                    <div class="imgDetail">
-                      <p>{{item.content}}</p>
-                    </div>
-                  </div>
-                  <div class="slide14-2">
-                    <div class="cirImg">
-                      <div><img src="../../static/img/img35.png" alt=""></div>
-                    </div>
-                    <div class="sl4-wrap">
-                      <div class="s4-info1">{{item.title}}</div>
-                      <div class="s4-info2">{{item.enTitle}}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-prev prev14"></div>
-            <div class="swiper-button-next next14"></div>
-          </div>
-        </div>
-      </div>
-      <div class="list5">
-        <div class="l5-wrap">
-          <div class="l5-title">
-            <img src="../../static/img/title04.png" alt="">
-          </div>
-          <div class="l5-slide">
-            <div class="slideList" v-for="(item,index) in progress3" :key="index">
-              <div class="sl1">
-                <!--<div class="l-default">ICON</div>-->
-                <img :src="item.icon" alt="">
-              </div>
-              <div class="sl2">
-                <img src="../../static/img/icon17.png" alt="">
-                <div class="sl2-1">{{item.range}}</div>
-                <div class="sl2-2">{{item.title}}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="title">
+      <img style="margin: auto;" src="../../static/img/title08.png" alt="">
     </div>
     <div class="list6">
       <div class="l6-wrap">
         <img src="../../static/img/bj15.png" alt="">
         <div class="detail">
           <div>
-            <div class="name">
-              <span class="label">姓名</span><input type="text" v-model="joinForm.name" placeholder="请输入姓名">
+            <div class="type">
+              <div class="typeTitle">类型</div>
+              <div class="typeTags">
+                <span @click="detailIdx = index+1" :class="{sel:detailIdx-1 == index}" v-for="(item,index) in liBtn" :key="index">{{item}}</span>
+              </div>
             </div>
-            <div class="phone">
-              <span class="label">电话</span><input type="text" v-model="joinForm.phone" placeholder="请输入联系方式">
+            <div class="detail_1">
+              <div class="name">
+                <span class="label label1">姓名</span>
+                <div class="input">
+                  <input type="text" v-model="joinForm.name" placeholder="请输入姓名">
+                </div>
+              </div>
+              <div class="phone">
+                <span class="label label1">电话</span>
+                <div class="input">
+                  <input type="text" v-model="joinForm.phone" placeholder="请输入联系方式">
+                </div>
+              </div>
             </div>
             <div class="addr">
-              <span class="label">地址</span><input type="text" v-model="joinForm.address" placeholder="请输入地址">
+              <span class="label">地区</span>
+              <div class="region">
+                <div class="province" style="">
+                  <el-select v-model="province" placeholder="请选择省" @change = "selectProvice()">
+                    <el-option
+                      v-for="item in options1"
+                      :key="item.value"
+                      :label="item.label"
+                      :value="item.value">
+                    </el-option>
+                  </el-select>
+                </div>
+                <div class="city">
+                  <el-select v-model="city" placeholder="请选择市" @change = "selectCity()">
+                    <el-option
+                      v-for="item in options2"
+                      :key="item.value"
+                      :label="item.label"
+                      :value="item.value">
+                    </el-option>
+                  </el-select>
+                </div>
+                <div class="district" style="display: block;">
+                  <el-select v-model="district" placeholder="请选择区">
+                    <el-option
+                      v-for="item in options3"
+                      :key="item.value"
+                      :label="item.label"
+                      :value="item.value">
+                    </el-option>
+                  </el-select>
+                </div>
+              </div>
+            </div>
+            <div class="message">
+              <span class="label">留言</span>
+              <div class="input">
+                <textarea placeholder="请输入您的留言" v-model="joinForm.desc"></textarea>
+              </div>
             </div>
             <div class="button">
               <button @click="btnForm">提交申请</button>
@@ -602,11 +358,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="wrapButton">
-      <ul>
-        <li v-for="(item,index) in liBtn" :class="{sel:index == 0}" :key="index" @click="btn01(index)">{{item}}</li>
-      </ul>
     </div>
   </div>
 </template>
@@ -616,10 +367,25 @@
       name: "inviteJoin",
       data(){
         return {
+          selStatus2:0,
+          nav01List:[
+            {text:'招商加盟',to:'/inviteJoin'},
+            {text:'人才招聘',to:'/invite/inviteInfo'}
+          ],
+          province: '',
+          city:'',
+          district:'',
+          options1:[],
+          options2:[],
+          options3:[],
+
+
+          tagChange:0,
+          index1:0,
           pagin13:0,
-          detailIdx:1,//1-传统五金 2-智能安防 3-智能家居
+          detailIdx:1,//1-传统五金 2-智能产品 3-智能家居
           swiper13:null,
-          liBtn:['传统五金','智能安防','智能家居'],
+          liBtn:['传统五金','智能产品','智能家居'],
           threeBtn:["雅洁五金招商","智能家居招商","智能门锁招商"],
           three1:[
             {
@@ -808,44 +574,45 @@
               icon:'static/img/joinIcon/26-03.png',
               range:'01'
             },
-            // {
-            //   title:'商务洽谈',
-            //   range:'02'
-            // },
             {
-              title:'加盟申请',
+              title:'商务洽谈',
               icon:'static/img/joinIcon/27-03.png',
               range:'02'
             },
             {
-              title:'资质审核',
+              title:'加盟申请',
               icon:'static/img/joinIcon/28-03.png',
               range:'03'
             },
             {
-              title:'签订合同',
+              title:'资质审核',
               icon:'static/img/joinIcon/29-03.png',
               range:'04'
             },
             {
-              title:'缴纳费用',
+              title:'签订合同',
               icon:'static/img/joinIcon/30-03.png',
               range:'05'
             },
             {
-              title:'店面装修',
+              title:'缴纳费用',
               icon:'static/img/joinIcon/31-03.png',
               range:'06'
             },
             {
-              title:'总部培训',
+              title:'店面装修',
               icon:'static/img/joinIcon/26-03.png',
               range:'07'
             },
             {
-              title:'正式运营',
+              title:'总部培训',
               icon:'static/img/joinIcon/27-03.png',
               range:'08'
+            },
+            {
+              title:'正式运营',
+              icon:'static/img/joinIcon/28-03.png',
+              range:'09'
             }
           ],
           progress3:[
@@ -951,11 +718,67 @@
               content:'销售网络覆盖全国80%的地区，全国专卖店近两千家。自主品牌远销欧洲、北美、中东和东南亚等50多个国家和地区。同时已建立了完善的售后服务体系，“智能锁产品身份卡”让用户尊享2年保修、终身维护的服务。'
             }
           ],
+          condition:[
+            {
+              title:'认同雅洁公司的经验理念、管理模式、品牌文化',
+              mes1:[],
+              mes2:[]
+            },
+            {
+              title:'较好的商业信誉和有志开拓新事业的个人或企业',
+              mes1:[],
+              mes2:[]
+            },
+            {
+              title:'有一定的终端市场营销与服务经验',
+              mes1:['经营过终端店面，服务过终端市场','建材行业、家电行业、安防行业、家具行业等服务经验'],
+              mes2:[]
+            },
+            {
+              title:'拥有售后销售服务团队',
+              mes1:[],
+              mes2:[
+                {
+                  label:'体验专区：',
+                  text:'至少1个技术专员，1个销售，1个售后，其中销售与售后可以共用先有服务团队'
+                },
+                {
+                  label:'体验馆：',
+                  text:'2个以上技术专员，2个以上销售，2个以上售后，其中销售与售后可以共用先有服务团队'
+                },
+                {
+                  label:'',
+                  text:'设计公司、定制家具、物业、地产公司等渠道拓展专员'
+                }
+              ]
+            },
+            {
+              title:'有相应行业客户或项目资源',
+              mes1:['设计装修公司资源','地产公司资源','政府或相关协会资源','建材类合作资源','物业服务资源'],
+              mes2:[]
+            },
+            {
+              title:'准备或拟定了符合总部要求的体验专区经营场所',
+              mes1:[],
+              mes2:[
+                {
+                  label:'体验专区：',
+                  text:'15㎡以上的体验及展示区域'
+                },
+                {
+                  label:'体验馆：',
+                  text:'60㎡以上的体验及展示区域'
+                }
+              ]
+            },
+          ],
           joinForm:{
             name:'',
             phone:'',
-            address:''
-          }
+            address:'',
+            desc:''
+          },
+          swiper12:''
         }
       },
       methods:{
@@ -964,14 +787,38 @@
           this.swiper13.slideTo(i);
         },
         btn01(i){
-          $("html,body").animate({scrollTop:0}, 500);
-          $('.wrapButton>ul>li').removeClass('sel');
-          $('.wrapButton>ul>li').eq(i).addClass('sel');
+          const that = this;
+          $("html,body").animate({scrollTop:2500}, 500);
+          // $('.wrapButton>ul>li').removeClass('sel');
+          // $('.wrapButton>ul>li').eq(i).addClass('sel');
           this.detailIdx = i+1;
+          // 获取加盟支持
+          this.$api.axiosPost('/index/Join/support',0,{
+            type:that.detailIdx
+          },function (data) {
+            that.three1 = data.data.data;
+          });
+          // 获取加盟流程
+          this.$api.axiosPost('/index/Join/jmimg',0,{
+            type:that.detailIdx
+          },function (data) {
+            that.progress1 = data.data.data;
+          })
+          if((i+1) == 3){
+            // 获取加盟条件
+            this.$api.axiosPost('/index/Join/requirement ',0,{},function (data) {
+              that.condition = data.data.data;
+            })
+          }
         },
         btnForm(){
           const that = this;
           let formData = this.joinForm;
+          var province = $('.province input').val();
+          var city = $('.city input').val();
+          var district = $('.district input').val();
+          formData.address = province+city+district;
+          // console.log(formData.address)
           if(formData.name == ''){
             that.$alert('姓名不能为空','温馨提示', {
               confirmButtonText: '确定',
@@ -988,6 +835,7 @@
               showClose:false
             });
           }else{
+            formData.address = province+'省'+city+'市'+district;
             // console.log(formData);
             formData.type = this.detailIdx;
             // 提交表单
@@ -1006,24 +854,183 @@
               }
             })
           }
+        },
+        index1Change:function (i) {
+          this.index1 = i;
+          this.swiper12.slideTo(i);
+        },
+        selectProvice:function () {
+          var _this = this;
+          _this.options2 = [];
+          _this.$api.axiosGet('/index/service/getNetwork/province/' + _this.province, {}, function (data) {
+
+            if(data.data.list.length>0)
+            {
+              _this.showShop = true;
+              _this.shopList = data.data.list;
+            }else{
+              _this.showShop = false;
+            }
+          });
+          //获取市
+          _this.city = '';
+          _this.$api.axiosGet('/index/service/getRegion/type/2/id/'+_this.province,{},function (data) {
+            var list = [];
+            for(var i=0; i<data.data.list.length; i++)
+            {
+              list.push({
+                label:data.data.list[i].name,
+                value:data.data.list[i].id
+              })
+            }
+            _this.options2 = list;
+          });
+        },
+        selectCity:function () {
+          var _this = this;
+          //获取区
+          _this.district = '';
+          _this.$api.axiosGet('/index/service/getRegion/type/3/id/'+_this.city,{},function (data) {
+            var list = [];
+            for(var i=0; i<data.data.list.length; i++)
+            {
+              list.push({
+                label:data.data.list[i].name,
+                value:data.data.list[i].id
+              })
+            }
+            _this.options3 = list;
+          });
+          _this.$api.axiosGet('/index/service/getNetwork/province/' + _this.province+'/city/'+_this.city, {}, function (data) {
+            console.log(data)
+            console.log(_this.city);
+            if (_this.city==52||_this.city==321||_this.city==394||_this.city==343) {
+
+            }else{
+              _this.showShop = [];
+              if (data.data.list.length > 0) {
+                _this.showShop = true;
+                _this.shopList = data.data.list;
+              } else {
+                _this.showShop = false;
+              }
+            }
+          });
         }
       },
       mounted(){
         const that = this;
+        $('#inviteJoin .nav01 li a').on('click',function () {
+          $('#inviteJoin .nav01 li').removeClass('sel');
+          $(this).parent('li').addClass('sel');
+        });
+        $('.zhankai').on('click',function () {
+          if($(this).hasClass('sel')){
+            $(this).removeClass('sel');
+            $('.nav01').removeClass('sel');
+          }else{
+            $(this).addClass('sel');
+            $('.nav01').addClass('sel');
+          }
+        });
+        var id = this.$router.history.current.query.id;
+        console.log(id);
+        if(id == undefined){
+          this.detailIdx = 1;
+          // 获取加盟支持
+          this.$api.axiosPost('/index/Join/support',0,{
+            type:that.detailIdx
+          },function (data) {
+            // console.log(data);
+            that.three1 = data.data.data;
+          })
+          // 获取加盟流程
+          this.$api.axiosPost('/index/Join/jmimg',0,{
+            type:that.detailIdx
+          },function (data) {
+            // console.log(data);
+            that.progress1 = data.data.data;
+          })
+        }else if(id == 3){
+          this.detailIdx = id;
+          // 获取加盟支持
+          this.$api.axiosPost('/index/Join/support',0,{
+            type:that.detailIdx
+          },function (data) {
+            // console.log(data);
+            that.three1 = data.data.data;
+          });
+          // 获取加盟流程
+          this.$api.axiosPost('/index/Join/jmimg',0,{
+            type:that.detailIdx
+          },function (data) {
+            // console.log(data);
+            that.progress1 = data.data.data;
+          });
+          // 获取加盟条件
+          this.$api.axiosPost('/index/Join/requirement ',0,{},function (data) {
+            that.condition = data.data.data;
+          })
+        }else{
+          this.detailIdx = id;
+          // 获取加盟支持
+          this.$api.axiosPost('/index/Join/support',0,{
+            type:that.detailIdx
+          },function (data) {
+            // console.log(data);
+            that.three1 = data.data.data;
+          });
+          // 获取加盟流程
+          this.$api.axiosPost('/index/Join/jmimg',0,{
+            type:that.detailIdx
+          },function (data) {
+            // console.log(data);
+            that.progress1 = data.data.data;
+          })
+        }
+        var _this = this;
+        //获取省
+        _this.$api.axiosGet('/index/service/getRegion/type/1',{},function (data) {
+          var list = [];
+          _this.options1 = [];
+          for(var i=0; i<data.data.list.length; i++)
+          {
+            list.push({
+              label:data.data.list[i].name,
+              value:data.data.list[i].id
+            })
+          }
+          _this.options1 = list;
+        });
         // var swiper11 = new Swiper('.swiper11',{
         //   // pagination: '.swiper-pagination',
         //   // paginationClickable: true,
         //   direction: 'vertical',
         //   pagination:'.pagin11'
         // });
-          var swiper12 = new Swiper('.swiper12',{
+          this.swiper12 = new Swiper('.swiper12',{
+            effect : 'flip',
+            speed:1000,
             prevButton:'.prev12',
             nextButton:'.next12',
-            pagination:'.pagin12'
+            pagination:'.pagin12',
+            onSlideChangeStart: function(swiper){
+              that.index1 = swiper.activeIndex;
+            }
           });
         this.swiper13 = new Swiper('.swiper13',{
+          autoplay:2500,
+          speed:800,
           prevButton:'.prev13',
           nextButton:'.next13',
+          onInit:function(swiper){
+            $('.swiper13').on('mouseenter',function () {
+              swiper.stopAutoplay();
+            })
+            $('.swiper13').on('mouseleave',function () {
+              swiper.startAutoplay();
+            })
+          },
           onSlideChangeStart: function(swiper){
             that.pagin13 = swiper.activeIndex;
           }
@@ -1036,11 +1043,21 @@
           observer:true
         });
         var swiper17 = new Swiper('.swiper17',{
-          slidesPerView:3,
-          direction : 'vertical',
+          slidesPerView:4,
+          spaceBetween:15,
           prevButton:'.prev13',
           nextButton:'.next13',
         })
+        // 获取品牌优势接口
+        this.$api.axiosPost('/index/Join/brand',0,{},function (data) {
+          // console.log(data);
+          that.join1 = data.data.data;
+        });
+        // 获取加盟优势接口
+        this.$api.axiosPost('/index/Join/jiameng',0,{},function (data) {
+          // console.log(data);
+          that.join2 = data.data.data;
+        });
       }
     }
 </script>

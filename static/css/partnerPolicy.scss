@@ -24,7 +24,7 @@
     flex-wrap: wrap;
     //justify-content: space-between;
     >div{
-      width: 20.2%;
+      width: 48%;
       margin-right: 6.4%;
     }
     >div:nth-child(4n){
@@ -32,15 +32,11 @@
     }
     .l2list{
       display: flex;
-      justify-content: center;
       align-items: center;
-      flex-direction: column;
-      text-align: center;
       font-size: 14px;
       color: #333333;
       position: relative;
-      padding: 25px 0;
-      padding-top: 40px;
+      padding: 25px 46px;
       border: 1px solid #ede8e3;
       box-sizing: border-box;
       -webkit-box-sizing: border-box;
@@ -48,8 +44,48 @@
       -ms-box-sizing: border-box;
       overflow: hidden;
       margin-bottom: 60px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      .listWrap{
+        margin-right: 30px;
+      }
+      .listDetail{
+        .d_1{
+          font-size: 20px;
+          color: #555555;
+          margin-bottom: 15px;
+          font-weight: bold;
+        }
+        .d_2{
+          font-size: 16px;
+          color: #555555;
+          font-weight: lighter;
+          margin-bottom: 15px;
+          >div:first-child{
+            margin-bottom: 10px;
+          }
+        }
+        .d_3{
+          a{
+            -webkit-transition: background-color 0.3s, color 0.3s;
+            -moz-transition: background-color 0.3s, color 0.3s;
+            -ms-transition: background-color 0.3s, color 0.3s;
+            -o-transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            font-size: 16px;
+            color: #888888;
+            background-color: #ede8e3;
+            line-height: 40px;
+            padding: 0 25px;
+          }
+        }
+      }
       img{
-        margin-bottom: 15px;
+
       }
       .download{
         position: absolute;
@@ -79,6 +115,22 @@
       }
     }
     .l2list:hover{
+      cursor: pointer;
+      background-color: #ffffff;
+      -webkit-box-shadow: 0 0 15px rgba(96, 71, 117, 0.2);
+      -moz-box-shadow: 0 0 15px rgba(96, 71, 117, 0.2);
+      box-shadow: 0 0 15px rgba(96, 71, 117, 0.2);
+      .listDetail{
+        .d_1{
+          color: #604775;
+        }
+        .d_3{
+          a{
+            background-color: #604775;
+            color: #ffffff;
+          }
+        }
+      }
       .download{
         -webkit-transform: translateY(0%);
         -moz-transform: translateY(0%);

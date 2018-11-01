@@ -1,10 +1,10 @@
 <template>
     <div id="informationNews">
       <div class="list1">
-        <div class="l1-1">品牌终端<span>一体化</span></div>
-        <div class="l1-2">雅洁通过产品和服务，努力营造一种和谐氛围，引领一种生活方式</div>
-        <div class="l1-3">BRAND TERMINAL INTEGRATION</div>
-        <div class="l1-4">YAJIE STRIVES TO CREATE A HARMONIOUS ATMOSPHERE AND LEAD A LIFESTYLE THROUGH PRODUCTS AND SERVICES.</div>
+        <div class="l1-1">{{title1}}<span>{{title1_1}}</span></div>
+        <div class="l1-2">{{title2}}</div>
+        <div class="l1-3">{{title3}}</div>
+        <div class="l1-4">{{title4}}</div>
       </div>
       <div class="list2-wrap">
         <div class="list" v-for="(item,index) in listData" :key="index" @click="navTo(item.id)">
@@ -24,38 +24,12 @@
               	<p>MORE</p>
               	</div>
               <div class="date">
-                <span>{{item.date[0]}}</span><span>/{{item.date[1]}}</span>
+                <span>{{item.date[1]}}</span><span>-{{item.date[0]}}</span>
               </div>
             </div>
           </div>
-          <!--<div class="listText" v-if="index%2 != 0">
-            <div class="text1">{{item.title}}</div>
-            <div class="text2">
-              <p>{{item.desc}}</p>
-            </div>
-            <div class="text3">
-              <div class="more">MORE <span class="jiantou"></span></div>
-              <div class="date">
-                <span>{{item.date[0]}}</span><span>/{{item.date[1]}}</span>
-              </div>
-            </div>
-          </div>
-          <div class="listImg" v-if="index%2 != 0">
-            <img :src="item.img" alt="">
-          </div>-->
         </div>
       </div>
-      <!--<div class="list3-pagin">-->
-        <!--<span v-for="(item,index) in pagin" :class="{sel:index == 0}" :key="index" @click="change(index+1)">{{index+1}}</span>-->
-      <!--</div>-->
-      <!--<el-pagination-->
-        <!--background-->
-        <!--layout="prev, pager, next"-->
-        <!--:page-size = 'page.per_page'-->
-        <!--:total="page.total"-->
-          <!--@current-change = "sizeChange"-->
-      <!--&gt;-->
-      <!--</el-pagination>-->
       <div class="pagina" >
         <el-pagination
           background
@@ -76,47 +50,9 @@
     Y = date.getFullYear();
     M = (date.getMonth()+1 < 10 ? (date.getMonth()+1) : date.getMonth()+1);
     D = date.getDate();
-    switch (parseInt(M)){
-      case 1:
-        month = 'Jan.';
-        break;
-      case 2:
-        month = 'Feb.';
-        break;
-      case 3:
-        month = 'Mar.';
-        break;
-      case 4:
-        month = 'Apr.';
-        break;
-      case 5:
-        month = 'May.';
-        break;
-      case 6:
-        month = 'Jun.';
-        break;
-      case 7:
-        month = 'Jul.';
-        break;
-      case 8:
-        month = 'Aug.';
-        break;
-      case 9:
-        month = 'Sept.';
-        break;
-      case 10:
-        month = 'Oct.';
-        break;
-      case 11:
-        month = 'Nov.';
-        break;
-      case 12:
-        month = 'Dec.';
-        break;
-    }
     var attr = {
       'year':Y,
-      'month':month,
+      'month':M,
       'day': D
     };
     return attr;
@@ -131,13 +67,18 @@
           page:{
             total:0,
             per_page:0
-          }
+          },
+          title1:'品牌终端',
+          title1_1:'一体化',
+          title2:'雅洁通过产品和服务，努力营造一种和谐氛围，引领一种生活方式',
+          title3:'BRAND TERMINAL INTEGRATION',
+          title4:'YAJIE STRIVES TO CREATE A HARMONIOUS ATMOSPHERE AND LEAD A LIFESTYLE THROUGH PRODUCTS AND SERVICES.'
         }
       },
       mounted:function () {
         var _this = this;
         _this.$api.axiosGet('/index/news/getNewsList/page/0',{},function (data) {
-          console.log(data);
+          // console.log(data);
           var list = data.data.list.data;
           _this.listData = [];
           _this.lastPage = data.data.list.last_page;
@@ -155,6 +96,15 @@
           }
           _this.listData = list;
         });
+        // 获取标题
+        this.$api.axiosPost('/index/News/postzxtitle',0,{},function (data) {
+          console.log(data);
+          _this.title1 = data.data.data.title1.slice(0,4);
+          _this.title1_1 = data.data.data.title1.slice(4);
+          _this.title2 = data.data.data.title2;
+          _this.title3 = data.data.data.etitle1;
+          _this.title4 = data.data.data.etitle2;
+        })
       },
       methods:{
         change(i){

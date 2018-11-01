@@ -45,6 +45,14 @@ const router = new Router({
       redirect: '/homePage'
     },
     {
+      path: '/login',
+      name: 'Login',
+      component:()=> import('@/components/login'),
+      meta:{
+        title:'登陆'
+      }
+    },
+    {
       path: '/homePage',
       name: HomePage,
       component: HomePage,
@@ -172,6 +180,15 @@ const router = new Router({
           meta:{
             keepAlive:false
           }
+        },
+        {
+          path: '/aboutUs/aboutUsInnovate',
+          name: 'AboutUsInnovate',
+          component:()=> import('@/components/aboutUsInnovate'),
+          meta:{
+            keepAlive:false,
+            title:'创新技术'
+          }
         }
       ]
     },
@@ -208,7 +225,8 @@ const router = new Router({
       component: Partner,
       redirect: '/partner/partnerPolicy',
       meta:{
-        keepAlive:false
+        keepAlive:false,
+        login:true
       },
       children:[
         {
@@ -216,7 +234,8 @@ const router = new Router({
           name: 'partnerPolicy',
           component: PartnerPolicy,
           meta:{
-            keepAlive:false
+            keepAlive:false,
+            login:true
           }
         },
         {
@@ -224,7 +243,8 @@ const router = new Router({
           name: 'partnerInstall',
           component: PartnerInstall,
           meta:{
-            keepAlive:false
+            keepAlive:false,
+            login:true
           }
         }
       ]
@@ -267,6 +287,33 @@ router.beforeEach((to, from, next) => {//beforeEach是router的钩子函数，�
   if (to.meta.title) {//判断是否有标题
     document.title = to.meta.title
   }
+  // console.log(to);
+    if(to.meta.login){
+      // console.log(to);
+      sessionStorage.setItem('path',to.fullPath);
+      var date = new Date();
+      var today = date.getFullYear()+'/'+(date.getMonth()+1)+'/'+date.getDate();
+      // 判断进入时间
+      if(localStorage.getItem('today') == null){
+        localStorage.setItem('today',today);
+        router.push('/login');
+      }else{
+        var date1 = new Date();
+        var nowDate = date1.getFullYear()+'/'+(date1.getMonth()+1)+'/'+date1.getDate();
+        var day = localStorage.getItem('today');
+        // 是否存在token
+        if(localStorage.getItem('token') == null){
+          router.push('/login');
+        }else{
+          if(nowDate == day){
+            next();
+          }else{
+            localStorage.removeItem('today');
+            router.push('/login');
+          }
+        }
+      }
+    }
   next()//执行进入路由，如果不写就不会进入目标页
 })
 

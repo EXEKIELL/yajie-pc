@@ -2,6 +2,71 @@
   width: 100%; }
   #inviteJoin .banner img {
     width: 100%; }
+#inviteJoin .nav01 {
+  padding: 25px 0;
+  width: 8%;
+  position: fixed;
+  left: 50px;
+  top: 156px;
+  z-index: 500;
+  background-color: #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  opacity: 0;
+  border: 1px solid #d4c1c1;
+  -webkit-box-shadow: 0 0 20px rgba(96, 71, 117, 0.2);
+  -moz-box-shadow: 0 0 20px rgba(96, 71, 117, 0.2);
+  box-shadow: 0 0 20px rgba(96, 71, 117, 0.2); }
+  #inviteJoin .nav01 ul {
+    width: 80%;
+    margin: auto; }
+    #inviteJoin .nav01 ul li {
+      margin-bottom: 30px;
+      text-align: center; }
+      #inviteJoin .nav01 ul li a {
+        font-size: 14px;
+        color: #999999; }
+    #inviteJoin .nav01 ul li:last-child {
+      margin-bottom: 0; }
+    #inviteJoin .nav01 ul li:hover a {
+      color: #604775;
+      font-weight: bold;
+      position: relative; }
+    #inviteJoin .nav01 ul li:hover a::after {
+      content: '';
+      display: block;
+      position: absolute;
+      border-left: 1px solid #604775;
+      top: 0;
+      left: -2px;
+      height: 100%; }
+    #inviteJoin .nav01 ul li.sel a {
+      color: #604775;
+      font-weight: bold;
+      position: relative; }
+    #inviteJoin .nav01 ul li.sel a::after {
+      content: '';
+      display: block;
+      position: absolute;
+      border-left: 1px solid #604775;
+      top: 0;
+      left: -2px;
+      height: 100%; }
+#inviteJoin .nav01.sel {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1; }
 #inviteJoin .list2 {
   width: 100%; }
   #inviteJoin .list2 .swiper11 {
@@ -10,8 +75,8 @@
     #inviteJoin .list2 .swiper11 .slide11 {
       width: 100%;
       height: 100%;
-      background: url("../img/bj11.png") no-repeat center;
-      background-size: 100% 100%;
+      background: url("../img/bj16.png") no-repeat top left;
+      background-size: auto 75%;
       display: flex;
       align-items: center; }
       #inviteJoin .list2 .swiper11 .slide11 > div {
@@ -25,11 +90,12 @@
           #inviteJoin .list2 .swiper11 .slide11 > div .title02 img {
             width: 80%; }
         #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 {
-          width: 800px;
           margin: auto; }
           #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 {
-            text-align: center; }
+            text-align: center;
+            display: flex; }
             #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 {
+              width: 0%;
               position: relative;
               padding: 40px 0; }
               #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .s12Img {
@@ -43,17 +109,6 @@
                 margin-bottom: 35px; }
                 #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .s12Img img {
                   width: 100%; }
-              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .s12Img::after {
-                content: '';
-                position: absolute;
-                width: 200px;
-                height: 140px;
-                border: 1px solid #444444;
-                -webkit-transform: translate(-12%, -15%);
-                -moz-transform: translate(-12%, -15%);
-                -ms-transform: translate(-12%, -15%);
-                -o-transform: translate(-12%, -15%);
-                transform: translate(-12%, -15%); }
               #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-1 .page12 {
                 position: absolute;
                 width: 45px;
@@ -84,53 +139,153 @@
                 font-size: 18px;
                 color: #ede8e3; }
             #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-2 {
+              width: 53%;
               padding: 55px 50px;
-              font-size: 14px;
-              color: #999999;
-              background-color: #373535;
+              background-color: transparent;
               -webkit-box-sizing: border-box;
               -moz-box-sizing: border-box;
               box-sizing: border-box;
               position: relative; }
+              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-2 .cnTitle {
+                font-size: 30px;
+                color: #555555;
+                font-weight: bold;
+                text-align: left;
+                margin-bottom: 35px; }
               #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-2 p {
-                text-align: center;
-                line-height: 30px; }
-            #inviteJoin .list2 .swiper11 .slide11 > div .swiper12 .slide12 .s12-2::after {
-              content: '';
-              display: block;
+                text-align: justify;
+                line-height: 40px;
+                font-size: 14px;
+                font-weight: lighter;
+                color: #555555; }
+        #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 47%;
+          height: 100%;
+          z-index: 50; }
+          #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div .w_1 {
               position: absolute;
-              width: 2px;
-              height: 50px;
+              width: 220px;
+              height: 220px;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              border-radius: 50%;
               background-color: #604775;
-              left: 50%;
-              top: -25px; }
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              color: #ffffff;
+              -webkit-box-shadow: 0 0 15px rgba(96, 71, 117, 0.2);
+              -moz-box-shadow: 0 0 15px rgba(96, 71, 117, 0.2);
+              box-shadow: 0 0 15px rgba(96, 71, 117, 0.2);
+              -webkit-transition: opacity 0.6s;
+              -moz-transition: opacity 0.6s;
+              -ms-transition: opacity 0.6s;
+              -o-transition: opacity 0.6s;
+              transition: opacity 0.6s;
+              opacity: 0; }
+              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div .w_1 .num {
+                font-size: 80px;
+                font-weight: bold; }
+              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div .w_1 .title1 {
+                width: 58%;
+                text-align: center;
+                font-size: 20px; }
+            #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div .w_1.sel {
+              opacity: 1; }
+            #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div .w_2 {
+              position: absolute;
+              width: 130px;
+              height: 130px;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              border-radius: 50%;
+              background-color: #ede8e3;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              color: #999999;
+              cursor: pointer; }
+              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div .w_2 .num {
+                font-size: 40px;
+                font-weight: bold; }
+              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div .w_2 .title1 {
+                width: 58%;
+                font-size: 14px;
+                text-align: center;
+                font-weight: lighter; }
+              #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div .w_2 .mask {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #ede8e3;
+                top: 0;
+                left: 0;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                opacity: 0;
+                -webkit-transition: opacity 0.6s;
+                -moz-transition: opacity 0.6s;
+                -ms-transition: opacity 0.6s;
+                -o-transition: opacity 0.6s;
+                transition: opacity 0.6s; }
+            #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div .w_2.sel .mask {
+              opacity: 1; }
+            #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div .wrap2 {
+              top: -80px; }
+            #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div .wrap3 {
+              left: 25px; }
+            #inviteJoin .list2 .swiper11 .slide11 > div .swiper12_detail > div .wrap4 {
+              bottom: -80px; }
         #inviteJoin .list2 .swiper11 .slide11 > div .prev12, #inviteJoin .list2 .swiper11 .slide11 > div .next12 {
           width: 52px;
-          height: 50px; }
+          height: 50px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s; }
         #inviteJoin .list2 .swiper11 .slide11 > div .prev12 {
           top: 50%;
-          left: 80px;
+          left: -20px;
+          background: url("../img/iconLeft02.png") no-repeat center #f6f6f6;
+          background-size: 20% auto; }
+        #inviteJoin .list2 .swiper11 .slide11 > div .prev12:hover {
           background: url("../img/iconLeft01_use.png") no-repeat center #604775;
           background-size: 20% auto; }
         #inviteJoin .list2 .swiper11 .slide11 > div .prev12.swiper-button-disabled {
-          opacity: 1;
-          background: url("../img/iconLeft01.png") no-repeat center #333333;
+          opacity: 0.3;
+          background: url("../img/iconLeft02.png") no-repeat center #f6f6f6;
           background-size: 20% auto; }
         #inviteJoin .list2 .swiper11 .slide11 > div .next12 {
           top: 50%;
           right: 80px;
+          background: url("../img/iconRight02.png") no-repeat center #f6f6f6;
+          background-size: 20% auto; }
+        #inviteJoin .list2 .swiper11 .slide11 > div .next12:hover {
           background: url("../img/iconRight01_use.png") no-repeat center #604775;
           background-size: 20% auto; }
         #inviteJoin .list2 .swiper11 .slide11 > div .next12.swiper-button-disabled {
-          opacity: 1;
-          background: url("../img/iconRight01.png") no-repeat center #333333;
+          opacity: 0.3;
+          background: url("../img/iconRight02.png") no-repeat center #f6f6f6;
           background-size: 20% auto; }
 #inviteJoin .list3 {
   width: 100%;
-  height: 700px;
-  background: url("../img/bj12.png") no-repeat center;
-  background-size: 100% 100%;
-  padding-bottom: 40px; }
+  height: 700px; }
   #inviteJoin .list3 .l3-wrap {
     width: 1200px;
     height: 100%;
@@ -146,17 +301,21 @@
         color: #ede8e3; }
   #inviteJoin .list3 .l3-swiper {
     position: relative;
-    display: flex; }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
     #inviteJoin .list3 .l3-swiper .swiper13 {
       width: 85%;
       height: 430px;
-      margin-left: 0;
       background-color: rgba(255, 255, 255, 0.9);
-      padding: 50px;
-      padding-right: 0;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      -webkit-box-shadow: 0 0 20px rgba(96, 71, 117, 0.2);
+      -moz-box-shadow: 0 0 20px rgba(96, 71, 117, 0.2);
+      box-shadow: 0 0 20px rgba(96, 71, 117, 0.2); }
       #inviteJoin .list3 .l3-swiper .swiper13 .bj01 {
         width: 100px;
         height: 100px;
@@ -168,14 +327,20 @@
         display: flex;
         align-items: center; }
         #inviteJoin .list3 .l3-swiper .swiper13 .slide13 .slide13-img {
-          width: 33.3%;
+          width: 60%;
           height: 100%;
           margin-right: 70px; }
           #inviteJoin .list3 .l3-swiper .swiper13 .slide13 .slide13-img img {
             width: 100%;
             height: 100%; }
         #inviteJoin .list3 .l3-swiper .swiper13 .slide13 .slide13-info {
-          width: 50%; }
+          width: 28%;
+          background-color: #fff;
+          margin-top: -20px; }
+          #inviteJoin .list3 .l3-swiper .swiper13 .slide13 .slide13-info .num {
+            font-size: 50px;
+            color: #ede8e3;
+            margin-bottom: 15px; }
           #inviteJoin .list3 .l3-swiper .swiper13 .slide13 .slide13-info .info13-1 {
             margin-bottom: 30px; }
             #inviteJoin .list3 .l3-swiper .swiper13 .slide13 .slide13-info .info13-1 .i13-title {
@@ -184,15 +349,6 @@
               font-weight: bold;
               margin-bottom: 10px;
               position: relative; }
-            #inviteJoin .list3 .l3-swiper .swiper13 .slide13 .slide13-info .info13-1 .i13-title::after {
-              content: '';
-              display: block;
-              position: absolute;
-              width: 70px;
-              height: 2px;
-              background-color: #4f69b0;
-              top: 50%;
-              left: -90px; }
             #inviteJoin .list3 .l3-swiper .swiper13 .slide13 .slide13-info .info13-1 .i13-title2 {
               font-size: 14px;
               color: #999999; }
@@ -200,13 +356,35 @@
             font-size: 14px;
             color: #555555; }
             #inviteJoin .list3 .l3-swiper .swiper13 .slide13 .slide13-info .info13-2 p {
-              width: 480px;
-              height: 180px;
               line-height: 30px;
               text-align: justify; }
+    #inviteJoin .list3 .l3-swiper .prev13, #inviteJoin .list3 .l3-swiper .next13 {
+      position: absolute;
+      width: 52px;
+      height: 50px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      cursor: pointer;
+      top: 35%; }
+    #inviteJoin .list3 .l3-swiper .prev13 {
+      left: -20px;
+      background: url("../img/iconLeft01_use.png") no-repeat center #604775;
+      background-size: 20% auto; }
+    #inviteJoin .list3 .l3-swiper .prev13.swiper-button-disabled {
+      opacity: 1;
+      background: url("../img/iconLeft01.png") no-repeat center #333333;
+      background-size: 20% auto; }
+    #inviteJoin .list3 .l3-swiper .next13 {
+      right: -20px;
+      background: url("../img/iconRight01_use.png") no-repeat center #604775;
+      background-size: 20% auto; }
+    #inviteJoin .list3 .l3-swiper .next13.swiper-button-disabled {
+      opacity: 1;
+      background: url("../img/iconRight01.png") no-repeat center #333333;
+      background-size: 20% auto; }
     #inviteJoin .list3 .l3-swiper .swiperRight {
-      width: 15%;
-      height: 430px;
+      width: 45%;
       position: relative; }
       #inviteJoin .list3 .l3-swiper .swiperRight .swiper17 {
         width: 100%;
@@ -217,9 +395,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #5b73b6;
-        border-bottom: 1px solid #647bbb;
-        border-right: 1px solid #647bbb;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -228,59 +403,36 @@
         -ms-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s;
-        cursor: pointer; }
+        cursor: pointer;
+        border: 1px solid transparent;
+        padding: 10px 10px; }
         #inviteJoin .list3 .l3-swiper .swiperRight .r1 > div {
           width: 55%; }
+          #inviteJoin .list3 .l3-swiper .swiperRight .r1 > div .r1-num {
+            text-align: center;
+            font-size: 45px;
+            color: #c8c8c8;
+            font-weight: bold; }
           #inviteJoin .list3 .l3-swiper .swiperRight .r1 > div .r1-title {
             font-size: 14px;
-            color: #ffffff;
-            font-weight: bold;
-            margin-bottom: 10px; }
+            color: #999999;
+            font-weight: lighter;
+            margin-bottom: 10px;
+            text-align: center; }
           #inviteJoin .list3 .l3-swiper .swiperRight .r1 > div .r1-title2 {
             font-size: 8px;
             color: rgba(255, 255, 255, 0.5); }
-      #inviteJoin .list3 .l3-swiper .swiperRight .r1:first-child {
-        border-top: 1px solid #647bbb; }
       #inviteJoin .list3 .l3-swiper .swiperRight .r1:hover {
-        background-color: #425eaa; }
+        border: 1px solid #604775; }
       #inviteJoin .list3 .l3-swiper .swiperRight .r1.sel {
-        background-color: #425eaa; }
-      #inviteJoin .list3 .l3-swiper .swiperRight .prev13, #inviteJoin .list3 .l3-swiper .swiperRight .next13 {
-        position: absolute;
-        width: 100%;
-        height: 33.3%;
-        left: 0;
-        cursor: pointer; }
-      #inviteJoin .list3 .l3-swiper .swiperRight .prev13 {
-        background: url("../img/top01.png") no-repeat center #425eaa;
-        background-size: 20% auto;
-        top: 0;
-        -webkit-transform: translateY(-100%);
-        -moz-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-        -o-transform: translateY(-100%);
-        transform: translateY(-100%); }
-      #inviteJoin .list3 .l3-swiper .swiperRight .prev13.swiper-button-disabled {
-        background: url("../img/top01.png") no-repeat center #5b73b6;
-        background-size: 20% auto;
-        opacity: 1; }
-      #inviteJoin .list3 .l3-swiper .swiperRight .next13 {
-        background: url("../img/bottom01.png") no-repeat center #425eaa;
-        background-size: 20% auto;
-        bottom: 0;
-        -webkit-transform: translateY(100%);
-        -moz-transform: translateY(100%);
-        -ms-transform: translateY(100%);
-        -o-transform: translateY(100%);
-        transform: translateY(100%); }
-      #inviteJoin .list3 .l3-swiper .swiperRight .next13.swiper-button-disabled {
-        background: url("../img/bottom01.png") no-repeat center #5b73b6;
-        background-size: 20% auto;
-        opacity: 1; }
+        border: 1px solid #604775; }
+        #inviteJoin .list3 .l3-swiper .swiperRight .r1.sel > div .r1-num {
+          color: #604775; }
+        #inviteJoin .list3 .l3-swiper .swiperRight .r1.sel > div .r1-title {
+          color: #604775; }
 #inviteJoin .wrap .list4 {
   width: 100%;
-  height: 700px;
-  padding: 50px 0;
+  height: 600px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -288,7 +440,7 @@
     width: 1200px;
     margin: auto; }
     #inviteJoin .wrap .list4 .l4-wrap .l4-title {
-      margin-bottom: 60px; }
+      margin-bottom: 20px; }
       #inviteJoin .wrap .list4 .l4-wrap .l4-title img {
         width: 100%; }
     #inviteJoin .wrap .list4 .l4-wrap .l4-swiper {
@@ -412,68 +564,73 @@
             transform: translateY(55%); }
       #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .prev14, #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .next14 {
         width: 52px;
-        height: 50px; }
+        height: 50px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
       #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .prev14 {
         top: 50%;
         left: -50px;
+        background: url("../img/iconLeft02.png") no-repeat center #f6f6f6;
+        background-size: 20% auto; }
+      #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .prev14:hover {
         background: url("../img/iconLeft01_use.png") no-repeat center #604775;
         background-size: 20% auto; }
       #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .prev14.swiper-button-disabled {
-        opacity: 1;
-        background: url("../img/iconLeft01.png") no-repeat center #f6f6f6;
+        opacity: 0.3;
+        background: url("../img/iconLeft02.png") no-repeat center #f6f6f6;
         background-size: 20% auto; }
       #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .next14 {
         top: 50%;
         right: -50px;
+        background: url("../img/iconRight02.png") no-repeat center #f6f6f6;
+        background-size: 20% auto; }
+      #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .next14:hover {
         background: url("../img/iconRight01_use.png") no-repeat center #604775;
         background-size: 20% auto; }
       #inviteJoin .wrap .list4 .l4-wrap .l4-swiper .next14.swiper-button-disabled {
         opacity: 1;
-        background: url("../img/iconRight01.png") no-repeat center #f6f6f6;
+        background: url("../img/iconRight02.png") no-repeat center #f6f6f6;
         background-size: 20% auto; }
 #inviteJoin .wrap .list5 {
   width: 100%;
-  height: 710px;
-  background: url("../img/bj13.png") no-repeat center;
-  background-size: 100% 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 40px 0; }
+  padding: 0 0 0px 0; }
   #inviteJoin .wrap .list5 .l5-wrap {
     width: 1200px;
     margin: auto; }
     #inviteJoin .wrap .list5 .l5-wrap .l5-title {
       width: 100%;
-      margin-bottom: 60px; }
+      margin-bottom: 25px; }
       #inviteJoin .wrap .list5 .l5-wrap .l5-title img {
         width: 90%;
         margin: auto; }
     #inviteJoin .wrap .list5 .l5-wrap .l5-slide {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center; }
+      flex-wrap: wrap; }
       #inviteJoin .wrap .list5 .l5-wrap .l5-slide > div {
         width: 16%; }
       #inviteJoin .wrap .list5 .l5-wrap .l5-slide .slideList {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 30px; }
+        margin-bottom: 50px; }
         #inviteJoin .wrap .list5 .l5-wrap .l5-slide .slideList .sl1 {
           width: 85px;
           height: 85px;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          border-radius: 50%;
           overflow: hidden;
           position: relative;
           z-index: 200;
-          background-color: #ffffff;
           display: flex;
           justify-content: center;
-          align-items: center;
-          border: 1px solid #c8c8c8; }
+          align-items: center; }
           #inviteJoin .wrap .list5 .l5-wrap .l5-slide .slideList .sl1 img {
             max-width: 100%;
             max-height: 100%; }
@@ -489,11 +646,6 @@
             color: #ffffff;
             background-color: #c8c8c8; }
         #inviteJoin .wrap .list5 .l5-wrap .l5-slide .slideList .sl2 {
-          -webkit-transform: translateY(-30%);
-          -moz-transform: translateY(-30%);
-          -ms-transform: translateY(-30%);
-          -o-transform: translateY(-30%);
-          transform: translateY(-30%);
           -webkit-transition: all 0.5s;
           -moz-transition: all 0.5s;
           -ms-transition: all 0.5s;
@@ -518,28 +670,25 @@
         transform: translateY(0%); }
 #inviteJoin .list6 {
   width: 100%;
-  height: 700px;
-  background: url("../img/bj14.png") no-repeat center;
-  background-size: 100% 100%; }
+  height: 660px; }
   #inviteJoin .list6 .l6-wrap {
     width: 1200px;
     margin: auto;
     position: relative; }
     #inviteJoin .list6 .l6-wrap > img {
-      width: 90%;
+      width: 70%;
       margin: auto; }
     #inviteJoin .list6 .l6-wrap .detail {
       position: absolute;
-      width: 562px;
-      height: 398px;
-      border: 1px solid red;
-      top: 105px;
-      right: 60px;
+      width: 688px;
+      height: 516px;
+      top: 38px;
+      left: 254px;
       display: flex;
       justify-content: center;
       align-items: center; }
       #inviteJoin .list6 .l6-wrap .detail > div {
-        width: 65%;
+        width: 85%;
         font-size: 18px;
         color: #999999;
         position: relative;
@@ -549,17 +698,71 @@
         flex-direction: column; }
         #inviteJoin .list6 .l6-wrap .detail > div > div {
           width: 100%;
-          padding: 25px 0;
-          border-bottom: 1px solid #dddddd;
           margin-bottom: 10px; }
+        #inviteJoin .list6 .l6-wrap .detail > div .type {
+          display: flex;
+          padding: 0;
+          margin-bottom: 15px; }
+          #inviteJoin .list6 .l6-wrap .detail > div .type .typeTitle {
+            margin-right: 20px;
+            font-size: 16px;
+            color: #555555;
+            font-weight: bold;
+            display: flex;
+            align-items: center; }
+          #inviteJoin .list6 .l6-wrap .detail > div .type .typeTitle:before {
+            content: '*';
+            color: #ff0000; }
+          #inviteJoin .list6 .l6-wrap .detail > div .type .typeTags {
+            display: flex; }
+            #inviteJoin .list6 .l6-wrap .detail > div .type .typeTags span {
+              font-size: 16px;
+              color: #333333;
+              padding: 7px 20px;
+              background-color: #fff;
+              margin-right: 15px;
+              cursor: pointer; }
+            #inviteJoin .list6 .l6-wrap .detail > div .type .typeTags span:last-child {
+              margin-right: 0; }
+            #inviteJoin .list6 .l6-wrap .detail > div .type .typeTags span:hover {
+              background-color: #604775;
+              color: #ffffff; }
+            #inviteJoin .list6 .l6-wrap .detail > div .type .typeTags span.sel {
+              color: #ffffff;
+              background-color: #604775; }
+        #inviteJoin .list6 .l6-wrap .detail > div .detail_1 {
+          display: flex; }
+          #inviteJoin .list6 .l6-wrap .detail > div .detail_1 > div {
+            width: 50%; }
+        #inviteJoin .list6 .l6-wrap .detail > div .message .input {
+          width: 93%;
+          height: 80px; }
+          #inviteJoin .list6 .l6-wrap .detail > div .message .input textarea {
+            width: 100%;
+            resize: none;
+            height: 100%;
+            border: 0;
+            background-color: transparent; }
+          #inviteJoin .list6 .l6-wrap .detail > div .message .input textarea::placeholder {
+            color: #c8c8c8; }
+          #inviteJoin .list6 .l6-wrap .detail > div .message .input textarea::-webkit-input-placeholder {
+            color: #c8c8c8; }
+          #inviteJoin .list6 .l6-wrap .detail > div .message .input textarea::-moz-placeholder {
+            color: #c8c8c8; }
+          #inviteJoin .list6 .l6-wrap .detail > div .message .input textarea::-ms-input-placeholder {
+            color: #c8c8c8; }
+        #inviteJoin .list6 .l6-wrap .detail > div .addr .region {
+          display: flex; }
+          #inviteJoin .list6 .l6-wrap .detail > div .addr .region > div {
+            margin-right: 10px; }
         #inviteJoin .list6 .l6-wrap .detail > div .button {
           position: absolute;
-          bottom: -140px;
+          bottom: -64px;
           border-bottom: 0;
           text-align: center; }
           #inviteJoin .list6 .l6-wrap .detail > div .button button {
             width: 250px;
-            line-height: 60px;
+            line-height: 46px;
             color: #604775;
             font-size: 20px;
             -webkit-transition: all 0.5s;
@@ -571,44 +774,163 @@
             color: #ffffff;
             background-color: #604775; }
         #inviteJoin .list6 .l6-wrap .detail > div input {
-          font-size: 18px;
+          font-size: 14px;
           color: #333333;
           border: 0;
           background-color: transparent; }
+        #inviteJoin .list6 .l6-wrap .detail > div input::placeholder {
+          color: #c8c8c8; }
+        #inviteJoin .list6 .l6-wrap .detail > div input::-webkit-input-placeholder {
+          color: #c8c8c8; }
+        #inviteJoin .list6 .l6-wrap .detail > div input::-moz-placeholder {
+          color: #c8c8c8; }
+        #inviteJoin .list6 .l6-wrap .detail > div input::-ms-input-placeholder {
+          color: #c8c8c8; }
         #inviteJoin .list6 .l6-wrap .detail > div .label {
-          margin-right: 50px; }
+          margin-right: 20px;
+          font-size: 16px;
+          color: #555555;
+          font-weight: bold;
+          margin-bottom: 10px;
+          display: block; }
+        #inviteJoin .list6 .l6-wrap .detail > div .label1:before {
+          content: '*';
+          color: #ff0000; }
+        #inviteJoin .list6 .l6-wrap .detail > div .input {
+          padding: 14px;
+          width: 85%;
+          background-color: #fff;
+          display: flex;
+          align-items: center; }
+#inviteJoin .list7 {
+  width: 100%;
+  margin-bottom: 80px; }
+  #inviteJoin .list7 .l7-wrap {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-shadow: 0 0 25px rgba(96, 71, 117, 0.3);
+    -moz-box-shadow: 0 0 25px rgba(96, 71, 117, 0.3);
+    box-shadow: 0 0 25px rgba(96, 71, 117, 0.3); }
+    #inviteJoin .list7 .l7-wrap .l7-img {
+      -webkit-transform: scale(1.07);
+      -moz-transform: scale(1.07);
+      -ms-transform: scale(1.07);
+      -o-transform: scale(1.07);
+      transform: scale(1.07); }
+    #inviteJoin .list7 .l7-wrap .l7-info {
+      width: 52%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-right: 58px;
+      display: flex;
+      align-items: center; }
+      #inviteJoin .list7 .l7-wrap .l7-info ul {
+        width: 100%; }
+        #inviteJoin .list7 .l7-wrap .l7-info ul li {
+          display: flex;
+          align-items: top;
+          margin-bottom: 15px; }
+          #inviteJoin .list7 .l7-wrap .l7-info ul li .xuhao {
+            width: 30px;
+            height: 30px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #604775;
+            margin-right: 12px; }
+          #inviteJoin .list7 .l7-wrap .l7-info ul li .text {
+            width: 90%; }
+            #inviteJoin .list7 .l7-wrap .l7-info ul li .text .t0 {
+              line-height: 30px;
+              font-size: 16px;
+              color: #555555;
+              font-weight: bold; }
+            #inviteJoin .list7 .l7-wrap .l7-info ul li .text .t1 {
+              font-size: 14px;
+              color: #333333;
+              font-weight: lighter;
+              display: flex;
+              flex-wrap: wrap; }
+              #inviteJoin .list7 .l7-wrap .l7-info ul li .text .t1 .t1Text {
+                line-height: 30px;
+                margin-right: 8px; }
+              #inviteJoin .list7 .l7-wrap .l7-info ul li .text .t1 .xh {
+                margin-right: 8px; }
+            #inviteJoin .list7 .l7-wrap .l7-info ul li .text .t2 {
+              font-size: 14px; }
+              #inviteJoin .list7 .l7-wrap .l7-info ul li .text .t2 .t2Text {
+                line-height: 30px;
+                color: #333333;
+                font-weight: lighter; }
+              #inviteJoin .list7 .l7-wrap .l7-info ul li .text .t2 .t-title {
+                font-weight: bold;
+                color: #604775; }
+        #inviteJoin .list7 .l7-wrap .l7-info ul li:last-child {
+          margin-bottom: 0; }
 #inviteJoin .wrapButton {
-  position: fixed;
-  right: 12px;
-  width: 100px;
-  background-color: #fff;
-  top: 50%;
-  margin-top: -75px;
-  z-index: 1000; }
+  margin: 45px 0 70px 0;
+  background-color: #fff; }
   #inviteJoin .wrapButton ul {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     border-left: 1px solid #e4e4e4;
     border-right: 1px solid #e4e4e4; }
     #inviteJoin .wrapButton ul li {
       text-align: center;
       font-size: 14px;
-      color: #604775;
-      border-bottom: 1px solid #e4e4e4;
-      line-height: 50px;
+      color: #333333;
+      font-weight: bold;
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;
       -ms-transition: all 0.5s;
       -o-transition: all 0.5s;
       transition: all 0.5s;
-      cursor: pointer; }
-    #inviteJoin .wrapButton ul li:first-child {
-      border-top: 1px solid #e4e4e4; }
+      cursor: pointer;
+      margin-right: 50px;
+      padding-right: 50px;
+      border-right: 1px solid #f6f6f6; }
+      #inviteJoin .wrapButton ul li .icon {
+        width: 56px;
+        height: 50px; }
+      #inviteJoin .wrapButton ul li .icon.i1 {
+        background: url("../img/icon10.png") no-repeat center;
+        background-size: 42% auto; }
+      #inviteJoin .wrapButton ul li .icon.i2 {
+        background: url("../img/icon09.png") no-repeat center;
+        background-size: 100% auto; }
+      #inviteJoin .wrapButton ul li .icon.i3 {
+        background: url("../img/icon08.png") no-repeat center;
+        background-size: 42% auto; }
+    #inviteJoin .wrapButton ul li:last-child {
+      border-right: 0;
+      margin-right: 0;
+      padding-right: 0; }
     #inviteJoin .wrapButton ul li.sel {
-      background-color: #604775;
-      color: #f2f2f2; }
+      color: #604775; }
+      #inviteJoin .wrapButton ul li.sel .icon.i1 {
+        background: url("../img/icon10_sel.png") no-repeat center;
+        background-size: 42% auto; }
+      #inviteJoin .wrapButton ul li.sel .icon.i2 {
+        background: url("../img/icon09_sel.png") no-repeat center;
+        background-size: 100% auto; }
+      #inviteJoin .wrapButton ul li.sel .icon.i3 {
+        background: url("../img/icon08_sel.png") no-repeat center;
+        background-size: 42% auto; }
     #inviteJoin .wrapButton ul li:hover {
-      background-color: #604775;
-      color: #f2f2f2; }
+      color: #604775; }
+      #inviteJoin .wrapButton ul li:hover .icon.i1 {
+        background: url("../img/icon10_sel.png") no-repeat center;
+        background-size: 42% auto; }
+      #inviteJoin .wrapButton ul li:hover .icon.i2 {
+        background: url("../img/icon09_sel.png") no-repeat center;
+        background-size: 100% auto; }
+      #inviteJoin .wrapButton ul li:hover .icon.i3 {
+        background: url("../img/icon08_sel.png") no-repeat center;
+        background-size: 42% auto; }
 
 /*# sourceMappingURL=inviteJoin.css.map */

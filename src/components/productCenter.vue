@@ -1,12 +1,18 @@
 <template>
   <div id="productCenter">
-    <div class="banner" style="width: 100%;margin-bottom: 50px;">
+    <div class="banner" style="width: 100%;margin-bottom: 50px;cursor: pointer;" @click="navTo">
       <img style="width: 100%" src="../../static/img/banner08.png" alt="">
     </div>
     <!--<div class="list1">-->
       <!--<div class="title_1">{{title.t1}}</div>-->
       <!--<div class="title_2">{{title.t2}}</div>-->
     <!--</div>-->
+    <div class="title"  style="text-align: left;margin-bottom: 40px;">
+      <div class="title-1">
+        <span class="color">产品</span><span>中心</span>
+      </div>
+      <div class="title-2"><span>PRODUCT CENTER</span></div>
+    </div>
     <div class="list2">
       <div class="l2-1" v-if="tag1Show">
         <ul class="clearfloat">
@@ -118,12 +124,27 @@
           })
         },
         select(i){
-          // $('.l2-2 .swiper-slide').removeClass('sel');
-          // $('.l2-2 .swiper-slide').eq(i).addClass('sel');
           this.idx1 = i;
         },
         onload:function (i) {
 
+        },
+        navTo(){
+          var id = this.$router.history.current.query.id;
+          var index = 1;
+          if(id == 42){
+            index = 2;
+          }else if(id == 40){
+            index = 1;
+          }else if(id == 41){
+            index = 3;
+          }
+          this.$router.push({
+            path:'/inviteJoin',
+            query:{
+              id:index
+            }
+          })
         }
       },
       updated(){
@@ -209,46 +230,28 @@
                   //初始化
                   setTimeout(function () {
                     that.swiper02 = new Swiper('.swiper02',{
-                      // autoplay:1000,
+                      autoplay:1500,
+                      speed:1000,
                       slidesPerView: 8,
                       spaceBetween: 10,
                       prevButton:'.prev02',
                       nextButton:'.next02',
                       observer:true,
-                      observeParents:false,//修改swiper的父元素时，自动初始化swiper
+                      observeParents:true,//修改swiper的父元素时，自动初始化swiper
                       onSlideChangeEnd: function(swiper){
                         swiper.update();
                         // that.swiper02.startAutoplay();
                         // that.swiper02.reLoop();
                       },
                       onInit:function (swiper) {
-                        // setTimeout(function () {
-                        //   if(idx1 == -1){
-                        //     swiper.slideTo(idx1+1);
-                        //   }else{
-                        //     swiper.slideTo(idx1);
-                        //   }
-                        // },50)
-                        setInterval(function () {
-                          swiper.slideNext();
-                        },1000)
+
                       }
                     })
                   },50);
-                  // if(sessionStorage.getItem('idx1') != null){
-                  //   that.$router.push({path:'/productCenter/ProductList',query:{item:data.data.cates.all[idx1]}})
-                  // }else{
-                  //   that.$router.push({
-                  //     name: 'ProductInfo',
-                  //     query:{
-                  //       id:defaultId
-                  //     }
-                  //   });
-                  // }
                 })
               })
             }else{
-              console.log('32sd1f3df51gd63f51gs6df15g6sdfg165s1dfg')
+              // console.log('32sd1f3df51gd63f51gs6df15g6sdfg165s1dfg')
               this.tag1Show = true;
               // 获取一级标签
               this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
@@ -300,12 +303,14 @@
                   //初始化
                   setTimeout(function () {
                     that.swiper02 = new Swiper('.swiper02',{
+                      autoplay:1500,
+                      speed:1000,
                       slidesPerView: 8,
                       spaceBetween: 10,
                       prevButton:'.prev02',
                       nextButton:'.next02',
                       observer:true,
-                      observeParents:false,//修改swiper的父元素时，自动初始化swiper
+                      observeParents:true,//修改swiper的父元素时，自动初始化swiper
                       onSlideChangeEnd: function(swiper){
                         swiper.update();
                         // that.swiper02.startAutoplay();
@@ -313,22 +318,12 @@
                       },
                       onInit:function (swiper) {
                         swiper.slideTo(idx1+1);
+                        swiper.startAutoplay();
                       }
                     })
                   },50);
-                  // if(sessionStorage.getItem('idx1') != null){
-                  //   that.$router.push({path:'/productCenter/ProductList',query:{item:data.data.cates.all[idx1]}})
-                  // }else{
-                  //   that.$router.push({
-                  //     name: 'ProductInfo',
-                  //     query:{
-                  //       id:defaultId
-                  //     }
-                  //   });
-                  // }
                 })
               })
-
             }
           }
         }
@@ -396,7 +391,8 @@
               //初始化
               setTimeout(function () {
                 that.swiper02 = new Swiper('.swiper02',{
-                  // autoplay:1000,
+                  autoplay:1500,
+                  speed:1000,
                   slidesPerView: 8,
                   spaceBetween: 10,
                   prevButton:'.prev02',
@@ -409,107 +405,249 @@
                     // that.swiper02.reLoop();
                   },
                   onInit:function (swiper) {
-                    setTimeout(function () {
-                        if(idx1 == -1){
-                          swiper.slideTo(idx1+1);
-                        }else{
-                          swiper.slideTo(idx1);
-                        }
-                      },50)
+                    // setTimeout(function () {
+                    //     if(idx1 == -1){
+                    //       swiper.slideTo(idx1+1);
+                    //     }else{
+                    //       swiper.slideTo(idx1);
+                    //     }
+                    //   },50)
                   }
+                });
+                $('#productCenter .swiper02').on('mouseenter',function () {
+                  that.swiper02.stopAutoplay();
+                })
+                $('#productCenter .swiper02').on('mouseleave',function () {
+                  that.swiper02.startAutoplay();
                 })
               },50);
-              // if(sessionStorage.getItem('idx1') != null){
-              //   that.$router.push({path:'/productCenter/ProductList',query:{item:data.data.cates.all[idx1]}})
-              // }else{
-              //   that.$router.push({
-              //     name: 'ProductInfo',
-              //     query:{
-              //       id:defaultId
-              //     }
-              //   });
-              // }
             })
           })
         }else{
-          // 获取一级标签
-          this.tag1Show = true;
-          this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
-            // console.log(data);
-            that.navBtn = data.data.cates;
-            let defaultId = data.data.cates[idx].id;
-            that.id = defaultId;
-            that.$router.push({
-              name: 'ProductInfo',
-              query:{
-                id:defaultId
-              }
-            });
-            console.log(idx);
-            // 获取默认二级标签
-            that.$api.axiosGet('/index/product/getCates/pid/'+defaultId,{},function (data) {
-              // console.log(data);
-              that.iconDetail = data.data.cates.all;
-              that.length = that.iconDetail.length;
-              if(data.data.cates.all.length>8){
-                that.swiperBtnShow = true;
-              }else{
-                that.swiperBtnShow = false;
-              }
-              that.idx = idx;
-              that.idx1 = idx1;
-              if(that.length<8){
-                // console.log(that.length);
-                var l = 70.5*(8-that.length);
-                $('.swiper02').css({
-                  '-webkit-transform': 'translateX('+l+'px)',
-                  '-moz-transform': 'translateX('+l+'px)',
-                  '-ms-transform': 'translateX('+l+'px)',
-                  '-o-transform': 'translateX('+l+'px)',
-                  'transform': 'translateX('+l+'px)',
-                  // 'margin-left': -w/2+'px'
-                })
-              }else{
-                $('.swiper02').css({
-                  '-webkit-transform': 'translateX(0px)',
-                  '-moz-transform': 'translateX(0px)',
-                  '-ms-transform': 'translateX(0px)',
-                  '-o-transform': 'translateX(0px)',
-                  'transform': 'translateX(0px)',
-                  // 'margin-left': -w/2+'px'
-                })
-              }
-              //初始化
-              setTimeout(function () {
-                that.swiper02 = new Swiper('.swiper02',{
-                  slidesPerView: 8,
-                  spaceBetween: 10,
-                  prevButton:'.prev02',
-                  nextButton:'.next02',
-                  observer:true,
-                  observeParents:false,//修改swiper的父元素时，自动初始化swiper
-                  onSlideChangeEnd: function(swiper){
-                    swiper.update();
-                    // that.swiper02.startAutoplay();
-                    // that.swiper02.reLoop();
-                  },
-                  onInit:function (swiper) {
-                    swiper.slideTo(idx1+1);
+          if(this.$router.history.current.query.item){
+            if(this.$router.history.current.query.id1 == 41){
+              // 获取一级标签
+              this.tag1Show = false;
+              this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
+                // console.log(data);
+                that.navBtn = data.data.cates;
+                let defaultId = data.data.cates[1].id;
+                that.id = defaultId;
+                // console.log(idx);
+                // 获取默认二级标签
+                that.$api.axiosGet('/index/product/getCates/pid/'+defaultId,{},function (data) {
+                  // console.log(data);
+                  that.iconDetail = data.data.cates.all;
+                  that.length = that.iconDetail.length;
+                  if(data.data.cates.all.length>8){
+                    that.swiperBtnShow = true;
+                  }else{
+                    that.swiperBtnShow = false;
                   }
+                  that.idx = idx;
+                  that.idx1 = idx1;
+                  if(that.length<8){
+                    // console.log(that.length);
+                    var l = 70.5*(8-that.length);
+                    $('.swiper02').css({
+                      '-webkit-transform': 'translateX('+l+'px)',
+                      '-moz-transform': 'translateX('+l+'px)',
+                      '-ms-transform': 'translateX('+l+'px)',
+                      '-o-transform': 'translateX('+l+'px)',
+                      'transform': 'translateX('+l+'px)',
+                      // 'margin-left': -w/2+'px'
+                    })
+                  }else{
+                    $('.swiper02').css({
+                      '-webkit-transform': 'translateX(0px)',
+                      '-moz-transform': 'translateX(0px)',
+                      '-ms-transform': 'translateX(0px)',
+                      '-o-transform': 'translateX(0px)',
+                      'transform': 'translateX(0px)',
+                      // 'margin-left': -w/2+'px'
+                    })
+                  }
+                  //初始化
+                  setTimeout(function () {
+                    that.swiper02 = new Swiper('.swiper02',{
+                      autoplay:1500,
+                      speed:1000,
+                      slidesPerView: 8,
+                      spaceBetween: 10,
+                      prevButton:'.prev02',
+                      nextButton:'.next02',
+                      observer:true,
+                      observeParents:false,//修改swiper的父元素时，自动初始化swiper
+                      onSlideChangeEnd: function(swiper){
+                        swiper.update();
+                        // that.swiper02.startAutoplay();
+                        // that.swiper02.reLoop();
+                      },
+                      onInit:function (swiper) {
+                        // setTimeout(function () {
+                        //     if(idx1 == -1){
+                        //       swiper.slideTo(idx1+1);
+                        //     }else{
+                        //       swiper.slideTo(idx1);
+                        //     }
+                        //   },50)
+                      }
+                    });
+                    $('#productCenter .swiper02').on('mouseenter',function () {
+                      that.swiper02.stopAutoplay();
+                    })
+                    $('#productCenter .swiper02').on('mouseleave',function () {
+                      that.swiper02.startAutoplay();
+                    })
+                  },50);
                 })
-              },50);
-              // if(sessionStorage.getItem('idx1') != null){
-              //   that.$router.push({path:'/productCenter/ProductList',query:{item:data.data.cates.all[idx1]}})
-              // }else{
-              //   that.$router.push({
-              //     name: 'ProductInfo',
-              //     query:{
-              //       id:defaultId
-              //     }
-              //   });
-              // }
+              })
+            }else{
+              // 获取一级标签
+              this.tag1Show = true;
+              this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
+                // console.log(data);
+                that.navBtn = data.data.cates;
+                let defaultId = data.data.cates[idx].id;
+                that.id = defaultId;
+                // that.$router.push({
+                //   name: 'ProductInfo',
+                //   query:{
+                //     id:defaultId
+                //   }
+                // });
+                console.log(idx);
+                // 获取默认二级标签
+                that.$api.axiosGet('/index/product/getCates/pid/'+defaultId,{},function (data) {
+                  // console.log(data);
+                  that.iconDetail = data.data.cates.all;
+                  that.length = that.iconDetail.length;
+                  if(data.data.cates.all.length>8){
+                    that.swiperBtnShow = true;
+                  }else{
+                    that.swiperBtnShow = false;
+                  }
+                  that.idx = idx;
+                  that.idx1 = idx1;
+                  if(that.length<8){
+                    // console.log(that.length);
+                    var l = 70.5*(8-that.length);
+                    $('.swiper02').css({
+                      '-webkit-transform': 'translateX('+l+'px)',
+                      '-moz-transform': 'translateX('+l+'px)',
+                      '-ms-transform': 'translateX('+l+'px)',
+                      '-o-transform': 'translateX('+l+'px)',
+                      'transform': 'translateX('+l+'px)',
+                      // 'margin-left': -w/2+'px'
+                    })
+                  }else{
+                    $('.swiper02').css({
+                      '-webkit-transform': 'translateX(0px)',
+                      '-moz-transform': 'translateX(0px)',
+                      '-ms-transform': 'translateX(0px)',
+                      '-o-transform': 'translateX(0px)',
+                      'transform': 'translateX(0px)',
+                      // 'margin-left': -w/2+'px'
+                    })
+                  }
+                  //初始化
+                  setTimeout(function () {
+                    that.swiper02 = new Swiper('.swiper02',{
+                      autoplay:1500,
+                      speed:1000,
+                      slidesPerView: 8,
+                      spaceBetween: 10,
+                      prevButton:'.prev02',
+                      nextButton:'.next02',
+                      observer:true,
+                      observeParents:false,//修改swiper的父元素时，自动初始化swiper
+                      onSlideChangeEnd: function(swiper){
+                        swiper.update();
+                        // that.swiper02.startAutoplay();
+                        // that.swiper02.reLoop();
+                      },
+                      onInit:function (swiper) {
+                        swiper.slideTo(idx1+1);
+                        swiper.startAutoplay();
+                      }
+                    })
+                  },50);
+                })
+              })
+            }
+          }else{
+            // 获取一级标签
+            this.tag1Show = true;
+            this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
+              // console.log(data);
+              that.navBtn = data.data.cates;
+              let defaultId = data.data.cates[idx].id;
+              that.id = defaultId;
+              that.$router.push({
+                name: 'ProductInfo',
+                query:{
+                  id:defaultId
+                }
+              });
+              console.log(idx);
+              // 获取默认二级标签
+              that.$api.axiosGet('/index/product/getCates/pid/'+defaultId,{},function (data) {
+                // console.log(data);
+                that.iconDetail = data.data.cates.all;
+                that.length = that.iconDetail.length;
+                if(data.data.cates.all.length>8){
+                  that.swiperBtnShow = true;
+                }else{
+                  that.swiperBtnShow = false;
+                }
+                that.idx = idx;
+                that.idx1 = idx1;
+                if(that.length<8){
+                  // console.log(that.length);
+                  var l = 70.5*(8-that.length);
+                  $('.swiper02').css({
+                    '-webkit-transform': 'translateX('+l+'px)',
+                    '-moz-transform': 'translateX('+l+'px)',
+                    '-ms-transform': 'translateX('+l+'px)',
+                    '-o-transform': 'translateX('+l+'px)',
+                    'transform': 'translateX('+l+'px)',
+                    // 'margin-left': -w/2+'px'
+                  })
+                }else{
+                  $('.swiper02').css({
+                    '-webkit-transform': 'translateX(0px)',
+                    '-moz-transform': 'translateX(0px)',
+                    '-ms-transform': 'translateX(0px)',
+                    '-o-transform': 'translateX(0px)',
+                    'transform': 'translateX(0px)',
+                    // 'margin-left': -w/2+'px'
+                  })
+                }
+                //初始化
+                setTimeout(function () {
+                  that.swiper02 = new Swiper('.swiper02',{
+                    autoplay:1500,
+                    speed:1000,
+                    slidesPerView: 8,
+                    spaceBetween: 10,
+                    prevButton:'.prev02',
+                    nextButton:'.next02',
+                    observer:true,
+                    observeParents:false,//修改swiper的父元素时，自动初始化swiper
+                    onSlideChangeEnd: function(swiper){
+                      swiper.update();
+                      // that.swiper02.startAutoplay();
+                      // that.swiper02.reLoop();
+                    },
+                    onInit:function (swiper) {
+                      swiper.slideTo(idx1+1);
+                      swiper.startAutoplay();
+                    }
+                  })
+                },50);
+              })
             })
-          })
+          }
         }
       }
     }

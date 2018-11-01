@@ -23,7 +23,7 @@
     display: flex;
     flex-wrap: wrap;
     //justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     >div{
       width: 32.5%;
     }
@@ -128,11 +128,11 @@
           .more{
             display: flex;
             align-items: center;
-            -webkit-transition: color 0.5s background 0.5s;
-            -moz-transition: color 0.5s background 0.5s;
-            -ms-transition: color 0.5s background 0.5s;
-            -o-transition: color 0.5s background 0.5s;
-            transition: color 0.5s background 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
             cursor: pointer;
             line-height: 30px;
 
@@ -165,10 +165,12 @@
             }
           }
           .date{
-            >span:first-child{
-              font-size: 24px;
-              color: #333333;
-            }
+            font-size: 16px;
+            color: #999999;
+            //>span:first-child{
+            //  font-size: 24px;
+            //  color: #333333;
+            //}
           }
         }
       }
@@ -208,6 +210,10 @@
               transform: translateX(0%);
               opacity: 1;
             }
+          }
+          .date{
+            font-size: 18px;
+            color: #604775;
           }
         }
       }

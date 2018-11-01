@@ -1,8 +1,8 @@
 #inviteInfo{
   .list1{
     position: relative;
-    margin-bottom: 60px;
-    margin-top: 80px;
+    margin-bottom: 35px;
+    margin-top: 48px;
     .l1-title{
       position: relative;
       .l1-title1{
@@ -34,25 +34,28 @@
       height: 30%;
     }
     .l1-search{
-      height: 100%;
+      height: 73%;
       position: absolute;
       top: 0;
       right: 0;
       .input{
-        padding: 16px 15px;
+        padding: 8px 15px;
         border: 1px solid #888888;
-        margin-right: 60px;
+        margin-right: 45px;
         input{
-          font-size: 16px;
+          font-size: 14px;
           color: #333333;
           border: 0;
           background-color: transparent;
         }
+        input::placeholder{
+          font-size: 14px;
+        }
       }
       .btn{
         position: absolute;
-        height: 99%;
-        width: 60px;
+        height: 100%;
+        width: 46px;
         right: 0;
         top: 0;
         background-color: #333333;
@@ -85,8 +88,8 @@
       width: 180px;
       position: absolute;
       z-index: 10;
-      top: 125px;
-      left: 210px;
+      bottom: 35px;
+      right: 192px;
       button{
         display: block;
         font-size: 16px;
@@ -128,7 +131,7 @@
     }
     .swiper-invite{
       width: 80%;
-      left: 150px;
+      left: 125px;
       top: 105px;
       .swiper-wrapper{
         width: 100%;
@@ -220,9 +223,38 @@
     }
   }
   .list3{
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    position: relative;
+    .prevInvite01,.nextInvite01{
+      width: 52px;
+      height: 50px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+    }
+    .prevInvite01{
+      bottom: 80px;
+      background: url("../img/iconLeft01_use.png") no-repeat center #604775;
+      background-size: 20% auto;
+    }
+    .prevInvite01.swiper-button-disabled{
+      opacity: 1;
+      background: url("../img/iconLeft01.png") no-repeat center #f6f6f6;
+      background-size: 20% auto;
+    }
+    .nextInvite01{
+      background: url("../img/iconRight01_use.png") no-repeat center #604775;
+      background-size: 20% auto;
+      bottom: 80px;
+    }
+    .nextInvite01.swiper-button-disabled{
+      opacity: 1;
+      background: url("../img/iconRight01.png") no-repeat center #f6f6f6;
+      background-size: 20% auto;
+    }
     .swiper-invite01{
       padding: 30px 0;
+      width: 85%;
       .swiper-wrapper{
         .swiper-slide{
           -webkit-transition: all 0.4s;

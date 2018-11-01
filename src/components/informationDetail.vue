@@ -34,7 +34,7 @@
      	 		<p>{{list.info.title}}</p>
      	 	</div>
      	 	<div class="inforDate">
-     	 		<p><span>日期：{{list.info.time}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>浏览：{{list.info.browse}}人</span></p>
+     	 		<p><span>日期：{{list.info.time}}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>浏览：{{people}}次</span></p>
      	 	</div>
      	 	<div class="inforContent" v-html="list.info.content1"></div>
     	</div>
@@ -82,7 +82,8 @@
         return {
           id:null,
           list:{},
-          bottomDetail:[]
+          bottomDetail:[],
+          people:0
         }
       },
       methods:{
@@ -142,6 +143,13 @@
           console.log(data);
           _this.bottomDetail = data.data.link;
         })
+        // 获取浏览人数
+        this.$api.axiosPost('/index/News/browse',0,{
+          id:id
+        },function (data) {
+          // console.log(data);
+          _this.people = data.data.browse;
+        })
       }
     }
 </script>
@@ -151,4 +159,18 @@
 </style>
 <style>
   @import "../../static/css/public.css";
+  #informationDetail .inforContent section{
+    width: 100%;
+  }
+  #informationDetail .inforContent p{
+    width: 100%;
+  }
+  #informationDetail .inforContent p img{
+    max-width: 100%;
+    margin: auto;
+  }
+  #informationDetail .inforContent img{
+    max-width: 100%;
+    margin: auto;
+  }
 </style>

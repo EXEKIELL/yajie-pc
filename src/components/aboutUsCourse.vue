@@ -1,5 +1,11 @@
 <template>
   <div id="aboutUsCourse">
+    <div class="title">
+      <div class="title-1">
+        <span>发展</span><span class="color">历程</span>
+      </div>
+      <div class="title-2"><span>DEVELOPMENT PATH</span></div>
+    </div>
     <div class="list2">
       <div class="swiper-container swiper07">
         <div class="swiper-wrapper">
@@ -10,10 +16,23 @@
             <div class="slide2">
               <div class="s2-wrap">
                 <div>
+                  <!--<div class="s2-time"></div>-->
                   <!--<div class="s2-title">经销加盟合作</div>-->
                   <div class="s2-cont">
-                    <!--<p class="title">{{item.title}}</p>-->
-                    <p >{{item.desc}}</p>
+                    <p class="s2Time">{{item.time}}</p>
+                    <p class="title textEllipsis">{{item.title}}</p>
+                    <p >{{item.desc|lowText}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mask">
+              <div>
+                <div class="mTime">{{item.time}}</div>
+                <div class="mCont">
+                  <div class="mcTitle">{{item.title}}</div>
+                  <div class="mcInfo">
+                    <p>{{item.desc}}</p>
                   </div>
                 </div>
               </div>
@@ -21,10 +40,10 @@
           </div>
         </div>
       </div>
-      <div class="swiper-button-prev prev07"></div>
-      <div class="swiper-button-next next07"></div>
+      <!--<div class="swiper-button-prev prev07"></div>-->
+      <!--<div class="swiper-button-next next07"></div>-->
     </div>
-    <div class="list1">
+    <div class="list1" style="margin-bottom: 0;">
       <div class="swiper-container swiper-container-year" >
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="(item,index) in detailData">
@@ -212,6 +231,13 @@
           M = (date.getMonth()+1 < 10 ? (date.getMonth()+1) : date.getMonth()+1);
           D = date.getDate();
           return Y;
+        },
+        lowText:function (val) {
+          var text = val;
+          if(val.length>60){
+            text = val.slice(0,60)+'...';
+          }
+          return text;
         }
       },
       mounted(){
@@ -222,7 +248,7 @@
 
         // 获取历程数据
         this.$api.axiosGet('/index/about/getDevelop',{},function (data) {
-          console.log(data);
+          // console.log(data);
           _this.detailData = data.data.develop;
         });
         setTimeout(function () {
@@ -230,11 +256,22 @@
             prevButton:'.prev07',
             nextButton:'.next07',
             centeredSlides : true,
-            slidesPerView:1.8,
-            // autoplay:3000,
+            slidesPerView:1.3,
+            autoplay:3000,
             speed:1000,
+            // loop:true,
+            loopAdditionalSlides : 0,
             spaceBetween:50,
+            // autoHeight: true,
             observer:true,
+            onInit:function(swiper){
+              $('.swiper07').on('mouseenter',function () {
+                swiper.stopAutoplay();
+              })
+              $('.swiper07').on('mouseleave',function () {
+                swiper.startAutoplay();
+              })
+            },
             onSlideChangeStart:function (swiper) {
               // console.log(swiper.activeIndex);
               if(_this.swiper2!='')

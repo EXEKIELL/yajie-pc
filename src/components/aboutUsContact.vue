@@ -1,5 +1,11 @@
 <template>
   <div id="aboutUsContact">
+    <div class="title">
+      <div class="title-1">
+        <span class="color">联系</span><span>我们</span>
+      </div>
+      <div class="title-2"><span>CONTACT US</span></div>
+    </div>
     <div class="list1">
       <div class="l1-map" id="companyMap">
           <!--<my-map></my-map>-->
@@ -7,11 +13,12 @@
       <div class="l1-info">
         <div>
           <div class="info-1">
+            <div class="i1_title">联系信息</div>
             <ul v-if="detailData.length != 0">
-              <li><span class="s1">客服热线：</span><span>{{detailData[0].tel}}</span></li>
-              <li><span class="s1">公司邮箱：</span><span>{{detailData[0].email}}</span></li>
-              <li><span class="s1">官方网站：</span><span>{{detailData[0].code}}</span></li>
-              <li><span class="s1">公司地址：</span><span>{{detailData[0].address}}</span></li>
+              <li><span class="s1">地址：</span><span>{{detailData[0].address}}</span></li>
+              <li><span class="s1">邮编：</span><span>{{detailData[0].url}}</span></li>
+              <li><span class="s1">电话：</span><span>{{detailData[0].tel}}</span></li>
+              <li><span class="s1">传真：</span><span>{{detailData[0].cz}}</span></li>
             </ul>
           </div>
           <!--<div class="info-2">-->

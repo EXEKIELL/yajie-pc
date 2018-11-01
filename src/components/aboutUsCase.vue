@@ -1,5 +1,11 @@
 <template>
   <div id="aboutUsCase">
+    <div class="title">
+      <div class="title-1">
+        <span>工程</span><span class="color">案例</span>
+      </div>
+      <div class="title-2"><span>ENGINEERING CASE</span></div>
+    </div>
     <div class="list1">
       <p>雅洁产品的价值体现在著名的工程建筑，上海世博村、世博中心、北京大剧院、北京中国妇女活动中心、北京东方广场、广州新体育馆、郑州新郑国际机场、重庆高级人民法院、杭州香格里拉酒店以及山东高级人民检察院等等数千个建筑工程均采用雅洁产品。</p>
     </div>
@@ -33,7 +39,7 @@
                 <img :src="'http://archie.web.hengdikeji.com'+item.pic" alt="">
               </div>-->
               <div class="img01">
-                <img :src="'http://archie.web.hengdikeji.com'+item.pic" alt="">
+                <img :src="$baseLink+item.pic" alt="">
               </div>
               <div class="detail01 d1">
                 <!--<div class="time">{{item.time|time02}}6</div>-->
@@ -127,7 +133,7 @@
         })
         // 获取案例列表
         this.$api.axiosGet('/index/about/getProject/'+0,{},function (data) {
-          // console.log(data);
+          console.log(data);
           that.listData = data.data.project;
         })
       }

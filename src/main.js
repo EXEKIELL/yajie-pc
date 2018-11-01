@@ -11,6 +11,11 @@ import '../static/js/swiper.min'
 import $ from 'jquery'
 import api from '../static/js/mainPublic'
 import VueAMap from 'vue-amap';
+import echarts from 'echarts'
+import 'echarts/map/js/china.js';
+
+
+Vue.prototype.$echarts = echarts;
 Vue.prototype.$api = api;
 Vue.prototype.VueAMap = VueAMap;
 Vue.config.productionTip = false;

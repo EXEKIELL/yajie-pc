@@ -1,12 +1,30 @@
 #aboutUsIntro {
   width: 100%; }
+  #aboutUsIntro .title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px; }
+    #aboutUsIntro .title .title-1 {
+      font-size: 30px;
+      color: #333333;
+      font-weight: bold;
+      margin-bottom: 10px; }
+      #aboutUsIntro .title .title-1 .color {
+        color: #604775; }
+    #aboutUsIntro .title .title-2 {
+      color: #888888;
+      font-size: 12px; }
   #aboutUsIntro .list1 {
     width: 100%;
-    height: 720px;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     position: relative;
-    margin-bottom: 90px; }
+    margin-bottom: 38px; }
+    #aboutUsIntro .list1 p {
+      font-size: 14px;
+      color: #333333;
+      font-weight: lighter;
+      line-height: 40px; }
     #aboutUsIntro .list1 > div {
       display: flex;
       align-items: flex-end; }
@@ -37,7 +55,8 @@
       top: 470px;
       width: 42%; }
   #aboutUsIntro .list2 {
-    position: relative; }
+    position: relative;
+    margin-bottom: 40px; }
     #aboutUsIntro .list2 .prev03, #aboutUsIntro .list2 .next03 {
       width: 52px;
       height: 50px;
@@ -66,6 +85,55 @@
       width: 100%; }
       #aboutUsIntro .list2 .swiper03 img {
         width: 100%; }
+  #aboutUsIntro .list3 .list_wrap {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 20px rgba(96, 71, 117, 0.1);
+    -moz-box-shadow: 0 0 20px rgba(96, 71, 117, 0.1);
+    box-shadow: 0 0 20px rgba(96, 71, 117, 0.1);
+    margin-bottom: 40px; }
+    #aboutUsIntro .list3 .list_wrap > div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center; }
+      #aboutUsIntro .list3 .list_wrap > div > div {
+        width: 50%; }
+    #aboutUsIntro .list3 .list_wrap img {
+      width: 100%; }
+    #aboutUsIntro .list3 .list_wrap .detail {
+      position: relative; }
+      #aboutUsIntro .list3 .list_wrap .detail .d_1 {
+        position: absolute;
+        font-size: 80px;
+        color: rgba(96, 71, 117, 0.1);
+        top: -10%;
+        right: 2%;
+        font-weight: bold; }
+      #aboutUsIntro .list3 .list_wrap .detail .le {
+        left: 2%; }
+      #aboutUsIntro .list3 .list_wrap .detail .d_2, #aboutUsIntro .list3 .list_wrap .detail .d_3 {
+        padding: 0 55px; }
+      #aboutUsIntro .list3 .list_wrap .detail .d_2 {
+        font-size: 18px;
+        color: #555555;
+        font-weight: bold;
+        position: relative;
+        margin-top: 60px;
+        margin-bottom: 35px; }
+      #aboutUsIntro .list3 .list_wrap .detail .d_2:before {
+        content: '';
+        display: block;
+        position: absolute;
+        border-left: 8px solid #604775;
+        height: 100%;
+        top: 0;
+        left: 0; }
+      #aboutUsIntro .list3 .list_wrap .detail .d_3 p {
+        font-size: 14px;
+        color: #555555;
+        line-height: 40px;
+        text-align: justify;
+        font-weight: lighter; }
 
 .slideBox {
   width: 100%;

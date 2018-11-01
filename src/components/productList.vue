@@ -35,9 +35,9 @@
           </div>
         </div>
       </div>
-      <div class="list3" v-if="productList.current_page == productList.last_page">
-        <img src="../../static/img/nomore01.png" alt="">
-      </div>
+      <!--<div class="list3" v-if="productList.current_page == productList.last_page">-->
+        <!--<img src="../../static/img/nomore01.png" alt="">-->
+      <!--</div>-->
       <div v-if="productList.data">
         <div class="list3" v-if="productList.data.length == 0">
           <img src="../../static/img/nomore01.png" alt="">
@@ -150,7 +150,7 @@
           let tagId = data.data.cates.all[0].id;
           // 获取产品列表
           that.$api.axiosGet('/index/product/getProductList/type/limit9/id/'+id,{},function (data) {
-            // console.log(data);
+            console.log(data);
             that.productList = data.data.list;
           })
         })

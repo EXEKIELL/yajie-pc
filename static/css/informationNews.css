@@ -16,7 +16,7 @@
 #informationNews .list2-wrap {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 80px; }
+  margin-bottom: 50px; }
   #informationNews .list2-wrap > div {
     width: 32.5%; }
   #informationNews .list2-wrap .list {
@@ -109,11 +109,11 @@
         #informationNews .list2-wrap .list .listText .text3 .more {
           display: flex;
           align-items: center;
-          -webkit-transition: color 0.5s background 0.5s;
-          -moz-transition: color 0.5s background 0.5s;
-          -ms-transition: color 0.5s background 0.5s;
-          -o-transition: color 0.5s background 0.5s;
-          transition: color 0.5s background 0.5s;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
           cursor: pointer;
           line-height: 30px;
           width: 80px;
@@ -141,9 +141,9 @@
             -ms-transition: all 0.5s;
             -o-transition: all 0.5s;
             transition: all 0.5s; }
-        #informationNews .list2-wrap .list .listText .text3 .date > span:first-child {
-          font-size: 24px;
-          color: #333333; }
+        #informationNews .list2-wrap .list .listText .text3 .date {
+          font-size: 16px;
+          color: #999999; }
   #informationNews .list2-wrap .list:nth-child(3n) {
     margin-right: 0; }
   #informationNews .list2-wrap .list:hover {
@@ -170,6 +170,9 @@
           -o-transform: translateX(0%);
           transform: translateX(0%);
           opacity: 1; }
+      #informationNews .list2-wrap .list:hover .listText .text3 .date {
+        font-size: 18px;
+        color: #604775; }
     #informationNews .list2-wrap .list:hover .listText:after {
       content: '';
       display: block;
