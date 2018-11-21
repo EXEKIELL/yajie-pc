@@ -93,7 +93,7 @@
             //上一篇
             var id0 = this.list.front.id;
             _this.$api.axiosGet('/index/news/getNewsinfo/id/'+id0,{},function (data) {
-              console.log(data);
+              // console.log(data);
               _this.list = data.data;
               _this.list.info.pic = _this.$baseLink + _this.list.info.pic;
 
@@ -108,7 +108,7 @@
             //下一篇
             var id1 = this.list.after.id;
             _this.$api.axiosGet('/index/news/getNewsinfo/id/'+id1,{},function (data) {
-              console.log(data);
+              // console.log(data);
               _this.list = data.data;
               _this.list.info.pic = _this.$baseLink + _this.list.info.pic;
 
@@ -127,7 +127,7 @@
         let id = this.$router.history.current.query.id;
         _this.id = id;
         _this.$api.axiosGet('/index/news/getNewsinfo/id/'+id,{},function (data) {
-          console.log(data);
+          // console.log(data);
           _this.list = data.data;
           _this.list.info.pic = _this.$baseLink + _this.list.info.pic;
 
@@ -140,7 +140,7 @@
         });
         // 获取底部信息
         this.$api.axiosGet('/index/about/getLink',{},function (data) {
-          console.log(data);
+          // console.log(data);
           _this.bottomDetail = data.data.link;
         })
         // 获取浏览人数

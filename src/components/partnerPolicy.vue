@@ -101,7 +101,7 @@
         });
         // 获取标题内容
         this.$api.axiosPost('/index/Partner/posthztitle',0,{},function (data) {
-          console.log(data);
+          // console.log(data);
           var data1 = data.data.data;
           _this.title1_1 = data1.title1.slice(0,2);
           _this.title1 = data1.title1.slice(2);
@@ -134,7 +134,7 @@
           this.$api.axiosPost('/index/Partner/number',0,{
             id:id
           },function (data) {
-            console.log(data);
+            // console.log(data);
             _this.number = data.data.number;
           })
           _this.$api.axiosGet('/index/partner/getDocument/page/1',{},function (data) {

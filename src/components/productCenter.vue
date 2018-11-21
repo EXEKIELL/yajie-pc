@@ -80,7 +80,7 @@
           const that = this;
           this.idx = i;
           this.idx1 = -1;
-          console.log(this.idx1);
+          // console.log(this.idx1);
 
           // console.log(id);
           let defaultId = id;
@@ -161,11 +161,11 @@
         },
         $route:function (to,form) {
           const that = this;
-          console.log(to);
-          console.log(form);
+          // console.log(to);
+          // console.log(form);
           var idx = parseInt(sessionStorage.getItem('idx'));
           var idx1 = parseInt(sessionStorage.getItem('idx1'));
-          console.log(idx !== idx);
+          // console.log(idx !== idx);
           if(sessionStorage.getItem('idx') == null){
             idx = 0;
           }
@@ -193,10 +193,10 @@
                     id:defaultId
                   }
                 });
-                console.log(idx);
+                // console.log(idx);
                 // 获取默认二级标签
                 that.$api.axiosGet('/index/product/getCates/pid/'+defaultId,{},function (data) {
-                  console.log(data);
+                  // console.log(data);
                   that.iconDetail = data.data.cates.all;
                   that.length = that.iconDetail.length;
                   if(data.data.cates.all.length>8){
@@ -255,8 +255,8 @@
               this.tag1Show = true;
               // 获取一级标签
               this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
-                console.log(data);
-                console.log(idx);
+                // console.log(data);
+                // console.log(idx);
                 that.navBtn = data.data.cates;
                 let defaultId = data.data.cates[idx].id;
                 that.id = defaultId;
@@ -266,10 +266,10 @@
                     id:defaultId
                   }
                 });
-                console.log(idx);
+                // console.log(idx);
                 // 获取默认二级标签
                 that.$api.axiosGet('/index/product/getCates/pid/'+defaultId,{},function (data) {
-                  console.log(data);
+                  // console.log(data);
                   that.iconDetail = data.data.cates.all;
                   that.length = that.iconDetail.length;
                   if(data.data.cates.all.length>8){
@@ -516,7 +516,7 @@
                 //     id:defaultId
                 //   }
                 // });
-                console.log(idx);
+                // console.log(idx);
                 // 获取默认二级标签
                 that.$api.axiosGet('/index/product/getCates/pid/'+defaultId,{},function (data) {
                   // console.log(data);
@@ -589,7 +589,7 @@
                   id:defaultId
                 }
               });
-              console.log(idx);
+              // console.log(idx);
               // 获取默认二级标签
               that.$api.axiosGet('/index/product/getCates/pid/'+defaultId,{},function (data) {
                 // console.log(data);

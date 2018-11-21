@@ -1,9 +1,13 @@
 import axios from '../../src/http'
 import router from '../../src/router/index'
 import qs from 'qs'
+import promise from 'es6-promise';
 
-let root = 'http://archie.web.hengdikeji.com';
-let headers = [
+
+promise.polyfill();
+
+var root = 'http://archie.web.hengdikeji.com';
+var headers = [
   {'Content-Type':'application/x-www-form-urlencoded'},
   {'Content-Type': 'application/json'},
   {'Content-Type': 'raw'}
@@ -17,7 +21,7 @@ function axiosPost(url,index,params,fun) {
     data:params,
     transformRequest:[function (data) {
       if(index==0){
-        Object.keys(data).forEach((key) => {
+        Object.keys(data).forEach(function(key) {
           if ((typeof data[key]) === 'object') {
             data[key] = JSON.stringify(data[key]) // 这里必须使用内置JSON对象转换
           }
@@ -29,11 +33,16 @@ function axiosPost(url,index,params,fun) {
         return data
       }
     }]
-  }).then(res=>{
-   if(typeof fun=="function"){
-      fun(res)
-    }
-  })
+  }).then(function(res){
+		if(typeof fun=="function"){
+		 fun(res)
+		}
+	})
+	//res=>{
+   //if(typeof fun=="function"){
+    //  fun(res)
+   // }
+  //}
 }
 function axiosGet(url,params,fun) {
   axios({
@@ -41,7 +50,7 @@ function axiosGet(url,params,fun) {
     baseURL:root,
     url:url,
     params:params
-  }).then(res=>{
+  }).then(function(res){
     if(typeof fun=="function"){
       fun(res)
     }

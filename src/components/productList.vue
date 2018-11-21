@@ -150,7 +150,7 @@
           let tagId = data.data.cates.all[0].id;
           // 获取产品列表
           that.$api.axiosGet('/index/product/getProductList/type/limit9/id/'+id,{},function (data) {
-            console.log(data);
+            // console.log(data);
             that.productList = data.data.list;
           })
         })

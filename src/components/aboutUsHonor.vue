@@ -99,7 +99,7 @@
       mounted(){
         var _this = this;
         _this.$api.axiosGet('/index/about/getHonor',{},function (data) {
-          console.log(data);
+          // console.log(data);
           _this.list = data.data.honor;
           _this.listLength = _this.list.length;
           var data1 = data.data.honor;
@@ -115,7 +115,7 @@
               _this.hImg.push(_this.list[i]);
             }
           }
-          console.log(_this.sImg,_this.hImg);
+          // console.log(_this.sImg,_this.hImg);
           setTimeout(function () {
             _this.swiper06 = new Swiper('.swiper06',{
               // speed:1000,

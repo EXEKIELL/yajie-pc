@@ -19,7 +19,7 @@
       },
       watch:{
         $route:function (to) {
-          console.log(to);
+          // console.log(to);
           if(to.name == 'informationDetail'){
             this.idx = false;
           }else{

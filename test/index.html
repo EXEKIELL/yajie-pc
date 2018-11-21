@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>闺蜜的下午茶</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta content="yes" name="apple-mobile-web-app-capable"/>
+		<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+		<meta content="telephone=no" name="format-detection"/>
+		<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/reset.min.css" />
+		<link rel="stylesheet" href="css/toto.css?v=6" />
+		<style>
+			.hiddin{
+				display: none;
+			}
+			.tripTitle img{
+				opacity: 0!important;
+			}
+
+			.jump{
+				position: absolute;
+				width: 1.05rem;
+				height: 0.41rem;
+				top: 1%;
+				right: 2%;
+				left: auto;
+			}
+		</style>
+		<script type="text/javascript">
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+					recalc = function() {
+						var clientWidth = docEl.clientWidth;
+						if(!clientWidth) return;
+						if(clientWidth >= 750) {
+							docEl.style.fontSize = '100px';
+						} else {
+							docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+						}
+					};
+				if(!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/toto.js?v=13"></script>
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+		<script type="text/javascript">
+			$(function(){
+			    var shareTitle="SMART TRIP特辑：闺蜜的下午茶";
+			    var shareDesc="一起开启smart trip智臻之旅";
+//			    var shareTitle="一起开启smart trip智臻之旅";
+//			    var shareDesc="闺蜜的下午茶";
+				var shareLink="http://shunfeng.hengdikeji.com/toto/index.html";
+				var shareImage="http://shunfeng.hengdikeji.com/toto/share.png";
+				$.get('http://shunfeng.hengdikeji.com/index/jssdk/js_sdk_all',function (res) {
+                    wx.config({
+                        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                        appId: res.appId, // 必填，公众号的唯一标识
+                        timestamp: res.timestamp, // 必填，生成签名的时间戳
+                        nonceStr: res.nonceStr, // 必填，生成签名的随机串
+                        signature: res.signature,// 必填，签名，见附录1
+                        jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                    });
+                    wx.ready(function () {
+                        wx.onMenuShareTimeline({
+                            title: shareTitle,
+                            desc: shareDesc,
+                            link:shareLink,
+                            imgUrl: shareImage,
+                            trigger: function (res) {
+                            },
+                            success: function (res) {
+                            },
+                            cancel: function (res) {
+                            },
+                            fail: function (res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                        wx.onMenuShareAppMessage({
+                            title: shareTitle,
+                            desc: shareDesc,
+                            link:shareLink,
+                            imgUrl: shareImage,
+                            trigger: function (res) {
+                            },
+                            success: function (res) {
+                            },
+                            cancel: function (res) {
+                            },
+                            fail: function (res) {
+                                alert(JSON.stringify(res));
+                            }
+                        });
+                    })
+
+                },'JSON')
+			})
+		</script>
+	</head>
+	<body>
+		<div class="delete1"></div>
+		<div class="hiddin">
+			<img src="img/people.png" /><img src="img/flower1.png" />
+			<!--<video src="hotata.mp4" preload="auto"></video>
+			<video src="hotata1.mp4" preload="auto"></video>
+			<video src="hotata2.mp4" preload="auto"></video>
+			<video src="hotata3.mp4" preload="auto"></video>-->
+		</div>
+		<!--<div id="gif" class="gif background">
+			<div class="logo animated bounceInDown">
+				<img src="img/logo.png" />
+			</div>
+			<div class="title animated bounceIn">
+				<img src="img/title.png" />
+			</div>
+			<div class="gifCenter animated fadeIn">
+				<img src="img/teas.png" />
+				<div class="flower">
+					<img src="img/flower.png" />
+				</div>
+			</div>
+			<div class="lookRound">
+				<button>强势微观</button>
+			</div>
+		</div>-->
+		<!--<div class="gif" class="background">
+			<img src="img/gif.gif" />
+			<button class="look">强势微观</button>
+		</div>-->
+		<div id="loading" class="background" style="display: none;">
+			<div class="logo">
+				<img src="img/cup.png" />
+				<div class="teaCup">
+					<img src="img/teaCup.png" />
+				</div>
+				<div class="water">
+					<img src="img/water.png" />
+				</div>
+				<div class="tea">
+					<img src="img/tea.png" />
+				</div>
+			</div>
+			<div class="logoBox">
+				<div class="logoP">
+					<p>0%</p>
+				</div>
+			</div>
+		</div>
+		<div id="firstSence">
+			<video
+				id="first"
+				src="hotata.mp4?v=1"
+			    preload="auto"
+			    webkit-playsinline="true"
+			    playsinline="true"
+			    x-webkit-airplay="allow"
+			    x5-video-player-type="h5"
+			    x5-video-player-fullscreen="true"
+			    x5-video-orientation="portraint"
+			    style="object-fit:fill">
+			></video>
+			<video
+				id="first1"
+				src="hotata1.mp4?v=3"
+			    preload="auto"
+			    webkit-playsinline="true"
+			    playsinline="true"
+			    x-webkit-airplay="allow"
+			    x5-video-player-type="h5"
+			    x5-video-player-fullscreen="true"
+			    x5-video-orientation="portraint"
+			    style="object-fit:fill">
+			></video>
+			<div class="jump">
+				<button></button>
+			</div>
+		</div>
+		<div id="secondSence">
+			<video
+				id="second"
+				src="toto.mp4"
+			    preload="auto"
+			    webkit-playsinline="true"
+			    playsinline="true"
+			    x-webkit-airplay="allow"
+			    x5-video-player-type="h5"
+			    x5-video-player-fullscreen="true"
+			    x5-video-orientation="landscape"
+			    style="object-fit:fill">
+			></video>
+			<div class="secondBoxOut">
+				<div class="secondClose">
+					<button></button>
+				</div>
+			</div>
+		</div>
+		<div class="delete2"></div>
+	</body>
+</html>

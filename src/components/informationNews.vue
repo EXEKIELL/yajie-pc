@@ -98,7 +98,7 @@
         });
         // 获取标题
         this.$api.axiosPost('/index/News/postzxtitle',0,{},function (data) {
-          console.log(data);
+          // console.log(data);
           _this.title1 = data.data.data.title1.slice(0,4);
           _this.title1_1 = data.data.data.title1.slice(4);
           _this.title2 = data.data.data.title2;

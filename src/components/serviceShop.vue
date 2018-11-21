@@ -118,7 +118,7 @@
         }
       },
       mounted:function () {
-        console.log(this.$refs.echarts)
+        // console.log(this.$refs.echarts)
         var _this = this;
         //获取省
         _this.$api.axiosGet('/index/service/getRegion/type/1',{},function (data) {
@@ -148,8 +148,13 @@
           }
 
           _this.options2 = [];
-          _this.$api.axiosGet('/index/service/getNetwork/province/' + _this.province, {}, function (data) {
-            console.log(data)
+          var pr = this.province;
+          // console.log(pr);
+          if(pr == 32){
+            pr = 26
+          }
+          _this.$api.axiosGet('/index/service/getNetwork/province/' + pr, {}, function (data) {
+            // console.log(data)
             if(data.data.list.length>0)
             {
               _this.showShop = true;
@@ -192,7 +197,7 @@
         },
         search:function () {
           const _this = this;
-          console.log(this.searchText);
+          // console.log(this.searchText);
           if(this.searchText == ''){
             this.$alert('请输入关键字','温馨提示',{
               confirmButtonText: '确定'
@@ -202,7 +207,7 @@
             _this.$api.axiosPost('/index/Service/key',0, {
               key:text
             }, function (data) {
-              console.log(data);
+              // console.log(data);
               if (data.data.key.length > 0) {
                 _this.showShop = true;
                 _this.shopList = data.data.key;
@@ -214,7 +219,7 @@
         },
         getData:function (data) {
           const _this = this;
-          console.log(data);
+          // console.log(data);
           $("html,body").animate({scrollTop:1000}, 500);
           // _this.showShop = true;
           // _this.shopList = data.data.key;
@@ -228,11 +233,17 @@
         getClickP:function (clickP) {
           const _this = this;
           var add = clickP;
+          // console.log(add);
           var adds = this.options1;
+          // console.log(adds)
           for(var i = 0;i<adds.length;i++){
             if(adds[i].label == add){
               var id = adds[i].value;
+              // if(id == 32){
+              //   id = 26
+              // }
               _this.province = id;
+              // console.log(_this)
             }
           }
         }

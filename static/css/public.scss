@@ -762,6 +762,13 @@ body{
       min-height: 240px;
       max-height: 440px;
       position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate3d(-50%,-50%,0);
+			-moz-transform: translate3d(-50%,-50%,0);
+			-ms-transform: translate3d(-50%,-50%,0);
+			-o-transform: translate3d(-50%,-50%,0);
+			transform: translate3d(-50%,-50%,0);
       .aw{
         max-height:540px;
         -webkit-border-radius: 10px;
@@ -826,7 +833,7 @@ body{
         }
         img{
           max-width: 100%;
-
+					width: 100%;
         }
       }
       .w_info{

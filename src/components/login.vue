@@ -1,8 +1,8 @@
 <template>
     <div id="login">
       <div class="loginWrap">
-        <div class="loginImg">
-          <img src="../../static/img/img45.png" alt="">
+        <div class="loginImg" style="height: 500px;overflow: hidden;">
+          <img :src="imgUrl" alt="">
         </div>
         <div class="loginMes">
           <div class="mesWrap">
@@ -42,7 +42,8 @@
           formData:{
             username:'',
             password:''
-          }
+          },
+          imgUrl:''
         }
       },
       methods:{
@@ -62,7 +63,7 @@
           }else{
             // console.log(formData);
             this.$api.axiosPost('/index/login/login',0,formData,function (data) {
-              console.log(data);
+              // console.log(data);
               if(data.data.status == 200){
                 localStorage.setItem('token',data.data.token);
                 var path = sessionStorage.getItem('path');
@@ -79,6 +80,14 @@
         goback(){
           window.history.go(-1);
         }
+      },
+      mounted:function () {
+        var that = this;
+        // 获取登录图片
+        this.$api.axiosPost('/index/Partner/postlognimg',0,{},function (data) {
+          // console.log(data);
+          that.imgUrl = that.$baseLink+data.data.data.pic;
+        })
       }
     }
 </script>

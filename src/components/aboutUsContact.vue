@@ -98,7 +98,7 @@
           });
           // 获取联系信息
           this.$api.axiosGet('/index/about/getLink',{},function (data) {
-            console.log(data);
+            // console.log(data);
 
             _this.detailData = data.data.link;
             var x = data.data.link[0].x,
@@ -118,8 +118,8 @@
               });
               _this.map.add(_this.marker);
               _this.marker.setTitle('点击我，打开地图，雅洁五金欢迎您的到来！');
-              console.log(_this.marker.getPosition())
-              console.log(_this.marker);
+              // console.log(_this.marker.getPosition())
+              // console.log(_this.marker);
               _this.marker.on('click',function(e){
                 _this.marker.markOnAMAP({
                   name:'广东雅洁五金科技有限公司',

@@ -105,7 +105,7 @@
       watch: {
         message(newValue, oldValue) {
           this.sT = newValue;
-          console.log(this.sT);
+          // console.log(this.sT);
           var arr = this.option.series[0].data;
           for(var i = 0;i<arr.length;i++){
             this.option.series[0].data[i].selected = false;
@@ -119,14 +119,18 @@
       mounted(){
         const _this = this;
         this.drawLine();
-        console.log(this.myChart)
+        // console.log(this.myChart)
         this.myChart.on('click', function (param){
-          console.log(param.name);
+          // console.log(param.name);
           _this.$emit('clickP',param.name);
+          var name = param.name;
+          if(name === '重庆'){
+            name = '四川'
+          }
           _this.$api.axiosPost('/index/Service/key',0,{
-            name:param.name
+            name:name
           },function (data) {
-            console.log(data)
+            // console.log(data)
             _this.listData1 = data.data.key;
             _this.$emit('data',data)
           })

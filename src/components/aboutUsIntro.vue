@@ -95,7 +95,7 @@
         var _this = this;
         // 获取企业简介
         this.$api.axiosGet('/index/about/getProfile',{},function (data) {
-          console.log(data);
+          // console.log(data);
           _this.contents = data.data.profile;
         });
         // 获取背景图片
@@ -105,7 +105,7 @@
         });
         // 获取轮播信息 /index/about/getPics
         this.$api.axiosGet('/index/about/getPics',{},function (data) {
-          console.log(data);
+          // console.log(data);
           _this.swiperBox = data.data.pics;
         });
         setTimeout(function () {

@@ -16,8 +16,6 @@
             <div class="slide2">
               <div class="s2-wrap">
                 <div>
-                  <!--<div class="s2-time"></div>-->
-                  <!--<div class="s2-title">经销加盟合作</div>-->
                   <div class="s2-cont">
                     <p class="s2Time">{{item.time}}</p>
                     <p class="title textEllipsis">{{item.title}}</p>
@@ -42,6 +40,9 @@
       </div>
       <!--<div class="swiper-button-prev prev07"></div>-->
       <!--<div class="swiper-button-next next07"></div>-->
+      <div class="xiushi">
+        <img src="../../static/img/img46.png" alt="">
+      </div>
     </div>
     <div class="list1" style="margin-bottom: 0;">
       <div class="swiper-container swiper-container-year" >
@@ -54,31 +55,6 @@
         </div>
       </div>
     </div>
-    <!--<div class="list1">-->
-      <!--<div class="swiperWrap">-->
-        <!--<div class="swiper-container swiper_02">-->
-          <!--<div class="swiper-wrapper">-->
-            <!--<div class="swiper-slide">-->
-              <!--<div class="slide-wrap">-->
-                <!--<div class="s_top">-->
-                  <!--<img src="../../static/img/img37.png" alt="">-->
-                <!--</div>-->
-                <!--<div class="s_detail">-->
-                  <!--<div>-->
-                    <!--<div class="s_title">-->
-                      <!--<p>2018-经销加盟合作</p>-->
-                    <!--</div>-->
-                    <!--<div class="s_desc">-->
-                      <!--<p>确立一级经销加盟合作模式，全国招商。推出全新的智能单品系列，助力雅洁智能家居体验馆和体验区的稳健发展。</p>-->
-                    <!--</div>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
   </div>
 </template>
 
@@ -308,6 +284,13 @@
 
 <style scoped>
 @import "../../static/css/aboutUsCourse.css";
+  .xiushi{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 100;
+  }
 </style>
 <style>
   @import "../../static/css/public.css";

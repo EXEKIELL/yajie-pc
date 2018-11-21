@@ -5,16 +5,16 @@ const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const webpack = require('webpack')
 
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
 
-
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app:['babel-polyfill','./src/main.js']
   },
   externals: {
     'AMap': 'AMap'

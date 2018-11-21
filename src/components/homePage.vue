@@ -212,7 +212,7 @@
                     <p>{{item.desc}}</p>
                   </div>
                   <div class="nrDate">
-                    <p>12-07</p>
+                    <p>{{item.time|newTime}}</p>
                     <div class="moreRead"></div>
                   </div>
                 </div>
@@ -357,7 +357,7 @@
         <li class="li1" @click="bottomBtn(1)" style="display: none"></li>
         <li class="li2" @click="bottomBtn(2)" style="display: none">
           <!--<a style="display: block;width: 100%;height: 100%;opacity: 0;" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=164992537&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=392563086" alt="点击联系在线客服" title="点击联系在线客服"/></a>-->
-          <a id="kefu" style="display: block;width: 100%;height: 100%;opacity: 0;" :href="'tencent://message/?uin='+qqNum+'&Site=http://vps.shuidazhe.com&Menu=yes'">PC版</a>
+          <a ref="kefu" id="kefu" style="display: block;width: 100%;height: 100%;opacity: 0;" :href="'tencent://message/?uin='+qqNum+'&Site=http://vps.shuidazhe.com&Menu=yes'">PC版</a>
         </li>
         <li class="li3" @click="bottomBtn(3)" style="display: none"></li>
         <li class="li4" style="display: none">
@@ -506,6 +506,14 @@
           var str = value.slice(0,22);
           str = str+'...';
           return str
+        },
+        newTime:function (value) {
+          var Y,M,D,month;
+          var date = new Date(value * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+          Y = date.getFullYear();
+          M = (date.getMonth()+1 < 10 ? (date.getMonth()+1) : date.getMonth()+1);
+          D = date.getDate();
+          return Y+'-'+M+'-'+D;
         }
       },
       methods:{
@@ -545,7 +553,7 @@
             //   },20)
             // })
             that.$api.axiosGet('/index/product/getProductList/type/limit4/id/'+id,{},function (data) {
-              console.log(data);
+              // console.log(data);
               that.productList = data.data.list;
               // console.log(that.productList);
               // 产品列表轮播
@@ -585,7 +593,7 @@
           }
         },
         moveTo(i){
-          console.log(i);
+          // console.log(i);
           this.$router.push({
             path: '/productDetail',
             query:{
@@ -594,7 +602,7 @@
           })
         },
         moveTo01(i){
-          console.log(i);
+          // console.log(i);
           this.$router.push({
             path: '/information/informationDetail',
             query:{
@@ -603,7 +611,6 @@
           })
         },
         zixun(){
-          console.log(1);
           document.getElementById("kefu").click()
         },
         videoPlay(){
@@ -649,7 +656,7 @@
           var d = parseInt(localStorage.getItem('day'));
           var count = parseInt(localStorage.getItem('countNum'));
           var dayNow = new Date().getDate();
-          console.log(d);
+          // console.log(d);
           if(dayNow == d){
             if(count<3){
               this.activeStatus = true;
@@ -662,7 +669,7 @@
             this.activeStatus = true;
             var date1 = new Date();
             var day1 = date1.getDate();
-            console.log(day1)
+            // console.log(day1)
             count = 1;
             localStorage.setItem('countNum',count);
             localStorage.setItem('day',day1);
@@ -699,7 +706,7 @@
         });
         // 获取banner图
         this.$api.axiosGet('/index/index/getPics/location/1',{},function (data) {
-          console.log(data);
+          // console.log(data);
           var data1 = data.data.pics;
           // 分开视频
           for(var i = 0;i<data1.length;i++){
@@ -709,8 +716,8 @@
               that.vList.push(data1[i])
             }
           }
-          console.log(that.vbanner);
-          console.log(that.vList);
+          // console.log(that.vbanner);
+          // console.log(that.vList);
           that.bannerVideoSrc = data.data.pics[0].path;
           that.bannerImg = data.data.pics;
           setTimeout(function () {
@@ -737,7 +744,7 @@
               onSlideChangeStart:function (swiper) {
                 // console.log(swiper.activeIndex);
                 // that.bannerVideoSrc = data.data.pics[swiper.activeIndex].path;
-                console.log(swiper.activeIndex)
+                // console.log(swiper.activeIndex)
                 if(swiper.activeIndex>0){
                   swiper.startAutoplay();
                   $('.paginHome').addClass('sel');
@@ -779,7 +786,7 @@
               $('.video')[0].play();
             })
             $('.video')[0].addEventListener("ended",function(){
-              console.log("结束");
+              // console.log("结束");
               $('.videoMask').show();
             })
           },100);
@@ -801,7 +808,7 @@
             that.tags02 = data.data.cates.all;
             //获取产品列表
             that.$api.axiosGet('/index/product/getProductList/type/limit4/id/'+id01,{},function (data) {
-              console.log(data);
+              // console.log(data);
               that.productList = data.data.list;
               // console.log(that.productList);
               // 产品列表轮播
@@ -818,7 +825,7 @@
         })
         //获取新闻动态
         this.$api.axiosGet('/index/index/getNewsList/commend/1/'+1,{},function (data) {
-          // console.log(data);
+          // console.log('新闻动态',data);
           that.newsList = data.data.list.data;
           //新闻资讯
           setTimeout(function () {
@@ -861,7 +868,7 @@
           var length = data.data.technology.length;
           if(length<4){
             var l = 139*(4-length);
-            console.log(l);
+            // console.log(l);
             $('.swiperHome03').css({
               '-webkit-transform': 'translateX('+l+'px)',
               '-moz-transform': 'translateX('+l+'px)',

@@ -81,7 +81,7 @@
           //   observer:true
           // })
           this.$api.axiosGet('/index/index/getTechnology/location/1',{},function (data) {
-            console.log(data);
+            // console.log(data);
             that.videoList = data.data.technology;
             // that.videoList = that.videoList.slice(0,1);
             var length = data.data.technology.length;

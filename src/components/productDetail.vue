@@ -41,7 +41,7 @@
           </div>
           <div class="proDetail">
             <ul>
-              <li v-if="index<4" v-for="(item,index) in getData.spec"><span class="li-title">{{item.name}}</span><span class="li-info">{{item.content}}</span></li>
+              <li v-if="index<4" v-for="(item,index) in getData.spec"><span class="li-title">{{item.name}}：</span><span class="li-info">{{item.content}}</span></li>
               <!--<li><span class="li-title">适用范围</span><span class="li-info">写字楼/别墅</span></li>-->
               <!--<li><span class="li-title">颜色分类</span><span class="li-info">红古铜/青古铜/尼龙铬/琥珀琮/香槟金</span></li>-->
               <!--<li><span class="li-title">开门方式</span><span class="li-info">密码/指纹/机械钥匙</span></li>-->
@@ -152,7 +152,7 @@
       },
       methods:{
         navTo1(item){
-          console.log(item)
+          // console.log(item)
           this.$router.push({
             path: '/productCenter/ProductList',
             query:{
@@ -168,7 +168,7 @@
       mounted(){
         const that = this;
         var offsetLeft = $('.navLeft').offset().left;
-        console.log(offsetLeft);
+        // console.log(offsetLeft);
 
         // 监听滚动条滚动
         $(window).scroll(function(event){
@@ -188,7 +188,7 @@
         });
         var id = this.$router.history.current.query.id;
         this.$api.axiosGet('/index/product/getProductinfo/id/'+id,{},function (data) {
-          console.log(data);
+          // console.log(data);
           if(data.data.info == null){
             that.noDetail = true;
           }else{
@@ -216,7 +216,7 @@
             },50);
             // 获取默认二级标签
             that.$api.axiosGet('/index/product/getCates/pid/'+id,{},function (data) {
-              console.log(data);
+              // console.log(data);
               that.navList = data.data.cates.all;
             })
           }

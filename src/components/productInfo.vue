@@ -112,7 +112,7 @@
         this.id = id;
         // 获取
         this.$api.axiosGet('/index/product/getProductList/type/limit3/id/'+that.id,{},function (data) {
-          console.log(data);
+          // console.log(data);
           that.listData = data.data.list;
         })
       }

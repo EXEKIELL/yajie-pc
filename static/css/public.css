@@ -614,7 +614,14 @@ body {
       width: 620px;
       min-height: 240px;
       max-height: 440px;
-      position: absolute; }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate3d(-50%, -50%, 0);
+      -moz-transform: translate3d(-50%, -50%, 0);
+      -ms-transform: translate3d(-50%, -50%, 0);
+      -o-transform: translate3d(-50%, -50%, 0);
+      transform: translate3d(-50%, -50%, 0); }
       #activity > div .activeWrap .aw {
         max-height: 540px;
         -webkit-border-radius: 10px;
@@ -669,7 +676,8 @@ body {
           display: flex;
           justify-content: center; }
         #activity > div .activeWrap .w_img img {
-          max-width: 100%; }
+          max-width: 100%;
+          width: 100%; }
       #activity > div .activeWrap .w_info {
         width: 100%;
         display: flex;

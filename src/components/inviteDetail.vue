@@ -83,7 +83,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="slide-img">
-                <img :src="$baseLink+jobData[0].ppic" alt="">
+                <img src="../../static/img/img47.jpg" alt="">
                 <div class="img-bottom"></div>
               </div>
               <div class="slide-info">
@@ -98,7 +98,7 @@
             </div>
             <div class="swiper-slide">
               <div class="slide-img">
-                <img :src="$baseLink+jobData[0].ppic" alt="">
+                <img src="../../static/img/img47.jpg" alt="">
                 <div class="img-bottom"></div>
               </div>
               <div class="slide-info">
@@ -232,7 +232,7 @@
           this.popUp01 = false;
         },
         updata(e){
-          console.log(e.target.files);
+          // console.log(e.target.files);
           // this.formData.upload = e.target.files[0].name;
           // console.log(this.formData.upload);
           // var formData1 = new FormData();
@@ -247,7 +247,7 @@
         },
         btn(){
           const that = this;
-          console.log(this.formData);
+          // console.log(this.formData);
           var formData = this.formData;
           if(formData.sex == '男士'){
            formData.sex = 1;
@@ -257,9 +257,9 @@
           if(formData.file == ''){
 
           }else{
-            console.log(formData);
+            // console.log(formData);
             this.$api.axiosPost('/index/join/postApply',0,formData,function (data) {
-              console.log(data);
+              // console.log(data);
               that.$alert(data.data.msg,'温馨提示', {
                 confirmButtonText: '确定',
                 showClose:false
@@ -268,11 +268,11 @@
           }
         },
         upload01(res,file,fileList){
-          console.log(res);
+          // console.log(res);
           this.formData.file = res.path;
         },
         selInput(e){
-          console.log(e);
+          // console.log(e);
           $('.cir').removeClass('sel');
           $(e.target).parent('.cir').addClass('sel');
         },
@@ -280,17 +280,17 @@
           this.popUp01 = true;
         },
         goBack(){
-          console.log(window)
+          // console.log(window)
           window.history.go(-1);
         }
       },
       mounted(){
         const _this = this;
         this.id = this.$router.history.current.query.id;
-        console.log(this.id);
+        // console.log(this.id);
         // 获取招聘信息
         this.$api.axiosGet('/index/join/getJob/location/1/id/'+_this.id,{},function (data) {
-          console.log(data);
+          // console.log(data);
           _this.jobData = data.data.job;
           setTimeout(function () {
             var swiper09 = new Swiper('.swiper09',{

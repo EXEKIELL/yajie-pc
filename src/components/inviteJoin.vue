@@ -902,8 +902,8 @@
             _this.options3 = list;
           });
           _this.$api.axiosGet('/index/service/getNetwork/province/' + _this.province+'/city/'+_this.city, {}, function (data) {
-            console.log(data)
-            console.log(_this.city);
+            // console.log(data)
+            // console.log(_this.city);
             if (_this.city==52||_this.city==321||_this.city==394||_this.city==343) {
 
             }else{
@@ -934,7 +934,7 @@
           }
         });
         var id = this.$router.history.current.query.id;
-        console.log(id);
+        // console.log(id);
         if(id == undefined){
           this.detailIdx = 1;
           // 获取加盟支持

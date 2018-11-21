@@ -36,13 +36,14 @@
             <div class="w_1">
               <div class="head">
                 <div class="img">
-                  <img src="../static/img/head01.png" alt="">
+                  <img src="../static/img/head01.jpg" alt="">
                 </div>
                 <span class="icon"></span>
               </div>
             </div>
             <div class="w_2">
               <button @click="zixun">在线咨询</button>
+              <a ref="kefu" id="kefu" style="display: none;width: 100%;height: 100%;opacity: 0;" :href="'tencent://message/?uin='+qqNum+'&Site=http://vps.shuidazhe.com&Menu=yes'">PC版</a>
             </div>
           </div>
         </div>
@@ -108,7 +109,8 @@ export default {
       wj:{},
       // 智能安防
       af:{},
-      loginStatus:true
+      loginStatus:true,
+      qqNum:''
     }
   },
   methods:{
@@ -120,7 +122,7 @@ export default {
       $("html,body").animate({scrollTop:0}, 500);
     },
     zixun(){
-
+      document.getElementById("kefu").click();
     }
   },
   watch:{
@@ -221,6 +223,7 @@ export default {
   mounted(){
     const that = this;
     // console.log('pc格式图片获取方式：路径拼接/location/1');
+    // console.log($('#kefu'))
     // 监听滚动条滚动
     $(window).scroll(function(event){
       if($(window).scrollTop()>1000){
@@ -377,6 +380,11 @@ export default {
     this.$api.axiosGet('/index/about/getLink',{},function (data) {
       // console.log(data);
       that.bottomDetail = data.data.link;
+    });
+    // 获取管理员qq号
+    this.$api.axiosPost('/index/About/zx',0,{},function (data) {
+      // console.log(data);
+      that.qqNum = data.data.data[0].name;
     })
     // 获取产品中心一级标签
     // this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {

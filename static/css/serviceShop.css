@@ -120,9 +120,6 @@
       #serviceShop .list3 ul li > div .icon3_1 {
         background: url("../img/icon22_1.png") no-repeat center;
         background-size: 100% auto; }
-  #serviceShop .list3 ul .listInfo:hover {
-    color: #604775;
-    font-weight: bold; }
   #serviceShop .list3 ul .listTitle {
     font-size: 18px;
     color: #ffffff;

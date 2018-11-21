@@ -301,7 +301,8 @@
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        padding: 10px; }
+        padding: 10px;
+        height: 384px; }
         #homePage .cont .cont-3 .swiperHome02 .swiper-slide {
           border: 1px solid transparent;
           position: relative; }
@@ -323,12 +324,20 @@
             box-sizing: border-box;
             padding: 15px; }
             #homePage .cont .cont-3 .swiperHome02 .swiper-slide .slide-top img {
+              width: 100%;
               max-width: 100%;
               max-height: 100%; }
             #homePage .cont .cont-3 .swiperHome02 .swiper-slide .slide-top .search {
               position: absolute;
               width: 60px;
               height: 60px;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate3d(-50%, -50%, 0);
+              -moz-transform: translate3d(-50%, -50%, 0);
+              -ms-transform: translate3d(-50%, -50%, 0);
+              -o-transform: translate3d(-50%, -50%, 0);
+              transform: translate3d(-50%, -50%, 0);
               -webkit-border-radius: 50%;
               -moz-border-radius: 50%;
               border-radius: 50%;
@@ -341,13 +350,15 @@
               -ms-transition: all 0.5s;
               -o-transition: all 0.5s;
               transition: all 0.5s; }
-          #homePage .cont .cont-3 .swiperHome02 .swiper-slide .slide-top::after {
+          #homePage .cont .cont-3 .swiperHome02 .swiper-slide .slide-top:after {
             content: '';
             display: block;
             width: 90%;
             height: 90%;
             border: 1px solid #ffffff;
             position: absolute;
+            top: 14px;
+            left: 14px;
             z-index: -1;
             opacity: 0; }
           #homePage .cont .cont-3 .swiperHome02 .swiper-slide .slide-bottom {
@@ -515,7 +526,14 @@
               height: 53px;
               background: url("../img/bo01.png") no-repeat center;
               background-size: 100% auto;
-              position: absolute; }
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              -webkit-transform: translate3d(-50%, -50%, 0);
+              -moz-transform: translate3d(-50%, -50%, 0);
+              -ms-transform: translate3d(-50%, -50%, 0);
+              -o-transform: translate3d(-50%, -50%, 0);
+              transform: translate3d(-50%, -50%, 0); }
         #homePage .l3 .cont .swiperHome03 .swiper-wrapper .swiper-slide .st03-bottom {
           display: flex;
           justify-content: center;
@@ -966,7 +984,14 @@
       margin: auto;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.9);
-      position: absolute; }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate3d(-50%, -50%, 0);
+      -moz-transform: translate3d(-50%, -50%, 0);
+      -ms-transform: translate3d(-50%, -50%, 0);
+      -o-transform: translate3d(-50%, -50%, 0);
+      transform: translate3d(-50%, -50%, 0); }
       #homePage .l6 .wrap > div {
         border: 1px solid #c8c8c8;
         padding: 55px; }

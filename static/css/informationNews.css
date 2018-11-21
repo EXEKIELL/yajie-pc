@@ -33,7 +33,7 @@
     #informationNews .list2-wrap .list .listImg {
       width: 100%;
       height: 292px;
-      overflow-y: hidden;
+      overflow: hidden;
       position: relative; }
       #informationNews .list2-wrap .list .listImg img {
         width: 100%; }
@@ -54,12 +54,19 @@
         background-color: rgba(96, 71, 117, 0.7);
         z-index: -1;
         opacity: 0; }
-      #informationNews .list2-wrap .list .listImg .hoverWrap::before {
+      #informationNews .list2-wrap .list .listImg .hoverWrap:before {
         content: '';
         width: 90%;
         height: 90%;
         border: 1px solid #f2f2f2;
         position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        -moz-transform: translate3d(-50%, -50%, 0);
+        -ms-transform: translate3d(-50%, -50%, 0);
+        -o-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
         -webkit-transition: all 0.5s;
         -moz-transition: all 0.5s;
         -ms-transition: all 0.5s;

@@ -244,7 +244,7 @@
           });
         },100);
         this.$api.axiosPost('/index/Join/key',0,{},function (data) {
-          console.log(data);
+          // console.log(data);
           _this.options1 = [];
           var arr = data.data.type;
           for(var i = 0;i<arr.length;i++){
@@ -284,7 +284,7 @@
           this.$api.axiosPost('/index/Join/namekey',0,{
             name:text
           },function (data) {
-            console.log(data);
+            // console.log(data);
             if(data.data.key.length>0){
               _this.jobData = data.data.key;
             }else{
