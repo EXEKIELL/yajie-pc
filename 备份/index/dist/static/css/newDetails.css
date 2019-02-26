@@ -1,0 +1,76 @@
+#main {
+  width: 100%;
+  z-index: 100;
+  padding-bottom: 1.2rem; }
+  #main .main {
+    padding: 1.2rem 0 0;
+    background-color: white; }
+    #main .main .ndTitle {
+      text-align: center;
+      font-size: 0.32rem;
+      color: #333333;
+      line-height: 0.5rem;
+      font-weight: bold; }
+      #main .main .ndTitle p {
+        padding: 0 0.2rem; }
+    #main .main .ndTime {
+      color: #604775;
+      font-size: 0.22rem;
+      line-height: 0.5rem;
+      font-weight: lighter;
+      text-align: center; }
+      #main .main .ndTime p {
+        padding: 0 0.2rem; }
+    #main .main .ndsTitle {
+      color: #555555;
+      font-size: 0.2rem;
+      line-height: 0.5rem;
+      text-align: center; }
+      #main .main .ndsTitle p {
+        padding: 0 0.2rem; }
+    #main .main .fullText {
+      color: #555555;
+      text-align: justify;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      padding: 0.4rem 0.45rem; }
+      #main .main .fullText img {
+        width: 100%;
+        padding: 0.2rem 0; }
+    #main .main .swiper-container {
+      width: 100%; }
+      #main .main .swiper-container img {
+        width: 100%; }
+      #main .main .swiper-container .swiper-button-next, #main .main .swiper-container .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        width: 0.41rem;
+        height: 0.37rem;
+        margin-top: -0.185rem;
+        z-index: 10;
+        cursor: pointer;
+        background-image: url("../img/twoNext.png");
+        -moz-background-size: 0.41rem 0.37rem;
+        -webkit-background-size: 0.41rem 0.37rem;
+        background-size: 0.41rem 0.37rem;
+        background-position: center;
+        background-repeat: no-repeat; }
+      #main .main .swiper-container .swiper-button-prev {
+        left: auto;
+        right: 10px;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg); }
+    #main .main .btns {
+      padding: 0rem 0.45rem; }
+      #main .main .btns button {
+        width: 46%;
+        line-height: 0.78rem;
+        background-color: #ede8e3;
+        font-size: 0.26rem;
+        color: #555555; }
+      #main .main .btns .prev {
+        float: left; }
+      #main .main .btns .next {
+        float: right; }
+
+/*# sourceMappingURL=newDetails.css.map */

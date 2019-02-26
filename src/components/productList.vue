@@ -19,19 +19,23 @@
         </div>
       </div>
       <div class="list2 clearfloat" v-if="productList.data">
-        <div style="cursor: pointer;" @click="navTo(item.id)" class="l2-wrap" v-for="(item,index) in productList.data" :key="index">
-          <div class="wrapImg">
-            <div class="img01">
+        <div style="cursor:pointer;" @click="navTo(item.id)" class="listCont" v-for="(item,index) in productList.data" :key="index">
+          <div class="lc1">
+            <div class="imgWrap">
               <img :src="$baseLink+item.pic" alt="">
             </div>
             <div class="hoverWrap">
               <button class="search" @click="navTo(item.id)"></button>
             </div>
           </div>
-          <div class="wrapText">
-            <div class="text-1">{{item.name}}</div>
-            <div class="text-2">适用范围：{{item.range}}</div>
-            <div class="text-3"></div>
+          <div class="lc2">
+            <div>
+              <div class="lc2-1">{{item.name}}</div>
+              <div class="lc2-2 textEllipsis">{{item.desc}}</div>
+              <!--<div class="lc2-3">-->
+              <!--<button @click="navTo(item.id)">MORE</button>-->
+              <!--</div>-->
+            </div>
           </div>
         </div>
       </div>

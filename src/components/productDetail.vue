@@ -41,7 +41,7 @@
           </div>
           <div class="proDetail">
             <ul>
-              <li v-if="index<4" v-for="(item,index) in getData.spec"><span class="li-title">{{item.name}}：</span><span class="li-info">{{item.content}}</span></li>
+              <li v-if="index<4" v-for="(item,index) in getData.spec"><span class="li-title">{{item.name}}</span><span class="li-info">{{item.content}}</span></li>
               <!--<li><span class="li-title">适用范围</span><span class="li-info">写字楼/别墅</span></li>-->
               <!--<li><span class="li-title">颜色分类</span><span class="li-info">红古铜/青古铜/尼龙铬/琥珀琮/香槟金</span></li>-->
               <!--<li><span class="li-title">开门方式</span><span class="li-info">密码/指纹/机械钥匙</span></li>-->
@@ -107,7 +107,10 @@
       </div>
       <div class="proHtml">
           <!--<img src="../../static/img/proImg1.png"/>-->
-        <div class="htmlDetail" v-html="content"></div>
+        <div class="htmlDetail" v-html="content" v-if="content">{{content}}</div>
+        <div class="list3" v-else>
+          <img src="../../static/img/nomore01.png" alt="">
+        </div>
         <div class="navLeft">
           <div class="title" style="margin-bottom: 0;">
             <img src="../../static/img/titleImg01.png" alt="">
@@ -194,6 +197,7 @@
           }else{
             that.bigImg = that.$baseLink+data.data.info.pic;
             that.content = data.data.info.content;
+            // console.log(that.content);
             that.productParam = data.data.info.param.data;
             that.getData = data.data.info;
             that.pImg = data.data.info.img;

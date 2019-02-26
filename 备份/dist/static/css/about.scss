@@ -1,0 +1,43 @@
+$mainColor:#604775;
+#select{
+  width: 100%;
+  padding-left: 3.2%;
+  box-sizing: border-box;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: -webkit-box;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  border-bottom: 1px solid #ede8e3;
+  .selectBtn{
+    width: 1.6rem;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 1rem;
+      text-align: center;
+      background-color: transparent;
+      color: #999999;
+      font-size: 0.26rem;
+    }
+  }
+  .selectBtnHas a{
+
+    span{
+      position: relative;
+      color: $mainColor;
+      display: inline;
+    }
+    span::after{
+      content: "";
+      position: absolute;
+      bottom: -0.32rem;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid $mainColor;
+    }
+  }
+}

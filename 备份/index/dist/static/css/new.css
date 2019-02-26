@@ -1,0 +1,62 @@
+#main {
+  padding: 0.6rem 0 0.8rem; }
+  #main .newList {
+    margin-top: 0.2rem; }
+  #main .newBox {
+    border-top: 1px solid #ededed;
+    padding: 0.35rem 0;
+    display: flex;
+    align-items: center; }
+    #main .newBox .newImg {
+      width: 50%;
+      overflow: hidden; }
+      #main .newBox .newImg img {
+        width: 100%; }
+  #main .newContent {
+    width: 100%;
+    padding: 0rem 0.2rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 0.22rem;
+    color: #999999;
+    line-height: 0.38rem; }
+    #main .newContent .ncTitle {
+      color: #333333;
+      font-size: 0.26rem;
+      font-weight: bold;
+      line-height: 0.38rem;
+      margin-bottom: 0.15rem; }
+    #main .newContent .ncText {
+      line-height: 0.3rem;
+      font-size: 0.22rem;
+      margin-bottom: 0.15rem; }
+    #main .newContent .ncTime {
+      font-size: 0.22rem; }
+  #main .newToMore {
+    width: 100%;
+    padding: 0rem 0.2rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 0.24rem;
+    color: #604775;
+    position: relative; }
+    #main .newToMore .date {
+      position: absolute;
+      right: 0.2rem;
+      top: 0;
+      color: #888888;
+      font-size: 0.22rem; }
+      #main .newToMore .date p {
+        position: absolute;
+        right: 100%;
+        top: -0.05rem; }
+        #main .newToMore .date p span {
+          position: absolute;
+          right: 100%;
+          top: -0.15rem;
+          color: #333333;
+          font-size: 0.3rem; }
+  #main .page {
+    background-color: #F2F2F2; }
+
+/*# sourceMappingURL=new.css.map */

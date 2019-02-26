@@ -23,7 +23,7 @@ Vue.prototype.$echarts = echarts;
 Vue.prototype.$api = api;
 Vue.prototype.VueAMap = VueAMap;
 Vue.config.productionTip = false;
-Vue.prototype.$baseLink = 'http://archie.web.hengdikeji.com';
+Vue.prototype.$baseLink = 'http://www.archie.com.cn';
 Vue.use(ElementUI);
 Vue.use(VueAMap);
 /* eslint-disable no-new */

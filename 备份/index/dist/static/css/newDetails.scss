@@ -1,0 +1,103 @@
+$mainColor:#604775;
+#bannerImg{
+  //background: no-repeat left 1.1rem;
+  //background-size: 100%;
+}
+#main{
+  width: 100%;
+  //margin-top: -1.36rem;
+  z-index: 100;
+  padding-bottom: 1.2rem;
+  .main{
+    padding: 1.2rem 0 0;
+    background-color: white;
+    .ndTitle{
+      text-align: center;
+      font-size: 0.32rem;
+      color: #333333;
+      line-height: 0.5rem;
+      font-weight: bold;
+      p{
+        padding: 0 0.2rem;
+      }
+    }
+    .ndTime{
+      color: #604775;
+      font-size: 0.22rem;
+      line-height: 0.5rem;
+      font-weight: lighter;
+      text-align: center;
+      p{
+        padding: 0 0.2rem;
+      }
+    }
+    .ndsTitle{
+      color: #555555;
+      font-size: 0.2rem;
+      line-height: 0.5rem;
+      text-align: center;
+      p{
+        padding: 0 0.2rem;
+      }
+    }
+    .fullText{
+      color: #555555;
+      //font-size: 0.24rem;
+      //line-height: 0.48rem;
+      text-align: justify;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      padding: 0.4rem 0.45rem;
+      //p{
+      //  text-indent: 0.48rem;
+      //}
+      img{
+        width: 100%;
+        padding: 0.2rem 0;
+      }
+    }
+    .swiper-container{
+      width: 100%;
+      img{
+        width: 100%;
+      }
+      .swiper-button-next, .swiper-button-prev{
+        position: absolute;
+        top: 50%;
+        width: 0.41rem;
+        height: 0.37rem;
+        margin-top: -0.185rem;
+        z-index: 10;
+        cursor: pointer;
+        background-image: url("../img/twoNext.png");
+        -moz-background-size: 0.41rem 0.37rem;
+        -webkit-background-size: 0.41rem 0.37rem;
+        background-size: 0.41rem 0.37rem;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .swiper-button-prev{
+        left: auto;
+        right: 10px;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+      }
+    }
+    .btns{
+      padding: 0rem 0.45rem;
+      button{
+        width: 46%;
+        line-height: 0.78rem;
+        background-color: #ede8e3;
+        font-size: 0.26rem;
+        color: #555555;
+      }
+      .prev{
+        float: left;
+      }
+      .next{
+        float: right;
+      }
+    }
+  }
+}

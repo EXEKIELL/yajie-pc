@@ -1,0 +1,60 @@
+@import "about.css";
+#aboutTechnology{
+  #main{
+    padding: 0.2rem 0;
+  }
+  .main2 {
+    margin-bottom: 0.3rem;
+    .mainVideo {
+      .videoBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        -webkit-flex-direction: column;
+        iframe {
+          margin: 0 auto;
+        }
+      }
+      .videoText {
+        padding: 0.3rem;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 1px solid #f6f6f6;
+        font-size: 0.26rem;
+        color: #333333;
+        line-height: 0.4rem;
+        position: relative;
+        ul li:nth-child(2) {
+          font-size: 0.2rem;
+          color: #999999;
+        }
+        .icon {
+          position: absolute;
+          top: 32%;
+          right: 6%;
+          width: 7%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .videoText::after {
+        display: none;
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 0.3rem;
+        width: 0.44rem;
+        margin-top: -0.16rem;
+        height: 0.32rem;
+        background: url("../img/index5.png") center center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+
+  }
+}

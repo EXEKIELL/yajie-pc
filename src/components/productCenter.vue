@@ -8,7 +8,11 @@
       <!--<div class="title_2">{{title.t2}}</div>-->
     <!--</div>-->
     <div class="title"  style="text-align: left;margin-bottom: 40px;">
-      <div class="title-1">
+
+      <div class="title-1" v-if="tabIdShow">
+        <span class="color">智能</span><span>家居</span>
+      </div>
+      <div class="title-1" v-else>
         <span class="color">产品</span><span>中心</span>
       </div>
       <div class="title-2"><span>PRODUCT CENTER</span></div>
@@ -27,6 +31,7 @@
                 <router-link :to="{path:'/productCenter/ProductList',query:{item:item}}">
                   <div class="slide1" :class="{default:item.pic == ''}">
                     <img :src="$baseLink+item.pic" alt="">
+                    <img class="xy_img" :src="$baseLink+item.pic2" alt="">
                   </div>
                   <div class="slide2">
                     <span>{{item.name}}</span>
@@ -62,6 +67,7 @@
             t2:'雅洁智能锁，80道工序全数合格检验，超强精准识别，权威体系认证。'
           },
           navBtn:[],
+          tabIdShow:false,
           //一级标签显示隐藏
           tag1Show:true,
           id:40,// 一级导航id
@@ -81,7 +87,11 @@
           this.idx = i;
           this.idx1 = -1;
           // console.log(this.idx1);
-
+          if(id == 41){
+            this.tabIdShow = true;
+          }else{
+            this.tabIdShow = false;
+          }
           // console.log(id);
           let defaultId = id;
           // 获取默认二级标签
@@ -181,6 +191,7 @@
           if(to.path == "/productCenter/productInfo"){
             if(to.query.id == 41){
               this.tag1Show = false;
+              this.tabIdShow = true;
               // 获取一级标签
               this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
                 // console.log(data);
@@ -253,6 +264,7 @@
             }else{
               // console.log('32sd1f3df51gd63f51gs6df15g6sdfg165s1dfg')
               this.tag1Show = true;
+              this.tabIdShow = false;
               // 获取一级标签
               this.$api.axiosGet('/index/product/getCates/pid/0',{},function (data) {
                 // console.log(data);

@@ -54,6 +54,8 @@
           </div>
         </div>
       </div>
+      <div class="swiper-button-prev prevYear"></div>
+      <div class="swiper-button-next nextYear"></div>
     </div>
   </div>
 </template>
@@ -262,6 +264,8 @@
               slidesPerView : 5,
               speed:1000,
               observer:true,
+              prevButton:'.prevYear',
+              nextButton:'.nextYear',
               onInit:function (swiper) {
                 swiper.slideTo(0);
               }

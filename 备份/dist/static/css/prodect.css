@@ -1,0 +1,165 @@
+#details {
+  padding-top: 1.1rem; }
+  #details img {
+    width: 100%; }
+
+#center {
+  width: 100%;
+  padding-top: 1.1rem;
+  min-height: 100%;
+  background-color: #efefef;
+  padding-bottom: 0.8rem; }
+  #center .smallTitle1 ul li:nth-child(1) {
+    color: #333333;
+    font-size: 0.36rem;
+    font-weight: normal; }
+  #center .twoProduce {
+    background-color: white; }
+    #center .twoProduce .twoTitlePro {
+      width: 100%;
+      display: flex;
+      display: -webkit-flex; }
+      #center .twoProduce .twoTitlePro .ttBox {
+        width: 100%;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box; }
+      #center .twoProduce .twoTitlePro .ttBox:nth-last-child(1) {
+        padding-right: 0.4rem; }
+      #center .twoProduce .twoTitlePro .ttBox:nth-child(1) {
+        padding-left: 0.4rem; }
+      #center .twoProduce .twoTitlePro button {
+        height: 0.8rem;
+        display: block;
+        width: 100%;
+        background-color: white;
+        position: relative; }
+      #center .twoProduce .twoTitlePro .hasBtn {
+        color: #604775;
+        font-weight: bold; }
+      #center .twoProduce .twoTitlePro .hasBtn::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        border-bottom: 1px solid #604775;
+        left: 0;
+        bottom: 0; }
+  #center .proSwiper {
+    width: 100%; }
+    #center .proSwiper .swiperbox {
+      width: 100%;
+      padding: 0.5rem 0; }
+      #center .proSwiper .swiperbox .swiperImg {
+        width: 1.0rem;
+        height: 1.0rem;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 1px solid #cbcbcb;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        -webkit-flex-direction: column; }
+        #center .proSwiper .swiperbox .swiperImg img {
+          max-height: 100%;
+          max-width: 100%; }
+      #center .proSwiper .swiperbox .swiperImgRound {
+        border-color: #604775; }
+      #center .proSwiper .swiperbox .swiperP {
+        line-height: 0.5rem;
+        color: #888888;
+        text-align: center;
+        font-size: 0.26rem; }
+    #center .proSwiper .swiper-pagination-bullet-active {
+      background: #604775; }
+    #center .proSwiper .swiper-container-horizontal > .swiper-pagination-bullets, #center .proSwiper .swiper-pagination-custom, #center .proSwiper .swiper-pagination-fraction {
+      bottom: 0; }
+  #center .proTitle {
+    font-size: 0.28rem;
+    color: #333333;
+    line-height: 0.9rem; }
+  #center .proList .proChild {
+    width: 100%;
+    margin-bottom: 0.4rem; }
+    #center .proList .proChild .proImg {
+      width: 100%; }
+      #center .proList .proChild .proImg img {
+        width: 100%; }
+    #center .proList .proChild .proP {
+      padding: 0.1rem 0.3rem;
+      background-color: white;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      line-height: 0.4rem; }
+      #center .proList .proChild .proP ul li:nth-child(1) {
+        font-size: 0.26rem;
+        color: #333333; }
+      #center .proList .proChild .proP ul li:nth-child(2) {
+        font-size: 0.2rem;
+        color: #999999; }
+      #center .proList .proChild .proP ul li:nth-child(3) {
+        font-size: 0.22rem;
+        color: #604775; }
+        #center .proList .proChild .proP ul li:nth-child(3) p {
+          display: inline-block;
+          padding-right: 0.24rem;
+          background: url("../img/pro0.png") no-repeat right center;
+          background-size: 0.21rem; }
+
+.sorry {
+  font-size: 0.36rem;
+  color: #604775;
+  text-align: center;
+  padding: 1.2rem 0 0.8rem; }
+
+.proMore {
+  height: 0.8rem;
+  color: #604775;
+  font-size: 0.26rem;
+  display: block;
+  width: 100%;
+  font-weight: bold; }
+
+.centerList .searchInput {
+  margin-top: 0.3rem;
+  background-color: white; }
+.centerList .searchInput form .searchBox {
+  border: 0; }
+
+.proTitle1 {
+  border-bottom: 1px solid #c8c8c8; }
+
+.moreProChoice {
+  width: 100%;
+  overflow-x: scroll;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: -webkit-box;
+  padding: 0.3rem 3.2% 0.4rem 3.2%; }
+  .moreProChoice button {
+    background-color: white;
+    width: 1.6rem;
+    display: block;
+    height: 0.6rem;
+    color: #999999;
+    font-size: 0.24rem;
+    margin-right: 0.2rem; }
+  .moreProChoice button:nth-last-child(2) {
+    margin-right: 0; }
+  .moreProChoice div {
+    width: 3.2%;
+    height: 0.6rem;
+    opacity: 0; }
+  .moreProChoice .btnChoice {
+    color: white;
+    background-color: #604775; }
+
+#fullText img {
+  width: 100%; }
+
+/*# sourceMappingURL=prodect.css.map */

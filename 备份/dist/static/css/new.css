@@ -1,0 +1,55 @@
+#main {
+  padding: 0.6rem 0 1.2rem; }
+  #main .newList {
+    margin-top: 0.2rem; }
+  #main .newBox {
+    border-top: 1px solid #ededed;
+    padding: 0.35rem 0 0.9rem;
+    display: block; }
+    #main .newBox .newImg {
+      width: 100%;
+      height: 3rem;
+      overflow: hidden; }
+      #main .newBox .newImg img {
+        width: 100%; }
+  #main .newContent {
+    width: 100%;
+    padding: 0.2rem 0.2rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 0.22rem;
+    color: #999999;
+    line-height: 0.38rem; }
+    #main .newContent .ncTitle {
+      color: #333333;
+      font-size: 0.28rem;
+      font-weight: bold;
+      line-height: 0.62rem; }
+  #main .newToMore {
+    width: 100%;
+    padding: 0rem 0.2rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 0.24rem;
+    color: #604775;
+    position: relative; }
+    #main .newToMore .date {
+      position: absolute;
+      right: 0.2rem;
+      top: 0;
+      color: #888888;
+      font-size: 0.22rem; }
+      #main .newToMore .date p {
+        position: absolute;
+        right: 100%;
+        top: -0.05rem; }
+        #main .newToMore .date p span {
+          position: absolute;
+          right: 100%;
+          top: -0.15rem;
+          color: #333333;
+          font-size: 0.3rem; }
+  #main .page {
+    background-color: #F2F2F2; }
+
+/*# sourceMappingURL=new.css.map */

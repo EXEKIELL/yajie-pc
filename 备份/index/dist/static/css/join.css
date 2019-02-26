@@ -1,0 +1,163 @@
+.joinBox {
+  width: 100%;
+  position: relative;
+  margin-top: 0.5rem; }
+  .joinBox .gray {
+    width: 100%;
+    background-color: #f2f2f2;
+    height: 3.75rem;
+    margin-bottom: 1.3rem; }
+  .joinBox .joinImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0.6rem 0.75rem; }
+    .joinBox .joinImg img {
+      width: 100%; }
+  .joinBox .joinMsg {
+    width: 100%;
+    padding: 0 10%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative; }
+  .joinBox .joinName {
+    font-size: 0.28rem;
+    color: #604775;
+    font-weight: bold; }
+    .joinBox .joinName span {
+      font-size: 0.18rem;
+      color: #999999;
+      margin-left: 0.1rem; }
+  .joinBox .joinName::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0.65rem;
+    border-bottom: 1px solid #604775;
+    top: 0.2rem; }
+  .joinBox .joinTime {
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    color: #888888;
+    display: flex;
+    display: -webkit-flex;
+    margin: 0.25rem 0 0.24rem; }
+    .joinBox .joinTime > div {
+      padding: 0 0.45rem 0 0.25rem;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      background: url("../img/join5.png") no-repeat left center;
+      background-size: 0.2rem; }
+    .joinBox .joinTime .joinPerson {
+      background-image: url("../img/join3.png");
+      background-size: 0.2rem; }
+    .joinBox .joinTime .joinCity {
+      background-image: url("../img/join4.png");
+      background-size: 0.15rem;
+      background-position-x: 0.05rem; }
+  .joinBox .joinP {
+    color: #555555;
+    font-size: 0.26rem;
+    line-height: 0.52rem; }
+
+.jobBox {
+  width: 100%;
+  padding: 0 0 0 3.6%;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: -webkit-box; }
+  .jobBox .jbChild {
+    display: block;
+    padding: 0.25rem 0.3rem;
+    color: white;
+    font-size: 0.28rem;
+    background-color: #f2f2f2;
+    margin-right: 0.3rem; }
+    .jobBox .jbChild span {
+      font-size: 0.16rem; }
+    .jobBox .jbChild p:nth-last-child(1) {
+      font-size: 0.24rem;
+      margin-top: 0.1rem; }
+  .jobBox .jbHas {
+    background-color: #604775; }
+
+#join {
+  padding-bottom: 1.2rem; }
+  #join .jobzw {
+    width: 0.01rem;
+    height: 0.5rem;
+    display: block; }
+  #join .swiper-button-next, #join .swiper-button-prev {
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-top: -0.3rem;
+    top: 3.2rem;
+    background: url("../img/rightNext.png") no-repeat center center;
+    background-size: 0.17rem auto;
+    -webkit-background-size: 0.17rem auto;
+    background-color: #604775;
+    right: 0.25rem;
+    left: auto; }
+  #join .swiper-button-prev {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    left: 0.25rem;
+    right: auto; }
+  #join .swiper-button-disabled {
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url("../img/rightNext1.png"); }
+
+#select {
+  width: 100%;
+  padding-left: 3.2%;
+  box-sizing: border-box;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: -webkit-box;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap; }
+  #select .selectBtn {
+    width: 2.1rem;
+    margin-right: 0.34rem; }
+    #select .selectBtn a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 0.7rem;
+      text-align: center;
+      background-color: transparent;
+      color: #999999;
+      font-size: 0.26rem;
+      border: 1px solid #ede8e3; }
+  #select .selectBtn:last-child {
+    margin-right: 0; }
+  #select .selectBtnHas a {
+    color: #FFFFFF;
+    background-color: #604775;
+    border: 1px solid #604775; }
+    #select .selectBtnHas a span {
+      position: relative;
+      display: inline; }
+    #select .selectBtnHas a span::after {
+      content: "";
+      position: absolute;
+      bottom: -0.32rem;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid #604775; }
+
+.sorry {
+  font-size: 0.26rem;
+  color: #999999;
+  text-align: center;
+  padding: 1.2rem 0 0.8rem;
+  background-color: #fff; }
+
+/*# sourceMappingURL=join.css.map */

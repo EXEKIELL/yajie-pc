@@ -1,0 +1,91 @@
+#service{
+  .wrap{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    padding: 40px 0 0px 0;
+  }
+  .nav01{
+    padding: 25px 0;
+    width: 8%;
+    position: fixed;
+    left: 50px;
+    top: 156px;
+    z-index: 500;
+    background-color: #fff;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+    opacity: 0;
+    border: 1px solid #d4c1c1;
+    -webkit-box-shadow: 0 0 20px rgba(96, 71, 117, 0.2);
+    -moz-box-shadow: 0 0 20px rgba(96, 71, 117, 0.2);
+    box-shadow: 0 0 20px rgba(96, 71, 117, 0.2);
+    ul{
+      width: 80%;
+      margin: auto;
+      li{
+        margin-bottom: 30px;
+        text-align: center;
+        a{
+          font-size: 14px;
+          color: #999999;
+        }
+      }
+      li:last-child{
+        margin-bottom: 0;
+      }
+      li:hover{
+        a{
+          color: #604775;
+          font-weight: bold;
+          position: relative;
+        }
+        a::after{
+          content: '';
+          display: block;
+          position: absolute;
+          border-left: 1px solid #604775;
+          top: 0;
+          left: -2px;
+          height: 100%;
+        }
+      }
+      li.sel{
+        a{
+          color: #604775;
+          font-weight: bold;
+          position: relative;
+        }
+        a::after{
+          content: '';
+          display: block;
+          position: absolute;
+          border-left: 1px solid #604775;
+          top: 0;
+          left: -2px;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .nav01.sel{
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .conts{
+    padding: 5px;
+    width: 94%;
+  }
+}

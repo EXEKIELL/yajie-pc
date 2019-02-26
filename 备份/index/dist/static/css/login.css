@@ -1,0 +1,85 @@
+#login {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/bj01.png") no-repeat center center;
+  background-size: 100%; }
+  #login .wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #login .wrap .infoWrap {
+      width: 80%;
+      position: relative; }
+      #login .wrap .infoWrap img {
+        width: 100%; }
+      #login .wrap .infoWrap .detail {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 0.7rem; }
+        #login .wrap .infoWrap .detail .logo {
+          width: 60%;
+          margin: 0.75rem auto; }
+        #login .wrap .infoWrap .detail .loginTitle {
+          margin-bottom: 0.5rem;
+          color: #614775;
+          font-size: 0.26rem;
+          font-weight: bold; }
+        #login .wrap .infoWrap .detail .loginInput {
+          margin-bottom: 0.5rem; }
+          #login .wrap .infoWrap .detail .loginInput .input1 {
+            font-size: 0.24rem;
+            color: #555555;
+            margin-bottom: 0.15rem; }
+            #login .wrap .infoWrap .detail .loginInput .input1 span {
+              font-size: 0.2rem;
+              color: #999999;
+              font-weight: lighter; }
+          #login .wrap .infoWrap .detail .loginInput .input2 {
+            border: 1px solid #c8c8c8;
+            line-height: 0.76rem;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0.2rem; }
+            #login .wrap .infoWrap .detail .loginInput .input2 input {
+              border: 0;
+              background: transparent;
+              font-size: 0.24rem; }
+            #login .wrap .infoWrap .detail .loginInput .input2 input::placeholder {
+              font-size: 0.24rem;
+              color: #c8c8c8; }
+        #login .wrap .infoWrap .detail .loginInput1 {
+          margin-bottom: 0.8rem; }
+        #login .wrap .infoWrap .detail .loginBtn {
+          width: 100%; }
+          #login .wrap .infoWrap .detail .loginBtn button {
+            width: 100%;
+            line-height: 0.8rem;
+            background-color: #604775;
+            color: #fff;
+            -webkit-border-radius: 0.8rem;
+            -moz-border-radius: 0.8rem;
+            border-radius: 0.8rem; }
+    #login .wrap .return {
+      position: absolute;
+      top: 5%;
+      left: 0;
+      background-color: #604775;
+      color: #FFFFFF;
+      padding: 0.15rem 0.4rem;
+      -webkit-border-radius: 0 0.4rem 0.4rem 0;
+      -moz-border-radius: 0 0.4rem 0.4rem 0;
+      border-radius: 0 0.4rem 0.4rem 0; }
+
+/*# sourceMappingURL=login.css.map */

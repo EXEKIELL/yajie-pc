@@ -97,7 +97,7 @@ export default {
         {text:'产品中心',url:'/productCenter/productInfo?id=40',tags:[]},
         {text:'智能家居',url:'/productCenter/productInfo?id=41',tags:[]},
         {text:'雅洁资讯',url:'/information',tags:[]},
-        {text:'雅洁服务',url:'/service',tags:[{tagsText:'全国门店',url:'/service/serviceShop'},{tagsText:'在线留言',url:'/black'}]},
+        {text:'雅洁服务',url:'/service',tags:[{tagsText:'全国门店',url:'/service/serviceShop'},{tagsText:'下载专区',url:'/service/down'},{tagsText:'在线留言',url:'/black'}]},
         {text:'加入雅洁',url:'/inviteJoin',tags:[{tagsText:'招商加盟',url:'/inviteJoin'},{tagsText:'人才招聘',url:'/invite/inviteInfo'}]},
         {text:'伙伴下载区',url:'/partner',tags:[{tagsText:'政策文档',url:'/partner/partnerPolicy'},{tagsText:'安装视频',url:'/partner/partnerInstall'}]},
       ],
@@ -180,7 +180,9 @@ export default {
           break;
         case '/service/serviceMessage':
           this.selStatus = 5;
-
+          break;
+        case '/service/down':
+          this.selStatus = 5;
           break;
         case "/invite/inviteInfo":
           this.selStatus = 6;
@@ -347,7 +349,9 @@ export default {
         break;
       case '/service/serviceMessage':
         this.selStatus = 5;
-
+        break;
+      case '/service/down':
+        this.selStatus = 5;
         break;
       case "/invite/inviteInfo":
         this.selStatus = 6;

@@ -1,0 +1,204 @@
+$mainColor:#604775;
+#details{
+  padding-top: 1.1rem;
+  img{
+    width: 100%;
+  }
+}
+#center{
+  width: 100%;
+  padding-top: 1.1rem;
+  min-height: 100%;
+  background-color: #efefef;
+  padding-bottom: 0.8rem;
+  .smallTitle1 ul li:nth-child(1){
+    color: #333333;
+    font-size: 0.36rem;
+    font-weight: normal;
+  }
+  .twoProduce{
+    background-color: white;
+    .twoTitlePro{
+      width: 100%;
+      display: flex;
+      display: -webkit-flex;
+      .ttBox{
+        width: 100%;
+
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+      .ttBox:nth-last-child(1){
+        padding-right: 0.4rem;
+      }
+      .ttBox:nth-child(1){
+        padding-left: 0.4rem;
+      }
+      button{
+        height: 0.8rem;
+        display: block;
+        width: 100%;
+        background-color: white;
+        position: relative;
+      }
+      .hasBtn{
+        color: $mainColor;
+        font-weight: bold;
+      }
+      .hasBtn::after{
+        content: "";
+        width: 100%;
+        position: absolute;
+        border-bottom: 1px solid $mainColor;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+  .proSwiper{
+    width: 100%;
+    .swiperbox{
+      width: 100%;
+      padding: 0.5rem 0;
+      .swiperImg{
+        width: 1.0rem;
+        height: 1.0rem;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 1px solid #cbcbcb;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        -webkit-flex-direction: column;
+        img{
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+      .swiperImgRound{
+        border-color: $mainColor;
+      }
+      .swiperP{
+        line-height: 0.5rem;
+        color: #888888;
+        text-align: center;
+        font-size: 0.26rem;
+      }
+    }
+    .swiper-pagination-bullet-active{
+      background: $mainColor;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+      bottom: 0;
+    }
+  }
+  .proTitle{
+    font-size: 0.28rem;
+    color: #333333;
+    line-height: 0.9rem;
+  }
+  .proList{
+    .proChild{
+      width: 100%;
+      margin-bottom: 0.4rem;
+      .proImg{
+        width: 100%;
+        img{
+          width: 100%;
+        }
+      }
+      .proP{
+        padding: 0.1rem 0.3rem;
+        background-color: white;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        line-height: 0.4rem;
+        ul li:nth-child(1){
+          font-size: 0.26rem;
+          color: #333333;
+        }
+        ul li:nth-child(2){
+           font-size: 0.2rem;
+          color: #999999;
+         }
+        ul li:nth-child(3){
+          font-size: 0.22rem;
+          color: $mainColor;
+          p{
+            display: inline-block;
+            padding-right: 0.24rem;
+            background: url("../img/pro0.png") no-repeat right center;
+            background-size: 0.21rem;
+          }
+        }
+      }
+    }
+  }
+}
+.sorry{
+  font-size: 0.36rem;
+  color: $mainColor;
+  text-align: center;
+  padding: 1.2rem 0 0.8rem;
+}
+.proMore{
+  height: 0.8rem;
+  color: $mainColor;
+  font-size: 0.26rem;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+}
+.centerList{
+  .searchInput{
+    margin-top: 0.3rem;
+    background-color: white;
+  }
+  .searchInput form .searchBox {
+    border: 0;
+  }
+}
+.proTitle1{
+  border-bottom: 1px solid #c8c8c8;
+}
+.moreProChoice{
+  width: 100%;
+  overflow-x: scroll;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: -webkit-box;
+  padding: 0.3rem 3.2% 0.4rem 3.2%;
+  button{
+    background-color: white;
+    width: 1.6rem;
+    display: block;
+    height: 0.6rem;
+    color: #999999;
+    font-size: 0.24rem;
+    margin-right: 0.2rem;
+  }
+  button:nth-last-child(2){
+    margin-right: 0;
+  }
+  div{
+    width: 3.2%;
+    height: 0.6rem;
+    opacity: 0;
+  }
+  .btnChoice{
+    color: white;
+    background-color: $mainColor;
+  }
+}
+#fullText{
+  img{
+    width: 100%;
+  }
+}

@@ -1,0 +1,229 @@
+#informationDetail {
+  font-size: 14px;
+  color: #555555; }
+  #informationDetail .list1 {
+    width: 100%;
+    position: relative;
+    margin-bottom: 55px; }
+    #informationDetail .list1 .lt-bottom {
+      position: absolute;
+      width: 596px;
+      height: 365px;
+      bottom: 0;
+      left: 0;
+      overflow: hidden; }
+      #informationDetail .list1 .lt-bottom img {
+        width: 100%; }
+    #informationDetail .list1 img {
+      width: 100%; }
+    #informationDetail .list1 .l1-title {
+      z-index: 10;
+      position: absolute;
+      width: 60%;
+      background-color: #fff;
+      bottom: 0;
+      right: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 48px;
+      padding-bottom: 15px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+      #informationDetail .list1 .l1-title > div {
+        width: 78%; }
+        #informationDetail .list1 .l1-title > div .l1-1 {
+          font-size: 18px;
+          color: #604775;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          padding: 25px 0;
+          margin-bottom: 30px; }
+          #informationDetail .list1 .l1-title > div .l1-1 span:nth-child(1) {
+            display: inline-block;
+            width: 490px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+          #informationDetail .list1 .l1-title > div .l1-1 .time {
+            font-size: 14px;
+            color: #b3b3b3;
+            line-height: 26px; }
+        #informationDetail .list1 .l1-title > div .l1-1::after {
+          content: '';
+          display: block;
+          border-bottom: 1px solid #604775;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 10%; }
+        #informationDetail .list1 .l1-title > div .l1-2 {
+          font-size: 12px;
+          color: #888888;
+          line-height: 25px;
+          text-align: justify;
+          width: 72%; }
+  #informationDetail .list2 {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 35px; }
+    #informationDetail .list2 p {
+      text-indent: 2em;
+      line-height: 35px; }
+  #informationDetail .list3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px; }
+    #informationDetail .list3 .l3-text {
+      width: 52%; }
+    #informationDetail .list3 .l3-img {
+      width: 45%; }
+      #informationDetail .list3 .l3-img img {
+        width: 100%; }
+  #informationDetail .list4 {
+    display: flex;
+    justify-content: space-between; }
+    #informationDetail .list4 > div {
+      width: 32.5%; }
+      #informationDetail .list4 > div img {
+        width: 100%; }
+    #informationDetail .list4 > div:last-child {
+      margin-right: 0; }
+
+.inforIn {
+  width: 1000px;
+  margin: 0 auto; }
+  .inforIn .inforTitle {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold; }
+  .inforIn .inforDate {
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: center;
+    margin: 30px 0;
+    color: #604775; }
+
+.prevNext {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px; }
+  .prevNext > div {
+    float: left;
+    width: 500px;
+    line-height: 100px;
+    height: 100px;
+    color: #888888;
+    font-size: 16px;
+    font-weight: lighter;
+    background: url(../img/iconLeft01.png) no-repeat 30px center;
+    background-color: #f6f6f6;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    cursor: pointer;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s; }
+  .prevNext .prev {
+    padding: 0 25px 0 75px; }
+    .prevNext .prev p {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+  .prevNext .prev:hover {
+    background-color: #604775;
+    color: white; }
+  .prevNext .next {
+    background: url(../img/iconRight01.png) no-repeat 460px center;
+    background-color: #f6f6f6;
+    padding: 0 75px 0 25px; }
+    .prevNext .next p {
+      text-align: right;
+      display: flex; }
+  .prevNext .next:hover {
+    background-color: #604775;
+    color: white; }
+
+.l9 {
+  position: fixed;
+  right: 2%;
+  top: 50%;
+  width: 120px;
+  height: 160px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #e4e4e4;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  background-color: #fff;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  .l9 > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .l9 .l9_wrap .head {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin-bottom: 5px; }
+  .l9 .l9_wrap .img {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .l9 .l9_wrap .img img {
+      width: 100%; }
+  .l9 .l9_wrap .icon {
+    width: 23px;
+    height: 22px;
+    background: url("../img/icon18.png") no-repeat center;
+    background-size: 100% auto;
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    -webkit-animation: shan 2s linear infinite;
+    -o-animation: shan 2s linear infinite;
+    animation: shan 2s linear infinite; }
+  .l9 .l9_wrap .w_2 {
+    width: 100%;
+    text-align: center; }
+    .l9 .l9_wrap .w_2 > div {
+      font-size: 12px;
+      color: #333333;
+      font-weight: lighter; }
+    .l9 .l9_wrap .w_2 button {
+      height: 30px;
+      padding: 0 15px;
+      background-color: #604775;
+      color: #ffffff;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    .l9 .l9_wrap .w_2 button:hover {
+      -webkit-box-shadow: 0 0 20px rgba(96, 71, 117, 0.3);
+      -moz-box-shadow: 0 0 20px rgba(96, 71, 117, 0.3);
+      box-shadow: 0 0 20px rgba(96, 71, 117, 0.3); }
+
+/*# sourceMappingURL=informationDetail.css.map */

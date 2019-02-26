@@ -3,6 +3,7 @@
     <div class="list1 l1">
       <div class="swiper-container swiperHome">
         <div class="swiper-wrapper">
+          <template v-if="vList">
             <div class="swiper-slide swiper-no-swiping" v-for="(item,index) in vList" :key="index" v-if="index == 0">
               <img :src="$baseLink+item.pics" alt="">
               <!--autoplay loop-->
@@ -12,12 +13,13 @@
                 Your browser does not support the video tag.
               </video>
               <!--<div class="mask videoMask">-->
-                <!--&lt;!&ndash;<div>&ndash;&gt;-->
-                  <!--&lt;!&ndash;<div class="bofang"></div>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+              <!--&lt;!&ndash;<div>&ndash;&gt;-->
+              <!--&lt;!&ndash;<div class="bofang"></div>&ndash;&gt;-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
               <!--</div>-->
               <!--<div class="button"></div>-->
             </div>
+          </template>
             <div class="swiper-slide" v-for="(item1,index1) in vbanner" :key="index1+1" @click="navTo2(item1.url)">
               <img :src="$baseLink+item1.pics" alt="">
               <!--<div class="button"></div>-->
@@ -25,7 +27,7 @@
         </div>
         <div class="swiper-button-prev prevHome"></div>
         <div class="swiper-button-next nextHome"></div>
-        <div class="swiper-wrap2">
+        <div class="swiper-wrap2" v-show="vList.length>0">
           <div class="videobtn" v-if="bannerVideo">
             <a class="">
               <span></span><span>视频</span>
@@ -35,6 +37,7 @@
             <span>图片</span>
           </div>
         </div>
+        <div v-show="vList.length == 0" class="swiper-pagination paginHome1"></div>
       </div>
     </div>
     <div class="list2 l2">
@@ -47,7 +50,7 @@
       <div class="cont">
         <div class="cont-1">
           <div>
-            <div :id="item.id" :class="{sel:index == 0,c1List1:index == 0,c1List2:index == 1,c1List3:index == 2}" v-for="(item,index) in tags01" :key="index" @click="tags01Btn(index,item.id)">
+            <div :id="item.id" :class="{sel:index == 0,c1List1:index == 0,c1List2:index == 1,c1List3:index == 2,c1List4: index == 3}" v-for="(item,index) in tags01" :key="index" @click="tags01Btn(index,item.id)">
               <div class="list1"></div>
               <div class="list2">{{item.name}}</div>
             </div>
@@ -59,7 +62,10 @@
           </ul>
         </div>
         <div class="cont-3">
-          <div class="swiper-container swiperHome02">
+          <div class="noList" v-if="productList.data < 1" style="padding: 20px 0;">
+            <div v-if="productList.data.length < 1" style="text-align: center;font-size: 16px;color: #604775;">暂未有产品推荐哦~</div>
+          </div>
+          <div class="swiper-container swiperHome02" v-else>
             <div class="swiper-wrapper">
               <div class="swiper-slide" v-for="(item,index) in productList.data" :key="index">
                 <div  @click="moveTo(item.id)" style="cursor: pointer">
@@ -78,9 +84,7 @@
               </div>
             </div>
           </div>
-          <div class="noList" v-if="productList.data < 1" style="padding: 20px 0;">
-            <div v-if="productList.data.length < 1" style="text-align: center;font-size: 16px;color: #604775;">暂未有产品推荐哦~</div>
-          </div>
+
           <div class="swiper-button-prev prevHome02"></div>
           <div class="swiper-button-next nextHome02"></div>
         </div>
@@ -219,92 +223,8 @@
               </div>
             </div>
           </div>
-      		<!--<div class="nrBox">-->
-      			<!--<div class="nrTitle">-->
-      					<!--<p>雅洁五金新闻资讯雅洁新闻资讯</p>-->
-      			<!--</div>-->
-      			<!--<div class="nrContent">-->
-      					<!--<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊...</p>-->
-      			<!--</div>-->
-      			<!--<div class="nrDate">-->
-      				<!--<p>12-07</p>-->
-      				<!--<div class="moreRead"></div>-->
-      			<!--</div>-->
-      		<!--</div>-->
-      		<!--<div class="nrBox">-->
-      			<!--<div class="nrTitle">-->
-      					<!--<p>雅洁五金新闻资讯雅洁新闻资讯</p>-->
-      			<!--</div>-->
-      			<!--<div class="nrContent">-->
-      					<!--<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊...</p>-->
-      			<!--</div>-->
-      			<!--<div class="nrDate">-->
-      				<!--<p>12-07</p>-->
-      				<!--<div class="moreRead"></div>-->
-      			<!--</div>-->
-      		<!--</div>-->
-      		<!--<div class="nrBox">-->
-      			<!--<div class="nrTitle">-->
-      					<!--<p>雅洁五金新闻资讯雅洁新闻资讯</p>-->
-      			<!--</div>-->
-      			<!--<div class="nrContent">-->
-      					<!--<p>好的设计一定是特殊的，当你看到它的时候，你的内心就会告诉自己想不想要。好的设计一定是特殊...</p>-->
-      			<!--</div>-->
-      			<!--<div class="nrDate">-->
-      				<!--<p>12-07</p>-->
-      				<!--<div class="moreRead"></div>-->
-      			<!--</div>-->
-      		<!--</div>-->
       	</div>
       </div>
-      <!--<div class="cont-5">
-        <div class="swiper-container swiperHome05">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="(item,index) in newsList" :key="index" style="cursor: pointer" @click="moveTo01(item.id)">
-              <div class="slideImg">
-                <img :src="'http://archie.web.hengdikeji.com'+item.pic" alt="">
-              </div>
-              <div class="slideInfo">
-                <div>
-                  <div class="info1">
-                    <div class="i1-1">{{item.title}}</div>
-                    <div class="i1-2">{{item.time|time01}}</div>
-                  </div>
-                  <div class="info2">
-                    <p>{{item.desc}}</p>
-                  </div>
-                  <div class="info3">
-                    <span class="more">MORE</span><span class="moreJT">&gt;</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pagin05">
-          <div class="p5Slide s1 " :class="{sel:newsIndex == index,s1:index == 0,s2:index == 1,s3:index == 2,s4:index == 3}" v-for="(item,index) in newsList" :key="index">
-            <div class="slide-img">
-              <img :src="$baseLink+item.pic" alt="">
-            </div>
-            <div class="mask" @click="newBtn(index)">
-              <div>
-                <div class="mask1 textEllipsis">{{item.title}}</div>
-                <div class="mask2">
-                  <p>{{item.desc|newDesc02}}</p>
-                </div>
-                <div class="mask3">0{{index}}.</div>
-              </div>
-            </div>
-          </div>
-          <div class="p5Button">
-            <div>
-              <div class="swiper-button-prev prev05"></div>
-              <div class="shu"></div>
-              <div class="swiper-button-next next05"></div>
-            </div>
-          </div>
-        </div>
-      </div>-->
       <div class="moreButton">
         <button @click="more(2)">MORE</button>
       </div>
@@ -375,7 +295,7 @@
           <div class="w_1">
             <div class="head">
               <div class="img">
-                <img src="../../static/img/head01.png" alt="">
+                <img src="../../static/img/head01.jpg" alt="">
               </div>
               <span class="icon"></span>
             </div>
@@ -462,28 +382,12 @@
             {icon:'static/img/serviseIcon/23-03.png',url:'',text:'承诺质量退换'}
           ],
           //招商加盟
-          slideJoin:[
-            // {
-            //   title:'五金名匠，认准雅洁',
-            //   desc:'雅洁五金，集研发、生产、销售为一体的综合型企业，旗下拥有智能安防、建筑门锁、卫浴五金、门用五金、家具五金等众多品类',
-            //   pic:'static/img/joins1.png'
-            // },
-            // {
-            //   title:'四大加盟优势，稳居前位',
-            //   desc:'品牌文化浓厚，技术尖端，权威认证，市场广阔',
-            //   pic:'static/img/joins2.jpg'
-            // },
-            // {
-            //   title:'智能时代，智能未来',
-            //   desc:'雅洁智能家居，公司战略发展重点方向，涵盖十大智能家居系统，为消费者提供一站式的全屋智能家居解决方案',
-            //   pic:'static/img/joins3.jpg'
-            // }
-          ],
+          slideJoin:[],
           // 企业介绍
           detailInfo:[],//内容
           detailImg:'',//背景图
 
-          activeStatus:true,
+          activeStatus:false,
           active:[],
           aw:'',
           awList:[],
@@ -526,7 +430,7 @@
           that.$api.axiosGet('/index/product/getProductList/type/limit4/id/'+id,{},function (data) {
             // console.log(data);
             that.productList = data.data.list;
-            // console.log(that.productList);
+            console.log(that.productList);
             setTimeout(function () {
               that.productSwiper.slideTo(0)
             },20)
@@ -636,45 +540,7 @@
       },
       mounted(){
         const that = this;
-        setTimeout(function () {
-          // var swiperHome04 = new Swiper('.swiperHome04',{
-          //   slidesPerView:3.5,
-          //   spaceBetween:10,
-          //   prevButton: '.prevHome04',
-          //   nextButton: '.nextHome04',
-          //   loop:true,
-          //   // observer:true
-          // });
-        },100);
-        var date = new Date();
-        var day = date.getDate();
-        var countNum = 1;
-        if(localStorage.getItem('day') == null && localStorage.getItem('countNum') == null){
-          localStorage.setItem('day',day);
-          localStorage.setItem('countNum',countNum);
-        }else{
-          var d = parseInt(localStorage.getItem('day'));
-          var count = parseInt(localStorage.getItem('countNum'));
-          var dayNow = new Date().getDate();
-          // console.log(d);
-          if(dayNow == d){
-            if(count<3){
-              this.activeStatus = true;
-              count++
-              localStorage.setItem('countNum',count);
-            }else{
-              this.activeStatus = false;
-            }
-          }else{
-            this.activeStatus = true;
-            var date1 = new Date();
-            var day1 = date1.getDate();
-            // console.log(day1)
-            count = 1;
-            localStorage.setItem('countNum',count);
-            localStorage.setItem('day',day1);
-          }
-        }
+
         var swiperHome06 = new Swiper('.swiperHome06',{
           slidesPerView: 7,
           spaceBetween: 10
@@ -722,7 +588,7 @@
           that.bannerImg = data.data.pics;
           setTimeout(function () {
             var swiperHome = new Swiper('.swiperHome',{
-              // pagination:'.paginHome',
+              pagination:'.paginHome1',
               prevButton: '.prevHome',
               nextButton: '.nextHome',
               // loop:true,
@@ -733,31 +599,38 @@
               observer:true,
               autoplayDisableOnInteraction : false,
               onInit:function(swiper){
-                swiper.stopAutoplay();
-                $('.videobtn a').addClass('sel');
+                // console.log(that.vList);
+                if(that.vList.length>0){
+                  swiper.stopAutoplay();
+                  $('.videobtn a').addClass('sel');
+                }
               },
               onReachEnd: function(swiper){
-                setTimeout(function () {
-                  swiper.slideTo(1);
-                },8000)
+                if(that.vList.length>0){
+                  setTimeout(function () {
+                    swiper.slideTo(1);
+                  },8000)
+                }
               },
               onSlideChangeStart:function (swiper) {
                 // console.log(swiper.activeIndex);
                 // that.bannerVideoSrc = data.data.pics[swiper.activeIndex].path;
                 // console.log(swiper.activeIndex)
-                if(swiper.activeIndex>0){
-                  swiper.startAutoplay();
-                  $('.paginHome').addClass('sel');
-                  $('.videobtn a').removeClass('sel');
-                  if(swiper.activeIndex == 1){
-                    swiper.lockSwipeToPrev();
+                if(that.vList.length>0){
+                  if(swiper.activeIndex>0){
+                    swiper.startAutoplay();
+                    $('.paginHome').addClass('sel');
+                    $('.videobtn a').removeClass('sel');
+                    if(swiper.activeIndex == 1){
+                      swiper.lockSwipeToPrev();
+                    }else{
+                      swiper.unlockSwipeToPrev();
+                    }
                   }else{
-                    swiper.unlockSwipeToPrev();
+                    swiper.stopAutoplay();
+                    $('.paginHome').removeClass('sel');
+                    $('.videobtn a').addClass('sel');
                   }
-                }else{
-                  swiper.stopAutoplay();
-                  $('.paginHome').removeClass('sel');
-                  $('.videobtn a').addClass('sel');
                 }
               }
             });
@@ -904,8 +777,41 @@
         })
         // 获取活动信息
         this.$api.axiosPost('/index/About/activity',0,{},function (data) {
-          // console.log(data);
           that.awList = data.data.data;
+          // console.log(that.awList.length);
+          if(that.awList.length == 0) {
+            that.activeStatus = false;
+          }else{
+            var date = new Date();
+            var day = date.getDate();
+            var countNum = 1;
+            if(localStorage.getItem('day') == null && localStorage.getItem('countNum') == null){
+              localStorage.setItem('day',day);
+              localStorage.setItem('countNum',countNum);
+            }else{
+              var d = parseInt(localStorage.getItem('day'));
+              var count = parseInt(localStorage.getItem('countNum'));
+              var dayNow = new Date().getDate();
+              // console.log(d);
+              if(dayNow == d){
+                if(count<3){
+                  that.activeStatus = true;
+                  count++
+                  localStorage.setItem('countNum',count);
+                }else{
+                  that.activeStatus = false;
+                }
+              }else{
+                that.activeStatus = true;
+                var date1 = new Date();
+                var day1 = date1.getDate();
+                // console.log(day1)
+                count = 1;
+                localStorage.setItem('countNum',count);
+                localStorage.setItem('day',day1);
+              }
+            }
+          }
           var data1 = data.data.data;
           setTimeout(function () {
             that.aw = new Swiper('.aw',{

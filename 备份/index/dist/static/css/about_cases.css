@@ -1,0 +1,74 @@
+@import url(about.css);
+body {
+  background-color: #f2f2f2; }
+
+#main {
+  margin-top: 0.3rem;
+  margin-bottom: 1.2rem; }
+  #main .case {
+    margin-bottom: 0.4rem;
+    width: 100%;
+    position: relative; }
+    #main .case .caseImg {
+      width: 100%; }
+      #main .case .caseImg img {
+        width: 100%; }
+    #main .case .caseContent {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(96, 71, 117, 0.8); }
+      #main .case .caseContent .ccLeft {
+        width: 1.6rem;
+        height: 1.6rem;
+        background-color: #604775;
+        font-size: 0.5rem;
+        line-height: 0.5rem;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        -webkit-flex-direction: column; }
+        #main .case .caseContent .ccLeft p {
+          width: 100%;
+          padding-right: 0.2rem;
+          box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          text-align: right; }
+        #main .case .caseContent .ccLeft .month {
+          font-size: 0.26rem;
+          line-height: 0.26rem;
+          margin-top: 0.2rem;
+          padding-right: 0.22rem; }
+      #main .case .caseContent .ccRight {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        -webkit-flex-direction: column;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding-left: 0.38rem;
+        font-size: 0.2rem;
+        color: #999999;
+        line-height: 0.36rem; }
+        #main .case .caseContent .ccRight p {
+          width: 100%; }
+        #main .case .caseContent .ccRight .ccrTitle {
+          font-size: 0.26rem;
+          line-height: 0.8rem;
+          font-weight: bold;
+          color: #ffffff;
+          position: relative; }
+
+/*# sourceMappingURL=about_cases.css.map */

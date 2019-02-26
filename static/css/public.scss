@@ -102,7 +102,8 @@ body{
       width: 100%;
       margin: 5px 0;
       img{
-        width: 100%;
+        width: 110%;
+        margin-left: -5%;
       }
     }
     .header-nav{
@@ -596,6 +597,59 @@ body{
     color: #ffffff;
     border: 1px solid #604775;
   }
+}
+#down{
+  .pagina{
+    text-align: center;
+  }
+  .swiper-pagination-bullet-active{
+    border: 1px solid #604775;
+    background: initial;
+  }
+  .btn-prev,.btn-next{
+    font-size: 14px;
+    color: #666666;
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    padding: 8px 13px;
+    height: 35px;
+    span{
+      line-height: normal;
+    }
+  }
+  .el-pager{
+    li{
+      height: 35px;
+      min-width: 35px;
+      line-height: 35px;
+      background-color: #fff;
+      border: 1px solid #bfbfbf;
+      font-size: 14px;
+      font-weight: normal;
+      color: #666666;
+    }
+    li.active{
+      background-color: #604775;
+      border: 1px solid #0f7ba1;
+      color: #ffffff;
+    }
+    li.active:hover{
+      color: #ffffff;
+    }
+    li:hover{
+      color: #666666;
+    }
+  }
+  .el-input.is-active .el-input__inner, .el-input__inner:focus{
+    border-color: #604775;
+  }
+  .el-select-dropdown__item.hover, .el-select-dropdown__item:hover{
+    background-color: #604775;
+  }
+  .el-select .el-input.is-focus .el-input__inner{
+    border-color: #604775;
+  }
+
 }
 .el-select-dropdown__item.selected{
   color: #604775!important;

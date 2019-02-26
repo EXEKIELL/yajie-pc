@@ -350,6 +350,30 @@
             color: #604775;
           }
         }
+        .c1List4 {
+          .list1 {
+            background: url("../../static/img/icon/SALO设计师系列-常规.png") no-repeat center;
+            background-size: 33% auto;
+          }
+        }
+        .c1List4:hover {
+          .list1 {
+            background: url("../../static/img/icon/SALO设计师系列-响应.png") no-repeat center;
+            background-size: 33% auto;
+          }
+          .list2 {
+            color: #604775;
+          }
+        }
+        .c1List4.sel {
+          .list1 {
+            background: url("../../static/img/icon/SALO设计师系列-响应.png") no-repeat center;
+            background-size: 33% auto;
+          }
+          .list2 {
+            color: #604775;
+          }
+        }
       }
     }
     .cont-2 {
@@ -1285,7 +1309,7 @@
 			transform: translate3d(-50%,-50%,0);
       > div {
         border: 1px solid #c8c8c8;
-        padding: 55px;
+        padding: 45px 50px;
         .cont {
           font-size: 14px;
           color: #555555;

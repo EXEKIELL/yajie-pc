@@ -1,5 +1,8 @@
 <template>
   <div id="service">
+    <div class="banner" v-if="selStatus2 == 1" style="width: 100%;">
+      <img style="width: 100%;" src="../../static/img/down_banner.png" alt="">
+    </div>
     <div class="wrap">
       <div class="zhankai sel">
         <div class="icon23">
@@ -28,7 +31,7 @@
           selStatus2:0,
           nav01List:[
             {text:'全国门店',to:'/service/serviceShop'},
-            // {text:'在线咨询',to:'###'},
+            {text:'下载专区',to:'/service/down'},
             {text:'在线留言',to:'/service/serviceMessage'},
           ]
         }
@@ -39,8 +42,11 @@
             case "/service/serviceShop":
               this.selStatus2 = 0;
               break;
-            case "/service/serviceMessage":
+            case "/service/down":
               this.selStatus2 = 1;
+              break;
+            case "/service/serviceMessage":
+              this.selStatus2 = 2;
               break;
           }
         }
@@ -64,8 +70,11 @@
           case "/service/serviceShop":
             this.selStatus2 = 0;
             break;
-          case "/service/serviceMessage":
+          case "/service/down":
             this.selStatus2 = 1;
+            break;
+          case "/service/serviceMessage":
+            this.selStatus2 = 2;
             break;
         }
       }

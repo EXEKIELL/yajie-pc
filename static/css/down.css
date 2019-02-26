@@ -1,0 +1,250 @@
+#down .titleWrap {
+  font-size: 12px;
+  color: #888888;
+  text-align: center;
+  margin-bottom: 46px; }
+  #down .titleWrap .cn {
+    font-size: 30px;
+    color: #333333;
+    margin-bottom: 8px;
+    font-weight: bold; }
+    #down .titleWrap .cn span {
+      color: #614775; }
+#down .filtrate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  -webkit-box-shadow: 0 0 10px rgba(96, 71, 117, 0.15);
+  -moz-box-shadow: 0 0 10px rgba(96, 71, 117, 0.15);
+  box-shadow: 0 0 10px rgba(96, 71, 117, 0.15);
+  margin-bottom: 40px; }
+  #down .filtrate > div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; }
+    #down .filtrate > div > div {
+      width: 24%; }
+      #down .filtrate > div > div > div {
+        width: 100%; }
+      #down .filtrate > div > div > button {
+        display: block;
+        width: 100%;
+        line-height: 40px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        background-color: #ede8e3;
+        font-size: 14px;
+        color: #333333;
+        -webkit-transition: background 0.5s, color 0.5s;
+        -moz-transition: background 0.5s, color 0.5s;
+        -ms-transition: background 0.5s, color 0.5s;
+        -o-transition: background 0.5s, color 0.5s;
+        transition: background 0.5s, color 0.5s; }
+      #down .filtrate > div > div > button:hover {
+        background-color: #604775;
+        color: #ffffff; }
+#down .lists {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #down .lists ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1120px; }
+    #down .lists ul > li {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #ece7e3;
+      width: 540px;
+      height: 270px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 40px 40px 0;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      cursor: pointer; }
+      #down .lists ul > li > div {
+        width: 482px; }
+      #down .lists ul > li .info_top {
+        position: relative;
+        margin-bottom: 40px; }
+        #down .lists ul > li .info_top .infoWrap {
+          display: flex;
+          width: 74%;
+          position: relative; }
+          #down .lists ul > li .info_top .infoWrap .img {
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            margin-right: 46px;
+            position: absolute;
+            top: 50%;
+            margin-top: -45px;
+            left: 15px; }
+            #down .lists ul > li .info_top .infoWrap .img img {
+              width: 100%; }
+          #down .lists ul > li .info_top .infoWrap .text {
+            font-size: 16px;
+            color: #555555;
+            font-weight: lighter;
+            margin-left: 150px; }
+            #down .lists ul > li .info_top .infoWrap .text .name {
+              font-size: 20px;
+              color: #333333;
+              font-weight: bold;
+              margin-bottom: 8px; }
+            #down .lists ul > li .info_top .infoWrap .text .ver, #down .lists ul > li .info_top .infoWrap .text .downCount, #down .lists ul > li .info_top .infoWrap .text .time {
+              line-height: 25px; }
+            #down .lists ul > li .info_top .infoWrap .text .time {
+              margin-bottom: 10px; }
+        #down .lists ul > li .info_top .downBtn {
+          position: absolute;
+          bottom: 0;
+          right: 0; }
+          #down .lists ul > li .info_top .downBtn span {
+            display: block;
+            font-size: 16px;
+            color: #333333;
+            line-height: 40px;
+            padding: 0 28px;
+            background-color: #ede8e3;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s; }
+          #down .lists ul > li .info_top .downBtn span:hover {
+            color: #ffffff;
+            background-color: #604775;
+            -webkit-box-shadow: 0 0 10px rgba(96, 71, 117, 0.2);
+            -moz-box-shadow: 0 0 10px rgba(96, 71, 117, 0.2);
+            box-shadow: 0 0 10px rgba(96, 71, 117, 0.2); }
+      #down .lists ul > li .info_bottom p {
+        font-size: 14px;
+        color: #555555;
+        text-indent: 2em;
+        line-height: 30px;
+        text-align: justify; }
+    #down .lists ul > li:nth-child(2n) {
+      margin-right: 0; }
+    #down .lists ul > li:hover {
+      border: 1px solid transparent;
+      -webkit-box-shadow: 0 0 30px rgba(96, 71, 117, 0.2);
+      -moz-box-shadow: 0 0 30px rgba(96, 71, 117, 0.2);
+      box-shadow: 0 0 30px rgba(96, 71, 117, 0.2); }
+#down .pagina {
+  width: 100%;
+  margin-bottom: 40px; }
+  #down .pagina .btn-prev, #down .pagina .btn-next {
+    font-size: 14px;
+    color: #666666;
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    padding: 8px 13px;
+    height: 35px; }
+    #down .pagina .btn-prev span, #down .pagina .btn-next span {
+      line-height: normal; }
+  #down .pagina .el-pager li {
+    height: 35px;
+    min-width: 35px;
+    line-height: 35px;
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    font-size: 14px;
+    font-weight: normal;
+    color: #666666; }
+  #down .pagina .el-pager li.active {
+    background-color: #0f7ba1;
+    border: 1px solid #0f7ba1;
+    color: #ffffff; }
+  #down .pagina .el-pager li.active:hover {
+    color: #ffffff; }
+  #down .pagina .el-pager li:hover {
+    color: #666666; }
+
+#downDetail .wrap {
+  width: 1200px;
+  margin: auto; }
+#downDetail .info_1 .wrap {
+  display: flex;
+  padding: 84px 0; }
+  #downDetail .info_1 .wrap > div {
+    width: 50%; }
+  #downDetail .info_1 .wrap .info1_left > div .info_title {
+    font-size: 48px;
+    color: #604775;
+    font-weight: bold;
+    padding: 30px 0 15px 0; }
+  #downDetail .info_1 .wrap .info1_left > div .info_desc {
+    font-size: 36px;
+    color: #604775;
+    margin-bottom: 20px; }
+  #downDetail .info_1 .wrap .info1_left > div .info_enTitle {
+    font-size: 18px;
+    color: #333333;
+    font-weight: lighter;
+    margin-bottom: 50px; }
+  #downDetail .info_1 .wrap .info1_left > div .info_btns {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%; }
+    #downDetail .info_1 .wrap .info1_left > div .info_btns > div {
+      margin: 0 20px 20px 0; }
+      #downDetail .info_1 .wrap .info1_left > div .info_btns > div a {
+        display: block;
+        line-height: 60px;
+        padding: 0 52px;
+        font-size: 16px;
+        color: #ffffff;
+        background-color: #604775;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+      #downDetail .info_1 .wrap .info1_left > div .info_btns > div a:hover {
+        -webkit-box-shadow: 0 0 10px rgba(96, 71, 117, 0.5);
+        -moz-box-shadow: 0 0 10px rgba(96, 71, 117, 0.5);
+        box-shadow: 0 0 10px rgba(96, 71, 117, 0.5); }
+    #downDetail .info_1 .wrap .info1_left > div .info_btns > div:nth-child(2n) {
+      margin-right: 0; }
+  #downDetail .info_1 .wrap .info1_right img {
+    margin: auto; }
+#downDetail .info_2 {
+  background-color: #604775;
+  padding: 60px 0 55px 0;
+  margin-bottom: 70px; }
+  #downDetail .info_2 .wrap {
+    display: flex;
+    position: relative; }
+    #downDetail .info_2 .wrap .info2_left {
+      margin-right: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #downDetail .info_2 .wrap .info2_right {
+      width: 30%; }
+      #downDetail .info_2 .wrap .info2_right p {
+        font-size: 16px;
+        color: #eeeeee;
+        line-height: 38px; }
+#downDetail .info_3 .title {
+  margin-bottom: 40px; }
+  #downDetail .info_3 .title img {
+    margin: auto; }
+#downDetail .info_3 .richText {
+  margin-bottom: 80px;
+  font-size: 16px;
+  color: #666666; }
+
+/*# sourceMappingURL=down.css.map */

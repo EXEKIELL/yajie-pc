@@ -89,6 +89,8 @@
             this.title01 = '智能家居'
           }else if(id == 42){
             this.title01 = '智能产品'
+          }else if(id == 252){
+            this.title01 = 'SALO设计师系列'
           }
           this.id = id;
           // 获取
@@ -108,6 +110,8 @@
           this.title01 = '智能家居'
         }else if(id == 42){
           this.title01 = '智能安防'
+        }else if(id == 252){
+          this.title01 = 'SALO设计师系列'
         }
         this.id = id;
         // 获取

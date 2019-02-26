@@ -1,0 +1,69 @@
+@import url(about.css);
+#main .main .slideBox {
+  width: 100%;
+  padding: 0.6rem 0.4rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+  #main .main .slideBox .slideImg {
+    width: 100%; }
+    #main .main .slideBox .slideImg img {
+      width: 100%; }
+  #main .main .slideBox .slideP {
+    padding: 0.26rem 0;
+    color: #555555;
+    text-align: center;
+    font-size: 0.26rem;
+    line-height: 0.52rem; }
+#main .main .swiper-button-next, #main .main .swiper-button-prev {
+  width: 0.6rem;
+  height: 0.6rem;
+  background: url("../img/rightNext.png") no-repeat center center;
+  background-size: 0.17rem auto;
+  -webkit-background-size: 0.17rem auto;
+  background-color: #604775;
+  right: 0;
+  left: auto; }
+#main .main .swiper-button-prev {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  left: 0;
+  right: auto; }
+#main .main .swiper-button-disabled {
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url("../img/rightNext1.png"); }
+#main .time {
+  width: 100%;
+  margin-top: 0.6rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding-left: 3.2%;
+  display: -webkit-box;
+  overflow-x: scroll; }
+  #main .time .yeatTime .ytTop {
+    width: 0.94rem;
+    margin-bottom: 0.18rem;
+    position: relative; }
+    #main .time .yeatTime .ytTop img {
+      width: 100%; }
+    #main .time .yeatTime .ytTop .ytBox {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center;
+      -webkit-flex-direction: column;
+      font-size: 0.26rem;
+      color: #ffffff; }
+  #main .time .yeatTime .ytBottom {
+    width: 1.52rem; }
+    #main .time .yeatTime .ytBottom img {
+      width: 100%; }
+
+/*# sourceMappingURL=about_progress.css.map */

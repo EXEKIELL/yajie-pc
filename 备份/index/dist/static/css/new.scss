@@ -1,0 +1,76 @@
+$mainColor:#604775;
+#main{
+  padding: 0.6rem 0 0.8rem;
+  .newList{
+    margin-top: 0.2rem;
+  }
+  .newBox{
+    border-top: 1px solid #ededed;
+    padding: 0.35rem 0 ;
+    display: flex;
+    align-items: center;
+    .newImg{
+      width: 50%;
+      overflow: hidden;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .newContent{
+    width: 100%;
+    padding: 0rem 0.2rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 0.22rem;
+    color: #999999;
+    line-height: 0.38rem;
+    .ncTitle{
+      color: #333333;
+      font-size: 0.26rem;
+      font-weight: bold;
+      line-height: 0.38rem;
+      margin-bottom: 0.15rem;
+    }
+    .ncText{
+      line-height: 0.3rem;
+      font-size: 0.22rem;
+      margin-bottom: 0.15rem;
+    }
+    .ncTime{
+      font-size: 0.22rem;
+
+    }
+  }
+  .newToMore{
+    width: 100%;
+    padding: 0rem 0.2rem;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 0.24rem;
+    color: $mainColor;
+    position: relative;
+    .date{
+      position: absolute;
+      right: 0.2rem;
+      top: 0;
+      color: #888888;
+      font-size: 0.22rem;
+      p{
+        position: absolute;
+        right: 100%;
+        top: -0.05rem;
+        span{
+          position: absolute;
+          right: 100%;
+          top: -0.15rem;
+          color: #333333;
+          font-size: 0.3rem;
+        }
+      }
+    }
+  }
+  .page{
+    background-color: #F2F2F2;
+  }
+}

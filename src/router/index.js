@@ -31,6 +31,9 @@ import Information from '@/components/information'
 import InformationNews from '@/components/informationNews'
 import InformationDetail from '@/components/informationDetail'
 
+import Down from '@/components/down'
+import DownDetail from '@/components/downDetail'
+
 import Black from '@/components/black'
 
 Vue.use(Router)
@@ -49,7 +52,7 @@ const router = new Router({
       name: 'Login',
       component:()=> import('@/components/login'),
       meta:{
-        title:'登陆'
+        // title:'登陆'
       }
     },
     {
@@ -58,7 +61,7 @@ const router = new Router({
       component: HomePage,
       meta:{
         keepAlive:false,
-        title:'雅洁五金'
+        // title:'雅洁五金'
       }
     },
     {
@@ -67,7 +70,7 @@ const router = new Router({
       component: InviteJoin,
       meta:{
         keepAlive:false,
-        title:'加入我们'
+        // title:'加入我们'
       }
     },
     {
@@ -187,7 +190,7 @@ const router = new Router({
           component:()=> import('@/components/aboutUsInnovate'),
           meta:{
             keepAlive:false,
-            title:'创新技术'
+            // title:'创新技术'
           }
         }
       ]
@@ -210,6 +213,14 @@ const router = new Router({
           }
         },
         {
+          path:'/service/down',
+          name:'Down',
+          component:Down,
+          meta:{
+            keepAlive:false
+          }
+        },
+        {
           path: '/service/serviceMessage',
           name: 'ServiceMessage',
           component: ServiceMessage,
@@ -218,6 +229,14 @@ const router = new Router({
           }
         }
       ]
+    },
+    {
+      path:'/downDetail',
+      name:'DownDetail',
+      component:DownDetail,
+      meta:{
+        keepAlive:false
+      }
     },
     {
       path: '/partner',
